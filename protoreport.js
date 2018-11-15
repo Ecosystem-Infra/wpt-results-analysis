@@ -11,6 +11,30 @@ flags.parse();
 const reportFile = flags.get('report-file');
 const reportObject = JSON.parse(fs.readFileSync(reportFile, 'UTF-8'));
 
+function benchmark(description, callback) {
+    const before = Date.now();
+    callback();
+    const after = Date.now();
+    console.log(`${description} took ${after - before} ms`);
+}
+
+const smallFile = reportFile.replace('.json', '.small.json');
+//fs.writeFileSync(smallFile, JSON.stringify(reportObject, ["message", "name", "results", "status", "subtests"]));
+/*
+benchmark('JSON load+parse', () => {
+    const report = JSON.parse(fs.readFileSync(smallFile, 'UTF-8'));
+    console.log(process.memoryUsage());
+});
+*/
+benchmark('PB load+parse', () => {
+    const bytes = fs.readFileSync('chrome.bin');
+    //console.log(bytes.length);
+    const report = wpt.Report.deserializeBinary(bytes);
+    console.log(process.memoryUsage());
+});
+
+process.exit();
+
 const rootTree = new wpt.Tree;
 
 for (const testObject of reportObject.results) {
@@ -62,5 +86,29 @@ const report = new wpt.Report;
 report.setResults(rootTree);
 // TODO: run_info
 
+const binFile = reportFile.replace('.json', '.bin');
 let bytes = report.serializeBinary();
-fs.writeFileSync('report.blob', bytes);
+fs.writeFileSync(binFile, bytes);
+
+function walkTree(tree, path, visitor) {
+    for (const [name, subtree] of tree.getSubtreesMap().entries()) {
+        walkTree(subtree, `${path}/${name}`, visitor);
+    }
+    for (const [name, test] of tree.getTestsMap().entries()) {
+        visitor(`${path}/${name}`, test);
+    }
+}
+
+function readBack(binFile) {
+    const bytes = fs.readFileSync(binFile);
+    //console.log(bytes.length);
+    const report = wpt.Report.deserializeBinary(bytes);
+    walkTree(report.getResults(), '', (name, test) => {
+        console.log(`${name}: ${test.getStatus()}`);
+        for (const subtest of test.getSubtestsList()) {
+            console.log(`  ${subtest.getName()}: ${subtest.getStatus()}`);
+        }
+    });
+}
+
+readBack(binFile);

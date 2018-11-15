@@ -22,7 +22,7 @@ message Test {
   }
   Status status = 1;
   string message = 2;
-  repeated string subtests = 3;
+  repeated Subtest subtests = 3;
 }
 
 message Subtest {
