@@ -3,7 +3,7 @@
 const flags = require('flags');
 const fs = require('fs');
 
-const wpt = require('./gen/wpt_pb');
+const wpt = require('./lib/wpt_pb');
 
 flags.defineString('report-file', [], 'path to report.json file');
 flags.parse();
