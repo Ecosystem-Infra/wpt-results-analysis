@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+message Report {
+  Tree results = 1;
+  // TODO: run_info
+}
+
+message Tree {
+  map<string, Tree> subtrees = 1;
+  map<string, Test> tests = 2;
+}
+
+message Test {
+  enum Status {
+    PASS = 0; // most common value as default
+    CRASH = 1;
+    ERROR = 2;
+    FAIL = 3;
+    OK = 4;
+    SKIP = 5;
+    TIMEOUT = 6;
+  }
+  Status status = 1;
+  string message = 2;
+  repeated string subtests = 3;
+}
+
+message Subtest {
+  enum Status {
+    PASS = 0; // most common value as default
+    ERROR = 1;
+    FAIL = 2;
+    NOTRUN = 3;
+    TIMEOUT = 4;
+  }
+  string name = 1;
+  Status status = 2;
+  string message = 3;
+}
