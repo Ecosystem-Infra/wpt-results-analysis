@@ -98,7 +98,7 @@ async function main() {
   } else {
     // compute interop score
     const scores = metrics.scoreInterop(reports, options);
-    const total = scores[reports.length + 1];
+    const total = Math.round(scores.reduce((x, y) => x + y));
     for (let i = 0; i <= reports.length; i++) {
       let score = scores[i];
       const pct = (100 * score / total).toFixed(2);
