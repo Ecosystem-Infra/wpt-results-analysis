@@ -4,6 +4,8 @@ const fs = require('fs');
 const Git = require('nodegit');
 
 async function writeReportToGit(report, repo) {
+  let t0, t1;
+
   // Create a tree of Treebuilders. When all the files have been written, this
   // tree is traversed depth first to write all of the trees.
   async function emptyTree() {
@@ -35,6 +37,11 @@ async function writeReportToGit(report, repo) {
     return tree.builder.write();
   }
 
+  let blobCache = new Map;
+
+  let timeComputingBlobIds = 0;
+
+  t0 = Date.now();
   for (const test of report.results) {
     // The keys that can appear for this object or on subtest object are:
     // ["duration", "expected", "message", "name", "status", "subtests", "test"]
@@ -43,9 +50,19 @@ async function writeReportToGit(report, repo) {
     //  - "expected" which will always be "PASS" or "OK" for wpt.fyi runs
     //  - "test" which is the test name, and would be represented elsewhere
     const json = JSON.stringify(test, ['message', 'name', 'status', 'subtests']);
-    const buffer = Buffer.from(json);
 
-    const blobId = await Git.Blob.createFromBuffer(repo, buffer, buffer.length);
+    let hrt0 = process.hrtime();
+
+    let blobId = blobCache.get(json);
+
+    if (!blobId) {
+      const buffer = Buffer.from(json);
+      blobId = await Git.Blob.createFromBuffer(repo, buffer, buffer.length);
+      blobCache.set(json, blobId);
+    }
+    let hrdiff = process.hrtime(hrt0);
+    timeComputingBlobIds += hrdiff[1];
+    timeComputingBlobIds += 1e9 * hrdiff[0];
 
     const path = test.test;
     // Complexity to handle /foo/bar/test.html?a/b, which isn't a test name
@@ -60,8 +77,15 @@ async function writeReportToGit(report, repo) {
     const tree = await getTree(dirs);
     tree.builder.insert(`${filename}.json`, blobId, Git.TreeEntry.FILEMODE.BLOB);
   }
+  t1 = Date.now();
+  console.log(`Writing blobs took ${t1 - t0} ms`);
+  console.log(`Of which ${timeComputingBlobIds/1e6} ms creating blob IDs`);
 
+  t0 = Date.now();
   const oid = await writeTree(rootTree);
+  t1 = Date.now();
+
+  console.log(`Writing trees took ${t1 - t0} ms`);
 
   const signature = Git.Signature.now('autofoolip', 'auto@foolip.org');
 
