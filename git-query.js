@@ -169,7 +169,10 @@ function queryTree(tree) {
 
   let counter = 0;
   walk(tree, (path, test, results) => {
-    counter++; // just count
+    // count non-OK/PASS tests
+    if (results.status !== 'OK' && results.status !== 'PASS') {
+      counter++;
+    }
     /*
     // look for non-unique subtests names
     if (results.subtests.length) {
@@ -220,16 +223,15 @@ async function main() {
   const repo = await Git.Repository.open('wpt-results');
 
   //const runs = await getExampleRuns();
-  const runs = (await getAllLocalRuns(repo)).slice(0, 1);
+  const RUN_LIMIT = Number(process.argv[2]);
+  const runs = (await getAllLocalRuns(repo)).slice(0, RUN_LIMIT);
 
   console.log(`Found ${runs.length} runs`);
 
-  let t0, t1;
-
-  t0 = Date.now();
   // Fully parallel loading is slower than loading one run after the other
   // probably because it's I/O bound. Also uses more memory. But loading a few
   // in parallel might be faster than this:
+  let t0 = Date.now();
   const trees = new Array(runs.length);
   for (const i in runs) {
     const run = runs[i];
@@ -237,8 +239,8 @@ async function main() {
     const gitTree = await getGitTree(repo, run);
     trees[i] = await readTree(gitTree);
   }
-  t1 = Date.now();
-  console.log(`Loading ${runs.length} runs took ${t1 - t0} ms`);
+  const loadTime = Date.now() - t0;
+  console.log(`Loading ${runs.length} runs took ${loadTime} ms`);
 
   t0 = Date.now();
   for (const i in runs) {
@@ -248,16 +250,22 @@ async function main() {
     const result = queryTree(tree);
     console.log(result);
   }
-  t1 = Date.now();
-  console.log(`Querying ${runs.length} runs took ${t1 - t0} ms`);
+  const queryTime = Date.now() - t0;
+  console.log(`Querying ${runs.length} runs took ${queryTime} ms`);
 
-  console.log(`${Object.keys(treeCache).length} trees in memory`);
-  console.log(`${Object.keys(testCache).length} tests in memory`);
+  const treeCount = Object.keys(treeCache).length;
+  const testCount = Object.keys(testCache).length;
+  console.log(`${treeCount} trees in memory`);
+  console.log(`${testCount} tests in memory`);
 
   if (global.gc) {
     global.gc();
   }
-  console.log(process.memoryUsage());
+  const memory = process.memoryUsage();
+  console.log(memory);
+
+  // For copying into spreadsheet
+  console.log(`${RUN_LIMIT}\t${loadTime}\t${queryTime}\t${treeCount}\t${testCount}\t${memory.rss}\t${memory.heapTotal}\t${memory.heapUsed}\t${memory.external}`);
 }
 
 main();
