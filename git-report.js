@@ -1,11 +1,30 @@
 'use strict';
 
-const fs = require('fs');
+const fetch = require('node-fetch');
 const Git = require('nodegit');
 
-async function writeReportToGit(report, repo) {
-  let t0, t1;
+async function getAllRuns() {
+  // TODO: make it all of them with pagination
+  return (await fetch('https://wpt.fyi/api/runs?max-count=500')).json();
+}
 
+async function writeRunToGit(run, repo) {
+  const tagName = `run-${run.id}`
+  try {
+    await repo.getReference(`refs/tags/${tagName}`);
+    console.log(`Tag ${tagName} already exists, skipping run`);
+    return;
+  } catch (e) {}
+
+  const reportURL = run.raw_results_url;
+  console.log(`Fetching ${reportURL}`);
+  const report = await (await fetch(reportURL)).json();
+  await writeReportToGit(report, repo, tagName);
+  console.log(`Wrote ${tagName}`);
+  return tagName;
+}
+
+async function writeReportToGit(report, repo, tagName) {
   // Create a tree of Treebuilders. When all the files have been written, this
   // tree is traversed depth first to write all of the trees.
   async function emptyTree() {
@@ -39,9 +58,6 @@ async function writeReportToGit(report, repo) {
 
   let blobCache = new Map;
 
-  let timeComputingBlobIds = 0;
-
-  t0 = Date.now();
   for (const test of report.results) {
     // The keys that can appear for this object or on subtest object are:
     // ["duration", "expected", "message", "name", "status", "subtests", "test"]
@@ -51,8 +67,6 @@ async function writeReportToGit(report, repo) {
     //  - "test" which is the test name, and would be represented elsewhere
     const json = JSON.stringify(test, ['message', 'name', 'status', 'subtests']);
 
-    let hrt0 = process.hrtime();
-
     let blobId = blobCache.get(json);
 
     if (!blobId) {
@@ -60,9 +74,6 @@ async function writeReportToGit(report, repo) {
       blobId = await Git.Blob.createFromBuffer(repo, buffer, buffer.length);
       blobCache.set(json, blobId);
     }
-    let hrdiff = process.hrtime(hrt0);
-    timeComputingBlobIds += hrdiff[1];
-    timeComputingBlobIds += 1e9 * hrdiff[0];
 
     const path = test.test;
     // Complexity to handle /foo/bar/test.html?a/b, which isn't a test name
@@ -77,44 +88,23 @@ async function writeReportToGit(report, repo) {
     const tree = await getTree(dirs);
     tree.builder.insert(`${filename}.json`, blobId, Git.TreeEntry.FILEMODE.BLOB);
   }
-  t1 = Date.now();
-  console.log(`Writing blobs took ${t1 - t0} ms`);
-  console.log(`Of which ${timeComputingBlobIds/1e6} ms creating blob IDs`);
 
-  t0 = Date.now();
   const oid = await writeTree(rootTree);
-  t1 = Date.now();
-
-  console.log(`Writing trees took ${t1 - t0} ms`);
 
   const signature = Git.Signature.now('autofoolip', 'auto@foolip.org');
 
   const commit = await repo.createCommit(null, signature, signature, 'commit message', oid, []);
 
-  const tag = `tree-${oid.tostrS()}`
-  try {
-    await repo.createLightweightTag(commit, tag);
-  } catch (e) {
-    console.error(e);
-  }
-  return tag;
+  await repo.createLightweightTag(commit, tagName);
 }
 
 async function main() {
-  let t0, t1;
-  const reportFile = process.argv[2];
-  const gitDir = process.argv[3];
-  t0 = Date.now();
-  const report = JSON.parse(fs.readFileSync(reportFile, 'UTF-8'));
-  t1 = Date.now();
-  console.log(`Parsing JSON took ${t1 - t0} ms`);
+  const repo = await Git.Repository.init('runs.git', 1);
 
-  t0 = Date.now();
-  const repo = await Git.Repository.init(gitDir, 1);
-  const tag = await writeReportToGit(report, repo);
-  t1 = Date.now();
-  console.log(`Writing to Git repo ${t1 - t0} ms`);
-  console.log(`Wrote ${tag}`);
+  const runs = await getAllRuns();
+  for (const run of runs) {
+    await writeRunToGit(run, repo);
+  }
 }
 
 main();
