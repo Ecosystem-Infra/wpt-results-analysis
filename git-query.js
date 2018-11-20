@@ -1,5 +1,6 @@
 'use strict';
 
+const fetch = require('node-fetch');
 const Git = require('nodegit');
 
 /*
@@ -12,28 +13,18 @@ function shaToKey(sha) {
   });
 }
 
-function keyToSha(key) {
-  return key.replace(/./g, char => {
-    let chars = char.charCodeAt(0).toString(16);
-    while (chars.length < 4) {
-      chars = '0' + chars;
-    }
-    return chars;
-  });
-}
-
 function oidToKey(oid) {
   return shaToKey(oid.tostrS());
 }
-
-function keyToOid(key) {
-  return Oid.fromString(keyToSha(key));
-}
 */
+
+function oidToKey(oid) {
+  return oid.tostrS();
+}
 
 const resultsCache = new Map;
 
-async function query(repo, tree) {
+async function queryGit(repo, tree) {
   let resolve, reject;
   const walkDone = new Promise((resolve_, reject_) => {
     resolve = resolve_;
@@ -47,7 +38,7 @@ async function query(repo, tree) {
   let counter = 0;
   walker.on('entry', entry => {
     if (!entry.isBlob()) {
-      reject(new Error('y not blob?'));
+      reject(new TypeError('y not blob?'));
     }
 
     const path = entry.path();
@@ -87,38 +78,186 @@ async function query(repo, tree) {
   return counter;
 }
 
+// Map from oid to { "trees": { ... }, "tests": { ... } } objects.
+const treeCache = {};
+// Map from oid to { "status": "OK", ... } objects.
+const testCache = {};
+
+// Read a Git.Tree fully into memory.
+async function readTree(treeOrEntry) {
+  let tree, entry, oid;
+  if (treeOrEntry instanceof Git.Tree) {
+    tree = treeOrEntry;
+    oid = tree.id();
+  } else {
+    if (!(treeOrEntry instanceof Git.TreeEntry) || !treeOrEntry.isTree()) {
+      throw new TypeError('y no Tree or TreeEntry?');
+    }
+    entry = treeOrEntry;
+    oid = entry.id();
+  }
+
+  const key = oidToKey(oid);
+
+  const cachedTree = treeCache[key];
+  if (cachedTree) {
+    return cachedTree;
+  }
+
+  const newTree = {
+    trees: {},
+    tests: {},
+  };
+
+  if (!tree) {
+    tree = await entry.getTree();
+  }
+
+  for (const entry of tree.entries()) {
+    if (entry.isTree()) {
+      newTree.trees[entry.name()] = await readTree(entry);
+    } else if (entry.isBlob()) {
+      let name = entry.name();
+      if (!name.endsWith('.json')) {
+        throw new Error('y not .json?');
+      }
+      name = name.substr(0, name.length - 5);
+      newTree.tests[name] = await readResults(entry);
+    } else {
+      throw new TypeError('y not tree or blob?')
+    }
+  }
+
+  treeCache[key] = newTree;
+  return newTree;
+}
+
+async function readResults(entry) {
+  if (!entry.isBlob()) {
+    throw new TypeError('y no Blob?');
+  }
+
+  const key = oidToKey(entry.id());
+
+  const cachedTest = testCache[key];
+  if (cachedTest) {
+    return cachedTest;
+  }
+
+  const blob = await entry.getBlob();
+  const buffer = blob.content();
+  const results = JSON.parse(buffer);
+
+  testCache[key] = results;
+  return results;
+}
+
+function queryTree(tree) {
+  function walk(tree, visitor, path = '') {
+    const subtrees = tree.trees;
+    for (const name in subtrees) {
+      const subtree = subtrees[name];
+      walk(subtree, visitor, `${path}/${name}`);
+    }
+
+    const tests = tree.tests;
+    for (const name in tests) {
+      const results = tests[name];
+      visitor(path, name, results);
+    }
+  }
+
+  let counter = 0;
+  walk(tree, (path, test, results) => {
+    counter++; // just count
+    /*
+    // look for non-unique subtests names
+    if (results.subtests.length) {
+      const names = new Set;
+      for (const subtest of results.subtests) {
+        names.add(subtest.name);
+      }
+      if (names.size !== results.subtests.length) {
+        //console.log(`${path}/${test}`);
+        counter++;
+      }
+    }
+    */
+  });
+  return counter;
+}
+
+async function getAllRuns() {
+  // TODO: make it all of them with pagination
+  return (await fetch('https://wpt.fyi/api/runs?max-count=500')).json();
+}
+
+async function getAllLocalRuns(repo) {
+  const refs = await repo.getReferences(Git.Reference.TYPE.OID);
+  const tags = refs.filter(ref => ref.isTag());
+  tags.sort();
+
+  return tags.map(tag => {
+    // format is refs/tags/run-6286849043595264
+    const id = Number(tag.toString().split('-')[1]);
+    // run info beyond id isn't available
+    return { id };
+  });
+}
+
+async function getExampleRuns() {
+  return (await fetch('https://wpt.fyi/api/runs?label=experimental&sha=c1faeb4eb5')).json();
+}
+
+async function getGitTree(repo, run) {
+  const commit = await repo.getReferenceCommit(`refs/tags/run-${run.id}`);
+  const tree = await commit.getTree();
+  return tree;
+}
+
 async function main() {
   // Checkout of https://github.com/foolip/wpt-results
   const repo = await Git.Repository.open('wpt-results');
 
-  const tags = (await repo.getReferences(Git.Reference.TYPE.OID))
-  .filter(ref => ref.isTag());
-  const runs = new Map(await Promise.all(tags.map(async tag => {
-    // format is refs/tags/run-6286849043595264
-    const runId = Number(tag.toString().split('-')[1]);
-    const commitId = tag.target();
-    const commit = await Git.Commit.lookup(repo, commitId);
-    const tree = await commit.getTree();
-    return [runId, tree];
-  })));
+  //const runs = await getExampleRuns();
+  const runs = (await getAllLocalRuns(repo)).slice(0, 1);
 
-  console.log(`Found ${runs.size} runs`);
+  console.log(`Found ${runs.length} runs`);
 
-  const RUNS_TO_QUERY = 10;
-  let counter = 0;
   let t0, t1;
+
   t0 = Date.now();
-  for (const [runId, tree] of runs.entries()) {
-    if (counter++ === RUNS_TO_QUERY) {
-      break;
-    }
-    console.log(`Querying run ${runId}`);
-    const result = await query(repo, tree);
+  // Fully parallel loading is slower than loading one run after the other
+  // probably because it's I/O bound. Also uses more memory. But loading a few
+  // in parallel might be faster than this:
+  const trees = new Array(runs.length);
+  for (const i in runs) {
+    const run = runs[i];
+    console.log(`Loading run ${run.id}`);
+    const gitTree = await getGitTree(repo, run);
+    trees[i] = await readTree(gitTree);
+  }
+  t1 = Date.now();
+  console.log(`Loading ${runs.length} runs took ${t1 - t0} ms`);
+
+  t0 = Date.now();
+  for (const i in runs) {
+    const run = runs[i];
+    const tree = trees[i];
+    console.log(`Querying run ${run.id}`);
+    const result = queryTree(tree);
     console.log(result);
   }
   t1 = Date.now();
-  console.log(`Querying ${RUNS_TO_QUERY} runs took ${t1 - t0} ms`);
-  console.log(`${resultsCache.size} objects in cache`);
+  console.log(`Querying ${runs.length} runs took ${t1 - t0} ms`);
+
+  console.log(`${Object.keys(treeCache).length} trees in memory`);
+  console.log(`${Object.keys(testCache).length} tests in memory`);
+
+  if (global.gc) {
+    global.gc();
+  }
+  console.log(process.memoryUsage());
 }
 
 main();
