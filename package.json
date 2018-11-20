@@ -2,7 +2,7 @@
   "dependencies": {
     "flags": "^0.1.3",
     "node-fetch": "^2.2.1",
-    "nodegit": "^0.23.0",
+    "nodegit": "file:../../src/nodegit",
     "shelljs": "^0.8.3"
   }
 }
