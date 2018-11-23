@@ -223,8 +223,9 @@ async function main() {
   const repo = await Git.Repository.open('wpt-results');
 
   //const runs = await getExampleRuns();
-  const RUN_LIMIT = Number(process.argv[2]);
-  const runs = (await getAllLocalRuns(repo)).slice(0, RUN_LIMIT);
+  const LOAD_LIMIT = Number(process.argv[2]);
+  const QUERY_LIMIT = Number(process.argv[3]) || LOAD_LIMIT;
+  const runs = (await getAllLocalRuns(repo)).slice(0, LOAD_LIMIT);
 
   console.log(`Found ${runs.length} runs`);
 
@@ -243,15 +244,20 @@ async function main() {
   console.log(`Loading ${runs.length} runs took ${loadTime} ms`);
 
   t0 = Date.now();
+  let queriedRuns = 0;
   for (const i in runs) {
+    if (i >= QUERY_LIMIT) {
+      break;
+    }
     const run = runs[i];
     const tree = trees[i];
     console.log(`Querying run ${run.id}`);
     const result = queryTree(tree);
     console.log(result);
+    queriedRuns++;
   }
   const queryTime = Date.now() - t0;
-  console.log(`Querying ${runs.length} runs took ${queryTime} ms`);
+  console.log(`Querying ${queriedRuns} runs took ${queryTime} ms`);
 
   const treeCount = Object.keys(treeCache).length;
   const testCount = Object.keys(testCache).length;
@@ -265,7 +271,7 @@ async function main() {
   console.log(memory);
 
   // For copying into spreadsheet
-  console.log(`${RUN_LIMIT}\t${loadTime}\t${queryTime}\t${treeCount}\t${testCount}\t${memory.rss}\t${memory.heapTotal}\t${memory.heapUsed}\t${memory.external}`);
+  console.log(`${LOAD_LIMIT}\t${QUERY_LIMIT}\t${loadTime}\t${queryTime}\t${treeCount}\t${testCount}\t${memory.rss}\t${memory.heapTotal}\t${memory.heapUsed}\t${memory.external}`);
 }
 
 main();
