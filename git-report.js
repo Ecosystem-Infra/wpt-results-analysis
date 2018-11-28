@@ -54,14 +54,50 @@ async function writeReportToGit(report, repo, tagName) {
 
   let blobCache = new Map;
 
+  function isJSONObject(v) {
+    return typeof v === "object" && v !== null && !Array.isArray(v);
+  }
+
+  function replacer(key, value) {
+    if (isJSONObject(this)) {
+      // The keys that can appear for objects are:
+      // ["duration", "expected", "message", "name", "status", "subtests", "test"]
+      // Filter out:
+      //  - "duration" which is different for every run
+      //  - "expected" which will always be "PASS" or "OK" for wpt.fyi runs
+      //  - "test" which is the test name, and will be represented elsewhere
+      if (key === "duration" || key === "expected" || key === "test") {
+        return undefined;
+      }
+    }
+
+    // If the value is null (often for "message"), just omit it.
+    if (value === null) {
+      return undefined;
+    }
+
+    // If the value is an empty array (often for "subtests"), just omit it.
+    if (Array.isArray(value) && value.length === 0) {
+      return undefined;
+    }
+
+    // Ensure that objects keys are sorted, as they would be if using
+    // `json.dumps(value, sort_keys=True)` in Python.
+    if (isJSONObject(value)) {
+      const valueKeys = Object.keys(value);
+      valueKeys.sort();
+      const sortedValue = {};
+      for (const valueKey of valueKeys) {
+        sortedValue[valueKey] = value[valueKey];
+      }
+      return sortedValue;
+    }
+
+    return value;
+  }
+
   for (const test of report.results) {
-    // The keys that can appear for this object or on subtest object are:
-    // ["duration", "expected", "message", "name", "status", "subtests", "test"]
-    // Filter out:
-    //  - "duration" which is different for every run
-    //  - "expected" which will always be "PASS" or "OK" for wpt.fyi runs
-    //  - "test" which is the test name, and would be represented elsewhere
-    const json = JSON.stringify(test, ['message', 'name', 'status', 'subtests']);
+    const json = JSON.stringify(test, replacer);
 
     let blobId = blobCache.get(json);
 
