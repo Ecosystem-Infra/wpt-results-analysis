@@ -95,11 +95,14 @@ async function writeReportToGit(report, repo, tagName) {
 }
 
 async function main() {
-  const repo = await Git.Repository.init('runs.git', 1);
+  // bare checkout of https://github.com/foolip/wpt-results
+  const repo = await Git.Repository.init('wpt-results.git', 1);
 
   for await (const run of runs.iterateRuns()) {
     await writeRunToGit(run, repo);
   }
+
+  // TODO: push runs to GitHub
 }
 
 main();
