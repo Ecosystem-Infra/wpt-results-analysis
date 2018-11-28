@@ -5,7 +5,7 @@ const Git = require('nodegit');
 const runs = require('./lib/runs');
 
 async function writeRunToGit(run, repo) {
-  const tagName = `run-${run.id}`
+  const tagName = `results/${run.id}`;
   try {
     await repo.getReference(`refs/tags/${tagName}`);
     console.log(`Tag ${tagName} already exists, skipping run`);
