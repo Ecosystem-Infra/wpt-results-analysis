@@ -2,11 +2,7 @@
 
 const fetch = require('node-fetch');
 const Git = require('nodegit');
-
-async function getAllRuns() {
-  // TODO: make it all of them with pagination
-  return (await fetch('https://wpt.fyi/api/runs?max-count=500')).json();
-}
+const runs = require('./lib/runs');
 
 async function writeRunToGit(run, repo) {
   const tagName = `run-${run.id}`
@@ -101,8 +97,7 @@ async function writeReportToGit(report, repo, tagName) {
 async function main() {
   const repo = await Git.Repository.init('runs.git', 1);
 
-  const runs = await getAllRuns();
-  for (const run of runs) {
+  for await (const run of runs.iterateRuns()) {
     await writeRunToGit(run, repo);
   }
 }
