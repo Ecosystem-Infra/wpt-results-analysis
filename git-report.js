@@ -131,7 +131,7 @@ async function writeReportToGit(report, repo, tagName) {
 }
 
 async function main() {
-  // bare checkout of https://github.com/foolip/wpt-results
+  // bare clone of https://github.com/foolip/wpt-results
   const repo = await Git.Repository.init('wpt-results.git', 1);
 
   for await (const run of runs.iterateRuns()) {

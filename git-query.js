@@ -1,7 +1,7 @@
 'use strict';
 
-const fetch = require('node-fetch');
 const Git = require('nodegit');
+const { iterateRuns } = require('./lib/runs');
 
 /*
 // Oids are 160 bit (20 byte) SHA-1 hashes. The hex strings would take
@@ -191,8 +191,11 @@ function queryTree(tree) {
 }
 
 async function getAllRuns() {
-  // TODO: make it all of them with pagination
-  return (await fetch('https://wpt.fyi/api/runs?max-count=500')).json();
+  const runs = [];
+  for await (const run of iterateRuns()) {
+    runs.push(run);
+  }
+  return runs;
 }
 
 async function getAllLocalRuns(repo) {
@@ -201,28 +204,24 @@ async function getAllLocalRuns(repo) {
   tags.sort();
 
   return tags.map(tag => {
-    // format is refs/tags/run-6286849043595264
-    const id = Number(tag.toString().split('-')[1]);
+    // format is refs/tags/results/6286849043595264
+    const parts = tag.toString().split('/');
+    const id = Number(parts[parts.length - 1]);
     // run info beyond id isn't available
     return { id };
   });
 }
 
-async function getExampleRuns() {
-  return (await fetch('https://wpt.fyi/api/runs?label=experimental&sha=c1faeb4eb5')).json();
-}
-
 async function getGitTree(repo, run) {
-  const commit = await repo.getReferenceCommit(`refs/tags/run-${run.id}`);
+  const commit = await repo.getReferenceCommit(`refs/tags/results/${run.id}`);
   const tree = await commit.getTree();
   return tree;
 }
 
 async function main() {
-  // Checkout of https://github.com/foolip/wpt-results
-  const repo = await Git.Repository.open('wpt-results');
+  // bare clone of https://github.com/foolip/wpt-results
+  const repo = await Git.Repository.open('wpt-results.git');
 
-  //const runs = await getExampleRuns();
   const LOAD_LIMIT = Number(process.argv[2]);
   const QUERY_LIMIT = Number(process.argv[3]) || LOAD_LIMIT;
   const runs = (await getAllLocalRuns(repo)).slice(0, LOAD_LIMIT);
