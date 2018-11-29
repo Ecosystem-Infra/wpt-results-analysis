@@ -254,7 +254,7 @@ async function main() {
   const trees = new Array(runs.length);
   for (const i in runs) {
     const run = runs[i];
-    console.log(`Loading run ${run.id} (${run.browser_name} ${run.browser_version} @ ${run.revision})`);
+    //console.log(`Loading run ${run.id} (${run.browser_name} ${run.browser_version} @ ${run.revision})`);
     const gitTree = await getGitTree(repo, run);
     trees[i] = await readTree(gitTree);
   }
@@ -262,13 +262,13 @@ async function main() {
   console.log(`Loading ${runs.length} runs took ${loadTime} ms`);
 
   t0 = Date.now();
-  for (const i in runs) {
-    const run = runs[i];
-    const tree = trees[i];
-    const result = queryTree(tree);
-    console.log(result);
+  const results = [];
+  for (const tree of trees) {
+    results.push(queryTree(tree));
   }
   const queryTime = Date.now() - t0;
+  // Log results after loop so that console doesn't dominate the time.
+  console.log(results);
   console.log(`Querying ${runs.length} runs took ${queryTime} ms`);
 
   const treeCount = Object.keys(treeCache).length;
