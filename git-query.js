@@ -169,9 +169,16 @@ function queryTree(tree) {
 
   let counter = 0;
   walk(tree, (path, test, results) => {
-    // count non-OK/PASS tests
+    // count non-OK/PASS statuses
     if (results.status !== 'OK' && results.status !== 'PASS') {
       counter++;
+    }
+    if (results.subtests) {
+      for (const subtest of results.subtests) {
+        if (subtest.status !== 'PASS') {
+          counter++;
+        }
+      }
     }
     /*
     // look for non-unique subtests names
