@@ -228,10 +228,22 @@ async function main() {
 
   console.log(`Found ${runs.length} runs`);
 
+  let t0 = Date.now();
+  for (const i in runs) {
+    const run = runs[i];
+    console.log(`GitQuerying run ${run.id}`);
+    const tree = await getGitTree(repo, run);
+    const result = await queryGit(repo, tree);
+    console.log(result);
+  }
+  const gitQueryTime = Date.now() - t0;
+  console.log(`GitQuerying ${runs.length} runs took ${gitQueryTime} ms`);
+  return;
+
   // Fully parallel loading is slower than loading one run after the other
   // probably because it's I/O bound. Also uses more memory. But loading a few
   // in parallel might be faster than this:
-  let t0 = Date.now();
+  t0 = Date.now();
   const trees = new Array(runs.length);
   for (const i in runs) {
     const run = runs[i];
