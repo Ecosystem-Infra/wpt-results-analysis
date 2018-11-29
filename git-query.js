@@ -1,7 +1,7 @@
 'use strict';
 
 const Git = require('nodegit');
-const { iterateRuns } = require('./lib/runs');
+const { getRuns } = require('./lib/runs');
 
 /*
 // Oids are 160 bit (20 byte) SHA-1 hashes. The hex strings would take
@@ -197,15 +197,7 @@ function queryTree(tree) {
   return counter;
 }
 
-async function getAllRuns() {
-  const runs = [];
-  for await (const run of iterateRuns()) {
-    runs.push(run);
-  }
-  return runs;
-}
-
-async function getAllLocalRuns(repo) {
+async function getLocalRuns(repo) {
   const refs = await repo.getReferences(Git.Reference.TYPE.OID);
   const tags = refs.filter(ref => ref.isTag());
   tags.sort();
@@ -230,10 +222,10 @@ async function main() {
   const repo = await Git.Repository.open('wpt-results.git');
 
   const RUN_LIMIT = Number(process.argv[2]);
-  let runs = await getAllRuns();
+  let runs = await getRuns();
 
   // Filter out runs which we don't have locally.
-  const localRuns = await getAllLocalRuns(repo);
+  const localRuns = await getLocalRuns(repo);
   const localRunsIds = new Set(localRuns.map(run => run.id));
   runs = runs.filter(run => localRunsIds.has(run.id));
 
