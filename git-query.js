@@ -223,9 +223,22 @@ async function main() {
   const repo = await Git.Repository.open('wpt-results.git');
 
   const RUN_LIMIT = Number(process.argv[2]);
-  const runs = (await getAllLocalRuns(repo)).slice(0, RUN_LIMIT);
+  let runs = await getAllRuns();
+
+  // Filter out runs which we don't have locally.
+  const localRuns = await getAllLocalRuns(repo);
+  const localRunsIds = new Set(localRuns.map(run => run.id));
+  runs = runs.filter(run => localRunsIds.has(run.id));
 
   console.log(`Found ${runs.length} runs`);
+
+  // Sort runs by start time, most recent first.
+  runs.sort((a, b) => {
+    return Date.parse(b.time_start) - Date.parse(a.time_start);
+  });
+
+  // Now just keep `RUN_LIMIT` runs.
+  runs = runs.slice(0, RUN_LIMIT);
 
   // Fully parallel loading is slower than loading one run after the other
   // probably because it's I/O bound. Also uses more memory. But loading a few
@@ -234,7 +247,7 @@ async function main() {
   const trees = new Array(runs.length);
   for (const i in runs) {
     const run = runs[i];
-    console.log(`Loading run ${run.id}`);
+    console.log(`Loading run ${run.id} (${run.browser_name} ${run.browser_version} @ ${run.revision})`);
     const gitTree = await getGitTree(repo, run);
     trees[i] = await readTree(gitTree);
     if (global.gc) {
@@ -248,7 +261,6 @@ async function main() {
   for (const i in runs) {
     const run = runs[i];
     const tree = trees[i];
-    console.log(`Querying run ${run.id}`);
     const result = queryTree(tree);
     console.log(result);
   }
