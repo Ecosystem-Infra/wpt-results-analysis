@@ -283,7 +283,7 @@ async function main() {
   console.log(memory);
 
   // For copying into spreadsheet
-  console.log(`${RUN_LIMIT}\t${loadTime}\t${queryTime}\t${treeCount}\t${testCount}\t${memory.rss}\t${memory.heapTotal}\t${memory.heapUsed}\t${memory.external}`);
+  console.log(`${runs.length}\t${loadTime}\t${queryTime}\t${treeCount}\t${testCount}\t${memory.rss}\t${memory.heapTotal}\t${memory.heapUsed}\t${memory.external}`);
 }
 
 main();
