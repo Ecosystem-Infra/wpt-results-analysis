@@ -250,9 +250,6 @@ async function main() {
     console.log(`Loading run ${run.id} (${run.browser_name} ${run.browser_version} @ ${run.revision})`);
     const gitTree = await getGitTree(repo, run);
     trees[i] = await readTree(gitTree);
-    if (global.gc) {
-      global.gc();
-    }
   }
   const loadTime = Date.now() - t0;
   console.log(`Loading ${runs.length} runs took ${loadTime} ms`);
