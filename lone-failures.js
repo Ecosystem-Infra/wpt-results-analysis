@@ -7,7 +7,7 @@ const lib = {
 
 const PRODUCTS = ['chrome', 'firefox', 'safari'];
 
-const USE_EXPERIMENTAL_TARGET = true;
+const INCLUDE_EXPERIMENTAL_TARGET = true;
 
 function isPass(result) {
   return result && (result.status === 'OK' || result.status === 'PASS');
@@ -17,11 +17,9 @@ function isFailure(result) {
   return result && (result.status === 'ERROR' || result.status === 'FAIL');
 }
 
-function isLoneFailure(result, otherResults) {
-  // The "best" definition isn't a given. This one is conservative:
-  return isFailure(result) && otherResults.every(isPass);
-  // This one would include more stuff:
-  //return isFailure(result) && !otherResults.some(isFailure);
+function isLoneFailure(targetResults, otherResults) {
+  // The best definition isn't obvious. This one is conservative:
+  return targetResults.every(isFailure) && otherResults.every(isPass);
 }
 
 function checkProduct(p) {
@@ -38,26 +36,17 @@ async function main() {
   }
   const targetProduct = checkProduct(process.argv[2]);
 
-  const excludeProducts = process.argv.slice(3).map(arg => {
-    if (!arg.startsWith('-')) {
-      throw new Error('exclude products by prefixing with -, e.g. -chrome');
+  const products = [];
+  for (const product of PRODUCTS) {
+    products.push(`${product}[stable]`);
+
+    if (INCLUDE_EXPERIMENTAL_TARGET && product === targetProduct) {
+      // Also include an experimental run to avoid listing things that have
+      // already been fixed. As a side effect, this will remove some flaky
+      // failures.
+      products.push(`${product}[experimental]`);
     }
-    return checkProduct(arg.substr(1));
-  });
-
-  const products = PRODUCTS.filter(product => {
-    return !excludeProducts.includes(product);
-  }).map(product => {
-    let label = 'stable';
-
-    if (USE_EXPERIMENTAL_TARGET && product === targetProduct) {
-      // get experimental of the lone (target) product and stable of everything
-      // else to make results the most useful for that product team.
-      label = 'experimental';
-    }
-
-    return `${product}[${label}]`;
-  });
+  }
 
   const runs = await lib.runs.get({
     products,
@@ -87,8 +76,8 @@ async function main() {
   console.log();
 
   console.log(`${targetProduct}-only failures:`);
-  const single = reports.find(r => r.run_info.product == targetProduct);
-  const others = reports.filter(r => r != single);
+  const targets = reports.filter(r => r.run_info.product === targetProduct);
+  const others = reports.filter(r => r.run_info.product !== targetProduct);
   for (const [test, result] of single.results.entries()) {
     const otherResults = others.map(report => {
       return report.results.get(test) || null;
