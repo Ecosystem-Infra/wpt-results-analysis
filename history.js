@@ -11,7 +11,7 @@ const RESULTS_URL_PREFIX = 'https://storage.googleapis.com/wptd-results/'
 const LOCAL_RESULTS_PATH = '../wptd-results/'
 
 const SCORING_OPTIONS = {
-    normalizePerTest: true,
+    normalizePerTest: false,
     requireHarnessOK: true,
 }
 
