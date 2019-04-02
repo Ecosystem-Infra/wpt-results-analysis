@@ -134,7 +134,7 @@ async function main() {
   // bare clone of https://github.com/foolip/wpt-results
   const repo = await Git.Repository.init('wpt-results.git', 1);
 
-  for await (const run of runs.iterateRuns()) {
+  for await (const run of runs.getIterator({label: 'master'})) {
     await writeRunToGit(run, repo);
   }
 
