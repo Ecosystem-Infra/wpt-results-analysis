@@ -1,56 +1,13 @@
-const fetch = require ('node-fetch');
-const fs = require('fs');
-const util = require('util');
-const readFile = util.promisify(fs.readFile);
-const writeFile = util.promisify(fs.writeFile);
+'use strict';
 
-const PRODUCTS = ['chrome', 'edge', 'firefox', 'safari'];
+const lib = {
+  report: require('./lib/report.js'),
+  runs: require('./lib/runs.js'),
+};
 
-// fetch report and cache
-async function fetchReport(info) {
-  const filename = `cache/${info.id}.json`;
-  const url = info.raw_results_url;
-  let data;
-  try {
-    data = await readFile(filename);
-    //console.info(`cache hit: ${filename}`);
-  } catch(e) {
-    //console.info(`cache miss: ${url}`);
-    data = await (await fetch(url)).text();
-    await writeFile(filename, data);
-  }
-  return JSON.parse(data);
-}
+const PRODUCTS = ['chrome', 'firefox', 'safari'];
 
-// given a wpt report's `results` array-of-arrays representation of test
-// and subtests, produce a map-of-maps instead.
-function dictifyResults(results) {
-  const tests = new Map;
-  for (const entry of results) {
-    const name = entry.test;
-    if (tests.has(name)) {
-      throw new Error(`Duplicate test name: ${name}`);
-    }
-
-    const status = entry.status;
-
-    const subtests = new Map;
-    for (const subentry of entry.subtests) {
-      const subname = subentry.name;
-      if (subtests.has(subname)) {
-        //console.warn(`Duplicate subtest name in ${name}: ${subname}`);
-        // only keep the first clashing subtest
-        continue;
-      }
-      // this could be just a string, but an object allows other code to treat
-      // tests and tests similarly, using result.status;
-      subtests.set(subname, { status: subentry.status });
-    }
-
-    tests.set(name, { status, subtests });
-  }
-  return tests;
-}
+const USE_EXPERIMENTAL_TARGET = true;
 
 function isPass(result) {
   return result && (result.status === 'OK' || result.status === 'PASS');
@@ -62,7 +19,7 @@ function isFailure(result) {
 
 function isLoneFailure(result, otherResults) {
   // The "best" definition isn't a given. This one is conservative:
-  return !isPass(result) && !isFailure(result) && otherResults.every(isPass);
+  return isFailure(result) && otherResults.every(isPass);
   // This one would include more stuff:
   //return isFailure(result) && !otherResults.some(isFailure);
 }
@@ -91,30 +48,31 @@ async function main() {
   const products = PRODUCTS.filter(product => {
     return !excludeProducts.includes(product);
   }).map(product => {
-    // get experimental of the lone (target) product and stable of everything
-    // else to make results the most useful for that product team.
-    const label = product === targetProduct ? 'experimental' : 'stable';
-    return `${product}%5B${label}%5D`;
+    let label = 'stable';
+
+    if (USE_EXPERIMENTAL_TARGET && product === targetProduct) {
+      // get experimental of the lone (target) product and stable of everything
+      // else to make results the most useful for that product team.
+      label = 'experimental';
+    }
+
+    return `${product}[${label}]`;
   });
 
-  const query = `products=${products.join(',')}`;
-  const runsUrl = `https://wpt.fyi/api/runs?${query}&sha=434ca47448`
-  //console.info(`Fetching ${runsUrl}`);
-  //console.info(`Equivalent to: https://wpt.fyi/results/?${query}`);
-  const runsInfo = await (await fetch(runsUrl)).json();
+  const runs = await lib.runs.get({
+    products,
+    label: 'master',
+    aligned: true,
+  });
 
   // needs a lot of memory: use --max-old-space-size=2048
-  const reports = await Promise.all(runsInfo.map(async info => {
-    const report = await fetchReport(info);
-    // modify in place and overwrite to not double memory usage
-    report.results.sort((a, b) => a.test.localeCompare(b.test));
-    report.results = dictifyResults(report.results);
-    return report;
+  const reports = await Promise.all(runs.map(run => {
+    return lib.report.fetch(run, { convertToMap: true });
   }));
 
   let alignedSha;
   console.log('Using these runs:')
-  for (const report of reports) {
+  for (const [i, report] of reports.entries()) {
     const product = report.run_info.product;
     const version = report.run_info.browser_version;
     const sha = report.run_info.revision.substr(0,10);
@@ -124,11 +82,11 @@ async function main() {
       throw new Error(`Expected aligned runs but got ${alignedSha} != ${sha}`);
     }
     const results = report.results;
-    console.log(`* ${product} ${version} @${sha}: ${results.size} tests`);
+    console.log(`* [${product} ${version} @${sha}](https://wpt.fyi/results/?run_id=${runs[i].id}): ${results.size} tests`);
   }
   console.log();
 
-  console.log(`${targetProduct}-only errors:`);
+  console.log(`${targetProduct}-only failures:`);
   const single = reports.find(r => r.run_info.product == targetProduct);
   const others = reports.filter(r => r != single);
   for (const [test, result] of single.results.entries()) {
@@ -145,7 +103,7 @@ async function main() {
 
     // subtest-level lone failures
     for (const [subtest, subresult] of result.subtests.entries()) {
-      otherSubresults = otherResults.map(result => {
+      const otherSubresults = otherResults.map(result => {
         return result && result.subtests.get(subtest) || null;
       });
 
@@ -156,7 +114,7 @@ async function main() {
     }
 
     if (hasLoneFailure) {
-      console.log(`* [${test}](https://wpt.fyi/results${test.replace('?', '%3F')}?${query}&sha=${alignedSha})`);
+      console.log(`* [${test}](https://wpt.fyi/results${test.replace('?', '%3F')}?${runs.map(run => `run_id=${run.id}`).join('&')})`);
     }
   }
 }
