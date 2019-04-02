@@ -100,19 +100,21 @@ async function main() {
         }
 
         //console.log(date, sha, 'OK');
-        const reports = bestRuns.map(run => {
+        const reports = await Promise.all(bestRuns.map(async run => {
             const resultsUrl = run.raw_results_url;
             if (!resultsUrl.startsWith(RESULTS_URL_PREFIX)) {
                 throw new Error(`Unexpected results URL: ${resultsUrl}`);
             }
 
-            const resultsPath = LOCAL_RESULTS_PATH + resultsUrl.substr(RESULTS_URL_PREFIX.length);
-            if (!fs.existsSync(resultsPath)) {
-                throw new Error(`Local copy of results not found: ${resultsPath}`);
+            try {
+                const resultsPath = LOCAL_RESULTS_PATH + resultsUrl.substr(RESULTS_URL_PREFIX.length);
+                return JSON.parse(fs.readFileSync(resultsPath, 'UTF-8'));
+            } catch (e) {
+                // keep going
             }
 
-            return JSON.parse(fs.readFileSync(resultsPath, 'UTF-8'));
-        });
+            return await (await fetch(run.raw_results_url)).json();
+        }));
 
         const scores = metrics.scoreInterop(reports, SCORING_OPTIONS);
         const csvRecord = [date.substr(0, 10), sha.substr(0, 10), ...scores];
