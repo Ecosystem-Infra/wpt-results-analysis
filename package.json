@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "install": "git clone --bare https://github.com/foolip/wpt-results.git || :"
+  },
   "dependencies": {
     "flags": "^0.1.3",
     "node-fetch": "^2.2.1",
