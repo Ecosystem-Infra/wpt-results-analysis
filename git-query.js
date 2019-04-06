@@ -1,7 +1,7 @@
 'use strict';
 
 const Git = require('nodegit');
-const { getRuns } = require('./lib/runs');
+const lib = require('./lib');
 
 /*
 // Oids are 160 bit (20 byte) SHA-1 hashes. The hex strings would take
@@ -222,7 +222,7 @@ async function main() {
   const repo = await Git.Repository.open('wpt-results.git');
 
   const RUN_LIMIT = Number(process.argv[2]);
-  let runs = await getRuns();
+  let runs = await lib.runs.getAll();
 
   // Filter out runs which we don't have locally.
   const localRuns = await getLocalRuns(repo);
