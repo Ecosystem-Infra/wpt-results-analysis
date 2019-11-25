@@ -16,6 +16,7 @@ async function main() {
   let data = await fs.promises.readFile('tagless-runs.txt', 'utf-8');
   let lines = data.split('\n');
 
+  let run_ids = [];
   let before = moment();
   for (const line of lines) {
     if (!line) continue;
@@ -49,13 +50,18 @@ async function main() {
 
     // 2017 runs have a little over 24k subtests.
     if (insertions >= 24000) {
-      console.log(`${run.split('/')[1]}`);
+      console.log(`${run} (${browserName} ${browserVersion}, ${startTime.substring(0, 10)}) has ${insertions} insertions`);
+      run_ids.push(run.split('/')[1]);
     }
 
     //console.log(`${run} (${startTime.substring(0, 10)}) has ${insertions} insertions`);
   }
   let after = moment();
   console.log(`Processed ${lines.length} runs in ${after - before}ms`);
+
+  let output = 'should_be_master_run_ids_2017.txt';
+  console.log(`Writing to ${output}`);
+  await fs.promises.writeFile(output, run_ids.join('\n'), 'utf-8');
 }
 
 main().catch(reason => {
