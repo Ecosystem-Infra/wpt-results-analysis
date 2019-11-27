@@ -21,7 +21,7 @@ flags.parse();
 
 const SHAS_API = 'https://wpt.fyi/api/shas?aligned=true';
 
-async function ReadShasFromFile(output) {
+async function readShasFromFile(output) {
   let shas = new Map();
 
   // Check whether the file exists; on failure just return the empty map.
@@ -42,7 +42,7 @@ async function ReadShasFromFile(output) {
     shas.set(parts[0], parts[1]);
   }
 
-  console.log(`Resuing ${shas.size} SHAs from ${output}`);
+  console.log(`Reusing ${shas.size} SHAs from ${output}`);
   return shas;
 }
 
@@ -53,7 +53,7 @@ async function main() {
   if (!output)
     output = experimental ? 'experimental-shas.txt' : 'stable-shas.txt';
 
-  let shas = await ReadShasFromFile(output);
+  let shas = await readShasFromFile(output);
 
   let labels = '&labels=master,';
   labels += experimental ? 'experimental' : 'stable';
