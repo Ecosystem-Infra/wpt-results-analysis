@@ -9,9 +9,16 @@ const fs = require('fs');
 const Git = require('nodegit');
 const moment = require('moment');
 
+async function getMergePRShas() {
+  let data = await fs.promises.readFile('merge_pr_shas.txt', 'utf-8');
+  return new Set(data.split('\n'));
+}
+
 async function main() {
   // bare clone of https://github.com/foolip/wpt-results
   const repo = await Git.Repository.init('wpt-results.git', 1);
+
+  let merge_pr_shas = await getMergePRShas();
 
   let data = await fs.promises.readFile('tagless-runs.txt', 'utf-8');
   let lines = data.split('\n');
@@ -45,7 +52,7 @@ async function main() {
     let commit = await repo.getReferenceCommit(run.tag);
     let diffList = await commit.getDiff();
     if (diffList.length != 1) {
-      throw new Error(`${run} has diffList of length ${diffList.length} (expected 1)`);
+      throw new Error(`${run.tag} has diffList of length ${diffList.length} (expected 1)`);
     }
 
     // This is the slow bit. Takes about a second per run.
@@ -64,9 +71,17 @@ async function main() {
 
   let run_ids = [];
   for (const run of runs) {
-    console.log(`${run.tag} (${run.browserName} ${run.browserVersion}, ${run.startTime.substring(0, 10)}, ${run.sha}) has ${run.insertions} insertions`);
-    // 2017 runs have a little over 24k subtests.
-    if (run.insertions >= 24000) {
+    const in_merge_pr_shas = merge_pr_shas.has(run.sha);
+    console.log(`${run.tag} (${run.browserName} ${run.browserVersion}, ${run.startTime.substring(0, 10)}, ${run.sha}) has ${run.insertions} insertions` +
+        (!in_merge_pr_shas ? ' <-- NOT IN MERGE PR SHAS' : ''));
+
+    // Filter for in merge_pr_shas.
+    if (!in_merge_pr_shas) {
+      continue;
+    }
+
+    // 2017 runs have a little over 23k subtests.
+    if (run.insertions >= 23000) {
       run_ids.push(run.tag.split('/')[1]);
     }
   }
