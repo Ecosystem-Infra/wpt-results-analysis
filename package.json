@@ -9,7 +9,7 @@
   },
   "scripts": {
     "install": "git clone --bare https://github.com/stephenmcgruer/wpt-results.git && git --git-dir=wpt-results.git remote set-url --push origin git@github.com:stephenmcgruer/wpt-results.git || git --git-dir=wpt-results.git fetch --tags",
-    "lint": "jshint lib/browser-specific.js",
+    "lint": "jshint browser-specific-failures.js lib/browser-specific.js",
     "test": "npm run lint && npm run test-unit",
     "test-unit": "mocha -u bdd ./test/*.js"
   },
