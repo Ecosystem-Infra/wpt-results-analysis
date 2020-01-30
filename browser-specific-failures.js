@@ -187,8 +187,7 @@ async function main() {
       `${after - before} ms`);
 
   // We're ready to score the runs now!
-  console.log('Calculating browser-specific failures for the runs ' +
-      '(takes ~1 minute/year)');
+  console.log('Calculating browser-specific failures for the runs');
   before = Date.now();
   const dateToScores = new Map();
   for (const [date, runs] of alignedRuns.entries()) {
