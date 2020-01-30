@@ -96,7 +96,7 @@ async function fetchAlignedRunsFromServer(products, from, to, experimental) {
       const response = await fetch(url);
       // Many days do not have an aligned set of runs, but we always write to
       // the cache to speed up future executions of this code.
-      runs = await response.json() || [];
+      runs = await response.json();
       await fs.promises.writeFile(cacheFile, JSON.stringify(runs));
     }
 

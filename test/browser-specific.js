@@ -46,31 +46,43 @@ function addSubtest(tree, testPath, subtest, status) {
   test.subtests.push({ name: subtest, status });
 }
 
-describe('browser-specific.js', () => { describe('Browser Validation', () => {
-  it('should not throw if the browser list is correct', () => { let runs = [ {
-    browser_name: 'chrome', tree: createEmptyTree() }, { browser_name:
-      'firefox', tree: createEmptyTree() }, ]; let expectedBrowsers = new
-      Set(['chrome', 'firefox']); assert.doesNotThrow(() => {
+describe('browser-specific.js', () => {
+  describe('Browser Validation', () => {
+    it('should not throw if the browser list is correct', () => {
+      let runs = [
+          { browser_name: 'chrome', tree: createEmptyTree() },
+          { browser_name: 'firefox', tree: createEmptyTree() },
+      ];
+      let expectedBrowsers = new Set(['chrome', 'firefox']);
+      assert.doesNotThrow(() => {
         browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
-      }); });
+      });
+    });
 
-    it('should throw if an expected browser is missing', () => { let runs = [];
-      let expectedBrowsers = new Set(['chrome', 'firefox']); assert.throws(() =>
-          { browserSpecific.scoreBrowserSpecificFailures(runs,
-              expectedBrowsers); });
+    it('should throw if an expected browser is missing', () => {
+      let runs = [];
+      let expectedBrowsers = new Set(['chrome', 'firefox']);
+      assert.throws(() => {
+        browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
+      });
 
-      runs = [ { browser_name: 'chrome', tree: createEmptyTree() }, {
-        browser_name: 'firefox', tree: createEmptyTree() }, ]; expectedBrowsers
-        = new Set(['chrome', 'firefox', 'safari']); assert.throws(() => {
-          browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
-        }); });
+      runs = [
+          { browser_name: 'chrome', tree: createEmptyTree() },
+          { browser_name: 'firefox', tree: createEmptyTree() },
+      ];
+      expectedBrowsers = new Set(['chrome', 'firefox', 'safari']);
+      assert.throws(() => {
+        browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
+      });
+    });
 
-    it('should throw if an unexpected browser is present', () => { let runs = [
-      { browser_name: 'chrome', tree: createEmptyTree() }, { browser_name:
-                                                             'firefox', tree:
-                                                                 createEmptyTree()
-                                                           }, ]; let
-      expectedBrowsers = new Set; assert.throws(() => {
+    it('should throw if an unexpected browser is present', () => {
+      let runs = [
+          { browser_name: 'chrome', tree: createEmptyTree() },
+          { browser_name: 'firefox', tree: createEmptyTree() },
+      ];
+      let expectedBrowsers = new Set;
+      assert.throws(() => {
         browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
       });
 
