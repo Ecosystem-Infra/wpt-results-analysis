@@ -5,34 +5,39 @@
  * time.
  */
 
-const fetch = require ('node-fetch');
-const fs = require ('fs');
+const fetch = require('node-fetch');
+const fs = require('fs');
 const flags = require('flags');
 const Git = require('nodegit');
 const lib = require('./lib');
 const moment = require('moment');
 
 flags.defineString('from', '2018-07-01', 'Starting date (inclusive)');
-flags.defineString('to', moment().format('YYYY-MM-DD'), 'Ending date (exclusive)');
-flags.defineStringList('products', ['chrome', 'firefox', 'safari'], 'Browsers to compare. Must match the products used on wpt.fyi');
-flags.defineString('output', null, 'Output CSV file to write to. Defaults to {stable, experimental}-browser-specific-failures.csv');
-flags.defineBoolean('experimental', false, 'Calculate metrics for experimental runs.');
+flags.defineString('to', moment().format('YYYY-MM-DD'),
+    'Ending date (exclusive)');
+flags.defineStringList('products', ['chrome', 'firefox', 'safari'],
+    'Browsers to compare. Must match the products used on wpt.fyi');
+flags.defineString('output', null,
+    'Output CSV file to write to. Defaults to ' +
+    '{stable, experimental}-browser-specific-failures.csv');
+flags.defineBoolean('experimental', false,
+    'Calculate metrics for experimental runs.');
 flags.parse();
 
 // See documentation of advanceDateToSkipBadDataIfNecessary. These ranges are
 // inclusive, exclusive.
 const STABLE_BAD_RANGES = [
-    // This was some form of Safari outage, undiagnosed but a clear erroneous
-    // spike in failure rates.
-    [ moment("2019-02-06"), moment("2019-03-04") ],
-    // This was a safaridriver outage, resolved by
-    // https://github.com/web-platform-tests/wpt/pull/18585
-    [ moment("2019-06-27"), moment("2019-08-23") ],
+  // This was some form of Safari outage, undiagnosed but a clear erroneous
+  // spike in failure rates.
+  [moment('2019-02-06'), moment('2019-03-04')],
+  // This was a safaridriver outage, resolved by
+  // https://github.com/web-platform-tests/wpt/pull/18585
+  [moment('2019-06-27'), moment('2019-08-23')],
 ];
 const EXPERIMENTAL_BAD_RANGES = [
-    // This was a safaridriver outage, resolved by
-    // https://github.com/web-platform-tests/wpt/pull/18585
-    [ moment("2019-06-27"), moment("2019-08-23") ],
+  // This was a safaridriver outage, resolved by
+  // https://github.com/web-platform-tests/wpt/pull/18585
+  [moment('2019-06-27'), moment('2019-08-23')],
 ];
 
 // There have been periods where results cannot be considered valid and
@@ -44,7 +49,8 @@ function advanceDateToSkipBadDataIfNecessary(date, experimental) {
   const ranges = experimental ? EXPERIMENTAL_BAD_RANGES : STABLE_BAD_RANGES;
   for (const range of ranges) {
     if (date >= range[0] && date < range[1]) {
-      console.log(`Skipping from ${date.format('YYYY-MM-DD')} to ${range[1].format('YYYY-MM-DD')} due to bad data`);
+      console.log(`Skipping from ${date.format('YYYY-MM-DD')} to ` +
+          `${range[1].format('YYYY-MM-DD')} due to bad data`);
       return range[1];
     }
   }
@@ -68,15 +74,16 @@ async function fetchAlignedRunsFromServer(products, from, to, experimental) {
   }
   const runsUri = `${RUNS_URI}${params}`;
 
-  console.log(`Fetching aligned runs from ${from.format('YYYY-MM-DD')} to ${to.format('YYYY-MM-DD')}`);
+  console.log(`Fetching aligned runs from ${from.format('YYYY-MM-DD')} ` +
+      `to ${to.format('YYYY-MM-DD')}`);
 
   let cachedCount = 0;
-  let before = moment();
+  const before = moment();
   const alignedRuns = new Map();
   while (from < to) {
-    const formatted_from = from.format('YYYY-MM-DD');
+    const formattedFrom = from.format('YYYY-MM-DD');
     from.add(1, 'days');
-    const formatted_to = from.format('YYYY-MM-DD');
+    const formattedTo = from.format('YYYY-MM-DD');
 
     // We advance the date (if necessary) before doing anything more, so that
     // code later in the loop body can just 'continue' without checking.
@@ -85,14 +92,16 @@ async function fetchAlignedRunsFromServer(products, from, to, experimental) {
     // Attempt to read the runs from the cache.
     // TODO: Consider https://github.com/tidoust/fetch-filecache-for-crawling
     let runs;
-    const cacheFile = `cache/${label}-${products.join('-')}-runs-${formatted_from}.json`;
+    const cacheFile =
+        `cache/${label}-${products.join('-')}-runs-${formattedFrom}.json`;
     try {
       runs = JSON.parse(await fs.promises.readFile(cacheFile));
-      if (runs.length)
+      if (runs.length) {
         cachedCount++;
+      }
     } catch (e) {
       // No cache hit; load from the server instead.
-      let url = `${runsUri}&from=${formatted_from}&to=${formatted_to}`;
+      const url = `${runsUri}&from=${formattedFrom}&to=${formattedTo}`;
       const response = await fetch(url);
       // Many days do not have an aligned set of runs, but we always write to
       // the cache to speed up future executions of this code.
@@ -105,13 +114,15 @@ async function fetchAlignedRunsFromServer(products, from, to, experimental) {
     }
 
     if (runs.length !== products.length) {
-      throw new Error(`Fetched ${runs.length} runs, expected ${products.length}`);
+      throw new Error(
+          `Fetched ${runs.length} runs, expected ${products.length}`);
     }
 
-    alignedRuns.set(formatted_from, runs);
+    alignedRuns.set(formattedFrom, runs);
   }
-  let after = moment();
-  console.log(`Fetched ${alignedRuns.size} sets of runs in ${after - before} ms (${cachedCount} cached)`);
+  const after = moment();
+  console.log(`Fetched ${alignedRuns.size} sets of runs in ` +
+      `${after - before} ms (${cachedCount} cached)`);
 
   return alignedRuns;
 }
@@ -126,16 +137,18 @@ async function main() {
 
   const repo = await Git.Repository.open('wpt-results.git');
 
-  // First, grab aligned runs from the server for the dates we are interested in.
+  // First, grab aligned runs from the server for the dates that we are
+  // interested in.
   const from = moment(flags.get('from'));
   const to = moment(flags.get('to'));
   const experimental = flags.get('experimental');
-  const alignedRuns = await fetchAlignedRunsFromServer(products, from, to, experimental);
+  const alignedRuns = await fetchAlignedRunsFromServer(
+      products, from, to, experimental);
 
   // Verify that we have data for the fetched runs in the wpt-results repo.
   console.log('Getting local set of run ids from repo');
   let before = Date.now();
-  let localRunIds = await lib.results.getLocalRunIds(repo);
+  const localRunIds = await lib.results.getLocalRunIds(repo);
   let after = Date.now();
   console.log(`Found ${localRunIds.size} ids (took ${after - before} ms)`);
 
@@ -145,7 +158,7 @@ async function main() {
       if (!localRunIds.has(run.id)) {
         // If you see this, you probably need to run git-write.js or just update
         // your wpt-results.git repo; see the README.md.
-        console.error(`ERROR: run ${run.id} missing from local git repo (date=${date})`);
+        console.error(`Run ${run.id} missing from local git repo (${date})`);
         hadErrors = true;
       }
     }
@@ -163,22 +176,26 @@ async function main() {
   for (const runs of alignedRuns.values()) {
     for (const run of runs) {
       // Just in case someone ever adds a 'tree' field to the JSON.
-      if (run.tree)
-        throw new Error('Run JSON already contains "tree" field; code needs changed.');
+      if (run.tree) {
+        throw new Error('Run JSON contains "tree" field; code needs changed.');
+      }
       run.tree = await lib.results.getGitTree(repo, run);
     }
   }
   after = Date.now();
-  console.log(`Loading ${alignedRuns.size} sets of runs took ${after - before} ms`);
+  console.log(`Loading ${alignedRuns.size} sets of runs took ` +
+      `${after - before} ms`);
 
   // We're ready to score the runs now!
-  console.log(`Calculating browser-specific failures for the runs (takes ~1 minute/year)`);
+  console.log('Calculating browser-specific failures for the runs ' +
+      '(takes ~1 minute/year)');
   before = Date.now();
   const dateToScores = new Map();
   for (const [date, runs] of alignedRuns.entries()) {
     // The SHA should be the same for all runs, so just grab the first.
     const sha = runs[0].revision;
-    const scores = lib.browserSpecific.scoreBrowserSpecificFailures(runs, new Set(products));
+    const scores = lib.browserSpecific.scoreBrowserSpecificFailures(
+        runs, new Set(products));
     dateToScores.set(date, {sha, scores});
   }
   after = Date.now();
@@ -197,18 +214,18 @@ async function main() {
   // ES6 maps iterate in insertion order, and we initially inserted in date
   // order, so we can just iterate |dateToScores|.
   for (const [date, shaAndScores] of dateToScores) {
-    let sha = shaAndScores.sha;
-    let scores = shaAndScores.scores;
+    const sha = shaAndScores.sha;
+    const scores = shaAndScores.scores;
     if (!scores) {
       console.log(`ERROR: ${date} had no scores`);
       continue;
     }
     const csvRecord = [
-        sha.substr(0, 10),
-        date.substr(0, 10),
-        scores.get('chrome'),
-        scores.get('firefox'),
-        scores.get('safari')
+      sha.substr(0, 10),
+      date.substr(0, 10),
+      scores.get('chrome'),
+      scores.get('firefox'),
+      scores.get('safari'),
     ];
     data += csvRecord.join(',') + '\n';
   }
