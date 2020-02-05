@@ -152,17 +152,62 @@ describe('browser-specific.js', () => {
       let scores = browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
       assert.deepEqual(scores, new Map([['chrome', 0], ['firefox', 1]]));
 
-      // At the test level, we check for !pass, so count timeouts as failures.
-      // TODO: Determine exact criteria for a BSF at a test level.
-      chromeTree = new TreeBuilder().addTest('TestB', 'TIMEOUT').build();
-      firefoxTree = new TreeBuilder().addTest('TestB', 'PASS').build();
+      // The following are all treated as failure: FAIL, ERROR, TIMEOUT, CRASH.
+      chromeTree = new TreeBuilder()
+          .addTest('TestA', 'ERROR')
+          .addTest('TestB', 'TIMEOUT')
+          .addTest('TestC', 'CRASH')
+          .build();
+      firefoxTree = new TreeBuilder()
+          .addTest('TestA', 'PASS')
+          .addTest('TestB', 'PASS')
+          .addTest('TestC', 'PASS')
+          .build();
       runs = [
           { browser_name: 'chrome', tree: chromeTree },
           { browser_name: 'firefox', tree: firefoxTree },
       ];
 
       scores = browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
-      assert.deepEqual(scores, new Map([['chrome', 1], ['firefox', 0]]));
+      assert.deepEqual(scores, new Map([['chrome', 3], ['firefox', 0]]));
+
+      // There are also 'neutral' statuses (PRECONDITION_FAILED, SKIP), which
+      // mean a test can never be a browser-specific fail. Make sure to test
+      // that a neutral status is not treated as either a PASS or FAIL.
+      chromeTree = new TreeBuilder()
+          .addTest('TestA', 'PASS')
+          .addTest('TestB', 'FAIL')
+          .addTest('TestC', 'PASS')
+          .addTest('TestD', 'FAIL')
+          .build();
+      firefoxTree = new TreeBuilder()
+          .addTest('TestA', 'PRECONDITION_FAILED')
+          .addTest('TestB', 'PRECONDITION_FAILED')
+          .addTest('TestC', 'SKIP')
+          .addTest('TestD', 'SKIP')
+          .build();
+      runs = [
+          { browser_name: 'chrome', tree: chromeTree },
+          { browser_name: 'firefox', tree: firefoxTree },
+      ];
+
+      scores = browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
+      assert.deepEqual(scores, new Map([['chrome', 0], ['firefox', 0]]));
+    });
+
+    it('should throw for an unknown top-level test status', () => {
+      const expectedBrowsers = new Set(['chrome', 'firefox']);
+
+      let chromeTree = new TreeBuilder().addTest('TestA', 'FOO').build();
+      let firefoxTree = new TreeBuilder().addTest('TestA', 'PASS').build();
+      let runs = [
+          { browser_name: 'chrome', tree: chromeTree },
+          { browser_name: 'firefox', tree: firefoxTree },
+      ];
+
+      assert.throws(() => {
+        browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
+      });
     });
 
     it('should traverse subtrees correctly', () => {
@@ -206,25 +251,47 @@ describe('browser-specific.js', () => {
       let scores = browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
       assert.deepEqual(scores, new Map([['chrome', 0.25], ['firefox', 0.5]]));
 
-      // At the subtest level we check for exactly 'fail', so timeouts are
-      // considered passes.
-      // TODO: Determine exact criteria for a BSF at a subtest level.
+      // TIMEOUT and ERROR are also considered failure modes.
       chromeTree = new TreeBuilder()
           .addTest('TestA', 'OK')
           .addSubtest('TestA', 'test 1', 'TIMEOUT')
-          .addSubtest('TestA', 'test 2', 'TIMEOUT')
+          .addSubtest('TestA', 'test 2', 'ERROR')
           .build();
       firefoxTree = new TreeBuilder()
           .addTest('TestA', 'OK')
           .addSubtest('TestA', 'test 1', 'PASS')
-          .addSubtest('TestA', 'test 2', 'FAIL')
+          .addSubtest('TestA', 'test 2', 'PASS')
           .build();
       runs = [
           { browser_name: 'chrome', tree: chromeTree },
           { browser_name: 'firefox', tree: firefoxTree },
       ];
       scores = browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
-      assert.deepEqual(scores, new Map([['chrome', 0], ['firefox', 0.5]]));
+      assert.deepEqual(scores, new Map([['chrome', 1], ['firefox', 0]]));
+
+      // There are also 'neutral' statuses (PRECONDITION_FAILED, SKIP), which
+      // mean a subtest can never be a browser-specific fail. Make sure to test
+      // that a neutral status is not treated as either a PASS or FAIL.
+      chromeTree = new TreeBuilder()
+          .addTest('TestA', 'OK')
+          .addSubtest('TestA', 'test 1', 'PRECONDITION_FAILED')
+          .addSubtest('TestA', 'test 2', 'PRECONDITION_FAILED')
+          .addSubtest('TestA', 'test 3', 'SKIP')
+          .addSubtest('TestA', 'test 4', 'SKIP')
+          .build();
+      firefoxTree = new TreeBuilder()
+          .addTest('TestA', 'OK')
+          .addSubtest('TestA', 'test 1', 'PASS')
+          .addSubtest('TestA', 'test 2', 'PASS')
+          .addSubtest('TestA', 'test 3', 'PASS')
+          .addSubtest('TestA', 'test 4', 'PASS')
+          .build();
+      runs = [
+          { browser_name: 'chrome', tree: chromeTree },
+          { browser_name: 'firefox', tree: firefoxTree },
+      ];
+      scores = browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
+      assert.deepEqual(scores, new Map([['chrome', 0], ['firefox', 0]]));
     });
 
     it('should ignore tests that arent in all browsers', () => {

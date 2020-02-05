@@ -193,9 +193,14 @@ async function main() {
   for (const [date, runs] of alignedRuns.entries()) {
     // The SHA should be the same for all runs, so just grab the first.
     const sha = runs[0].revision;
-    const scores = lib.browserSpecific.scoreBrowserSpecificFailures(
-        runs, new Set(products));
-    dateToScores.set(date, {sha, scores});
+    try {
+      const scores = lib.browserSpecific.scoreBrowserSpecificFailures(
+          runs, new Set(products));
+      dateToScores.set(date, {sha, scores});
+    } catch (e) {
+      e.message += `\n\tRuns: ${runs.map(r => r.id)}`;
+      throw e;
+    }
   }
   after = Date.now();
   console.log(`Done scoring (took ${after - before} ms)`);
