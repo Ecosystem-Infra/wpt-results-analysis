@@ -337,14 +337,16 @@ describe('browser-specific.js', () => {
       assert.deepEqual(scores, new Map([['chrome', 0], ['firefox', 0]]));
     });
 
-    it('should ignore subtests that arent in all browsers', () => {
+    it('should handle subtests that arent in all browsers', () => {
       const expectedBrowsers = new Set(['chrome', 'firefox']);
 
-      // Subtests that aren't in some browser do not count for browser-specific
-      // failures; this includes not be counted for the denominator.
+      // We take the union of results when looking at subtests. This means that
+      // a missing subtest can be a browser-specific failure, if all other
+      // browsers have a passing result for it. Even if they don't, it still
+      // counts for the denominator.
       let chromeTree = new TreeBuilder()
           .addTest('TestA', 'OK')
-          .addSubtest('TestA', 'test 1', 'FAIL')
+          .addSubtest('TestA', 'test 1', 'PASS')
           .addSubtest('TestA', 'test 2', 'FAIL')
           .addSubtest('TestA', 'test 3', 'PASS')
           .build();
@@ -361,7 +363,7 @@ describe('browser-specific.js', () => {
       ];
 
       let scores = browserSpecific.scoreBrowserSpecificFailures(runs, expectedBrowsers);
-      assert.deepEqual(scores, new Map([['chrome', 0.5], ['firefox', 0]]));
+      assert.deepEqual(scores, new Map([['chrome', 0.6], ['firefox', 0.2]]));
     });
 
     it('should handle the case where one browser has no subtests for a test', () => {
