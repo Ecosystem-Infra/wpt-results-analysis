@@ -192,7 +192,7 @@ async function main() {
   const dateToScores = new Map();
   for (const [date, runs] of alignedRuns.entries()) {
     // The SHA should be the same for all runs, so just grab the first.
-    const sha = runs[0].revision;
+    const sha = runs[0].full_revision_hash;
     try {
       const scores = lib.browserSpecific.scoreBrowserSpecificFailures(
           runs, new Set(products));
@@ -225,7 +225,7 @@ async function main() {
       continue;
     }
     const csvRecord = [
-      sha.substr(0, 10),
+      sha,
       date.substr(0, 10),
       scores.get('chrome'),
       scores.get('firefox'),

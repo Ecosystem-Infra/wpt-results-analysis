@@ -1,7 +1,7 @@
 'use strict';
 
-var assert = require('chai').assert,
-    browserSpecific = require('../lib/browser-specific');
+const assert = require('chai').assert,
+      browserSpecific = require('../lib/browser-specific');
 
 function createEmptyTree() {
   return {
@@ -20,10 +20,10 @@ class TreeBuilder {
   build() {
     // Time to add all the unique ids.
     function addUniqueIds(node) {
-      node.id = uniqueId++;
+      node.id = ++uniqueId;
 
       for (let name in node.tests) {
-        node.tests[name].id = uniqueId++;
+        node.tests[name].id = ++uniqueId;
       }
       for (let dir in node.trees) {
         addUniqueIds(node.trees[dir]);
