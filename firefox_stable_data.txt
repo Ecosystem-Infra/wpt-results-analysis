@@ -1,0 +1,2210 @@
+Comparing WPT and BCD data for firefox, version: 75.0 (experimental flags ? false)
+
+Checking WPT results data.
+----------------------
+
+CryptoKey: inconsistent support information.
+CryptoKey.type: inconsistent support information.
+CryptoKey.extractable: inconsistent support information.
+CryptoKey.algorithm: inconsistent support information.
+CryptoKey.usages: inconsistent support information.
+WorkletAnimation: inconsistent support information.
+BackgroundFetchEvent: inconsistent support information.
+BackgroundFetchUpdateUIEvent: inconsistent support information.
+CookieChangeEvent: inconsistent support information.
+ExtendableCookieChangeEvent: inconsistent support information.
+PerformanceEventTiming: inconsistent support information.
+EventCounts: inconsistent support information.
+PerformanceEventTiming: inconsistent support information.
+EventCounts: inconsistent support information.
+PerformanceEventTiming: inconsistent support information.
+EventCounts: inconsistent support information.
+AudioTrackList: inconsistent support information.
+AudioTrack: inconsistent support information.
+VideoTrackList: inconsistent support information.
+VideoTrack: inconsistent support information.
+HTMLDialogElement: inconsistent support information.
+CanvasGradient: inconsistent support information.
+CanvasGradient.addColorStop: inconsistent support information.
+CanvasPattern: inconsistent support information.
+TextMetrics: inconsistent support information.
+TextMetrics.width: inconsistent support information.
+TextMetrics.actualBoundingBoxLeft: inconsistent support information.
+TextMetrics.actualBoundingBoxRight: inconsistent support information.
+TextMetrics.actualBoundingBoxAscent: inconsistent support information.
+TextMetrics.actualBoundingBoxDescent: inconsistent support information.
+ElementInternals: inconsistent support information.
+ApplicationCache: inconsistent support information.
+SharedWorker: inconsistent support information.
+SharedWorker.port: inconsistent support information.
+SharedWorker.onerror: inconsistent support information.
+External: inconsistent support information.
+CanMakePaymentEvent: inconsistent support information.
+PaymentRequestEvent: inconsistent support information.
+PermissionStatus: inconsistent support information.
+PermissionStatus.state: inconsistent support information.
+PermissionStatus.onchange: inconsistent support information.
+Permissions: inconsistent support information.
+Permissions.query: inconsistent support information.
+PushSubscriptionChangeEvent: inconsistent support information.
+WebGLUniformLocation: inconsistent support information.
+WebGLActiveInfo: inconsistent support information.
+WebGLActiveInfo.size: inconsistent support information.
+WebGLActiveInfo.type: inconsistent support information.
+WebGLActiveInfo.name: inconsistent support information.
+WebGLShaderPrecisionFormat: inconsistent support information.
+WebGLShaderPrecisionFormat.rangeMin: inconsistent support information.
+WebGLShaderPrecisionFormat.rangeMax: inconsistent support information.
+WebGLShaderPrecisionFormat.precision: inconsistent support information.
+WebGLRenderingContext: inconsistent support information.
+WebGLRenderingContext.bufferData: inconsistent support information.
+WebGLContextEvent: inconsistent support information.
+WebGLContextEvent.statusMessage: inconsistent support information.
+
+
+Cross-comparing WPT to BCD.
+----------------------
+
+ADD: api.SyncEvent.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: ServiceWorkerRegistration.cookies
+ADD-DATA: api.ServiceWorkerRegistration.paymentManager.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.ServiceWorkerRegistration.navigationPreload.__compat.support.firefox.version_added (44) does not match WPT (false)
+MISSING-FEATURE: ServiceWorkerGlobalScope.cookieStore
+MISSING-FEATURE: ServiceWorkerGlobalScope.oncookiechange
+ADD-DATA: api.ServiceWorkerGlobalScope.oncanmakepayment.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.ServiceWorkerGlobalScope.onpaymentrequest.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: ServiceWorkerGlobalScope.serviceWorker
+ADD-DATA: api.ServiceWorkerGlobalScope.onmessageerror.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: WorkerGlobalScope.indexedDB
+MISSING-FEATURE: WorkerGlobalScope.crypto
+MISSING-FEATURE: WorkerGlobalScope.fetch
+MISSING-FEATURE: WorkerGlobalScope.addressSpace
+MISSING-FEATURE: WorkerGlobalScope.onrejectionhandled
+MISSING-FEATURE: WorkerGlobalScope.onunhandledrejection
+MISSING-FEATURE: WorkerGlobalScope.origin
+MISSING-FEATURE: WorkerGlobalScope.btoa
+MISSING-FEATURE: WorkerGlobalScope.atob
+MISSING-FEATURE: WorkerGlobalScope.setTimeout
+MISSING-FEATURE: WorkerGlobalScope.clearTimeout
+MISSING-FEATURE: WorkerGlobalScope.setInterval
+MISSING-FEATURE: WorkerGlobalScope.clearInterval
+MISSING-FEATURE: WorkerGlobalScope.queueMicrotask
+MISSING-FEATURE: WorkerGlobalScope.createImageBitmap
+MISSING-FEATURE: WorkerGlobalScope.originPolicyIds
+MISSING-FEATURE: WorkerGlobalScope.isSecureContext
+ADD-DATA: api.Blob.slice.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.File.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: FileReader.onloadstart
+ADD-DATA: api.URL.origin.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.URL.pathname.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.URL.search.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBRequest.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBRequest.result.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBRequest.error.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBRequest.source.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBRequest.transaction.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBRequest.readyState.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBRequest.onsuccess.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBRequest.onerror.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBOpenDBRequest.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBOpenDBRequest.onblocked.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBOpenDBRequest.onupgradeneeded.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBVersionChangeEvent.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBVersionChangeEvent.oldVersion.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBVersionChangeEvent.newVersion.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBFactory.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBFactory.open.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBFactory.deleteDatabase.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBFactory.cmp.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBDatabase.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBDatabase.name.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBDatabase.version.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBDatabase.objectStoreNames.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBDatabase.transaction.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBDatabase.close.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBDatabase.createObjectStore.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBDatabase.deleteObjectStore.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBDatabase.onabort.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBDatabase.onerror.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBDatabase.onversionchange.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBObjectStore.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.name.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.keyPath.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.indexNames.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.transaction.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.autoIncrement.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.put.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.add.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.delete.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.clear.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.get.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.count.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.openCursor.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.index.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.createIndex.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBObjectStore.deleteIndex.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBIndex.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBIndex.name.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBIndex.objectStore.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBIndex.keyPath.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBIndex.multiEntry.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBIndex.unique.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBIndex.get.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBIndex.getKey.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBIndex.count.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBIndex.openCursor.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBIndex.openKeyCursor.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBKeyRange.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBKeyRange.lower.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBKeyRange.upper.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBKeyRange.lowerOpen.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBKeyRange.upperOpen.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBKeyRange.only.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBKeyRange.lowerBound.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBKeyRange.upperBound.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBKeyRange.bound.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBCursor.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBCursor.source.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBCursor.direction.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBCursor.key.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBCursor.primaryKey.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBCursor.advance.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBCursor.continue.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBCursor.continuePrimaryKey.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBCursor.update.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBCursor.delete.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBCursorWithValue.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBCursorWithValue.value.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IDBTransaction.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBTransaction.mode.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: IDBTransaction.durability
+ADD-DATA: api.IDBTransaction.db.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBTransaction.error.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBTransaction.objectStore.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBTransaction.abort.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBTransaction.onabort.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBTransaction.oncomplete.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IDBTransaction.onerror.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Window.indexedDB
+MISSING-FEATURE: Window.onorientationchange
+MISSING-FEATURE: Window.cookieStore
+MISSING-FEATURE: Window.onanimationstart
+MISSING-FEATURE: Window.onanimationiteration
+MISSING-FEATURE: Window.onanimationend
+MISSING-FEATURE: Window.onanimationcancel
+MISSING-FEATURE: Window.ontransitionrun
+MISSING-FEATURE: Window.ontransitionstart
+MISSING-FEATURE: Window.ontransitionend
+MISSING-FEATURE: Window.ontransitioncancel
+ADD-DATA: api.Window.innerWidth.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Window.innerHeight.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Window.scrollX.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Window.scrollY.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Window.fetch
+ADD-DATA: api.Window.customElements.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Window.closed
+MISSING-FEATURE: Window.applicationCache
+ADD-DATA: api.Window.postMessage.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Window.captureEvents
+MISSING-FEATURE: Window.onabort
+MISSING-FEATURE: Window.onauxclick
+MISSING-FEATURE: Window.onblur
+MISSING-FEATURE: Window.oncancel
+MISSING-FEATURE: Window.oncanplay
+MISSING-FEATURE: Window.oncanplaythrough
+MISSING-FEATURE: Window.onchange
+MISSING-FEATURE: Window.onclick
+MISSING-FEATURE: Window.onclose
+MISSING-FEATURE: Window.oncontextmenu
+MISSING-FEATURE: Window.oncuechange
+MISSING-FEATURE: Window.ondblclick
+MISSING-FEATURE: Window.ondrag
+MISSING-FEATURE: Window.ondragend
+MISSING-FEATURE: Window.ondragenter
+MISSING-FEATURE: Window.ondragexit
+MISSING-FEATURE: Window.ondragleave
+MISSING-FEATURE: Window.ondragover
+MISSING-FEATURE: Window.ondragstart
+MISSING-FEATURE: Window.ondrop
+MISSING-FEATURE: Window.ondurationchange
+MISSING-FEATURE: Window.onemptied
+MISSING-FEATURE: Window.onended
+MISSING-FEATURE: Window.onerror
+MISSING-FEATURE: Window.onfocus
+MISSING-FEATURE: Window.onformdata
+MISSING-FEATURE: Window.oninput
+MISSING-FEATURE: Window.oninvalid
+MISSING-FEATURE: Window.onkeydown
+MISSING-FEATURE: Window.onkeypress
+MISSING-FEATURE: Window.onkeyup
+MISSING-FEATURE: Window.onload
+MISSING-FEATURE: Window.onloadeddata
+MISSING-FEATURE: Window.onloadedmetadata
+MISSING-FEATURE: Window.onloadstart
+MISSING-FEATURE: Window.onmousedown
+MISSING-FEATURE: Window.onmouseenter
+MISSING-FEATURE: Window.onmouseleave
+MISSING-FEATURE: Window.onmousemove
+MISSING-FEATURE: Window.onmouseout
+MISSING-FEATURE: Window.onmouseover
+MISSING-FEATURE: Window.onmouseup
+MISSING-FEATURE: Window.onpause
+MISSING-FEATURE: Window.onplay
+MISSING-FEATURE: Window.onplaying
+MISSING-FEATURE: Window.onprogress
+MISSING-FEATURE: Window.onratechange
+MISSING-FEATURE: Window.onreset
+MISSING-FEATURE: Window.onresize
+MISSING-FEATURE: Window.onscroll
+MISSING-FEATURE: Window.onsecuritypolicyviolation
+MISSING-FEATURE: Window.onseeked
+MISSING-FEATURE: Window.onseeking
+MISSING-FEATURE: Window.onselect
+MISSING-FEATURE: Window.onslotchange
+MISSING-FEATURE: Window.onstalled
+MISSING-FEATURE: Window.onsubmit
+MISSING-FEATURE: Window.onsuspend
+MISSING-FEATURE: Window.ontimeupdate
+MISSING-FEATURE: Window.ontoggle
+MISSING-FEATURE: Window.onvolumechange
+MISSING-FEATURE: Window.onwaiting
+MISSING-FEATURE: Window.onwebkitanimationend
+MISSING-FEATURE: Window.onwebkitanimationiteration
+MISSING-FEATURE: Window.onwebkitanimationstart
+MISSING-FEATURE: Window.onwebkittransitionend
+MISSING-FEATURE: Window.onwheel
+MISSING-FEATURE: Window.onafterprint
+MISSING-FEATURE: Window.onbeforeprint
+MISSING-FEATURE: Window.onbeforeunload
+MISSING-FEATURE: Window.onhashchange
+MISSING-FEATURE: Window.onlanguagechange
+MISSING-FEATURE: Window.onmessage
+MISSING-FEATURE: Window.onmessageerror
+MISSING-FEATURE: Window.onoffline
+MISSING-FEATURE: Window.ononline
+MISSING-FEATURE: Window.onpagehide
+MISSING-FEATURE: Window.onpageshow
+MISSING-FEATURE: Window.onpopstate
+MISSING-FEATURE: Window.onrejectionhandled
+MISSING-FEATURE: Window.onstorage
+MISSING-FEATURE: Window.onunhandledrejection
+MISSING-FEATURE: Window.onunload
+MISSING-FEATURE: Window.origin
+MISSING-FEATURE: Window.btoa
+MISSING-FEATURE: Window.atob
+MISSING-FEATURE: Window.setTimeout
+MISSING-FEATURE: Window.clearTimeout
+MISSING-FEATURE: Window.setInterval
+MISSING-FEATURE: Window.clearInterval
+MISSING-FEATURE: Window.queueMicrotask
+MISSING-FEATURE: Window.createImageBitmap
+ADD-DATA: api.Window.requestAnimationFrame.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Window.cancelAnimationFrame.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Window.chooseFileSystemEntries
+MISSING-FEATURE: Window.oncompassneedscalibration
+MISSING-FEATURE: Window.originPolicyIds
+MISSING-FEATURE: Window.ongotpointercapture
+MISSING-FEATURE: Window.onlostpointercapture
+MISSING-FEATURE: Window.onpointerdown
+MISSING-FEATURE: Window.onpointermove
+MISSING-FEATURE: Window.onpointerrawupdate
+MISSING-FEATURE: Window.onpointerup
+MISSING-FEATURE: Window.onpointercancel
+MISSING-FEATURE: Window.onpointerover
+MISSING-FEATURE: Window.onpointerout
+MISSING-FEATURE: Window.onpointerenter
+MISSING-FEATURE: Window.onpointerleave
+ADD-DATA: api.Window.requestIdleCallback.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Window.cancelIdleCallback.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Window.onselectstart
+MISSING-FEATURE: Window.onselectionchange
+MISSING-FEATURE: Window.ontouchstart
+MISSING-FEATURE: Window.ontouchend
+MISSING-FEATURE: Window.ontouchmove
+MISSING-FEATURE: Window.ontouchcancel
+MISMATCH: api.Window.visualViewport.__compat.support.firefox.version_added (63) does not match WPT (false)
+ADD-DATA: api.Window.onvrdisplayconnect.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Window.onvrdisplaydisconnect.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Window.onvrdisplayactivate.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Window.onvrdisplaydeactivate.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Window.onvrdisplaypresentchange.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Crypto.subtle.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.SubtleCrypto.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.encrypt.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.decrypt.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.sign.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.verify.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.digest.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.generateKey.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.deriveKey.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.deriveBits.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.importKey.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.exportKey.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.wrapKey.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubtleCrypto.unwrapKey.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.Accelerometer.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Accelerometer.x.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Accelerometer.y.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Accelerometer.z.__compat.support.firefox.version_added would be set to false
+ADD: api.LinearAccelerationSensor.__compat.support.firefox.version_added would be set to false
+MISSING-INTERFACE: GravitySensor
+ADD: api.AmbientLightSensor.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.AmbientLightSensor.illuminance.__compat.support.firefox.version_added would be set to false
+MISSING-INTERFACE: AnimationWorkletGlobalScope
+MISSING-INTERFACE: WorkletAnimationEffect
+MISSING-INTERFACE: WorkletAnimation
+MISSING-INTERFACE: WorkletGroupEffect
+MISSING-INTERFACE: WorkletGlobalScope
+MISMATCH: api.Worklet.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+ADD: api.Animation.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.id.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.effect.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.timeline.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.startTime.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.currentTime.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.playbackRate.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.playState.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Animation.replaceState
+ADD-DATA: api.Animation.ready.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.finished.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.onfinish.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.oncancel.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Animation.onremove
+ADD-DATA: api.Animation.cancel.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.finish.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.play.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.pause.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Animation.reverse.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Animation.persist
+MISSING-FEATURE: Animation.commitStyles
+ADD-DATA: api.HTMLMediaElement.sinkId.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.HTMLMediaElement.setSinkId.__compat.support.firefox.version_added (64) does not match WPT (false)
+ADD-DATA: api.HTMLMediaElement.srcObject.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLMediaElement.crossOrigin.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: HTMLMediaElement.getStartDate
+MISMATCH: api.HTMLMediaElement.audioTracks.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.HTMLMediaElement.videoTracks.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.HTMLMediaElement.captureStream.__compat.support.firefox.version_added (15) does not match WPT (false)
+MISSING-FEATURE: HTMLMediaElement.remote
+MISMATCH: api.HTMLMediaElement.disableRemotePlayback.__compat.support.firefox.version_added (20) does not match WPT (false)
+MISMATCH: api.BackgroundFetchEvent.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISMATCH: api.BackgroundFetchUpdateUIEvent.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISSING-FEATURE: Navigator.setClientBadge
+MISSING-FEATURE: Navigator.clearClientBadge
+MISSING-FEATURE: Navigator.setAppBadge
+MISSING-FEATURE: Navigator.clearAppBadge
+MISMATCH: api.Navigator.getBattery.__compat.support.firefox.version_added (43) does not match WPT (false)
+MISSING-FEATURE: Navigator.bluetooth
+MISSING-FEATURE: Navigator.appCodeName
+MISSING-FEATURE: Navigator.appName
+MISSING-FEATURE: Navigator.appVersion
+MISSING-FEATURE: Navigator.platform
+MISSING-FEATURE: Navigator.product
+MISSING-FEATURE: Navigator.userAgent
+MISSING-FEATURE: Navigator.taintEnabled
+MISSING-FEATURE: Navigator.language
+MISSING-FEATURE: Navigator.languages
+MISSING-FEATURE: Navigator.onLine
+MISMATCH: api.Navigator.registerProtocolHandler.__compat.support.firefox.version_added (3) does not match WPT (false)
+MISSING-FEATURE: Navigator.unregisterProtocolHandler
+MISSING-FEATURE: Navigator.plugins
+MISSING-FEATURE: Navigator.mimeTypes
+MISSING-FEATURE: Navigator.javaEnabled
+MISSING-FEATURE: Navigator.hardwareConcurrency
+MISSING-FEATURE: Navigator.getInstalledRelatedApps
+MISMATCH: api.Navigator.getUserMedia.__compat.support.firefox.version_added (17) does not match WPT (false)
+MISMATCH: api.Navigator.mediaSession.__compat.support.firefox.version_added (71) does not match WPT (false)
+MISMATCH: api.Navigator.connection.__compat.support.firefox.version_added (true) does not match WPT (false)
+ADD-DATA: api.Navigator.maxTouchPoints.__compat.support.firefox.version_added would be set to 75.0
+MISMATCH: api.Navigator.presentation.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISSING-FEATURE: Navigator.wakeLock
+MISSING-FEATURE: Navigator.storage
+ADD-DATA: api.Navigator.vibrate.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Navigator.locks.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: Navigator.requestMIDIAccess
+MISSING-FEATURE: Navigator.usb
+ADD-DATA: api.Navigator.getVRDisplays.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Navigator.activeVRDisplays.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: Navigator.vrEnabled
+MISSING-FEATURE: WorkerNavigator.setAppBadge
+MISSING-FEATURE: WorkerNavigator.clearAppBadge
+MISSING-FEATURE: WorkerNavigator.appCodeName
+MISSING-FEATURE: WorkerNavigator.appName
+MISSING-FEATURE: WorkerNavigator.appVersion
+MISSING-FEATURE: WorkerNavigator.platform
+MISSING-FEATURE: WorkerNavigator.product
+MISSING-FEATURE: WorkerNavigator.userAgent
+MISSING-FEATURE: WorkerNavigator.language
+MISSING-FEATURE: WorkerNavigator.languages
+MISSING-FEATURE: WorkerNavigator.onLine
+MISSING-FEATURE: WorkerNavigator.hardwareConcurrency
+MISSING-FEATURE: WorkerNavigator.mediaCapabilities
+MISSING-FEATURE: WorkerNavigator.storage
+MISSING-FEATURE: WorkerNavigator.locks
+MISSING-FEATURE: WorkerNavigator.usb
+ADD: api.BatteryManager.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.BatteryManager.charging.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.BatteryManager.chargingTime.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.BatteryManager.dischargingTime.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.BatteryManager.level.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.BatteryManager.onchargingchange.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.BatteryManager.onchargingtimechange.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.BatteryManager.ondischargingtimechange.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.BatteryManager.onlevelchange.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: Bluetooth.getDevices
+MISSING-FEATURE: Bluetooth.onadvertisementreceived
+MISSING-FEATURE: Bluetooth.ongattserverdisconnected
+MISSING-FEATURE: Bluetooth.oncharacteristicvaluechanged
+MISSING-FEATURE: Bluetooth.onserviceadded
+MISSING-FEATURE: Bluetooth.onservicechanged
+MISSING-FEATURE: Bluetooth.onserviceremoved
+MISSING-INTERFACE: BluetoothPermissionResult
+MISSING-INTERFACE: ValueEvent
+MISSING-FEATURE: BluetoothDevice.onadvertisementreceived
+MISSING-FEATURE: BluetoothDevice.ongattserverdisconnected
+MISSING-FEATURE: BluetoothDevice.oncharacteristicvaluechanged
+MISSING-FEATURE: BluetoothDevice.onserviceadded
+MISSING-FEATURE: BluetoothDevice.onservicechanged
+MISSING-FEATURE: BluetoothDevice.onserviceremoved
+MISSING-INTERFACE: BluetoothManufacturerDataMap
+MISSING-INTERFACE: BluetoothServiceDataMap
+MISSING-INTERFACE: BluetoothAdvertisingEvent
+MISSING-FEATURE: BluetoothRemoteGATTService.oncharacteristicvaluechanged
+MISSING-FEATURE: BluetoothRemoteGATTService.onserviceadded
+MISSING-FEATURE: BluetoothRemoteGATTService.onservicechanged
+MISSING-FEATURE: BluetoothRemoteGATTService.onserviceremoved
+MISSING-FEATURE: BluetoothRemoteGATTCharacteristic.writeValueWithResponse
+MISSING-FEATURE: BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse
+MISSING-FEATURE: BluetoothRemoteGATTCharacteristic.oncharacteristicvaluechanged
+MISSING-INTERFACE: BluetoothUUID
+MISSING-FEATURE: HTMLBodyElement.onorientationchange
+MISSING-FEATURE: HTMLBodyElement.onafterprint
+MISSING-FEATURE: HTMLBodyElement.onbeforeprint
+MISSING-FEATURE: HTMLBodyElement.onbeforeunload
+MISSING-FEATURE: HTMLBodyElement.onhashchange
+MISSING-FEATURE: HTMLBodyElement.onlanguagechange
+MISSING-FEATURE: HTMLBodyElement.onmessage
+MISSING-FEATURE: HTMLBodyElement.onmessageerror
+MISSING-FEATURE: HTMLBodyElement.onoffline
+MISSING-FEATURE: HTMLBodyElement.ononline
+MISSING-FEATURE: HTMLBodyElement.onpagehide
+MISSING-FEATURE: HTMLBodyElement.onpageshow
+MISSING-FEATURE: HTMLBodyElement.onpopstate
+MISSING-FEATURE: HTMLBodyElement.onrejectionhandled
+MISSING-FEATURE: HTMLBodyElement.onstorage
+MISSING-FEATURE: HTMLBodyElement.onunhandledrejection
+MISSING-FEATURE: HTMLBodyElement.onunload
+ADD-DATA: api.HTMLIFrameElement.csp.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.HTMLIFrameElement.featurePolicy.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: HTMLIFrameElement.allowFullscreen
+MISSING-FEATURE: HTMLIFrameElement.getSVGDocument
+MISSING-INTERFACE: CSPViolationReportBody
+ADD: api.SecurityPolicyViolationEvent.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: SecurityPolicyViolationEvent.documentURL
+ADD-DATA: api.SecurityPolicyViolationEvent.documentURI.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SecurityPolicyViolationEvent.referrer.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: SecurityPolicyViolationEvent.blockedURL
+ADD-DATA: api.SecurityPolicyViolationEvent.blockedURI.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SecurityPolicyViolationEvent.effectiveDirective.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SecurityPolicyViolationEvent.violatedDirective.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SecurityPolicyViolationEvent.originalPolicy.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SecurityPolicyViolationEvent.sourceFile.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SecurityPolicyViolationEvent.sample.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SecurityPolicyViolationEvent.disposition.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SecurityPolicyViolationEvent.statusCode.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: SecurityPolicyViolationEvent.lineno
+ADD-DATA: api.SecurityPolicyViolationEvent.lineNumber.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: SecurityPolicyViolationEvent.colno
+ADD-DATA: api.SecurityPolicyViolationEvent.columnNumber.__compat.support.firefox.version_added would be set to 75.0
+MISSING-INTERFACE: CookieStore
+MISSING-INTERFACE: CookieStoreManager
+MISSING-INTERFACE: CookieChangeEvent
+MISSING-INTERFACE: ExtendableCookieChangeEvent
+ADD: api.PasswordCredential.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.PasswordCredential.password.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.PasswordCredential.name.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.PasswordCredential.iconURL.__compat.support.firefox.version_added would be set to false
+ADD: api.FederatedCredential.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.FederatedCredential.provider.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.FederatedCredential.protocol.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: FederatedCredential.name
+MISSING-FEATURE: FederatedCredential.iconURL
+MISSING-FEATURE: CSSStyleSheet.replace
+MISSING-FEATURE: CSSStyleSheet.replaceSync
+MISSING-FEATURE: Document.adoptedStyleSheets
+MISSING-FEATURE: Document.onanimationstart
+MISSING-FEATURE: Document.onanimationiteration
+MISSING-FEATURE: Document.onanimationend
+MISSING-FEATURE: Document.onanimationcancel
+ADD-DATA: api.Document.fonts.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Document.ontransitionrun
+MISSING-FEATURE: Document.ontransitionstart
+MISSING-FEATURE: Document.ontransitionend
+MISSING-FEATURE: Document.ontransitioncancel
+MISSING-FEATURE: Document.elementFromPoint
+MISSING-FEATURE: Document.elementsFromPoint
+MISSING-FEATURE: Document.caretPositionFromPoint
+ADD-DATA: api.Document.scrollingElement.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Document.getBoxQuads
+MISSING-FEATURE: Document.convertQuadFromNode
+MISSING-FEATURE: Document.convertRectFromNode
+MISSING-FEATURE: Document.convertPointFromNode
+MISSING-FEATURE: Document.styleSheets
+ADD-DATA: api.Document.characterSet.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Document.charset
+MISSING-FEATURE: Document.inputEncoding
+ADD-DATA: api.Document.createAttribute.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Document.children
+MISSING-FEATURE: Document.firstElementChild
+MISSING-FEATURE: Document.lastElementChild
+MISSING-FEATURE: Document.childElementCount
+MISSING-FEATURE: Document.prepend
+MISSING-FEATURE: Document.append
+MISSING-FEATURE: Document.replaceChildren
+ADD-DATA: api.Document.featurePolicy.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: Document.addressSpace
+ADD-DATA: api.Document.fullscreenEnabled.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Document.fullscreen.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Document.exitFullscreen.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Document.onfullscreenchange.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Document.onfullscreenerror.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Document.fullscreenElement
+ADD-DATA: api.Document.queryCommandEnabled.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Document.queryCommandSupported.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Document.onabort
+MISSING-FEATURE: Document.onauxclick
+MISSING-FEATURE: Document.onblur
+MISSING-FEATURE: Document.oncancel
+MISSING-FEATURE: Document.oncanplay
+MISSING-FEATURE: Document.oncanplaythrough
+MISSING-FEATURE: Document.onchange
+MISSING-FEATURE: Document.onclick
+MISSING-FEATURE: Document.onclose
+MISSING-FEATURE: Document.oncontextmenu
+MISSING-FEATURE: Document.oncuechange
+MISSING-FEATURE: Document.ondblclick
+MISSING-FEATURE: Document.ondrag
+MISSING-FEATURE: Document.ondragend
+MISSING-FEATURE: Document.ondragenter
+MISSING-FEATURE: Document.ondragexit
+MISSING-FEATURE: Document.ondragleave
+MISSING-FEATURE: Document.ondragover
+MISSING-FEATURE: Document.ondragstart
+MISSING-FEATURE: Document.ondrop
+MISSING-FEATURE: Document.ondurationchange
+MISSING-FEATURE: Document.onemptied
+MISSING-FEATURE: Document.onended
+MISSING-FEATURE: Document.onerror
+MISSING-FEATURE: Document.onfocus
+MISSING-FEATURE: Document.onformdata
+MISSING-FEATURE: Document.oninput
+MISSING-FEATURE: Document.oninvalid
+MISSING-FEATURE: Document.onkeydown
+MISSING-FEATURE: Document.onkeypress
+MISSING-FEATURE: Document.onkeyup
+MISSING-FEATURE: Document.onload
+MISSING-FEATURE: Document.onloadeddata
+MISSING-FEATURE: Document.onloadedmetadata
+MISSING-FEATURE: Document.onloadstart
+MISSING-FEATURE: Document.onmousedown
+MISSING-FEATURE: Document.onmouseenter
+MISSING-FEATURE: Document.onmouseleave
+MISSING-FEATURE: Document.onmousemove
+MISSING-FEATURE: Document.onmouseout
+MISSING-FEATURE: Document.onmouseover
+MISSING-FEATURE: Document.onmouseup
+MISSING-FEATURE: Document.onpause
+MISSING-FEATURE: Document.onplay
+MISSING-FEATURE: Document.onplaying
+MISSING-FEATURE: Document.onprogress
+MISSING-FEATURE: Document.onratechange
+MISSING-FEATURE: Document.onreset
+MISSING-FEATURE: Document.onresize
+MISSING-FEATURE: Document.onscroll
+MISSING-FEATURE: Document.onsecuritypolicyviolation
+MISSING-FEATURE: Document.onseeked
+MISSING-FEATURE: Document.onseeking
+MISSING-FEATURE: Document.onselect
+MISSING-FEATURE: Document.onslotchange
+MISSING-FEATURE: Document.onstalled
+MISSING-FEATURE: Document.onsubmit
+MISSING-FEATURE: Document.onsuspend
+MISSING-FEATURE: Document.ontimeupdate
+MISSING-FEATURE: Document.ontoggle
+MISSING-FEATURE: Document.onvolumechange
+MISSING-FEATURE: Document.onwaiting
+MISSING-FEATURE: Document.onwebkitanimationend
+MISSING-FEATURE: Document.onwebkitanimationiteration
+MISSING-FEATURE: Document.onwebkitanimationstart
+MISSING-FEATURE: Document.onwebkittransitionend
+MISSING-FEATURE: Document.onwheel
+MISSING-FEATURE: Document.activeElement
+ADD-DATA: api.Document.hidden.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Document.visibilityState.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Document.pictureInPictureEnabled
+MISSING-FEATURE: Document.exitPictureInPicture
+MISSING-FEATURE: Document.pictureInPictureElement
+MISSING-FEATURE: Document.ongotpointercapture
+MISSING-FEATURE: Document.onlostpointercapture
+MISSING-FEATURE: Document.onpointerdown
+MISSING-FEATURE: Document.onpointermove
+MISSING-FEATURE: Document.onpointerrawupdate
+MISSING-FEATURE: Document.onpointerup
+MISSING-FEATURE: Document.onpointercancel
+MISSING-FEATURE: Document.onpointerover
+MISSING-FEATURE: Document.onpointerout
+MISSING-FEATURE: Document.onpointerenter
+MISSING-FEATURE: Document.onpointerleave
+ADD-DATA: api.Document.exitPointerLock.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Document.pointerLockElement
+MISSING-FEATURE: Document.getSelection
+MISSING-FEATURE: Document.onselectstart
+MISSING-FEATURE: Document.onselectionchange
+MISSING-FEATURE: Document.rootElement
+MISSING-FEATURE: Document.ontouchstart
+MISSING-FEATURE: Document.ontouchend
+MISSING-FEATURE: Document.ontouchmove
+MISSING-FEATURE: Document.ontouchcancel
+MISMATCH: api.Document.timeline.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISMATCH: api.Document.getAnimations.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+ADD: api.ShadowRoot.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: ShadowRoot.adoptedStyleSheets
+MISSING-FEATURE: ShadowRoot.styleSheets
+ADD-DATA: api.ShadowRoot.mode.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.ShadowRoot.host.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: ShadowRoot.onslotchange
+ADD-DATA: api.ShadowRoot.innerHTML.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: ShadowRoot.fullscreenElement
+MISSING-FEATURE: ShadowRoot.activeElement
+MISSING-FEATURE: ShadowRoot.pictureInPictureElement
+MISSING-FEATURE: ShadowRoot.pointerLockElement
+MISSING-FEATURE: ShadowRoot.getAnimations
+ADD: api.CSSKeyframeRule.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.CSSKeyframesRule.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.CSSKeyframesRule.appendRule.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: HTMLElement.onanimationstart
+MISSING-FEATURE: HTMLElement.onanimationiteration
+MISSING-FEATURE: HTMLElement.onanimationend
+MISSING-FEATURE: HTMLElement.onanimationcancel
+MISSING-FEATURE: HTMLElement.ontransitionrun
+MISSING-FEATURE: HTMLElement.ontransitionstart
+MISSING-FEATURE: HTMLElement.ontransitionend
+MISSING-FEATURE: HTMLElement.ontransitioncancel
+MISSING-FEATURE: HTMLElement.attributeStyleMap
+MISSING-FEATURE: HTMLElement.autocapitalize
+MISSING-FEATURE: HTMLElement.attachInternals
+MISSING-FEATURE: HTMLElement.onabort
+MISSING-FEATURE: HTMLElement.onauxclick
+MISSING-FEATURE: HTMLElement.onblur
+MISSING-FEATURE: HTMLElement.oncancel
+MISSING-FEATURE: HTMLElement.oncanplay
+MISSING-FEATURE: HTMLElement.oncanplaythrough
+MISSING-FEATURE: HTMLElement.onchange
+MISSING-FEATURE: HTMLElement.onclick
+MISSING-FEATURE: HTMLElement.onclose
+MISSING-FEATURE: HTMLElement.oncontextmenu
+MISSING-FEATURE: HTMLElement.oncuechange
+MISSING-FEATURE: HTMLElement.ondblclick
+MISSING-FEATURE: HTMLElement.ondrag
+MISSING-FEATURE: HTMLElement.ondragend
+MISSING-FEATURE: HTMLElement.ondragenter
+MISSING-FEATURE: HTMLElement.ondragexit
+MISSING-FEATURE: HTMLElement.ondragleave
+MISSING-FEATURE: HTMLElement.ondragover
+MISSING-FEATURE: HTMLElement.ondragstart
+MISSING-FEATURE: HTMLElement.ondrop
+MISSING-FEATURE: HTMLElement.ondurationchange
+MISSING-FEATURE: HTMLElement.onemptied
+MISSING-FEATURE: HTMLElement.onended
+MISSING-FEATURE: HTMLElement.onerror
+MISSING-FEATURE: HTMLElement.onfocus
+MISSING-FEATURE: HTMLElement.onformdata
+MISSING-FEATURE: HTMLElement.oninput
+MISSING-FEATURE: HTMLElement.oninvalid
+MISSING-FEATURE: HTMLElement.onkeydown
+MISSING-FEATURE: HTMLElement.onkeypress
+MISSING-FEATURE: HTMLElement.onkeyup
+MISSING-FEATURE: HTMLElement.onload
+MISSING-FEATURE: HTMLElement.onloadeddata
+MISSING-FEATURE: HTMLElement.onloadedmetadata
+MISSING-FEATURE: HTMLElement.onloadstart
+MISSING-FEATURE: HTMLElement.onmousedown
+MISSING-FEATURE: HTMLElement.onmouseenter
+MISSING-FEATURE: HTMLElement.onmouseleave
+MISSING-FEATURE: HTMLElement.onmousemove
+MISSING-FEATURE: HTMLElement.onmouseout
+MISSING-FEATURE: HTMLElement.onmouseover
+MISSING-FEATURE: HTMLElement.onmouseup
+MISSING-FEATURE: HTMLElement.onpause
+MISSING-FEATURE: HTMLElement.onplay
+MISSING-FEATURE: HTMLElement.onplaying
+MISSING-FEATURE: HTMLElement.onprogress
+MISSING-FEATURE: HTMLElement.onratechange
+MISSING-FEATURE: HTMLElement.onreset
+MISSING-FEATURE: HTMLElement.onresize
+MISSING-FEATURE: HTMLElement.onscroll
+MISSING-FEATURE: HTMLElement.onsecuritypolicyviolation
+MISSING-FEATURE: HTMLElement.onseeked
+MISSING-FEATURE: HTMLElement.onseeking
+MISSING-FEATURE: HTMLElement.onselect
+MISSING-FEATURE: HTMLElement.onslotchange
+MISSING-FEATURE: HTMLElement.onstalled
+MISSING-FEATURE: HTMLElement.onsubmit
+MISSING-FEATURE: HTMLElement.onsuspend
+MISSING-FEATURE: HTMLElement.ontimeupdate
+MISSING-FEATURE: HTMLElement.ontoggle
+MISSING-FEATURE: HTMLElement.onvolumechange
+MISSING-FEATURE: HTMLElement.onwaiting
+MISSING-FEATURE: HTMLElement.onwebkitanimationend
+MISSING-FEATURE: HTMLElement.onwebkitanimationiteration
+MISSING-FEATURE: HTMLElement.onwebkitanimationstart
+MISSING-FEATURE: HTMLElement.onwebkittransitionend
+MISSING-FEATURE: HTMLElement.onwheel
+MISSING-FEATURE: HTMLElement.enterKeyHint
+ADD-DATA: api.HTMLElement.inputMode.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: HTMLElement.autofocus
+MISSING-FEATURE: HTMLElement.ongotpointercapture
+MISSING-FEATURE: HTMLElement.onlostpointercapture
+MISSING-FEATURE: HTMLElement.onpointerdown
+MISSING-FEATURE: HTMLElement.onpointermove
+MISSING-FEATURE: HTMLElement.onpointerrawupdate
+MISSING-FEATURE: HTMLElement.onpointerup
+MISSING-FEATURE: HTMLElement.onpointercancel
+MISSING-FEATURE: HTMLElement.onpointerover
+MISSING-FEATURE: HTMLElement.onpointerout
+MISSING-FEATURE: HTMLElement.onpointerenter
+MISSING-FEATURE: HTMLElement.onpointerleave
+MISSING-FEATURE: HTMLElement.onselectstart
+MISSING-FEATURE: HTMLElement.onselectionchange
+MISSING-FEATURE: HTMLElement.ontouchstart
+MISSING-FEATURE: HTMLElement.ontouchend
+MISSING-FEATURE: HTMLElement.ontouchmove
+MISSING-FEATURE: HTMLElement.ontouchcancel
+MISSING-FEATURE: CSSConditionRule.conditionText
+MISSING-FEATURE: CSSCounterStyleRule.name
+MISSING-FEATURE: CSSCounterStyleRule.system
+MISSING-FEATURE: CSSCounterStyleRule.symbols
+MISSING-FEATURE: CSSCounterStyleRule.additiveSymbols
+MISSING-FEATURE: CSSCounterStyleRule.negative
+MISSING-FEATURE: CSSCounterStyleRule.prefix
+MISSING-FEATURE: CSSCounterStyleRule.suffix
+MISSING-FEATURE: CSSCounterStyleRule.range
+MISSING-FEATURE: CSSCounterStyleRule.pad
+MISSING-FEATURE: CSSCounterStyleRule.speakAs
+MISSING-FEATURE: CSSCounterStyleRule.fallback
+MISSING-FEATURE: FontFace.variationSettings
+MISSING-INTERFACE: CSSFontFaceRule
+MISSING-INTERFACE: CSSFontFeatureValuesRule
+MISSING-INTERFACE: CSSFontFeatureValuesMap
+MISSING-INTERFACE: CSSFontPaletteValuesRule
+MISSING-FEATURE: SVGClipPathElement.transform
+ADD: api.PaintWorkletGlobalScope.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.PaintSize.__compat.support.firefox.version_added would be set to 75.0
+MISSING-INTERFACE: CSSParserRule
+MISSING-INTERFACE: CSSParserAtRule
+MISSING-INTERFACE: CSSParserQualifiedRule
+MISSING-INTERFACE: CSSParserDeclaration
+MISSING-INTERFACE: CSSParserValue
+MISSING-INTERFACE: CSSParserBlock
+MISSING-INTERFACE: CSSParserFunction
+MISSING-INTERFACE: CSSPropertyRule
+ADD: api.CSSPseudoElement.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.CSSPseudoElement.type.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.CSSPseudoElement.element.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: CSSPseudoElement.getBoxQuads
+MISSING-FEATURE: CSSPseudoElement.convertQuadFromNode
+MISSING-FEATURE: CSSPseudoElement.convertRectFromNode
+MISSING-FEATURE: CSSPseudoElement.convertPointFromNode
+MISSING-FEATURE: Element.pseudo
+ADD-DATA: api.Element.scrollHeight.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Element.getBoxQuads
+MISSING-FEATURE: Element.convertQuadFromNode
+MISSING-FEATURE: Element.convertRectFromNode
+MISSING-FEATURE: Element.convertPointFromNode
+ADD-DATA: api.Element.attachShadow.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Element.shadowRoot.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Element.matches.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Element.webkitMatchesSelector
+MISSING-FEATURE: Element.children
+MISSING-FEATURE: Element.firstElementChild
+MISSING-FEATURE: Element.lastElementChild
+MISSING-FEATURE: Element.childElementCount
+MISSING-FEATURE: Element.prepend
+MISSING-FEATURE: Element.append
+MISSING-FEATURE: Element.replaceChildren
+MISSING-FEATURE: Element.previousElementSibling
+MISSING-FEATURE: Element.nextElementSibling
+MISSING-FEATURE: Element.before
+MISSING-FEATURE: Element.after
+MISSING-FEATURE: Element.replaceWith
+MISSING-FEATURE: Element.remove
+MISSING-FEATURE: Element.assignedSlot
+MISSING-FEATURE: Element.elementTiming
+ADD-DATA: api.Element.requestFullscreen.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Element.onfullscreenchange.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Element.onfullscreenerror.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Element.setPointerCapture.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Element.releasePointerCapture.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Element.hasPointerCapture.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Element.requestPointerLock.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Element.role
+MISSING-FEATURE: Element.ariaActiveDescendantElement
+MISSING-FEATURE: Element.ariaAtomic
+MISSING-FEATURE: Element.ariaAutoComplete
+MISSING-FEATURE: Element.ariaBusy
+MISSING-FEATURE: Element.ariaChecked
+MISSING-FEATURE: Element.ariaColCount
+MISSING-FEATURE: Element.ariaColIndex
+MISSING-FEATURE: Element.ariaColIndexText
+MISSING-FEATURE: Element.ariaColSpan
+MISSING-FEATURE: Element.ariaControlsElements
+MISSING-FEATURE: Element.ariaCurrent
+MISSING-FEATURE: Element.ariaDescribedByElements
+MISSING-FEATURE: Element.ariaDescription
+MISSING-FEATURE: Element.ariaDetailsElements
+MISSING-FEATURE: Element.ariaDisabled
+MISSING-FEATURE: Element.ariaErrorMessageElement
+MISSING-FEATURE: Element.ariaExpanded
+MISSING-FEATURE: Element.ariaFlowToElements
+MISSING-FEATURE: Element.ariaHasPopup
+MISSING-FEATURE: Element.ariaHidden
+MISSING-FEATURE: Element.ariaInvalid
+MISSING-FEATURE: Element.ariaKeyShortcuts
+MISSING-FEATURE: Element.ariaLabel
+MISSING-FEATURE: Element.ariaLabelledByElements
+MISSING-FEATURE: Element.ariaLevel
+MISSING-FEATURE: Element.ariaLive
+MISSING-FEATURE: Element.ariaModal
+MISSING-FEATURE: Element.ariaMultiLine
+MISSING-FEATURE: Element.ariaMultiSelectable
+MISSING-FEATURE: Element.ariaOrientation
+MISSING-FEATURE: Element.ariaOwnsElements
+MISSING-FEATURE: Element.ariaPlaceholder
+MISSING-FEATURE: Element.ariaPosInSet
+MISSING-FEATURE: Element.ariaPressed
+MISSING-FEATURE: Element.ariaReadOnly
+MISSING-FEATURE: Element.ariaRelevant
+MISSING-FEATURE: Element.ariaRequired
+MISSING-FEATURE: Element.ariaRoleDescription
+MISSING-FEATURE: Element.ariaRowCount
+MISSING-FEATURE: Element.ariaRowIndex
+MISSING-FEATURE: Element.ariaRowIndexText
+MISSING-FEATURE: Element.ariaRowSpan
+MISSING-FEATURE: Element.ariaSelected
+MISSING-FEATURE: Element.ariaSetSize
+MISSING-FEATURE: Element.ariaSort
+MISSING-FEATURE: Element.ariaValueMax
+MISSING-FEATURE: Element.ariaValueMin
+MISSING-FEATURE: Element.ariaValueNow
+MISSING-FEATURE: Element.ariaValueText
+ADD-DATA: api.Element.getAnimations.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: CSSMathNegate.value
+MISSING-INTERFACE: CSSMathClamp
+ADD-DATA: api.CSSStyleRule.styleMap.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: SVGElement.attributeStyleMap
+MISSING-FEATURE: SVGElement.style
+MISSING-FEATURE: SVGElement.onabort
+MISSING-FEATURE: SVGElement.onauxclick
+MISSING-FEATURE: SVGElement.onblur
+MISSING-FEATURE: SVGElement.oncancel
+MISSING-FEATURE: SVGElement.oncanplay
+MISSING-FEATURE: SVGElement.oncanplaythrough
+MISSING-FEATURE: SVGElement.onchange
+MISSING-FEATURE: SVGElement.onclick
+MISSING-FEATURE: SVGElement.onclose
+MISSING-FEATURE: SVGElement.oncontextmenu
+MISSING-FEATURE: SVGElement.oncuechange
+MISSING-FEATURE: SVGElement.ondblclick
+MISSING-FEATURE: SVGElement.ondrag
+MISSING-FEATURE: SVGElement.ondragend
+MISSING-FEATURE: SVGElement.ondragenter
+MISSING-FEATURE: SVGElement.ondragexit
+MISSING-FEATURE: SVGElement.ondragleave
+MISSING-FEATURE: SVGElement.ondragover
+MISSING-FEATURE: SVGElement.ondragstart
+MISSING-FEATURE: SVGElement.ondrop
+MISSING-FEATURE: SVGElement.ondurationchange
+MISSING-FEATURE: SVGElement.onemptied
+MISSING-FEATURE: SVGElement.onended
+MISSING-FEATURE: SVGElement.onerror
+MISSING-FEATURE: SVGElement.onfocus
+MISSING-FEATURE: SVGElement.onformdata
+MISSING-FEATURE: SVGElement.oninput
+MISSING-FEATURE: SVGElement.oninvalid
+MISSING-FEATURE: SVGElement.onkeydown
+MISSING-FEATURE: SVGElement.onkeypress
+MISSING-FEATURE: SVGElement.onkeyup
+MISSING-FEATURE: SVGElement.onload
+MISSING-FEATURE: SVGElement.onloadeddata
+MISSING-FEATURE: SVGElement.onloadedmetadata
+MISSING-FEATURE: SVGElement.onloadstart
+MISSING-FEATURE: SVGElement.onmousedown
+MISSING-FEATURE: SVGElement.onmouseenter
+MISSING-FEATURE: SVGElement.onmouseleave
+MISSING-FEATURE: SVGElement.onmousemove
+MISSING-FEATURE: SVGElement.onmouseout
+MISSING-FEATURE: SVGElement.onmouseover
+MISSING-FEATURE: SVGElement.onmouseup
+MISSING-FEATURE: SVGElement.onpause
+MISSING-FEATURE: SVGElement.onplay
+MISSING-FEATURE: SVGElement.onplaying
+MISSING-FEATURE: SVGElement.onprogress
+MISSING-FEATURE: SVGElement.onratechange
+MISSING-FEATURE: SVGElement.onreset
+MISSING-FEATURE: SVGElement.onresize
+MISSING-FEATURE: SVGElement.onscroll
+MISSING-FEATURE: SVGElement.onsecuritypolicyviolation
+MISSING-FEATURE: SVGElement.onseeked
+MISSING-FEATURE: SVGElement.onseeking
+MISSING-FEATURE: SVGElement.onselect
+MISSING-FEATURE: SVGElement.onslotchange
+MISSING-FEATURE: SVGElement.onstalled
+MISSING-FEATURE: SVGElement.onsubmit
+MISSING-FEATURE: SVGElement.onsuspend
+MISSING-FEATURE: SVGElement.ontimeupdate
+MISSING-FEATURE: SVGElement.ontoggle
+MISSING-FEATURE: SVGElement.onvolumechange
+MISSING-FEATURE: SVGElement.onwaiting
+MISSING-FEATURE: SVGElement.onwebkitanimationend
+MISSING-FEATURE: SVGElement.onwebkitanimationiteration
+MISSING-FEATURE: SVGElement.onwebkitanimationstart
+MISSING-FEATURE: SVGElement.onwebkittransitionend
+MISSING-FEATURE: SVGElement.onwheel
+MISSING-FEATURE: SVGElement.oncopy
+MISSING-FEATURE: SVGElement.oncut
+MISSING-FEATURE: SVGElement.onpaste
+MISSING-FEATURE: SVGElement.nonce
+MISSING-FEATURE: SVGElement.autofocus
+MISSING-FEATURE: SVGElement.tabIndex
+MISSING-FEATURE: SVGElement.blur
+MISSING-FEATURE: SVGElement.className
+MISSING-FEATURE: SVGElement.ownerSVGElement
+MISSING-FEATURE: SVGElement.viewportElement
+MISSING-FEATURE: SVGElement.correspondingElement
+MISSING-FEATURE: SVGElement.correspondingUseElement
+MISMATCH: api.Screen.__compat.support.firefox.version_added (true) does not match WPT (false)
+ADD-DATA: api.Screen.orientation.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: CaretPosition.offsetNode
+MISSING-FEATURE: CaretPosition.offset
+MISSING-FEATURE: CaretPosition.getClientRect
+ADD-DATA: api.MouseEvent.movementX.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MouseEvent.movementY.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLImageElement.x.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLImageElement.y.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLImageElement.srcset.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLImageElement.sizes.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLImageElement.currentSrc.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: HTMLImageElement.loading
+MISSING-FEATURE: HTMLImageElement.lowsrc
+MISSING-FEATURE: Text.getBoxQuads
+MISSING-FEATURE: Text.convertQuadFromNode
+MISSING-FEATURE: Text.convertRectFromNode
+MISSING-FEATURE: Text.convertPointFromNode
+MISSING-INTERFACE: CSSImportRule
+MISSING-FEATURE: CSSGroupingRule.cssRules
+MISSING-FEATURE: CSSGroupingRule.insertRule
+MISSING-FEATURE: CSSGroupingRule.deleteRule
+MISMATCH: api.CSSPageRule.__compat.support.firefox.version_added (19) does not match WPT (false)
+MISSING-INTERFACE: CSSMarginRule
+MISSING-FEATURE: SVGStyleElement.sheet
+MISSING-FEATURE: SVGStyleElement.type
+MISSING-FEATURE: SVGStyleElement.media
+MISSING-FEATURE: SVGStyleElement.title
+MISSING-FEATURE: HTMLLinkElement.sheet
+MISSING-FEATURE: HTMLLinkElement.href
+MISSING-FEATURE: HTMLLinkElement.media
+MISSING-FEATURE: HTMLLinkElement.integrity
+MISSING-FEATURE: HTMLLinkElement.hreflang
+MISSING-FEATURE: HTMLLinkElement.type
+MISMATCH: api.HTMLLinkElement.sizes.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISSING-FEATURE: HTMLLinkElement.imageSrcset
+MISSING-FEATURE: HTMLLinkElement.imageSizes
+MISSING-FEATURE: HTMLLinkElement.charset
+MISSING-FEATURE: HTMLLinkElement.rev
+MISSING-FEATURE: HTMLLinkElement.target
+MISSING-FEATURE: ProcessingInstruction.sheet
+MISSING-FEATURE: SVGFilterElement.filterUnits
+MISSING-FEATURE: SVGFilterElement.primitiveUnits
+MISSING-FEATURE: SVGFilterElement.x
+MISSING-FEATURE: SVGFilterElement.y
+MISSING-FEATURE: SVGFilterElement.width
+MISSING-FEATURE: SVGFilterElement.height
+MISSING-FEATURE: SVGFEBlendElement.mode
+MISSING-FEATURE: SVGFEBlendElement.x
+MISSING-FEATURE: SVGFEBlendElement.y
+MISSING-FEATURE: SVGFEBlendElement.width
+MISSING-FEATURE: SVGFEBlendElement.height
+MISSING-FEATURE: SVGFEBlendElement.result
+MISSING-FEATURE: SVGFEColorMatrixElement.x
+MISSING-FEATURE: SVGFEColorMatrixElement.y
+MISSING-FEATURE: SVGFEColorMatrixElement.width
+MISSING-FEATURE: SVGFEColorMatrixElement.height
+MISSING-FEATURE: SVGFEColorMatrixElement.result
+MISSING-FEATURE: SVGFEComponentTransferElement.x
+MISSING-FEATURE: SVGFEComponentTransferElement.y
+MISSING-FEATURE: SVGFEComponentTransferElement.width
+MISSING-FEATURE: SVGFEComponentTransferElement.height
+MISSING-FEATURE: SVGFEComponentTransferElement.result
+MISSING-FEATURE: SVGComponentTransferFunctionElement.type
+MISSING-FEATURE: SVGComponentTransferFunctionElement.tableValues
+MISSING-FEATURE: SVGComponentTransferFunctionElement.slope
+MISSING-FEATURE: SVGComponentTransferFunctionElement.intercept
+MISSING-FEATURE: SVGComponentTransferFunctionElement.amplitude
+MISSING-FEATURE: SVGComponentTransferFunctionElement.exponent
+MISSING-FEATURE: SVGComponentTransferFunctionElement.offset
+MISSING-FEATURE: SVGFECompositeElement.operator
+MISSING-FEATURE: SVGFECompositeElement.x
+MISSING-FEATURE: SVGFECompositeElement.y
+MISSING-FEATURE: SVGFECompositeElement.width
+MISSING-FEATURE: SVGFECompositeElement.height
+MISSING-FEATURE: SVGFECompositeElement.result
+MISSING-FEATURE: SVGFEConvolveMatrixElement.orderX
+MISSING-FEATURE: SVGFEConvolveMatrixElement.orderY
+MISSING-FEATURE: SVGFEConvolveMatrixElement.kernelMatrix
+MISSING-FEATURE: SVGFEConvolveMatrixElement.divisor
+MISSING-FEATURE: SVGFEConvolveMatrixElement.bias
+MISSING-FEATURE: SVGFEConvolveMatrixElement.targetX
+MISSING-FEATURE: SVGFEConvolveMatrixElement.targetY
+MISSING-FEATURE: SVGFEConvolveMatrixElement.edgeMode
+MISSING-FEATURE: SVGFEConvolveMatrixElement.kernelUnitLengthX
+MISSING-FEATURE: SVGFEConvolveMatrixElement.kernelUnitLengthY
+MISSING-FEATURE: SVGFEConvolveMatrixElement.preserveAlpha
+MISSING-FEATURE: SVGFEConvolveMatrixElement.x
+MISSING-FEATURE: SVGFEConvolveMatrixElement.y
+MISSING-FEATURE: SVGFEConvolveMatrixElement.width
+MISSING-FEATURE: SVGFEConvolveMatrixElement.height
+MISSING-FEATURE: SVGFEConvolveMatrixElement.result
+MISSING-FEATURE: SVGFEDiffuseLightingElement.surfaceScale
+MISSING-FEATURE: SVGFEDiffuseLightingElement.diffuseConstant
+MISSING-FEATURE: SVGFEDiffuseLightingElement.kernelUnitLengthX
+MISSING-FEATURE: SVGFEDiffuseLightingElement.kernelUnitLengthY
+MISSING-FEATURE: SVGFEDiffuseLightingElement.x
+MISSING-FEATURE: SVGFEDiffuseLightingElement.y
+MISSING-FEATURE: SVGFEDiffuseLightingElement.width
+MISSING-FEATURE: SVGFEDiffuseLightingElement.height
+MISSING-FEATURE: SVGFEDiffuseLightingElement.result
+MISSING-FEATURE: SVGFEDistantLightElement.azimuth
+MISSING-FEATURE: SVGFEDistantLightElement.elevation
+MISSING-FEATURE: SVGFEPointLightElement.x
+MISSING-FEATURE: SVGFEPointLightElement.y
+MISSING-FEATURE: SVGFEPointLightElement.z
+MISSING-FEATURE: SVGFESpotLightElement.x
+MISSING-FEATURE: SVGFESpotLightElement.y
+MISSING-FEATURE: SVGFESpotLightElement.z
+MISSING-FEATURE: SVGFESpotLightElement.pointsAtX
+MISSING-FEATURE: SVGFESpotLightElement.pointsAtY
+MISSING-FEATURE: SVGFESpotLightElement.pointsAtZ
+MISSING-FEATURE: SVGFESpotLightElement.specularExponent
+MISSING-FEATURE: SVGFESpotLightElement.limitingConeAngle
+MISSING-FEATURE: SVGFEDisplacementMapElement.scale
+MISSING-FEATURE: SVGFEDisplacementMapElement.xChannelSelector
+MISSING-FEATURE: SVGFEDisplacementMapElement.yChannelSelector
+MISSING-FEATURE: SVGFEDisplacementMapElement.x
+MISSING-FEATURE: SVGFEDisplacementMapElement.y
+MISSING-FEATURE: SVGFEDisplacementMapElement.width
+MISSING-FEATURE: SVGFEDisplacementMapElement.height
+MISSING-FEATURE: SVGFEDisplacementMapElement.result
+MISSING-FEATURE: SVGFEDropShadowElement.dx
+MISSING-FEATURE: SVGFEDropShadowElement.dy
+MISSING-FEATURE: SVGFEDropShadowElement.stdDeviationX
+MISSING-FEATURE: SVGFEDropShadowElement.stdDeviationY
+MISSING-FEATURE: SVGFEDropShadowElement.setStdDeviation
+MISSING-FEATURE: SVGFEDropShadowElement.x
+MISSING-FEATURE: SVGFEDropShadowElement.y
+MISSING-FEATURE: SVGFEDropShadowElement.width
+MISSING-FEATURE: SVGFEDropShadowElement.height
+MISSING-FEATURE: SVGFEDropShadowElement.result
+MISSING-FEATURE: SVGFEFloodElement.x
+MISSING-FEATURE: SVGFEFloodElement.y
+MISSING-FEATURE: SVGFEFloodElement.width
+MISSING-FEATURE: SVGFEFloodElement.height
+MISSING-FEATURE: SVGFEFloodElement.result
+MISSING-FEATURE: SVGFEGaussianBlurElement.stdDeviationX
+MISSING-FEATURE: SVGFEGaussianBlurElement.stdDeviationY
+MISSING-FEATURE: SVGFEGaussianBlurElement.edgeMode
+MISSING-FEATURE: SVGFEGaussianBlurElement.setStdDeviation
+MISSING-FEATURE: SVGFEGaussianBlurElement.x
+MISSING-FEATURE: SVGFEGaussianBlurElement.y
+MISSING-FEATURE: SVGFEGaussianBlurElement.width
+MISSING-FEATURE: SVGFEGaussianBlurElement.height
+MISSING-FEATURE: SVGFEGaussianBlurElement.result
+MISSING-FEATURE: SVGFEImageElement.preserveAspectRatio
+MISSING-FEATURE: SVGFEImageElement.crossOrigin
+MISSING-FEATURE: SVGFEImageElement.x
+MISSING-FEATURE: SVGFEImageElement.y
+MISSING-FEATURE: SVGFEImageElement.width
+MISSING-FEATURE: SVGFEImageElement.height
+MISSING-FEATURE: SVGFEImageElement.result
+MISSING-FEATURE: SVGFEMergeElement.x
+MISSING-FEATURE: SVGFEMergeElement.y
+MISSING-FEATURE: SVGFEMergeElement.width
+MISSING-FEATURE: SVGFEMergeElement.height
+MISSING-FEATURE: SVGFEMergeElement.result
+MISSING-FEATURE: SVGFEMorphologyElement.operator
+MISSING-FEATURE: SVGFEMorphologyElement.radiusX
+MISSING-FEATURE: SVGFEMorphologyElement.radiusY
+MISSING-FEATURE: SVGFEMorphologyElement.x
+MISSING-FEATURE: SVGFEMorphologyElement.y
+MISSING-FEATURE: SVGFEMorphologyElement.width
+MISSING-FEATURE: SVGFEMorphologyElement.height
+MISSING-FEATURE: SVGFEMorphologyElement.result
+MISSING-FEATURE: SVGFEOffsetElement.dx
+MISSING-FEATURE: SVGFEOffsetElement.dy
+MISSING-FEATURE: SVGFEOffsetElement.x
+MISSING-FEATURE: SVGFEOffsetElement.y
+MISSING-FEATURE: SVGFEOffsetElement.width
+MISSING-FEATURE: SVGFEOffsetElement.height
+MISSING-FEATURE: SVGFEOffsetElement.result
+MISSING-FEATURE: SVGFESpecularLightingElement.surfaceScale
+MISSING-FEATURE: SVGFESpecularLightingElement.specularConstant
+MISSING-FEATURE: SVGFESpecularLightingElement.specularExponent
+MISSING-FEATURE: SVGFESpecularLightingElement.kernelUnitLengthX
+MISSING-FEATURE: SVGFESpecularLightingElement.kernelUnitLengthY
+MISSING-FEATURE: SVGFESpecularLightingElement.x
+MISSING-FEATURE: SVGFESpecularLightingElement.y
+MISSING-FEATURE: SVGFESpecularLightingElement.width
+MISSING-FEATURE: SVGFESpecularLightingElement.height
+MISSING-FEATURE: SVGFESpecularLightingElement.result
+MISSING-FEATURE: SVGFETileElement.x
+MISSING-FEATURE: SVGFETileElement.y
+MISSING-FEATURE: SVGFETileElement.width
+MISSING-FEATURE: SVGFETileElement.height
+MISSING-FEATURE: SVGFETileElement.result
+MISSING-FEATURE: SVGFETurbulenceElement.baseFrequencyX
+MISSING-FEATURE: SVGFETurbulenceElement.baseFrequencyY
+MISSING-FEATURE: SVGFETurbulenceElement.numOctaves
+MISSING-FEATURE: SVGFETurbulenceElement.seed
+MISSING-FEATURE: SVGFETurbulenceElement.stitchTiles
+MISSING-FEATURE: SVGFETurbulenceElement.type
+MISSING-FEATURE: SVGFETurbulenceElement.x
+MISSING-FEATURE: SVGFETurbulenceElement.y
+MISSING-FEATURE: SVGFETurbulenceElement.width
+MISSING-FEATURE: SVGFETurbulenceElement.height
+MISSING-FEATURE: SVGFETurbulenceElement.result
+MISSING-FEATURE: SVGAnimatedBoolean.baseVal
+MISSING-FEATURE: SVGAnimatedBoolean.animVal
+MISSING-FEATURE: SVGAnimatedEnumeration.baseVal
+MISSING-FEATURE: SVGAnimatedEnumeration.animVal
+MISSING-FEATURE: SVGAnimatedInteger.baseVal
+MISSING-FEATURE: SVGAnimatedInteger.animVal
+MISSING-FEATURE: SVGAnimatedNumber.baseVal
+MISSING-FEATURE: SVGAnimatedNumber.animVal
+MISSING-FEATURE: SVGAnimatedLength.baseVal
+MISSING-FEATURE: SVGAnimatedLength.animVal
+MISSING-FEATURE: SVGAnimatedNumberList.baseVal
+MISSING-FEATURE: SVGAnimatedNumberList.animVal
+MISSING-FEATURE: SVGAnimatedPreserveAspectRatio.baseVal
+MISSING-FEATURE: SVGAnimatedPreserveAspectRatio.animVal
+ADD-DATA: api.Node.ownerDocument.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Node.isSameNode.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: DOMPoint.fromPoint
+MISSING-FEATURE: DOMPoint.x
+MISSING-FEATURE: DOMPoint.y
+MISSING-FEATURE: DOMPoint.z
+MISSING-FEATURE: DOMPoint.w
+MISSING-FEATURE: DOMRectReadOnly.toJSON
+MISSING-FEATURE: DOMRect.fromRect
+MISSING-FEATURE: DOMRect.x
+MISSING-FEATURE: DOMRect.y
+MISSING-FEATURE: DOMRect.width
+MISSING-FEATURE: DOMRect.height
+MISSING-INTERFACE: DOMRectList
+MISSING-FEATURE: DOMMatrix.fromMatrix
+MISSING-FEATURE: DOMMatrix.a
+MISSING-FEATURE: DOMMatrix.b
+MISSING-FEATURE: DOMMatrix.c
+MISSING-FEATURE: DOMMatrix.d
+MISSING-FEATURE: DOMMatrix.e
+MISSING-FEATURE: DOMMatrix.f
+MISSING-FEATURE: DOMMatrix.multiplySelf
+MISSING-FEATURE: DOMMatrix.preMultiplySelf
+MISSING-FEATURE: DOMMatrix.translateSelf
+MISSING-FEATURE: DOMMatrix.rotateSelf
+MISSING-FEATURE: DOMMatrix.rotateFromVectorSelf
+MISSING-FEATURE: DOMMatrix.rotateAxisAngleSelf
+MISSING-FEATURE: DOMMatrix.skewXSelf
+MISSING-FEATURE: DOMMatrix.skewYSelf
+MISSING-FEATURE: DOMMatrix.invertSelf
+MISSING-FEATURE: DOMMatrix.setMatrixValue
+MISMATCH: api.Event.returnValue.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+ADD-DATA: api.Event.initEvent.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: DocumentType.before
+MISSING-FEATURE: DocumentType.after
+MISSING-FEATURE: DocumentType.replaceWith
+MISSING-FEATURE: DocumentType.remove
+MISSING-FEATURE: DocumentFragment.getElementById
+MISSING-FEATURE: DocumentFragment.children
+MISSING-FEATURE: DocumentFragment.firstElementChild
+MISSING-FEATURE: DocumentFragment.lastElementChild
+MISSING-FEATURE: DocumentFragment.childElementCount
+MISSING-FEATURE: DocumentFragment.prepend
+MISSING-FEATURE: DocumentFragment.append
+MISSING-FEATURE: DocumentFragment.replaceChildren
+ADD: api.NamedNodeMap.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Attr.name
+MISSING-FEATURE: Attr.value
+MISSING-FEATURE: Attr.ownerElement
+MISSING-FEATURE: Attr.specified
+MISSING-FEATURE: CharacterData.previousElementSibling
+MISSING-FEATURE: CharacterData.nextElementSibling
+MISSING-FEATURE: CharacterData.before
+MISSING-FEATURE: CharacterData.after
+MISSING-FEATURE: CharacterData.replaceWith
+MISSING-FEATURE: CharacterData.remove
+MISSING-FEATURE: XPathResult.numberValue
+MISSING-FEATURE: XPathResult.stringValue
+MISSING-FEATURE: XPathResult.booleanValue
+MISSING-FEATURE: XPathResult.singleNodeValue
+MISSING-FEATURE: XPathResult.snapshotLength
+MISSING-INTERFACE: XPathNSResolver
+MISSING-INTERFACE: XPathEvaluator
+ADD: api.HTMLSlotElement.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLSlotElement.name.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLSlotElement.assignedNodes.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: XMLSerializer.serializeToString
+MISSING-INTERFACE: PerformanceElementTiming
+ADD: api.TextDecoder.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.TextDecoder.decode.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.TextDecoder.encoding.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.TextEncoder.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.TextEncoder.encode.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.TextEncoder.encoding.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: HTMLInputElement.capture
+MISSING-FEATURE: HTMLInputElement.accept
+MISSING-FEATURE: HTMLInputElement.alt
+MISSING-FEATURE: HTMLInputElement.defaultChecked
+MISSING-FEATURE: HTMLInputElement.checked
+MISSING-FEATURE: HTMLInputElement.dirName
+MISSING-FEATURE: HTMLInputElement.disabled
+MISSING-FEATURE: HTMLInputElement.form
+MISSING-FEATURE: HTMLInputElement.formEnctype
+MISSING-FEATURE: HTMLInputElement.max
+MISSING-FEATURE: HTMLInputElement.maxLength
+MISSING-FEATURE: HTMLInputElement.min
+MISSING-FEATURE: HTMLInputElement.minLength
+MISSING-FEATURE: HTMLInputElement.name
+MISSING-FEATURE: HTMLInputElement.readOnly
+MISSING-FEATURE: HTMLInputElement.size
+MISSING-FEATURE: HTMLInputElement.src
+MISSING-FEATURE: HTMLInputElement.step
+MISSING-FEATURE: HTMLInputElement.type
+MISSING-FEATURE: HTMLInputElement.defaultValue
+MISSING-FEATURE: HTMLInputElement.value
+MISSING-FEATURE: HTMLInputElement.valueAsDate
+MISSING-FEATURE: HTMLInputElement.valueAsNumber
+MISSING-FEATURE: HTMLInputElement.width
+MISSING-FEATURE: HTMLInputElement.select
+MISSING-FEATURE: HTMLInputElement.selectionStart
+MISSING-FEATURE: HTMLInputElement.selectionEnd
+MISSING-FEATURE: HTMLInputElement.setRangeText
+MISSING-FEATURE: HTMLInputElement.align
+MISSING-FEATURE: HTMLInputElement.useMap
+MISMATCH: api.FileSystemEntry.getParent.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISSING-INTERFACE: PerformanceEventTiming
+MISSING-INTERFACE: EventCounts
+MISSING-FEATURE: Performance.eventCounts
+MISSING-FEATURE: Performance.profile
+MISMATCH: api.FeaturePolicy.__compat.support.firefox.version_added (65) does not match WPT (false)
+MISMATCH: api.FeaturePolicy.allowsFeature.__compat.support.firefox.version_added (65) does not match WPT (false)
+MISMATCH: api.FeaturePolicy.features.__compat.support.firefox.version_added (70) does not match WPT (false)
+MISMATCH: api.FeaturePolicy.allowedFeatures.__compat.support.firefox.version_added (65) does not match WPT (false)
+MISMATCH: api.FeaturePolicy.getAllowlistForFeature.__compat.support.firefox.version_added (65) does not match WPT (false)
+MISSING-INTERFACE: FeaturePolicyViolationReportBody
+ADD: api.Headers.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Headers.append.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Headers.delete.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Headers.get.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Headers.has.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Headers.set.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.Request.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Request.method.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Request.url.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Request.headers.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Request.credentials.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Request.keepalive.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: Request.isReloadNavigation
+MISSING-FEATURE: Request.isHistoryNavigation
+ADD-DATA: api.Request.clone.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Request.body
+MISSING-FEATURE: Request.bodyUsed
+MISSING-FEATURE: Request.arrayBuffer
+MISSING-FEATURE: Request.blob
+MISSING-FEATURE: Request.formData
+MISSING-FEATURE: Request.json
+MISSING-FEATURE: Request.text
+ADD: api.Response.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Response.type.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Response.url.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Response.status.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Response.ok.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Response.statusText.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Response.headers.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Response.clone.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Response.body
+MISSING-FEATURE: Response.bodyUsed
+MISSING-FEATURE: Response.arrayBuffer
+MISSING-FEATURE: Response.blob
+MISSING-FEATURE: Response.formData
+MISSING-FEATURE: Response.json
+MISSING-FEATURE: Response.text
+ADD: api.Gamepad.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Gamepad.id.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Gamepad.index.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Gamepad.connected.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Gamepad.timestamp.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Gamepad.mapping.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Gamepad.axes.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Gamepad.buttons.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Gamepad.displayId.__compat.support.firefox.version_added would be set to false
+ADD: api.GamepadButton.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.GamepadButton.pressed.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.GamepadButton.value.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.GamepadEvent.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.GamepadEvent.gamepad.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.Sensor.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Sensor.activated.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Sensor.hasReading.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Sensor.timestamp.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Sensor.start.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Sensor.stop.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Sensor.onreading.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Sensor.onactivate.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Sensor.onerror.__compat.support.firefox.version_added would be set to false
+ADD: api.SensorErrorEvent.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.SensorErrorEvent.error.__compat.support.firefox.version_added would be set to false
+ADD: api.GeolocationPosition.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.GeolocationCoordinates.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.GeolocationPositionError.__compat.support.firefox.version_added would be set to 75.0
+MISSING-INTERFACE: GeolocationSensor
+ADD: api.Gyroscope.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Gyroscope.x.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Gyroscope.y.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Gyroscope.z.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.AudioTrackList.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.AudioTrackList.length.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.AudioTrackList.getTrackById.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.AudioTrackList.onchange.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.AudioTrackList.onaddtrack.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.AudioTrackList.onremovetrack.__compat.support.firefox.version_added (33) does not match WPT (false)
+ADD: api.AudioTrack.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.AudioTrack.id.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.AudioTrack.kind.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.AudioTrack.label.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.AudioTrack.language.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.AudioTrack.enabled.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.AudioTrack.sourceBuffer.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.VideoTrackList.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.VideoTrackList.length.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.VideoTrackList.getTrackById.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.VideoTrackList.selectedIndex.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.VideoTrackList.onchange.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.VideoTrackList.onaddtrack.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.VideoTrackList.onremovetrack.__compat.support.firefox.version_added (33) does not match WPT (false)
+ADD: api.VideoTrack.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VideoTrack.id.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VideoTrack.kind.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VideoTrack.label.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VideoTrack.language.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VideoTrack.selected.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VideoTrack.sourceBuffer.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: TextTrackList.onchange
+MISSING-FEATURE: TextTrackList.onaddtrack
+MISSING-FEATURE: TextTrackList.onremovetrack
+ADD-DATA: api.TextTrack.sourceBuffer.__compat.support.firefox.version_added would be set to false
+MISSING-INTERFACE: TextTrackCueList
+ADD: api.TextTrackCue.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.TextTrackCue.track.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.TextTrackCue.id.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.TextTrackCue.startTime.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.TextTrackCue.endTime.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.TextTrackCue.pauseOnExit.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: TextTrackCue.onenter
+MISSING-FEATURE: TextTrackCue.onexit
+ADD: api.TrackEvent.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.TrackEvent.track.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: ValidityState.valueMissing
+MISSING-FEATURE: ValidityState.typeMismatch
+MISSING-FEATURE: ValidityState.patternMismatch
+MISSING-FEATURE: ValidityState.rangeUnderflow
+MISSING-FEATURE: ValidityState.rangeOverflow
+MISSING-FEATURE: ValidityState.stepMismatch
+MISSING-FEATURE: ValidityState.customError
+MISSING-FEATURE: ValidityState.valid
+ADD: api.SubmitEvent.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SubmitEvent.submitter.__compat.support.firefox.version_added would be set to 75.0
+MISMATCH: api.CanvasPattern.setTransform.__compat.support.firefox.version_added (33) does not match WPT (false)
+MISMATCH: api.TextMetrics.fontBoundingBoxAscent.__compat.support.firefox.version_added (74) does not match WPT (false)
+MISMATCH: api.TextMetrics.fontBoundingBoxDescent.__compat.support.firefox.version_added (74) does not match WPT (false)
+MISMATCH: api.TextMetrics.emHeightAscent.__compat.support.firefox.version_added (74) does not match WPT (false)
+MISMATCH: api.TextMetrics.emHeightDescent.__compat.support.firefox.version_added (74) does not match WPT (false)
+MISMATCH: api.TextMetrics.hangingBaseline.__compat.support.firefox.version_added (74) does not match WPT (false)
+MISMATCH: api.TextMetrics.alphabeticBaseline.__compat.support.firefox.version_added (74) does not match WPT (false)
+MISMATCH: api.TextMetrics.ideographicBaseline.__compat.support.firefox.version_added (74) does not match WPT (false)
+MISSING-FEATURE: ImageBitmapRenderingContext.canvas
+ADD-DATA: api.ImageBitmapRenderingContext.transferFromImageBitmap.__compat.support.firefox.version_added would be set to 75.0
+MISMATCH: api.OffscreenCanvas.__compat.support.firefox.version_added (44) does not match WPT (false)
+MISMATCH: api.OffscreenCanvas.width.__compat.support.firefox.version_added (44) does not match WPT (false)
+MISMATCH: api.OffscreenCanvas.height.__compat.support.firefox.version_added (44) does not match WPT (false)
+MISMATCH: api.OffscreenCanvas.getContext.__compat.support.firefox.version_added (44) does not match WPT (false)
+MISMATCH: api.OffscreenCanvas.transferToImageBitmap.__compat.support.firefox.version_added (46) does not match WPT (false)
+MISMATCH: api.OffscreenCanvas.convertToBlob.__compat.support.firefox.version_added (46) does not match WPT (false)
+ADD: api.CustomElementRegistry.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.CustomElementRegistry.define.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.CustomElementRegistry.get.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.CustomElementRegistry.whenDefined.__compat.support.firefox.version_added would be set to 75.0
+MISSING-INTERFACE: ElementInternals
+MISSING-INTERFACE: BarProp
+MISSING-FEATURE: BeforeUnloadEvent.returnValue
+MISSING-INTERFACE: ApplicationCache
+ADD: api.PromiseRejectionEvent.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PromiseRejectionEvent.promise.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PromiseRejectionEvent.reason.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: Plugin.length
+ADD: api.WebSocket.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.WebSocket.close.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.WebSocket.send.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: CloseEvent.wasClean
+MISSING-FEATURE: CloseEvent.code
+MISSING-FEATURE: CloseEvent.reason
+MISSING-FEATURE: DedicatedWorkerGlobalScope.requestAnimationFrame
+MISSING-FEATURE: DedicatedWorkerGlobalScope.cancelAnimationFrame
+MISSING-FEATURE: Worker.onerror
+MISSING-FEATURE: SharedWorker.onerror
+MISSING-FEATURE: WorkerLocation.href
+MISSING-FEATURE: WorkerLocation.origin
+MISSING-FEATURE: WorkerLocation.protocol
+MISSING-FEATURE: WorkerLocation.host
+MISSING-FEATURE: WorkerLocation.hostname
+MISSING-FEATURE: WorkerLocation.port
+MISSING-FEATURE: WorkerLocation.pathname
+MISSING-FEATURE: WorkerLocation.search
+MISSING-FEATURE: WorkerLocation.hash
+MISMATCH: api.External.__compat.support.firefox.version_added (true) does not match WPT (false)
+MISMATCH: api.External.AddSearchProvider.__compat.support.firefox.version_added (true) does not match WPT (false)
+MISMATCH: api.External.IsSearchProviderInstalled.__compat.support.firefox.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGSVGElement.onafterprint
+MISSING-FEATURE: SVGSVGElement.onbeforeprint
+MISSING-FEATURE: SVGSVGElement.onbeforeunload
+MISSING-FEATURE: SVGSVGElement.onhashchange
+MISSING-FEATURE: SVGSVGElement.onlanguagechange
+MISSING-FEATURE: SVGSVGElement.onmessage
+MISSING-FEATURE: SVGSVGElement.onmessageerror
+MISSING-FEATURE: SVGSVGElement.onoffline
+MISSING-FEATURE: SVGSVGElement.ononline
+MISSING-FEATURE: SVGSVGElement.onpagehide
+MISSING-FEATURE: SVGSVGElement.onpageshow
+MISSING-FEATURE: SVGSVGElement.onpopstate
+MISSING-FEATURE: SVGSVGElement.onrejectionhandled
+MISSING-FEATURE: SVGSVGElement.onstorage
+MISSING-FEATURE: SVGSVGElement.onunhandledrejection
+MISSING-FEATURE: SVGSVGElement.onunload
+MISMATCH: api.SVGSVGElement.createSVGTransformFromMatrix.__compat.support.firefox.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGSVGElement.viewBox
+MISSING-FEATURE: SVGSVGElement.preserveAspectRatio
+ADD-DATA: api.HTMLFormControlsCollection.namedItem.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: HTMLHtmlElement.version
+MISSING-FEATURE: HTMLMetaElement.name
+MISSING-FEATURE: HTMLMetaElement.httpEquiv
+MISSING-FEATURE: HTMLMetaElement.content
+MISSING-FEATURE: HTMLMetaElement.scheme
+MISSING-FEATURE: HTMLHRElement.align
+MISSING-FEATURE: HTMLHRElement.color
+MISSING-FEATURE: HTMLHRElement.noShade
+MISSING-FEATURE: HTMLHRElement.size
+MISSING-FEATURE: HTMLHRElement.width
+MISSING-FEATURE: HTMLLIElement.value
+MISSING-FEATURE: HTMLLIElement.type
+MISSING-FEATURE: HTMLAnchorElement.ping
+MISSING-FEATURE: HTMLAnchorElement.href
+MISSING-FEATURE: HTMLAnchorElement.origin
+MISSING-FEATURE: HTMLAnchorElement.protocol
+MISSING-FEATURE: HTMLAnchorElement.username
+MISSING-FEATURE: HTMLAnchorElement.password
+MISSING-FEATURE: HTMLAnchorElement.host
+MISSING-FEATURE: HTMLAnchorElement.hostname
+MISSING-FEATURE: HTMLAnchorElement.port
+MISSING-FEATURE: HTMLAnchorElement.pathname
+MISSING-FEATURE: HTMLAnchorElement.search
+MISSING-FEATURE: HTMLAnchorElement.hash
+ADD: api.HTMLPictureElement.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLSourceElement.srcset.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLSourceElement.sizes.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: HTMLEmbedElement.src
+MISSING-FEATURE: HTMLEmbedElement.type
+MISSING-FEATURE: HTMLEmbedElement.width
+MISSING-FEATURE: HTMLEmbedElement.height
+MISSING-FEATURE: HTMLEmbedElement.getSVGDocument
+MISSING-FEATURE: HTMLEmbedElement.align
+MISSING-FEATURE: HTMLEmbedElement.name
+MISSING-FEATURE: HTMLVideoElement.playsInline
+ADD-DATA: api.HTMLVideoElement.getVideoPlaybackQuality.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: HTMLVideoElement.requestPictureInPicture
+MISSING-FEATURE: HTMLVideoElement.onenterpictureinpicture
+MISSING-FEATURE: HTMLVideoElement.onleavepictureinpicture
+MISSING-FEATURE: HTMLVideoElement.autoPictureInPicture
+MISSING-FEATURE: HTMLVideoElement.disablePictureInPicture
+MISSING-FEATURE: HTMLVideoElement.requestVideoFrameCallback
+MISSING-FEATURE: HTMLVideoElement.cancelVideoFrameCallback
+ADD: api.HTMLTrackElement.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLTrackElement.kind.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLTrackElement.src.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLTrackElement.srclang.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLTrackElement.label.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLTrackElement.default.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLTrackElement.readyState.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.HTMLTrackElement.track.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: HTMLAreaElement.ping
+MISSING-FEATURE: HTMLAreaElement.href
+MISSING-FEATURE: HTMLAreaElement.origin
+MISSING-FEATURE: HTMLAreaElement.protocol
+MISSING-FEATURE: HTMLAreaElement.username
+MISSING-FEATURE: HTMLAreaElement.password
+MISSING-FEATURE: HTMLAreaElement.host
+MISSING-FEATURE: HTMLAreaElement.hostname
+MISSING-FEATURE: HTMLAreaElement.port
+MISSING-FEATURE: HTMLAreaElement.pathname
+MISSING-FEATURE: HTMLAreaElement.search
+MISSING-FEATURE: HTMLAreaElement.hash
+MISMATCH: api.HTMLTableColElement.ch.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISMATCH: api.HTMLTableColElement.chOff.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISMATCH: api.HTMLTableSectionElement.ch.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISMATCH: api.HTMLTableSectionElement.chOff.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISSING-FEATURE: HTMLFormElement.rel
+MISSING-FEATURE: HTMLFormElement.relList
+MISSING-FEATURE: HTMLButtonElement.checkValidity
+MISSING-FEATURE: HTMLButtonElement.setCustomValidity
+ADD-DATA: api.HTMLOptionElement.label.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: HTMLTextAreaElement.cols
+MISSING-FEATURE: HTMLTextAreaElement.dirName
+MISSING-FEATURE: HTMLTextAreaElement.disabled
+MISSING-FEATURE: HTMLTextAreaElement.form
+MISSING-FEATURE: HTMLTextAreaElement.maxLength
+MISSING-FEATURE: HTMLTextAreaElement.minLength
+MISSING-FEATURE: HTMLTextAreaElement.name
+MISSING-FEATURE: HTMLTextAreaElement.placeholder
+MISSING-FEATURE: HTMLTextAreaElement.readOnly
+MISSING-FEATURE: HTMLTextAreaElement.required
+MISSING-FEATURE: HTMLTextAreaElement.rows
+MISSING-FEATURE: HTMLTextAreaElement.wrap
+MISSING-FEATURE: HTMLTextAreaElement.type
+MISSING-FEATURE: HTMLTextAreaElement.defaultValue
+MISSING-FEATURE: HTMLTextAreaElement.value
+MISSING-FEATURE: HTMLTextAreaElement.willValidate
+MISSING-FEATURE: HTMLTextAreaElement.validity
+MISSING-FEATURE: HTMLTextAreaElement.validationMessage
+MISSING-FEATURE: HTMLTextAreaElement.checkValidity
+MISSING-FEATURE: HTMLTextAreaElement.setCustomValidity
+MISSING-FEATURE: HTMLTextAreaElement.select
+MISSING-FEATURE: HTMLTextAreaElement.selectionStart
+MISSING-FEATURE: HTMLTextAreaElement.selectionEnd
+MISSING-FEATURE: HTMLTextAreaElement.selectionDirection
+MISSING-FEATURE: HTMLTextAreaElement.setRangeText
+MISSING-FEATURE: HTMLTextAreaElement.setSelectionRange
+MISSING-FEATURE: HTMLFieldSetElement.checkValidity
+MISSING-FEATURE: HTMLFieldSetElement.setCustomValidity
+MISSING-FEATURE: HTMLLegendElement.form
+MISSING-FEATURE: HTMLLegendElement.align
+MISMATCH: api.HTMLDialogElement.__compat.support.firefox.version_added (53) does not match WPT (false)
+MISMATCH: api.HTMLDialogElement.open.__compat.support.firefox.version_added (53) does not match WPT (false)
+MISMATCH: api.HTMLDialogElement.returnValue.__compat.support.firefox.version_added (53) does not match WPT (false)
+MISMATCH: api.HTMLDialogElement.show.__compat.support.firefox.version_added (53) does not match WPT (false)
+MISMATCH: api.HTMLDialogElement.showModal.__compat.support.firefox.version_added (53) does not match WPT (false)
+MISMATCH: api.HTMLDialogElement.close.__compat.support.firefox.version_added (53) does not match WPT (false)
+ADD-DATA: api.HTMLScriptElement.noModule.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: HTMLScriptElement.integrity
+MISMATCH: api.HTMLCanvasElement.transferControlToOffscreen.__compat.support.firefox.version_added (44) does not match WPT (false)
+MISSING-FEATURE: HTMLMarqueeElement.bgColor
+MISSING-FEATURE: HTMLMarqueeElement.scrollAmount
+MISSING-FEATURE: HTMLMarqueeElement.scrollDelay
+MISSING-FEATURE: HTMLMarqueeElement.trueSpeed
+MISSING-FEATURE: HTMLMarqueeElement.onbounce
+MISSING-FEATURE: HTMLMarqueeElement.onfinish
+MISSING-FEATURE: HTMLMarqueeElement.onstart
+MISSING-FEATURE: HTMLMarqueeElement.start
+MISSING-FEATURE: HTMLMarqueeElement.stop
+MISSING-FEATURE: HTMLFrameSetElement.onafterprint
+MISSING-FEATURE: HTMLFrameSetElement.onbeforeprint
+MISSING-FEATURE: HTMLFrameSetElement.onbeforeunload
+MISSING-FEATURE: HTMLFrameSetElement.onhashchange
+MISSING-FEATURE: HTMLFrameSetElement.onlanguagechange
+MISSING-FEATURE: HTMLFrameSetElement.onmessage
+MISSING-FEATURE: HTMLFrameSetElement.onmessageerror
+MISSING-FEATURE: HTMLFrameSetElement.onoffline
+MISSING-FEATURE: HTMLFrameSetElement.ononline
+MISSING-FEATURE: HTMLFrameSetElement.onpagehide
+MISSING-FEATURE: HTMLFrameSetElement.onpageshow
+MISSING-FEATURE: HTMLFrameSetElement.onpopstate
+MISSING-FEATURE: HTMLFrameSetElement.onrejectionhandled
+MISSING-FEATURE: HTMLFrameSetElement.onunhandledrejection
+MISSING-FEATURE: HTMLFrameSetElement.onunload
+MISSING-INTERFACE: HTMLDirectoryElement
+ADD-DATA: api.UIEvent.sourceCapabilities.__compat.support.firefox.version_added would be set to false
+ADD: api.InputDeviceCapabilities.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.InputDeviceCapabilities.firesTouchEvents.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: InputDeviceCapabilities.pointerMovementScrolls
+ADD: api.IntersectionObserver.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserver.root.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserver.rootMargin.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserver.thresholds.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserver.observe.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserver.unobserve.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserver.disconnect.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserver.takeRecords.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.IntersectionObserverEntry.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserverEntry.time.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserverEntry.rootBounds.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserverEntry.boundingClientRect.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserverEntry.intersectionRect.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserverEntry.isIntersecting.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserverEntry.intersectionRatio.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IntersectionObserverEntry.target.__compat.support.firefox.version_added would be set to 75.0
+MISSING-INTERFACE: Profiler
+MISSING-INTERFACE: LargestContentfulPaint
+MISSING-INTERFACE: LayoutShift
+MISSING-FEATURE: PerformanceLongTaskTiming.toJSON
+MISSING-FEATURE: TaskAttributionTiming.toJSON
+ADD: api.Magnetometer.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Magnetometer.x.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Magnetometer.y.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Magnetometer.z.__compat.support.firefox.version_added would be set to false
+MISSING-INTERFACE: UncalibratedMagnetometer
+ADD: api.VideoPlaybackQuality.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.VideoPlaybackQuality.creationTime.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.VideoPlaybackQuality.droppedVideoFrames.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.VideoPlaybackQuality.totalVideoFrames.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.VideoPlaybackQuality.corruptedVideoFrames.__compat.support.firefox.version_added would be set to false
+ADD: api.MediaSource.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaSource.sourceBuffers.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaSource.activeSourceBuffers.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaSource.readyState.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaSource.duration.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaSource.onsourceopen.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaSource.onsourceended.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaSource.onsourceclose.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MediaSource.addSourceBuffer.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaSource.removeSourceBuffer.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaSource.endOfStream.__compat.support.firefox.version_added would be set to 75.0
+MISMATCH: api.MediaSource.setLiveSeekableRange.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISMATCH: api.MediaSource.clearLiveSeekableRange.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+ADD-DATA: api.MediaSource.isTypeSupported.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.SourceBuffer.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.mode.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.updating.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.buffered.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.timestampOffset.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.appendWindowStart.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.appendWindowEnd.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.onupdatestart.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.onupdate.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.onupdateend.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.onerror.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.onabort.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.appendBuffer.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.abort.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBuffer.remove.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.SourceBufferList.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBufferList.length.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBufferList.onaddsourcebuffer.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.SourceBufferList.onremovesourcebuffer.__compat.support.firefox.version_added would be set to 75.0
+MISMATCH: api.CanvasCaptureMediaStreamTrack.__compat.support.firefox.version_added (41) does not match WPT (false)
+MISMATCH: api.CanvasCaptureMediaStreamTrack.canvas.__compat.support.firefox.version_added (41) does not match WPT (false)
+MISMATCH: api.CanvasCaptureMediaStreamTrack.requestFrame.__compat.support.firefox.version_added (41) does not match WPT (false)
+ADD: api.ImageCapture.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.ImageCapture.takePhoto.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.ImageCapture.getPhotoCapabilities.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.ImageCapture.getPhotoSettings.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.ImageCapture.grabFrame.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.ImageCapture.track.__compat.support.firefox.version_added would be set to false
+ADD: api.PhotoCapabilities.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.PhotoCapabilities.redEyeReduction.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.PhotoCapabilities.imageHeight.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.PhotoCapabilities.imageWidth.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.PhotoCapabilities.fillLightMode.__compat.support.firefox.version_added would be set to false
+ADD: api.MediaSettingsRange.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MediaSettingsRange.max.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MediaSettingsRange.min.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MediaSettingsRange.step.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: MediaRecorder.audioBitrateMode
+ADD-DATA: api.BlobEvent.timecode.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.MediaStream.onremovetrack.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+ADD-DATA: api.MediaStreamTrack.contentHint.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MediaDevices.ondevicechange.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaDevices.enumerateDevices.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.MediaDevices.getDisplayMedia.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.InputDeviceInfo.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.InputDeviceInfo.getCapabilities.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.MediaSession.__compat.support.firefox.version_added (71) does not match WPT (false)
+MISMATCH: api.MediaSession.metadata.__compat.support.firefox.version_added (71) does not match WPT (false)
+MISMATCH: api.MediaSession.setActionHandler.__compat.support.firefox.version_added (71) does not match WPT (false)
+MISMATCH: api.MediaMetadata.__compat.support.firefox.version_added (71) does not match WPT (false)
+MISMATCH: api.MediaMetadata.title.__compat.support.firefox.version_added (71) does not match WPT (false)
+MISMATCH: api.MediaMetadata.artist.__compat.support.firefox.version_added (71) does not match WPT (false)
+MISMATCH: api.MediaMetadata.album.__compat.support.firefox.version_added (71) does not match WPT (false)
+MISMATCH: api.MediaMetadata.artwork.__compat.support.firefox.version_added (71) does not match WPT (false)
+MISSING-INTERFACE: FileSystemHandle
+MISSING-INTERFACE: FileSystemFileHandle
+MISSING-INTERFACE: FileSystemDirectoryHandle
+MISSING-INTERFACE: FileSystemWriter
+ADD: api.Notification.__compat.support.firefox.version_added would be set to 75.0
+MISMATCH: api.Notification.onerror.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISMATCH: api.Notification.title.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+ADD-DATA: api.Notification.icon.__compat.support.firefox.version_added would be set to 75.0
+MISMATCH: api.NotificationEvent.action.__compat.support.firefox.version_added (44) does not match WPT (false)
+MISSING-FEATURE: DeviceOrientationEvent.requestPermission
+ADD: api.DeviceMotionEventAcceleration.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventAcceleration.x.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventAcceleration.y.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventAcceleration.z.__compat.support.firefox.version_added would be set to false
+ADD: api.DeviceMotionEventRotationRate.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventRotationRate.alpha.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventRotationRate.beta.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventRotationRate.gamma.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: DeviceMotionEvent.requestPermission
+ADD: api.OrientationSensor.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.OrientationSensor.quaternion.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.OrientationSensor.populateMatrix.__compat.support.firefox.version_added would be set to false
+ADD: api.AbsoluteOrientationSensor.__compat.support.firefox.version_added would be set to false
+ADD: api.RelativeOrientationSensor.__compat.support.firefox.version_added would be set to false
+ADD: api.PerformancePaintTiming.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: PaymentManager.enableDelegations
+ADD: api.CanMakePaymentEvent.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.CanMakePaymentEvent.topOrigin.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.CanMakePaymentEvent.paymentRequestOrigin.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.CanMakePaymentEvent.methodData.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.CanMakePaymentEvent.respondWith.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.PaymentRequestEvent.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISSING-FEATURE: PaymentRequestEvent.requestBillingAddress
+MISSING-FEATURE: PaymentRequestEvent.paymentOptions
+MISSING-FEATURE: PaymentRequestEvent.shippingOptions
+MISSING-FEATURE: PaymentRequestEvent.changePaymentMethod
+MISSING-FEATURE: PaymentRequestEvent.changeShippingAddress
+MISSING-FEATURE: PaymentRequestEvent.changeShippingOption
+MISMATCH: api.PaymentRequest.__compat.support.firefox.version_added (55) does not match WPT (false)
+MISMATCH: api.PaymentRequest.show.__compat.support.firefox.version_added (55) does not match WPT (false)
+MISMATCH: api.PaymentRequest.abort.__compat.support.firefox.version_added (55) does not match WPT (false)
+MISMATCH: api.PaymentRequest.canMakePayment.__compat.support.firefox.version_added (55) does not match WPT (false)
+MISSING-FEATURE: PaymentRequest.hasEnrolledInstrument
+MISMATCH: api.PaymentRequest.id.__compat.support.firefox.version_added (55) does not match WPT (false)
+MISSING-FEATURE: PaymentRequest.shippingAddress
+MISMATCH: api.PaymentRequest.shippingOption.__compat.support.firefox.version_added (55) does not match WPT (false)
+MISMATCH: api.PaymentRequest.shippingType.__compat.support.firefox.version_added (55) does not match WPT (false)
+MISMATCH: api.PaymentRequest.onmerchantvalidation.__compat.support.firefox.version_added (64) does not match WPT (false)
+MISMATCH: api.PaymentRequest.onshippingaddresschange.__compat.support.firefox.version_added (55) does not match WPT (false)
+MISMATCH: api.PaymentRequest.onshippingoptionchange.__compat.support.firefox.version_added (55) does not match WPT (false)
+MISMATCH: api.PaymentRequest.onpaymentmethodchange.__compat.support.firefox.version_added (63) does not match WPT (false)
+MISMATCH: api.PaymentAddress.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentAddress.toJSON.__compat.support.firefox.version_added (62) does not match WPT (false)
+MISMATCH: api.PaymentAddress.city.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentAddress.country.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentAddress.dependentLocality.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentAddress.organization.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentAddress.phone.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentAddress.postalCode.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentAddress.recipient.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentAddress.region.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentAddress.sortingCode.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentAddress.addressLine.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentResponse.__compat.support.firefox.version_added (55) does not match WPT (false)
+MISMATCH: api.PaymentResponse.toJSON.__compat.support.firefox.version_added (62) does not match WPT (false)
+MISMATCH: api.PaymentResponse.requestId.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentResponse.methodName.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentResponse.details.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentResponse.shippingAddress.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentResponse.shippingOption.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentResponse.payerName.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentResponse.payerEmail.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentResponse.payerPhone.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentResponse.complete.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentResponse.retry.__compat.support.firefox.version_added (64) does not match WPT (false)
+MISMATCH: api.PaymentResponse.onpayerdetailchange.__compat.support.firefox.version_added (64) does not match WPT (false)
+MISMATCH: api.MerchantValidationEvent.__compat.support.firefox.version_added (64) does not match WPT (false)
+MISMATCH: api.MerchantValidationEvent.methodName.__compat.support.firefox.version_added (64) does not match WPT (false)
+MISMATCH: api.MerchantValidationEvent.validationURL.__compat.support.firefox.version_added (64) does not match WPT (false)
+MISMATCH: api.MerchantValidationEvent.complete.__compat.support.firefox.version_added (64) does not match WPT (false)
+MISMATCH: api.PaymentMethodChangeEvent.__compat.support.firefox.version_added (63) does not match WPT (false)
+MISMATCH: api.PaymentMethodChangeEvent.methodName.__compat.support.firefox.version_added (63) does not match WPT (false)
+MISMATCH: api.PaymentMethodChangeEvent.methodDetails.__compat.support.firefox.version_added (63) does not match WPT (false)
+MISMATCH: api.PaymentRequestUpdateEvent.__compat.support.firefox.version_added (56) does not match WPT (false)
+MISMATCH: api.PaymentRequestUpdateEvent.updateWith.__compat.support.firefox.version_added (56) does not match WPT (false)
+ADD-DATA: api.PerformanceObserver.supportedEntryTypes.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.Permissions.revoke.__compat.support.firefox.version_added would be set to false
+MISSING-INTERFACE: PictureInPictureWindow
+MISSING-INTERFACE: EnterPictureInPictureEvent
+ADD: api.PointerEvent.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PointerEvent.pointerId.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PointerEvent.width.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PointerEvent.height.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PointerEvent.pressure.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PointerEvent.tangentialPressure.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PointerEvent.tiltX.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PointerEvent.tiltY.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PointerEvent.twist.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: PointerEvent.altitudeAngle
+MISSING-FEATURE: PointerEvent.azimuthAngle
+ADD-DATA: api.PointerEvent.pointerType.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PointerEvent.isPrimary.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: PointerEvent.getPredictedEvents
+MISMATCH: api.Presentation.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.Presentation.defaultRequest.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.Presentation.receiver.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationRequest.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationRequest.start.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationRequest.reconnect.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationRequest.getAvailability.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationRequest.onconnectionavailable.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationAvailability.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationAvailability.value.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationAvailability.onchange.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnectionAvailableEvent.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnectionAvailableEvent.connection.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.id.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.url.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.state.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.close.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.terminate.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.onconnect.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.onclose.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.onterminate.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.binaryType.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.onmessage.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnection.send.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnectionCloseEvent.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnectionCloseEvent.reason.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.PresentationConnectionCloseEvent.message.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISSING-INTERFACE: ProximitySensor
+MISMATCH: api.PushManager.supportedContentEncodings.__compat.support.firefox.version_added (44) does not match WPT (false)
+ADD-DATA: api.PushSubscriptionOptions.userVisibleOnly.__compat.support.firefox.version_added would be set to false
+ADD: api.PushSubscriptionChangeEvent.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.PushSubscriptionChangeEvent.newSubscription.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.PushSubscriptionChangeEvent.oldSubscription.__compat.support.firefox.version_added would be set to false
+MISSING-INTERFACE: RemotePlayback
+MISSING-INTERFACE: ReportBody
+MISSING-INTERFACE: Report
+MISSING-INTERFACE: ReportingObserver
+ADD: api.IdleDeadline.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IdleDeadline.timeRemaining.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.IdleDeadline.didTimeout.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: ResizeObserverEntry.devicePixelContentBoxSize
+MISSING-INTERFACE: ResizeObserverSize
+MISSING-INTERFACE: ResizeObservation
+MISSING-INTERFACE: WakeLock
+MISSING-INTERFACE: WakeLockSentinel
+MISSING-INTERFACE: ScrollTimeline
+MISSING-FEATURE: ServiceWorker.postMessage
+ADD-DATA: api.WindowClient.ancestorOrigins.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Clients.matchAll.__compat.support.firefox.version_added would be set to 75.0
+MISSING-INTERFACE: FaceDetector
+MISSING-INTERFACE: BarcodeDetector
+MISSING-INTERFACE: TextDetector
+MISMATCH: api.SpeechGrammar.__compat.support.firefox.version_added (44) does not match WPT (false)
+MISMATCH: api.SpeechGrammar.src.__compat.support.firefox.version_added (44) does not match WPT (false)
+MISMATCH: api.SpeechGrammar.weight.__compat.support.firefox.version_added (44) does not match WPT (false)
+MISSING-FEATURE: SpeechSynthesisEvent.charLength
+ADD: api.StorageManager.__compat.support.firefox.version_added would be set to 75.0
+MISSING-FEATURE: SVGGraphicsElement.requiredExtensions
+MISSING-FEATURE: SVGGraphicsElement.systemLanguage
+MISSING-FEATURE: SVGNumber.value
+MISSING-FEATURE: SVGLength.unitType
+MISSING-FEATURE: SVGLength.value
+MISSING-FEATURE: SVGLength.valueInSpecifiedUnits
+MISSING-FEATURE: SVGLength.valueAsString
+MISSING-FEATURE: SVGLength.newValueSpecifiedUnits
+MISSING-FEATURE: SVGLength.convertToSpecifiedUnits
+MISSING-FEATURE: SVGAngle.unitType
+MISSING-FEATURE: SVGAngle.value
+MISSING-FEATURE: SVGAngle.valueInSpecifiedUnits
+MISSING-FEATURE: SVGAngle.valueAsString
+MISSING-FEATURE: SVGAngle.newValueSpecifiedUnits
+MISSING-FEATURE: SVGAngle.convertToSpecifiedUnits
+MISSING-FEATURE: SVGNumberList.length
+MISSING-FEATURE: SVGNumberList.numberOfItems
+MISSING-FEATURE: SVGNumberList.clear
+MISSING-FEATURE: SVGNumberList.initialize
+MISSING-FEATURE: SVGNumberList.getItem
+MISSING-FEATURE: SVGNumberList.insertItemBefore
+MISSING-FEATURE: SVGNumberList.replaceItem
+MISSING-FEATURE: SVGNumberList.removeItem
+MISSING-FEATURE: SVGNumberList.appendItem
+MISSING-FEATURE: SVGLengthList.length
+MISSING-FEATURE: SVGLengthList.numberOfItems
+MISSING-FEATURE: SVGLengthList.clear
+MISSING-FEATURE: SVGLengthList.initialize
+MISSING-FEATURE: SVGLengthList.getItem
+MISSING-FEATURE: SVGLengthList.insertItemBefore
+MISSING-FEATURE: SVGLengthList.replaceItem
+MISSING-FEATURE: SVGLengthList.removeItem
+MISSING-FEATURE: SVGLengthList.appendItem
+MISSING-FEATURE: SVGStringList.numberOfItems
+MISSING-FEATURE: SVGStringList.clear
+MISSING-FEATURE: SVGStringList.initialize
+MISSING-FEATURE: SVGStringList.getItem
+MISSING-FEATURE: SVGStringList.insertItemBefore
+MISSING-FEATURE: SVGStringList.replaceItem
+MISSING-FEATURE: SVGStringList.removeItem
+MISSING-FEATURE: SVGStringList.appendItem
+MISSING-FEATURE: SVGAnimatedAngle.baseVal
+MISSING-FEATURE: SVGAnimatedAngle.animVal
+MISSING-FEATURE: SVGAnimatedRect.baseVal
+MISSING-FEATURE: SVGAnimatedRect.animVal
+MISSING-FEATURE: SVGAnimatedLengthList.baseVal
+MISSING-FEATURE: SVGAnimatedLengthList.animVal
+MISMATCH: api.SVGSymbolElement.__compat.support.firefox.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGSymbolElement.viewBox
+MISSING-FEATURE: SVGSymbolElement.preserveAspectRatio
+ADD-DATA: api.SVGUseElement.instanceRoot.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.SVGUseElement.animatedInstanceRoot.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: SVGUseElement.href
+MISSING-INTERFACE: SVGUseElementShadowRoot
+MISSING-INTERFACE: ShadowAnimation
+MISSING-FEATURE: SVGTransform.type
+MISSING-FEATURE: SVGTransform.matrix
+MISSING-FEATURE: SVGTransform.angle
+MISSING-FEATURE: SVGTransform.setMatrix
+MISSING-FEATURE: SVGTransform.setTranslate
+MISSING-FEATURE: SVGTransform.setScale
+MISSING-FEATURE: SVGTransform.setRotate
+MISSING-FEATURE: SVGTransform.setSkewX
+MISSING-FEATURE: SVGTransform.setSkewY
+MISSING-FEATURE: SVGTransformList.numberOfItems
+MISSING-FEATURE: SVGTransformList.clear
+MISSING-FEATURE: SVGTransformList.initialize
+MISSING-FEATURE: SVGTransformList.getItem
+MISSING-FEATURE: SVGTransformList.insertItemBefore
+MISSING-FEATURE: SVGTransformList.replaceItem
+MISSING-FEATURE: SVGTransformList.removeItem
+MISSING-FEATURE: SVGTransformList.appendItem
+MISSING-FEATURE: SVGTransformList.createSVGTransformFromMatrix
+MISSING-FEATURE: SVGTransformList.consolidate
+MISSING-FEATURE: SVGAnimatedTransformList.baseVal
+MISSING-FEATURE: SVGAnimatedTransformList.animVal
+MISSING-FEATURE: SVGPreserveAspectRatio.align
+MISSING-FEATURE: SVGPreserveAspectRatio.meetOrSlice
+MISSING-INTERFACE: SVGPointList
+MISSING-FEATURE: SVGPolylineElement.points
+MISSING-FEATURE: SVGPolylineElement.animatedPoints
+MISSING-FEATURE: SVGPolygonElement.points
+MISSING-FEATURE: SVGPolygonElement.animatedPoints
+MISSING-FEATURE: SVGTextPathElement.href
+ADD-DATA: api.SVGImageElement.crossOrigin.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: SVGForeignObjectElement.x
+MISSING-FEATURE: SVGForeignObjectElement.y
+MISSING-FEATURE: SVGForeignObjectElement.width
+MISSING-FEATURE: SVGForeignObjectElement.height
+MISSING-INTERFACE: SVGMarkerElement
+MISSING-FEATURE: SVGGradientElement.gradientUnits
+MISSING-FEATURE: SVGGradientElement.gradientTransform
+MISSING-FEATURE: SVGGradientElement.spreadMethod
+MISSING-FEATURE: SVGGradientElement.href
+MISSING-FEATURE: SVGRadialGradientElement.cx
+MISSING-FEATURE: SVGRadialGradientElement.cy
+MISSING-FEATURE: SVGRadialGradientElement.r
+MISSING-FEATURE: SVGRadialGradientElement.fx
+MISSING-FEATURE: SVGRadialGradientElement.fy
+MISSING-FEATURE: SVGRadialGradientElement.fr
+MISSING-FEATURE: SVGStopElement.offset
+MISSING-FEATURE: SVGPatternElement.viewBox
+MISSING-FEATURE: SVGPatternElement.preserveAspectRatio
+MISSING-FEATURE: SVGPatternElement.href
+MISSING-FEATURE: SVGScriptElement.type
+MISSING-FEATURE: SVGScriptElement.crossOrigin
+MISSING-FEATURE: SVGScriptElement.href
+MISSING-FEATURE: SVGAElement.href
+MISSING-FEATURE: SVGViewElement.viewBox
+MISSING-FEATURE: SVGViewElement.preserveAspectRatio
+ADD: api.Touch.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.identifier.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.target.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.screenX.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.screenY.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.clientX.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.clientY.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.pageX.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.pageY.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.radiusX.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.radiusY.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Touch.rotationAngle.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.Touch.force.__compat.support.firefox.version_added (true) does not match WPT (false)
+MISSING-FEATURE: Touch.altitudeAngle
+MISSING-FEATURE: Touch.azimuthAngle
+MISSING-FEATURE: Touch.touchType
+ADD: api.TouchList.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.TouchList.length.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.TouchList.item.__compat.support.firefox.version_added would be set to false
+ADD: api.TouchEvent.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.TouchEvent.touches.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.TouchEvent.targetTouches.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.TouchEvent.changedTouches.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.TouchEvent.altKey.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.TouchEvent.metaKey.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.TouchEvent.ctrlKey.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.TouchEvent.shiftKey.__compat.support.firefox.version_added would be set to false
+MISSING-INTERFACE: TrustedHTML
+MISSING-INTERFACE: TrustedScript
+MISSING-INTERFACE: TrustedScriptURL
+MISSING-INTERFACE: TrustedTypePolicyFactory
+MISSING-INTERFACE: TrustedTypePolicy
+MISSING-FEATURE: PerformanceMark.detail
+MISSING-FEATURE: PerformanceMeasure.detail
+MISSING-INTERFACE: Module
+MISSING-INTERFACE: Instance
+MISSING-INTERFACE: Memory
+MISSING-INTERFACE: Table
+MISSING-INTERFACE: Global
+ADD: api.AnimationTimeline.__compat.support.firefox.version_added would be set to 75.0
+ADD-DATA: api.AnimationTimeline.currentTime.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.DocumentTimeline.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.AnimationEffect.__compat.support.firefox.version_added would be set to 75.0
+MISMATCH: api.KeyframeEffect.composite.__compat.support.firefox.version_added (63) does not match WPT (false)
+ADD: api.LockManager.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.LockManager.request.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.LockManager.query.__compat.support.firefox.version_added would be set to false
+ADD: api.Lock.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Lock.name.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.Lock.mode.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: NDEFReader.onreading
+ADD-DATA: api.BaseAudioContext.audioWorklet.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.AudioContext.resume.__compat.support.firefox.version_added (40) does not match WPT (false)
+ADD-DATA: api.AudioParam.automationRate.__compat.support.firefox.version_added would be set to false
+ADD: api.AudioScheduledSourceNode.__compat.support.firefox.version_added would be set to 75.0
+MISMATCH: api.AudioWorklet.__compat.support.firefox.version_added (76) does not match WPT (false)
+ADD: api.AudioParamMap.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.AudioWorkletNode.__compat.support.firefox.version_added (76) does not match WPT (false)
+MISMATCH: api.AudioWorkletNode.parameters.__compat.support.firefox.version_added (76) does not match WPT (false)
+MISMATCH: api.AudioWorkletNode.port.__compat.support.firefox.version_added (76) does not match WPT (false)
+MISMATCH: api.AudioWorkletNode.onprocessorerror.__compat.support.firefox.version_added (76) does not match WPT (false)
+ADD: api.WebGLObject.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.WebGLBuffer.__compat.support.firefox.version_added (4) does not match WPT (false)
+MISMATCH: api.WebGLFramebuffer.__compat.support.firefox.version_added (4) does not match WPT (false)
+MISMATCH: api.WebGLProgram.__compat.support.firefox.version_added (4) does not match WPT (false)
+MISMATCH: api.WebGLRenderbuffer.__compat.support.firefox.version_added (4) does not match WPT (false)
+MISMATCH: api.WebGLShader.__compat.support.firefox.version_added (4) does not match WPT (false)
+MISMATCH: api.WebGLTexture.__compat.support.firefox.version_added (4) does not match WPT (false)
+MISMATCH: api.WebGLQuery.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.WebGLSampler.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.WebGLSync.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.WebGLTransformFeedback.__compat.support.firefox.version_added (51) does not match WPT (false)
+MISMATCH: api.WebGLVertexArrayObject.__compat.support.firefox.version_added (51) does not match WPT (false)
+ADD: api.MIDIInputMap.__compat.support.firefox.version_added would be set to false
+ADD: api.MIDIOutputMap.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: MIDIAccess.onstatechange
+ADD: api.MIDIPort.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIPort.id.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIPort.manufacturer.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIPort.name.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIPort.type.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIPort.version.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIPort.state.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIPort.connection.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: MIDIPort.onstatechange
+ADD-DATA: api.MIDIPort.open.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIPort.close.__compat.support.firefox.version_added would be set to false
+ADD: api.MIDIInput.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: MIDIInput.onmidimessage
+ADD: api.MIDIOutput.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIOutput.send.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: MIDIOutput.clear
+ADD: api.MIDIMessageEvent.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIMessageEvent.data.__compat.support.firefox.version_added would be set to false
+ADD: api.MIDIConnectionEvent.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.MIDIConnectionEvent.port.__compat.support.firefox.version_added would be set to false
+ADD: api.RTCIdentityProviderGlobalScope.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.RTCIdentityProviderRegistrar.__compat.support.firefox.version_added would be set to 75.0
+ADD: api.RTCIdentityAssertion.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.RTCIdentityAssertion.idp.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.RTCIdentityAssertion.name.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: RTCPeerConnection.idpLoginUrl
+MISSING-FEATURE: RTCPeerConnection.idpErrorInfo
+ADD-DATA: api.RTCPeerConnection.onicecandidateerror.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: RTCPeerConnection.getTransceivers
+MISSING-INTERFACE: RTCError
+MISMATCH: api.RTCSessionDescription.type.__compat.support.firefox.version_added (true) does not match WPT (false)
+MISMATCH: api.RTCSessionDescription.sdp.__compat.support.firefox.version_added (true) does not match WPT (false)
+MISMATCH: api.RTCIceCandidate.candidate.__compat.support.firefox.version_added (22) does not match WPT (false)
+MISMATCH: api.RTCIceCandidate.sdpMid.__compat.support.firefox.version_added (22) does not match WPT (false)
+MISMATCH: api.RTCIceCandidate.sdpMLineIndex.__compat.support.firefox.version_added (22) does not match WPT (false)
+ADD-DATA: api.RTCIceCandidate.address.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.RTCIceCandidate.usernameFragment.__compat.support.firefox.version_added (67) does not match WPT (false)
+ADD-DATA: api.RTCPeerConnectionIceEvent.url.__compat.support.firefox.version_added would be set to false
+ADD: api.RTCPeerConnectionIceErrorEvent.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: RTCPeerConnectionIceErrorEvent.address
+MISSING-FEATURE: RTCPeerConnectionIceErrorEvent.port
+ADD-DATA: api.RTCPeerConnectionIceErrorEvent.url.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.RTCPeerConnectionIceErrorEvent.errorCode.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.RTCPeerConnectionIceErrorEvent.errorText.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.RTCCertificate.getFingerprints.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.RTCRtpSender.transport.__compat.support.firefox.version_added (34) does not match WPT (false)
+ADD-DATA: api.RTCRtpSender.getCapabilities.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.RTCRtpSender.setParameters.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: RTCRtpSender.setStreams
+MISMATCH: api.RTCRtpReceiver.transport.__compat.support.firefox.version_added (true) does not match WPT (false)
+MISMATCH: api.RTCRtpReceiver.getCapabilities.__compat.support.firefox.version_added (true) does not match WPT (false)
+MISMATCH: api.RTCRtpReceiver.getParameters.__compat.support.firefox.version_added (true) does not match WPT (false)
+ADD: api.RTCDataChannel.__compat.support.firefox.version_added would be set to 75.0
+MISMATCH: api.RTCDataChannel.id.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+MISMATCH: api.RTCDataChannel.onerror.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+ADD-DATA: api.RTCDTMFSender.canInsertDTMF.__compat.support.firefox.version_added would be set to false
+MISMATCH: api.RTCStatsReport.__compat.support.firefox.version_added (false) does not match WPT (75.0)
+ADD: api.RTCErrorEvent.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.RTCErrorEvent.error.__compat.support.firefox.version_added would be set to false
+ADD: api.VRDisplay.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.isPresenting.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.capabilities.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.stageParameters.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.getEyeParameters.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.displayId.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.displayName.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.getFrameData.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.depthNear.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.depthFar.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.requestAnimationFrame.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.cancelAnimationFrame.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.requestPresent.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.exitPresent.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.getLayers.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplay.submitFrame.__compat.support.firefox.version_added would be set to false
+ADD: api.VRDisplayCapabilities.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplayCapabilities.hasPosition.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplayCapabilities.hasExternalDisplay.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplayCapabilities.canPresent.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplayCapabilities.maxLayers.__compat.support.firefox.version_added would be set to false
+ADD: api.VRPose.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRPose.position.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRPose.linearVelocity.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRPose.linearAcceleration.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRPose.orientation.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRPose.angularVelocity.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRPose.angularAcceleration.__compat.support.firefox.version_added would be set to false
+ADD: api.VRFrameData.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRFrameData.leftProjectionMatrix.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRFrameData.leftViewMatrix.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRFrameData.rightProjectionMatrix.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRFrameData.rightViewMatrix.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRFrameData.pose.__compat.support.firefox.version_added would be set to false
+ADD: api.VREyeParameters.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VREyeParameters.offset.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VREyeParameters.renderWidth.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VREyeParameters.renderHeight.__compat.support.firefox.version_added would be set to false
+ADD: api.VRStageParameters.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRStageParameters.sittingToStandingTransform.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRStageParameters.sizeX.__compat.support.firefox.version_added would be set to false
+MISSING-FEATURE: VRStageParameters.sizeZ
+ADD: api.VRDisplayEvent.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplayEvent.display.__compat.support.firefox.version_added would be set to false
+ADD-DATA: api.VRDisplayEvent.reason.__compat.support.firefox.version_added would be set to false
+MISSING-INTERFACE: VTTRegion
+MISSING-FEATURE: XRSession.interactionMode
+MISSING-FEATURE: XRSession.requestHitTestSource
+MISSING-FEATURE: XRSession.requestHitTestSourceForTransientInput
+MISSING-FEATURE: XRSession.onsqueeze
+MISSING-FEATURE: XRSession.onsqueezestart
+MISSING-FEATURE: XRSession.onsqueezeend
+MISSING-INTERFACE: XRHitTestSource
+MISSING-INTERFACE: XRTransientInputHitTestSource
+MISSING-INTERFACE: XRHitTestResult
+MISSING-INTERFACE: XRTransientInputHitTestResult
+MISSING-INTERFACE: XRRay
+MISSING-FEATURE: XRFrame.getHitTestResults
+MISSING-FEATURE: XRFrame.getHitTestResultsForTransientInput
+MISSING-INTERFACE: XRRenderState
+MISSING-INTERFACE: XRLayer

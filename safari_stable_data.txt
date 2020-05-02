@@ -1,0 +1,1873 @@
+Comparing WPT and BCD data for safari, version: 13.1 (14609.1.20.111.8) (experimental flags ? false)
+
+Checking WPT results data.
+----------------------
+
+WorkletAnimation: inconsistent support information.
+BackgroundFetchEvent: inconsistent support information.
+BackgroundFetchUpdateUIEvent: inconsistent support information.
+CookieChangeEvent: inconsistent support information.
+ExtendableCookieChangeEvent: inconsistent support information.
+AbstractRange: inconsistent support information.
+StaticRange: inconsistent support information.
+Range: inconsistent support information.
+PerformanceEventTiming: inconsistent support information.
+EventCounts: inconsistent support information.
+PerformanceEventTiming: inconsistent support information.
+EventCounts: inconsistent support information.
+HTMLDialogElement: inconsistent support information.
+MediaCapabilities: inconsistent support information.
+MediaCapabilities.decodingInfo: inconsistent support information.
+Notification: inconsistent support information.
+Notification.permission: inconsistent support information.
+Notification.onclick: inconsistent support information.
+Notification.onshow: inconsistent support information.
+Notification.onerror: inconsistent support information.
+Notification.onclose: inconsistent support information.
+Notification.title: inconsistent support information.
+Notification.dir: inconsistent support information.
+Notification.lang: inconsistent support information.
+Notification.body: inconsistent support information.
+Notification.tag: inconsistent support information.
+Notification.icon: inconsistent support information.
+Notification.close: inconsistent support information.
+NotificationEvent: inconsistent support information.
+Notification: inconsistent support information.
+Notification.permission: inconsistent support information.
+Notification.onclick: inconsistent support information.
+Notification.onshow: inconsistent support information.
+Notification.onerror: inconsistent support information.
+Notification.onclose: inconsistent support information.
+Notification.title: inconsistent support information.
+Notification.dir: inconsistent support information.
+Notification.lang: inconsistent support information.
+Notification.body: inconsistent support information.
+Notification.tag: inconsistent support information.
+Notification.icon: inconsistent support information.
+Notification.close: inconsistent support information.
+CanMakePaymentEvent: inconsistent support information.
+PaymentRequestEvent: inconsistent support information.
+PushMessageData: inconsistent support information.
+PushEvent: inconsistent support information.
+PushSubscriptionChangeEvent: inconsistent support information.
+WebGLUniformLocation: inconsistent support information.
+WebGLActiveInfo: inconsistent support information.
+WebGLActiveInfo.size: inconsistent support information.
+WebGLActiveInfo.type: inconsistent support information.
+WebGLActiveInfo.name: inconsistent support information.
+WebGLShaderPrecisionFormat: inconsistent support information.
+WebGLShaderPrecisionFormat.rangeMin: inconsistent support information.
+WebGLShaderPrecisionFormat.rangeMax: inconsistent support information.
+WebGLShaderPrecisionFormat.precision: inconsistent support information.
+WebGLRenderingContext: inconsistent support information.
+WebGLRenderingContext.bufferData: inconsistent support information.
+WebGLContextEvent: inconsistent support information.
+WebGLContextEvent.statusMessage: inconsistent support information.
+
+
+Cross-comparing WPT to BCD.
+----------------------
+
+ADD: api.SyncEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: ServiceWorkerRegistration.cookies
+MISMATCH: api.ServiceWorkerRegistration.getNotifications.__compat.support.safari.version_added (11.1) does not match WPT (false)
+ADD-DATA: api.ServiceWorkerRegistration.paymentManager.__compat.support.safari.version_added would be set to false
+MISMATCH: api.ServiceWorkerRegistration.pushManager.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISMATCH: api.ServiceWorkerRegistration.navigationPreload.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISSING-FEATURE: ServiceWorkerGlobalScope.cookieStore
+MISSING-FEATURE: ServiceWorkerGlobalScope.oncookiechange
+MISMATCH: api.ServiceWorkerGlobalScope.onnotificationclick.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISMATCH: api.ServiceWorkerGlobalScope.onnotificationclose.__compat.support.safari.version_added (11.1) does not match WPT (false)
+ADD-DATA: api.ServiceWorkerGlobalScope.oncanmakepayment.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.ServiceWorkerGlobalScope.onpaymentrequest.__compat.support.safari.version_added would be set to false
+MISMATCH: api.ServiceWorkerGlobalScope.onpush.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISMATCH: api.ServiceWorkerGlobalScope.onpushsubscriptionchange.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISSING-FEATURE: ServiceWorkerGlobalScope.serviceWorker
+MISMATCH: api.ServiceWorkerGlobalScope.skipWaiting.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD-DATA: api.ServiceWorkerGlobalScope.onmessageerror.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.ExtendableEvent.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: WorkerGlobalScope.indexedDB
+MISSING-FEATURE: WorkerGlobalScope.crypto
+MISSING-FEATURE: WorkerGlobalScope.fetch
+MISSING-FEATURE: WorkerGlobalScope.addressSpace
+ADD-DATA: api.WorkerGlobalScope.performance.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.WorkerGlobalScope.onlanguagechange.__compat.support.safari.version_added (4) does not match WPT (false)
+ADD-DATA: api.WorkerGlobalScope.onoffline.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.WorkerGlobalScope.ononline.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: WorkerGlobalScope.onrejectionhandled
+MISSING-FEATURE: WorkerGlobalScope.onunhandledrejection
+MISSING-FEATURE: WorkerGlobalScope.origin
+MISSING-FEATURE: WorkerGlobalScope.btoa
+MISSING-FEATURE: WorkerGlobalScope.atob
+MISSING-FEATURE: WorkerGlobalScope.setTimeout
+MISSING-FEATURE: WorkerGlobalScope.clearTimeout
+MISSING-FEATURE: WorkerGlobalScope.setInterval
+MISSING-FEATURE: WorkerGlobalScope.clearInterval
+MISSING-FEATURE: WorkerGlobalScope.queueMicrotask
+MISSING-FEATURE: WorkerGlobalScope.createImageBitmap
+MISSING-FEATURE: WorkerGlobalScope.originPolicyIds
+MISSING-FEATURE: WorkerGlobalScope.isSecureContext
+MISMATCH: api.File.lastModified.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.File.webkitRelativePath.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: FileReader.onloadstart
+ADD: api.URL.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.IDBCursor.request.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: IDBTransaction.durability
+MISSING-FEATURE: Window.indexedDB
+ADD-DATA: api.Window.orientation.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: Window.onorientationchange
+MISSING-FEATURE: Window.cookieStore
+MISSING-FEATURE: Window.onanimationstart
+MISSING-FEATURE: Window.onanimationiteration
+MISSING-FEATURE: Window.onanimationend
+MISSING-FEATURE: Window.onanimationcancel
+MISSING-FEATURE: Window.ontransitionrun
+MISSING-FEATURE: Window.ontransitionstart
+MISSING-FEATURE: Window.ontransitionend
+MISSING-FEATURE: Window.ontransitioncancel
+MISMATCH: api.Window.moveTo.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.Window.moveBy.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.Window.resizeTo.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.Window.resizeBy.__compat.support.safari.version_added (true) does not match WPT (false)
+ADD-DATA: api.Window.scrollX.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.Window.scrollY.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: Window.fetch
+MISSING-FEATURE: Window.chooseFileSystemEntries
+ADD-DATA: api.Window.ondeviceorientation.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Window.ondeviceorientationabsolute.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: Window.oncompassneedscalibration
+ADD-DATA: api.Window.ondevicemotion.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: Window.originPolicyIds
+MISSING-FEATURE: Window.ongotpointercapture
+MISSING-FEATURE: Window.onlostpointercapture
+MISSING-FEATURE: Window.onpointerdown
+MISSING-FEATURE: Window.onpointermove
+MISSING-FEATURE: Window.onpointerrawupdate
+MISSING-FEATURE: Window.onpointerup
+MISSING-FEATURE: Window.onpointercancel
+MISSING-FEATURE: Window.onpointerover
+MISSING-FEATURE: Window.onpointerout
+MISSING-FEATURE: Window.onpointerenter
+MISSING-FEATURE: Window.onpointerleave
+MISSING-FEATURE: Window.onselectstart
+MISSING-FEATURE: Window.onselectionchange
+MISSING-FEATURE: Window.ontouchstart
+MISSING-FEATURE: Window.ontouchend
+MISSING-FEATURE: Window.ontouchmove
+MISSING-FEATURE: Window.ontouchcancel
+ADD-DATA: api.Window.visualViewport.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.Crypto.subtle.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.CryptoKey.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.CryptoKey.type.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.CryptoKey.extractable.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.CryptoKey.algorithm.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.CryptoKey.usages.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.SubtleCrypto.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.Accelerometer.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Accelerometer.x.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Accelerometer.y.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Accelerometer.z.__compat.support.safari.version_added would be set to false
+ADD: api.LinearAccelerationSensor.__compat.support.safari.version_added would be set to false
+MISSING-INTERFACE: GravitySensor
+ADD: api.AmbientLightSensor.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.AmbientLightSensor.illuminance.__compat.support.safari.version_added would be set to false
+MISSING-INTERFACE: AnimationWorkletGlobalScope
+MISSING-INTERFACE: WorkletAnimationEffect
+MISSING-INTERFACE: WorkletAnimation
+MISSING-INTERFACE: WorkletGroupEffect
+MISSING-INTERFACE: WorkletGlobalScope
+MISMATCH: api.Worklet.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.id.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.effect.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.startTime.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.currentTime.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.playbackRate.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.playState.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: Animation.replaceState
+MISMATCH: api.Animation.pending.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.ready.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.finished.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.onfinish.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.oncancel.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: Animation.onremove
+MISMATCH: api.Animation.cancel.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.finish.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.play.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.pause.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.updatePlaybackRate.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Animation.reverse.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: Animation.persist
+MISSING-FEATURE: Animation.commitStyles
+ADD-DATA: api.HTMLMediaElement.sinkId.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.HTMLMediaElement.setSinkId.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.HTMLMediaElement.mediaKeys.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.HTMLMediaElement.onencrypted.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.HTMLMediaElement.onwaitingforkey.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.HTMLMediaElement.setMediaKeys.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.HTMLMediaElement.srcObject.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: HTMLMediaElement.getStartDate
+MISSING-FEATURE: HTMLMediaElement.remote
+MISMATCH: api.BackgroundFetchEvent.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.BackgroundFetchUpdateUIEvent.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: Navigator.setClientBadge
+MISSING-FEATURE: Navigator.clearClientBadge
+MISSING-FEATURE: Navigator.setAppBadge
+MISSING-FEATURE: Navigator.clearAppBadge
+MISSING-FEATURE: Navigator.bluetooth
+ADD-DATA: api.Navigator.credentials.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.Navigator.requestMediaKeySystemAccess.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.Navigator.getGamepads.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: Navigator.getInstalledRelatedApps
+MISMATCH: api.Navigator.mediaCapabilities.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Navigator.mediaDevices.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD-DATA: api.Navigator.mediaSession.__compat.support.safari.version_added would be set to false
+MISMATCH: api.Navigator.maxTouchPoints.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD-DATA: api.Navigator.presentation.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: Navigator.wakeLock
+MISSING-FEATURE: Navigator.storage
+ADD-DATA: api.Navigator.locks.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: Navigator.requestMIDIAccess
+MISSING-FEATURE: Navigator.usb
+MISSING-FEATURE: Navigator.vrEnabled
+ADD: api.WorkerNavigator.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: WorkerNavigator.setAppBadge
+MISSING-FEATURE: WorkerNavigator.clearAppBadge
+MISSING-FEATURE: WorkerNavigator.appCodeName
+MISSING-FEATURE: WorkerNavigator.appName
+MISSING-FEATURE: WorkerNavigator.appVersion
+MISSING-FEATURE: WorkerNavigator.platform
+MISSING-FEATURE: WorkerNavigator.product
+MISSING-FEATURE: WorkerNavigator.userAgent
+MISSING-FEATURE: WorkerNavigator.language
+MISSING-FEATURE: WorkerNavigator.languages
+MISSING-FEATURE: WorkerNavigator.onLine
+MISSING-FEATURE: WorkerNavigator.hardwareConcurrency
+MISSING-FEATURE: WorkerNavigator.mediaCapabilities
+MISSING-FEATURE: WorkerNavigator.storage
+MISSING-FEATURE: WorkerNavigator.locks
+MISSING-FEATURE: WorkerNavigator.usb
+MISSING-FEATURE: Bluetooth.getDevices
+MISSING-FEATURE: Bluetooth.onadvertisementreceived
+MISSING-FEATURE: Bluetooth.ongattserverdisconnected
+MISSING-FEATURE: Bluetooth.oncharacteristicvaluechanged
+MISSING-FEATURE: Bluetooth.onserviceadded
+MISSING-FEATURE: Bluetooth.onservicechanged
+MISSING-FEATURE: Bluetooth.onserviceremoved
+MISSING-INTERFACE: BluetoothPermissionResult
+MISSING-INTERFACE: ValueEvent
+MISSING-FEATURE: BluetoothDevice.onadvertisementreceived
+MISSING-FEATURE: BluetoothDevice.ongattserverdisconnected
+MISSING-FEATURE: BluetoothDevice.oncharacteristicvaluechanged
+MISSING-FEATURE: BluetoothDevice.onserviceadded
+MISSING-FEATURE: BluetoothDevice.onservicechanged
+MISSING-FEATURE: BluetoothDevice.onserviceremoved
+MISSING-INTERFACE: BluetoothManufacturerDataMap
+MISSING-INTERFACE: BluetoothServiceDataMap
+MISSING-INTERFACE: BluetoothAdvertisingEvent
+MISSING-FEATURE: BluetoothRemoteGATTService.oncharacteristicvaluechanged
+MISSING-FEATURE: BluetoothRemoteGATTService.onserviceadded
+MISSING-FEATURE: BluetoothRemoteGATTService.onservicechanged
+MISSING-FEATURE: BluetoothRemoteGATTService.onserviceremoved
+MISSING-FEATURE: BluetoothRemoteGATTCharacteristic.writeValueWithResponse
+MISSING-FEATURE: BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse
+MISSING-FEATURE: BluetoothRemoteGATTCharacteristic.oncharacteristicvaluechanged
+MISSING-INTERFACE: BluetoothUUID
+MISSING-FEATURE: HTMLBodyElement.onorientationchange
+MISSING-FEATURE: HTMLBodyElement.onafterprint
+MISSING-FEATURE: HTMLBodyElement.onbeforeprint
+MISSING-FEATURE: HTMLBodyElement.onbeforeunload
+MISSING-FEATURE: HTMLBodyElement.onhashchange
+MISSING-FEATURE: HTMLBodyElement.onlanguagechange
+MISSING-FEATURE: HTMLBodyElement.onmessage
+MISSING-FEATURE: HTMLBodyElement.onmessageerror
+MISSING-FEATURE: HTMLBodyElement.onoffline
+MISSING-FEATURE: HTMLBodyElement.ononline
+MISSING-FEATURE: HTMLBodyElement.onpagehide
+MISSING-FEATURE: HTMLBodyElement.onpageshow
+MISSING-FEATURE: HTMLBodyElement.onpopstate
+MISSING-FEATURE: HTMLBodyElement.onrejectionhandled
+MISSING-FEATURE: HTMLBodyElement.onstorage
+MISSING-FEATURE: HTMLBodyElement.onunhandledrejection
+MISSING-FEATURE: HTMLBodyElement.onunload
+ADD-DATA: api.HTMLIFrameElement.csp.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: HTMLIFrameElement.allowFullscreen
+ADD-DATA: api.HTMLIFrameElement.allowPaymentRequest.__compat.support.safari.version_added would be set to false
+MISMATCH: api.HTMLIFrameElement.referrerPolicy.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISSING-FEATURE: HTMLIFrameElement.getSVGDocument
+MISSING-INTERFACE: CSPViolationReportBody
+MISSING-FEATURE: SecurityPolicyViolationEvent.documentURL
+MISSING-FEATURE: SecurityPolicyViolationEvent.blockedURL
+MISMATCH: api.SecurityPolicyViolationEvent.sample.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.SecurityPolicyViolationEvent.disposition.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SecurityPolicyViolationEvent.lineno
+MISSING-FEATURE: SecurityPolicyViolationEvent.colno
+MISSING-INTERFACE: CookieStore
+MISSING-INTERFACE: CookieStoreManager
+MISSING-INTERFACE: CookieChangeEvent
+MISSING-INTERFACE: ExtendableCookieChangeEvent
+ADD: api.Credential.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.Credential.id.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.Credential.type.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.CredentialsContainer.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.CredentialsContainer.get.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.CredentialsContainer.store.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.CredentialsContainer.create.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.CredentialsContainer.preventSilentAccess.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.PasswordCredential.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PasswordCredential.password.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PasswordCredential.name.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PasswordCredential.iconURL.__compat.support.safari.version_added would be set to false
+ADD: api.FederatedCredential.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.FederatedCredential.provider.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.FederatedCredential.protocol.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: FederatedCredential.name
+MISSING-FEATURE: FederatedCredential.iconURL
+MISSING-FEATURE: CSSStyleSheet.replace
+MISSING-FEATURE: CSSStyleSheet.replaceSync
+MISSING-FEATURE: Document.adoptedStyleSheets
+MISSING-FEATURE: Document.onanimationstart
+MISSING-FEATURE: Document.onanimationiteration
+MISSING-FEATURE: Document.onanimationend
+MISSING-FEATURE: Document.onanimationcancel
+MISSING-FEATURE: Document.ontransitionrun
+MISSING-FEATURE: Document.ontransitionstart
+MISSING-FEATURE: Document.ontransitionend
+MISSING-FEATURE: Document.ontransitioncancel
+MISSING-FEATURE: Document.elementFromPoint
+MISSING-FEATURE: Document.elementsFromPoint
+MISSING-FEATURE: Document.caretPositionFromPoint
+MISSING-FEATURE: Document.getBoxQuads
+MISSING-FEATURE: Document.convertQuadFromNode
+MISSING-FEATURE: Document.convertRectFromNode
+MISSING-FEATURE: Document.convertPointFromNode
+MISSING-FEATURE: Document.styleSheets
+ADD-DATA: api.Document.characterSet.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: Document.charset
+MISSING-FEATURE: Document.inputEncoding
+MISSING-FEATURE: Document.children
+MISSING-FEATURE: Document.firstElementChild
+MISSING-FEATURE: Document.lastElementChild
+MISSING-FEATURE: Document.childElementCount
+MISSING-FEATURE: Document.prepend
+MISSING-FEATURE: Document.append
+MISSING-FEATURE: Document.replaceChildren
+ADD-DATA: api.Document.createExpression.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.Document.createNSResolver.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: Document.addressSpace
+ADD-DATA: api.Document.fullscreenEnabled.__compat.support.safari.version_added would be set to false
+MISMATCH: api.Document.fullscreen.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.Document.exitFullscreen.__compat.support.safari.version_added (5.1) does not match WPT (false)
+ADD-DATA: api.Document.onfullscreenchange.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Document.onfullscreenerror.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: Document.fullscreenElement
+MISSING-FEATURE: Document.pictureInPictureEnabled
+MISSING-FEATURE: Document.exitPictureInPicture
+MISSING-FEATURE: Document.pictureInPictureElement
+MISSING-FEATURE: Document.ongotpointercapture
+MISSING-FEATURE: Document.onlostpointercapture
+MISSING-FEATURE: Document.onpointerdown
+MISSING-FEATURE: Document.onpointermove
+MISSING-FEATURE: Document.onpointerrawupdate
+MISSING-FEATURE: Document.onpointerup
+MISSING-FEATURE: Document.onpointercancel
+MISSING-FEATURE: Document.onpointerover
+MISSING-FEATURE: Document.onpointerout
+MISSING-FEATURE: Document.onpointerenter
+MISSING-FEATURE: Document.onpointerleave
+MISMATCH: api.Document.onpointerlockchange.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.Document.onpointerlockerror.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-FEATURE: Document.pointerLockElement
+MISSING-FEATURE: Document.getSelection
+MISSING-FEATURE: Document.onselectstart
+MISSING-FEATURE: Document.onselectionchange
+MISSING-FEATURE: Document.rootElement
+MISSING-FEATURE: Document.ontouchstart
+MISSING-FEATURE: Document.ontouchend
+MISSING-FEATURE: Document.ontouchmove
+MISSING-FEATURE: Document.ontouchcancel
+MISMATCH: api.Document.getAnimations.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: ShadowRoot.adoptedStyleSheets
+MISSING-FEATURE: ShadowRoot.styleSheets
+MISSING-FEATURE: ShadowRoot.onslotchange
+MISSING-FEATURE: ShadowRoot.fullscreenElement
+MISSING-FEATURE: ShadowRoot.pictureInPictureElement
+MISSING-FEATURE: ShadowRoot.pointerLockElement
+MISSING-FEATURE: ShadowRoot.getAnimations
+ADD: api.AnimationEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.AnimationEvent.pseudoElement.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: HTMLElement.onanimationstart
+MISSING-FEATURE: HTMLElement.onanimationiteration
+MISSING-FEATURE: HTMLElement.onanimationend
+MISSING-FEATURE: HTMLElement.onanimationcancel
+MISSING-FEATURE: HTMLElement.ontransitionrun
+MISSING-FEATURE: HTMLElement.ontransitionstart
+MISSING-FEATURE: HTMLElement.ontransitionend
+MISSING-FEATURE: HTMLElement.ontransitioncancel
+MISSING-FEATURE: HTMLElement.attributeStyleMap
+ADD-DATA: api.HTMLElement.accessKeyLabel.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: HTMLElement.autocapitalize
+MISSING-FEATURE: HTMLElement.attachInternals
+MISSING-FEATURE: HTMLElement.onabort
+MISSING-FEATURE: HTMLElement.onauxclick
+MISSING-FEATURE: HTMLElement.onblur
+MISSING-FEATURE: HTMLElement.oncancel
+MISSING-FEATURE: HTMLElement.oncanplay
+MISSING-FEATURE: HTMLElement.oncanplaythrough
+MISSING-FEATURE: HTMLElement.onchange
+MISSING-FEATURE: HTMLElement.onclick
+MISSING-FEATURE: HTMLElement.onclose
+MISSING-FEATURE: HTMLElement.oncontextmenu
+MISSING-FEATURE: HTMLElement.oncuechange
+MISSING-FEATURE: HTMLElement.ondblclick
+MISSING-FEATURE: HTMLElement.ondrag
+MISSING-FEATURE: HTMLElement.ondragend
+MISSING-FEATURE: HTMLElement.ondragenter
+MISSING-FEATURE: HTMLElement.ondragexit
+MISSING-FEATURE: HTMLElement.ondragleave
+MISSING-FEATURE: HTMLElement.ondragover
+MISSING-FEATURE: HTMLElement.ondragstart
+MISSING-FEATURE: HTMLElement.ondrop
+MISSING-FEATURE: HTMLElement.ondurationchange
+MISSING-FEATURE: HTMLElement.onemptied
+MISSING-FEATURE: HTMLElement.onended
+MISSING-FEATURE: HTMLElement.onerror
+MISSING-FEATURE: HTMLElement.onfocus
+MISSING-FEATURE: HTMLElement.onformdata
+MISSING-FEATURE: HTMLElement.oninput
+MISSING-FEATURE: HTMLElement.oninvalid
+MISSING-FEATURE: HTMLElement.onkeydown
+MISSING-FEATURE: HTMLElement.onkeypress
+MISSING-FEATURE: HTMLElement.onkeyup
+MISSING-FEATURE: HTMLElement.onload
+MISSING-FEATURE: HTMLElement.onloadeddata
+MISSING-FEATURE: HTMLElement.onloadedmetadata
+MISSING-FEATURE: HTMLElement.onloadstart
+MISSING-FEATURE: HTMLElement.onmousedown
+MISSING-FEATURE: HTMLElement.onmouseenter
+MISSING-FEATURE: HTMLElement.onmouseleave
+MISSING-FEATURE: HTMLElement.onmousemove
+MISSING-FEATURE: HTMLElement.onmouseout
+MISSING-FEATURE: HTMLElement.onmouseover
+MISSING-FEATURE: HTMLElement.onmouseup
+MISSING-FEATURE: HTMLElement.onpause
+MISSING-FEATURE: HTMLElement.onplay
+MISSING-FEATURE: HTMLElement.onplaying
+MISSING-FEATURE: HTMLElement.onprogress
+MISSING-FEATURE: HTMLElement.onratechange
+MISSING-FEATURE: HTMLElement.onreset
+MISSING-FEATURE: HTMLElement.onresize
+MISSING-FEATURE: HTMLElement.onscroll
+MISSING-FEATURE: HTMLElement.onsecuritypolicyviolation
+MISSING-FEATURE: HTMLElement.onseeked
+MISSING-FEATURE: HTMLElement.onseeking
+MISSING-FEATURE: HTMLElement.onselect
+MISSING-FEATURE: HTMLElement.onslotchange
+MISSING-FEATURE: HTMLElement.onstalled
+MISSING-FEATURE: HTMLElement.onsubmit
+MISSING-FEATURE: HTMLElement.onsuspend
+MISSING-FEATURE: HTMLElement.ontimeupdate
+MISSING-FEATURE: HTMLElement.ontoggle
+MISSING-FEATURE: HTMLElement.onvolumechange
+MISSING-FEATURE: HTMLElement.onwaiting
+MISSING-FEATURE: HTMLElement.onwebkitanimationend
+MISSING-FEATURE: HTMLElement.onwebkitanimationiteration
+MISSING-FEATURE: HTMLElement.onwebkitanimationstart
+MISSING-FEATURE: HTMLElement.onwebkittransitionend
+MISSING-FEATURE: HTMLElement.onwheel
+MISMATCH: api.HTMLElement.oncopy.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.HTMLElement.oncut.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.HTMLElement.onpaste.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-FEATURE: HTMLElement.enterKeyHint
+ADD-DATA: api.HTMLElement.inputMode.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.HTMLElement.nonce.__compat.support.safari.version_added (10) does not match WPT (false)
+MISSING-FEATURE: HTMLElement.autofocus
+MISSING-FEATURE: HTMLElement.ongotpointercapture
+MISSING-FEATURE: HTMLElement.onlostpointercapture
+MISSING-FEATURE: HTMLElement.onpointerdown
+MISSING-FEATURE: HTMLElement.onpointermove
+MISSING-FEATURE: HTMLElement.onpointerrawupdate
+MISSING-FEATURE: HTMLElement.onpointerup
+MISSING-FEATURE: HTMLElement.onpointercancel
+MISSING-FEATURE: HTMLElement.onpointerover
+MISSING-FEATURE: HTMLElement.onpointerout
+MISSING-FEATURE: HTMLElement.onpointerenter
+MISSING-FEATURE: HTMLElement.onpointerleave
+MISSING-FEATURE: HTMLElement.onselectstart
+MISSING-FEATURE: HTMLElement.onselectionchange
+MISSING-FEATURE: HTMLElement.ontouchstart
+MISSING-FEATURE: HTMLElement.ontouchend
+MISSING-FEATURE: HTMLElement.ontouchmove
+MISSING-FEATURE: HTMLElement.ontouchcancel
+ADD: api.CSSConditionRule.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: CSSConditionRule.conditionText
+MISMATCH: api.CSSMediaRule.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.CSSMediaRule.media.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-FEATURE: CSSCounterStyleRule.name
+MISSING-FEATURE: CSSCounterStyleRule.system
+MISSING-FEATURE: CSSCounterStyleRule.symbols
+MISSING-FEATURE: CSSCounterStyleRule.additiveSymbols
+MISSING-FEATURE: CSSCounterStyleRule.negative
+MISSING-FEATURE: CSSCounterStyleRule.prefix
+MISSING-FEATURE: CSSCounterStyleRule.suffix
+MISSING-FEATURE: CSSCounterStyleRule.range
+MISSING-FEATURE: CSSCounterStyleRule.pad
+MISSING-FEATURE: CSSCounterStyleRule.speakAs
+MISSING-FEATURE: CSSCounterStyleRule.fallback
+MISMATCH: api.FontFace.variant.__compat.support.safari.version_added (10) does not match WPT (false)
+MISSING-FEATURE: FontFace.variationSettings
+ADD: api.FontFaceSetLoadEvent.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.FontFaceSetLoadEvent.fontfaces.__compat.support.safari.version_added would be set to false
+MISSING-INTERFACE: CSSFontFaceRule
+MISSING-INTERFACE: CSSFontFeatureValuesRule
+MISSING-INTERFACE: CSSFontFeatureValuesMap
+MISSING-INTERFACE: CSSFontPaletteValuesRule
+MISMATCH: api.SVGClipPathElement.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGClipPathElement.transform
+ADD: api.PaintWorkletGlobalScope.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.PaintSize.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-INTERFACE: CSSParserRule
+MISSING-INTERFACE: CSSParserAtRule
+MISSING-INTERFACE: CSSParserQualifiedRule
+MISSING-INTERFACE: CSSParserDeclaration
+MISSING-INTERFACE: CSSParserValue
+MISSING-INTERFACE: CSSParserBlock
+MISSING-INTERFACE: CSSParserFunction
+MISSING-INTERFACE: CSSPropertyRule
+MISSING-FEATURE: CSSPseudoElement.getBoxQuads
+MISSING-FEATURE: CSSPseudoElement.convertQuadFromNode
+MISSING-FEATURE: CSSPseudoElement.convertRectFromNode
+MISSING-FEATURE: CSSPseudoElement.convertPointFromNode
+MISSING-FEATURE: Element.pseudo
+MISSING-FEATURE: Element.getBoxQuads
+MISSING-FEATURE: Element.convertQuadFromNode
+MISSING-FEATURE: Element.convertRectFromNode
+MISSING-FEATURE: Element.convertPointFromNode
+ADD-DATA: api.Element.matches.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: Element.webkitMatchesSelector
+MISSING-FEATURE: Element.children
+MISSING-FEATURE: Element.firstElementChild
+MISSING-FEATURE: Element.lastElementChild
+MISSING-FEATURE: Element.childElementCount
+MISSING-FEATURE: Element.prepend
+MISSING-FEATURE: Element.append
+MISSING-FEATURE: Element.replaceChildren
+MISSING-FEATURE: Element.previousElementSibling
+MISSING-FEATURE: Element.nextElementSibling
+MISSING-FEATURE: Element.before
+MISSING-FEATURE: Element.after
+MISSING-FEATURE: Element.replaceWith
+MISSING-FEATURE: Element.remove
+MISSING-FEATURE: Element.assignedSlot
+MISSING-FEATURE: Element.elementTiming
+MISMATCH: api.Element.requestFullscreen.__compat.support.safari.version_added (6) does not match WPT (false)
+ADD-DATA: api.Element.onfullscreenchange.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Element.onfullscreenerror.__compat.support.safari.version_added would be set to false
+MISMATCH: api.Element.setPointerCapture.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Element.releasePointerCapture.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Element.hasPointerCapture.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: Element.role
+MISSING-FEATURE: Element.ariaActiveDescendantElement
+MISSING-FEATURE: Element.ariaAtomic
+MISSING-FEATURE: Element.ariaAutoComplete
+MISSING-FEATURE: Element.ariaBusy
+MISSING-FEATURE: Element.ariaChecked
+MISSING-FEATURE: Element.ariaColCount
+MISSING-FEATURE: Element.ariaColIndex
+MISSING-FEATURE: Element.ariaColIndexText
+MISSING-FEATURE: Element.ariaColSpan
+MISSING-FEATURE: Element.ariaControlsElements
+MISSING-FEATURE: Element.ariaCurrent
+MISSING-FEATURE: Element.ariaDescribedByElements
+MISSING-FEATURE: Element.ariaDescription
+MISSING-FEATURE: Element.ariaDetailsElements
+MISSING-FEATURE: Element.ariaDisabled
+MISSING-FEATURE: Element.ariaErrorMessageElement
+MISSING-FEATURE: Element.ariaExpanded
+MISSING-FEATURE: Element.ariaFlowToElements
+MISSING-FEATURE: Element.ariaHasPopup
+MISSING-FEATURE: Element.ariaHidden
+MISSING-FEATURE: Element.ariaInvalid
+MISSING-FEATURE: Element.ariaKeyShortcuts
+MISSING-FEATURE: Element.ariaLabel
+MISSING-FEATURE: Element.ariaLabelledByElements
+MISSING-FEATURE: Element.ariaLevel
+MISSING-FEATURE: Element.ariaLive
+MISSING-FEATURE: Element.ariaModal
+MISSING-FEATURE: Element.ariaMultiLine
+MISSING-FEATURE: Element.ariaMultiSelectable
+MISSING-FEATURE: Element.ariaOrientation
+MISSING-FEATURE: Element.ariaOwnsElements
+MISSING-FEATURE: Element.ariaPlaceholder
+MISSING-FEATURE: Element.ariaPosInSet
+MISSING-FEATURE: Element.ariaPressed
+MISSING-FEATURE: Element.ariaReadOnly
+MISSING-FEATURE: Element.ariaRelevant
+MISSING-FEATURE: Element.ariaRequired
+MISSING-FEATURE: Element.ariaRoleDescription
+MISSING-FEATURE: Element.ariaRowCount
+MISSING-FEATURE: Element.ariaRowIndex
+MISSING-FEATURE: Element.ariaRowIndexText
+MISSING-FEATURE: Element.ariaRowSpan
+MISSING-FEATURE: Element.ariaSelected
+MISSING-FEATURE: Element.ariaSetSize
+MISSING-FEATURE: Element.ariaSort
+MISSING-FEATURE: Element.ariaValueMax
+MISSING-FEATURE: Element.ariaValueMin
+MISSING-FEATURE: Element.ariaValueNow
+MISSING-FEATURE: Element.ariaValueText
+MISSING-FEATURE: CSSMathNegate.value
+MISSING-INTERFACE: CSSMathClamp
+ADD-DATA: api.CSSStyleRule.styleMap.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: SVGElement.attributeStyleMap
+MISSING-FEATURE: SVGElement.style
+MISSING-FEATURE: SVGElement.className
+MISSING-FEATURE: SVGElement.ownerSVGElement
+MISSING-FEATURE: SVGElement.viewportElement
+MISSING-FEATURE: SVGElement.correspondingElement
+MISSING-FEATURE: SVGElement.correspondingUseElement
+MISMATCH: api.MediaQueryList.__compat.support.safari.version_added (5.1) does not match WPT (false)
+MISMATCH: api.MediaQueryList.media.__compat.support.safari.version_added (5.1) does not match WPT (false)
+MISMATCH: api.MediaQueryList.matches.__compat.support.safari.version_added (5.1) does not match WPT (false)
+MISMATCH: api.MediaQueryList.addListener.__compat.support.safari.version_added (5.1) does not match WPT (false)
+MISMATCH: api.MediaQueryList.removeListener.__compat.support.safari.version_added (5.1) does not match WPT (false)
+ADD: api.MediaQueryListEvent.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaQueryListEvent.media.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaQueryListEvent.matches.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: CaretPosition.offsetNode
+MISSING-FEATURE: CaretPosition.offset
+MISSING-FEATURE: CaretPosition.getClientRect
+MISMATCH: api.MouseEvent.pageX.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.MouseEvent.pageY.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.MouseEvent.movementX.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.MouseEvent.movementY.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD-DATA: api.MouseEvent.getModifierState.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.HTMLImageElement.sizes.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.HTMLImageElement.currentSrc.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.HTMLImageElement.referrerPolicy.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISSING-FEATURE: HTMLImageElement.loading
+MISSING-FEATURE: HTMLImageElement.lowsrc
+MISSING-FEATURE: Text.getBoxQuads
+MISSING-FEATURE: Text.convertQuadFromNode
+MISSING-FEATURE: Text.convertRectFromNode
+MISSING-FEATURE: Text.convertPointFromNode
+MISMATCH: api.StyleSheet.media.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-INTERFACE: CSSImportRule
+MISSING-FEATURE: CSSGroupingRule.cssRules
+MISSING-FEATURE: CSSGroupingRule.insertRule
+MISSING-FEATURE: CSSGroupingRule.deleteRule
+MISMATCH: api.CSSPageRule.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-INTERFACE: CSSMarginRule
+MISSING-FEATURE: SVGStyleElement.sheet
+MISSING-FEATURE: SVGStyleElement.type
+MISSING-FEATURE: SVGStyleElement.media
+MISSING-FEATURE: SVGStyleElement.title
+MISSING-FEATURE: HTMLLinkElement.sheet
+MISSING-FEATURE: HTMLLinkElement.href
+MISSING-FEATURE: HTMLLinkElement.media
+MISSING-FEATURE: HTMLLinkElement.integrity
+MISSING-FEATURE: HTMLLinkElement.hreflang
+MISSING-FEATURE: HTMLLinkElement.type
+MISSING-FEATURE: HTMLLinkElement.imageSrcset
+MISSING-FEATURE: HTMLLinkElement.imageSizes
+MISMATCH: api.HTMLLinkElement.referrerPolicy.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISSING-FEATURE: HTMLLinkElement.charset
+MISSING-FEATURE: HTMLLinkElement.rev
+MISSING-FEATURE: HTMLLinkElement.target
+MISSING-FEATURE: ProcessingInstruction.sheet
+MISSING-FEATURE: SVGFilterElement.filterUnits
+MISSING-FEATURE: SVGFilterElement.primitiveUnits
+MISSING-FEATURE: SVGFilterElement.x
+MISSING-FEATURE: SVGFilterElement.y
+MISSING-FEATURE: SVGFilterElement.width
+MISSING-FEATURE: SVGFilterElement.height
+MISSING-FEATURE: SVGFEBlendElement.mode
+MISSING-FEATURE: SVGFEBlendElement.x
+MISSING-FEATURE: SVGFEBlendElement.y
+MISSING-FEATURE: SVGFEBlendElement.width
+MISSING-FEATURE: SVGFEBlendElement.height
+MISSING-FEATURE: SVGFEBlendElement.result
+MISSING-FEATURE: SVGFEColorMatrixElement.x
+MISSING-FEATURE: SVGFEColorMatrixElement.y
+MISSING-FEATURE: SVGFEColorMatrixElement.width
+MISSING-FEATURE: SVGFEColorMatrixElement.height
+MISSING-FEATURE: SVGFEColorMatrixElement.result
+MISSING-FEATURE: SVGFEComponentTransferElement.x
+MISSING-FEATURE: SVGFEComponentTransferElement.y
+MISSING-FEATURE: SVGFEComponentTransferElement.width
+MISSING-FEATURE: SVGFEComponentTransferElement.height
+MISSING-FEATURE: SVGFEComponentTransferElement.result
+MISSING-FEATURE: SVGComponentTransferFunctionElement.type
+MISSING-FEATURE: SVGComponentTransferFunctionElement.tableValues
+MISSING-FEATURE: SVGComponentTransferFunctionElement.slope
+MISSING-FEATURE: SVGComponentTransferFunctionElement.intercept
+MISSING-FEATURE: SVGComponentTransferFunctionElement.amplitude
+MISSING-FEATURE: SVGComponentTransferFunctionElement.exponent
+MISSING-FEATURE: SVGComponentTransferFunctionElement.offset
+MISSING-FEATURE: SVGFECompositeElement.operator
+MISSING-FEATURE: SVGFECompositeElement.x
+MISSING-FEATURE: SVGFECompositeElement.y
+MISSING-FEATURE: SVGFECompositeElement.width
+MISSING-FEATURE: SVGFECompositeElement.height
+MISSING-FEATURE: SVGFECompositeElement.result
+MISSING-FEATURE: SVGFEConvolveMatrixElement.orderX
+MISSING-FEATURE: SVGFEConvolveMatrixElement.orderY
+MISSING-FEATURE: SVGFEConvolveMatrixElement.kernelMatrix
+MISSING-FEATURE: SVGFEConvolveMatrixElement.divisor
+MISSING-FEATURE: SVGFEConvolveMatrixElement.bias
+MISSING-FEATURE: SVGFEConvolveMatrixElement.targetX
+MISSING-FEATURE: SVGFEConvolveMatrixElement.targetY
+MISSING-FEATURE: SVGFEConvolveMatrixElement.edgeMode
+MISSING-FEATURE: SVGFEConvolveMatrixElement.kernelUnitLengthX
+MISSING-FEATURE: SVGFEConvolveMatrixElement.kernelUnitLengthY
+MISSING-FEATURE: SVGFEConvolveMatrixElement.preserveAlpha
+MISSING-FEATURE: SVGFEConvolveMatrixElement.x
+MISSING-FEATURE: SVGFEConvolveMatrixElement.y
+MISSING-FEATURE: SVGFEConvolveMatrixElement.width
+MISSING-FEATURE: SVGFEConvolveMatrixElement.height
+MISSING-FEATURE: SVGFEConvolveMatrixElement.result
+MISSING-FEATURE: SVGFEDiffuseLightingElement.surfaceScale
+MISSING-FEATURE: SVGFEDiffuseLightingElement.diffuseConstant
+MISSING-FEATURE: SVGFEDiffuseLightingElement.kernelUnitLengthX
+MISSING-FEATURE: SVGFEDiffuseLightingElement.kernelUnitLengthY
+MISSING-FEATURE: SVGFEDiffuseLightingElement.x
+MISSING-FEATURE: SVGFEDiffuseLightingElement.y
+MISSING-FEATURE: SVGFEDiffuseLightingElement.width
+MISSING-FEATURE: SVGFEDiffuseLightingElement.height
+MISSING-FEATURE: SVGFEDiffuseLightingElement.result
+MISSING-FEATURE: SVGFEDistantLightElement.azimuth
+MISSING-FEATURE: SVGFEDistantLightElement.elevation
+MISSING-FEATURE: SVGFEPointLightElement.x
+MISSING-FEATURE: SVGFEPointLightElement.y
+MISSING-FEATURE: SVGFEPointLightElement.z
+MISSING-FEATURE: SVGFESpotLightElement.x
+MISSING-FEATURE: SVGFESpotLightElement.y
+MISSING-FEATURE: SVGFESpotLightElement.z
+MISSING-FEATURE: SVGFESpotLightElement.pointsAtX
+MISSING-FEATURE: SVGFESpotLightElement.pointsAtY
+MISSING-FEATURE: SVGFESpotLightElement.pointsAtZ
+MISSING-FEATURE: SVGFESpotLightElement.specularExponent
+MISSING-FEATURE: SVGFESpotLightElement.limitingConeAngle
+MISSING-FEATURE: SVGFEDisplacementMapElement.scale
+MISSING-FEATURE: SVGFEDisplacementMapElement.xChannelSelector
+MISSING-FEATURE: SVGFEDisplacementMapElement.yChannelSelector
+MISSING-FEATURE: SVGFEDisplacementMapElement.x
+MISSING-FEATURE: SVGFEDisplacementMapElement.y
+MISSING-FEATURE: SVGFEDisplacementMapElement.width
+MISSING-FEATURE: SVGFEDisplacementMapElement.height
+MISSING-FEATURE: SVGFEDisplacementMapElement.result
+MISSING-FEATURE: SVGFEDropShadowElement.dx
+MISSING-FEATURE: SVGFEDropShadowElement.dy
+MISSING-FEATURE: SVGFEDropShadowElement.stdDeviationX
+MISSING-FEATURE: SVGFEDropShadowElement.stdDeviationY
+MISSING-FEATURE: SVGFEDropShadowElement.setStdDeviation
+MISSING-FEATURE: SVGFEDropShadowElement.x
+MISSING-FEATURE: SVGFEDropShadowElement.y
+MISSING-FEATURE: SVGFEDropShadowElement.width
+MISSING-FEATURE: SVGFEDropShadowElement.height
+MISSING-FEATURE: SVGFEDropShadowElement.result
+MISSING-FEATURE: SVGFEFloodElement.x
+MISSING-FEATURE: SVGFEFloodElement.y
+MISSING-FEATURE: SVGFEFloodElement.width
+MISSING-FEATURE: SVGFEFloodElement.height
+MISSING-FEATURE: SVGFEFloodElement.result
+MISSING-FEATURE: SVGFEGaussianBlurElement.stdDeviationX
+MISSING-FEATURE: SVGFEGaussianBlurElement.stdDeviationY
+MISSING-FEATURE: SVGFEGaussianBlurElement.edgeMode
+MISSING-FEATURE: SVGFEGaussianBlurElement.setStdDeviation
+MISSING-FEATURE: SVGFEGaussianBlurElement.x
+MISSING-FEATURE: SVGFEGaussianBlurElement.y
+MISSING-FEATURE: SVGFEGaussianBlurElement.width
+MISSING-FEATURE: SVGFEGaussianBlurElement.height
+MISSING-FEATURE: SVGFEGaussianBlurElement.result
+MISSING-FEATURE: SVGFEImageElement.preserveAspectRatio
+MISSING-FEATURE: SVGFEImageElement.crossOrigin
+MISSING-FEATURE: SVGFEImageElement.x
+MISSING-FEATURE: SVGFEImageElement.y
+MISSING-FEATURE: SVGFEImageElement.width
+MISSING-FEATURE: SVGFEImageElement.height
+MISSING-FEATURE: SVGFEImageElement.result
+MISSING-FEATURE: SVGFEMergeElement.x
+MISSING-FEATURE: SVGFEMergeElement.y
+MISSING-FEATURE: SVGFEMergeElement.width
+MISSING-FEATURE: SVGFEMergeElement.height
+MISSING-FEATURE: SVGFEMergeElement.result
+MISSING-FEATURE: SVGFEMorphologyElement.operator
+MISSING-FEATURE: SVGFEMorphologyElement.radiusX
+MISSING-FEATURE: SVGFEMorphologyElement.radiusY
+MISSING-FEATURE: SVGFEMorphologyElement.x
+MISSING-FEATURE: SVGFEMorphologyElement.y
+MISSING-FEATURE: SVGFEMorphologyElement.width
+MISSING-FEATURE: SVGFEMorphologyElement.height
+MISSING-FEATURE: SVGFEMorphologyElement.result
+MISSING-FEATURE: SVGFEOffsetElement.dx
+MISSING-FEATURE: SVGFEOffsetElement.dy
+MISSING-FEATURE: SVGFEOffsetElement.x
+MISSING-FEATURE: SVGFEOffsetElement.y
+MISSING-FEATURE: SVGFEOffsetElement.width
+MISSING-FEATURE: SVGFEOffsetElement.height
+MISSING-FEATURE: SVGFEOffsetElement.result
+MISSING-FEATURE: SVGFESpecularLightingElement.surfaceScale
+MISSING-FEATURE: SVGFESpecularLightingElement.specularConstant
+MISSING-FEATURE: SVGFESpecularLightingElement.specularExponent
+MISSING-FEATURE: SVGFESpecularLightingElement.kernelUnitLengthX
+MISSING-FEATURE: SVGFESpecularLightingElement.kernelUnitLengthY
+MISSING-FEATURE: SVGFESpecularLightingElement.x
+MISSING-FEATURE: SVGFESpecularLightingElement.y
+MISSING-FEATURE: SVGFESpecularLightingElement.width
+MISSING-FEATURE: SVGFESpecularLightingElement.height
+MISSING-FEATURE: SVGFESpecularLightingElement.result
+MISSING-FEATURE: SVGFETileElement.x
+MISSING-FEATURE: SVGFETileElement.y
+MISSING-FEATURE: SVGFETileElement.width
+MISSING-FEATURE: SVGFETileElement.height
+MISSING-FEATURE: SVGFETileElement.result
+MISSING-FEATURE: SVGFETurbulenceElement.baseFrequencyX
+MISSING-FEATURE: SVGFETurbulenceElement.baseFrequencyY
+MISSING-FEATURE: SVGFETurbulenceElement.numOctaves
+MISSING-FEATURE: SVGFETurbulenceElement.seed
+MISSING-FEATURE: SVGFETurbulenceElement.stitchTiles
+MISSING-FEATURE: SVGFETurbulenceElement.type
+MISSING-FEATURE: SVGFETurbulenceElement.x
+MISSING-FEATURE: SVGFETurbulenceElement.y
+MISSING-FEATURE: SVGFETurbulenceElement.width
+MISSING-FEATURE: SVGFETurbulenceElement.height
+MISSING-FEATURE: SVGFETurbulenceElement.result
+MISSING-FEATURE: SVGAnimatedBoolean.baseVal
+MISSING-FEATURE: SVGAnimatedBoolean.animVal
+MISSING-FEATURE: SVGAnimatedEnumeration.baseVal
+MISSING-FEATURE: SVGAnimatedEnumeration.animVal
+MISSING-FEATURE: SVGAnimatedInteger.baseVal
+MISSING-FEATURE: SVGAnimatedInteger.animVal
+MISSING-FEATURE: SVGAnimatedNumber.baseVal
+MISSING-FEATURE: SVGAnimatedNumber.animVal
+MISSING-FEATURE: SVGAnimatedLength.baseVal
+MISSING-FEATURE: SVGAnimatedLength.animVal
+MISSING-FEATURE: SVGAnimatedNumberList.baseVal
+MISSING-FEATURE: SVGAnimatedNumberList.animVal
+MISSING-FEATURE: SVGAnimatedPreserveAspectRatio.baseVal
+MISSING-FEATURE: SVGAnimatedPreserveAspectRatio.animVal
+MISSING-FEATURE: DOMPoint.fromPoint
+MISSING-FEATURE: DOMPoint.x
+MISSING-FEATURE: DOMPoint.y
+MISSING-FEATURE: DOMPoint.z
+MISSING-FEATURE: DOMPoint.w
+MISSING-FEATURE: DOMRectReadOnly.toJSON
+MISSING-FEATURE: DOMRect.fromRect
+MISSING-FEATURE: DOMRect.x
+MISSING-FEATURE: DOMRect.y
+MISSING-FEATURE: DOMRect.width
+MISSING-FEATURE: DOMRect.height
+MISSING-INTERFACE: DOMRectList
+MISSING-FEATURE: DOMMatrix.fromMatrix
+MISSING-FEATURE: DOMMatrix.a
+MISSING-FEATURE: DOMMatrix.b
+MISSING-FEATURE: DOMMatrix.c
+MISSING-FEATURE: DOMMatrix.d
+MISSING-FEATURE: DOMMatrix.e
+MISSING-FEATURE: DOMMatrix.f
+MISSING-FEATURE: DOMMatrix.multiplySelf
+MISSING-FEATURE: DOMMatrix.preMultiplySelf
+MISSING-FEATURE: DOMMatrix.translateSelf
+MISSING-FEATURE: DOMMatrix.rotateSelf
+MISSING-FEATURE: DOMMatrix.rotateFromVectorSelf
+MISSING-FEATURE: DOMMatrix.rotateAxisAngleSelf
+MISSING-FEATURE: DOMMatrix.skewXSelf
+MISSING-FEATURE: DOMMatrix.skewYSelf
+MISSING-FEATURE: DOMMatrix.invertSelf
+MISSING-FEATURE: DOMMatrix.setMatrixValue
+ADD: api.AbortController.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.AbortController.signal.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.AbortController.abort.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.MutationObserver.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.XMLDocument.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: DocumentType.before
+MISSING-FEATURE: DocumentType.after
+MISSING-FEATURE: DocumentType.replaceWith
+MISSING-FEATURE: DocumentType.remove
+MISSING-FEATURE: DocumentFragment.getElementById
+MISSING-FEATURE: DocumentFragment.children
+MISSING-FEATURE: DocumentFragment.firstElementChild
+MISSING-FEATURE: DocumentFragment.lastElementChild
+MISSING-FEATURE: DocumentFragment.childElementCount
+MISSING-FEATURE: DocumentFragment.prepend
+MISSING-FEATURE: DocumentFragment.append
+MISSING-FEATURE: DocumentFragment.replaceChildren
+MISSING-FEATURE: Attr.name
+MISSING-FEATURE: Attr.value
+MISSING-FEATURE: Attr.ownerElement
+MISSING-FEATURE: Attr.specified
+MISSING-FEATURE: CharacterData.previousElementSibling
+MISSING-FEATURE: CharacterData.nextElementSibling
+MISSING-FEATURE: CharacterData.before
+MISSING-FEATURE: CharacterData.after
+MISSING-FEATURE: CharacterData.replaceWith
+MISSING-FEATURE: CharacterData.remove
+MISMATCH: api.AbstractRange.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.XPathResult.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.XPathResult.resultType.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: XPathResult.numberValue
+MISSING-FEATURE: XPathResult.stringValue
+MISSING-FEATURE: XPathResult.booleanValue
+MISSING-FEATURE: XPathResult.singleNodeValue
+ADD-DATA: api.XPathResult.invalidIteratorState.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: XPathResult.snapshotLength
+ADD-DATA: api.XPathResult.iterateNext.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.XPathResult.snapshotItem.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.XPathExpression.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.XPathExpression.evaluate.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-INTERFACE: XPathNSResolver
+MISSING-INTERFACE: XPathEvaluator
+ADD-DATA: api.HTMLSlotElement.assignedElements.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: XMLSerializer.serializeToString
+MISSING-INTERFACE: PerformanceElementTiming
+ADD: api.MediaKeySystemAccess.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySystemAccess.keySystem.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySystemAccess.getConfiguration.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySystemAccess.createMediaKeys.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.MediaKeys.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeys.createSession.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeys.setServerCertificate.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.MediaKeySession.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.sessionId.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.expiration.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.closed.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.keyStatuses.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.onkeystatuseschange.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.onmessage.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.generateRequest.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.load.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.update.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.close.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeySession.remove.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.MediaKeyStatusMap.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeyStatusMap.size.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeyStatusMap.has.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeyStatusMap.get.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.MediaKeyMessageEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeyMessageEvent.messageType.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaKeyMessageEvent.message.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.MediaEncryptedEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaEncryptedEvent.initDataType.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaEncryptedEvent.initData.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.HTMLInputElement.webkitdirectory.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: HTMLInputElement.capture
+MISSING-FEATURE: HTMLInputElement.accept
+MISSING-FEATURE: HTMLInputElement.alt
+MISSING-FEATURE: HTMLInputElement.defaultChecked
+MISSING-FEATURE: HTMLInputElement.checked
+MISSING-FEATURE: HTMLInputElement.dirName
+MISSING-FEATURE: HTMLInputElement.disabled
+MISSING-FEATURE: HTMLInputElement.form
+MISSING-FEATURE: HTMLInputElement.formEnctype
+ADD-DATA: api.HTMLInputElement.list.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: HTMLInputElement.max
+MISSING-FEATURE: HTMLInputElement.maxLength
+MISSING-FEATURE: HTMLInputElement.min
+MISSING-FEATURE: HTMLInputElement.minLength
+MISSING-FEATURE: HTMLInputElement.name
+MISSING-FEATURE: HTMLInputElement.readOnly
+MISSING-FEATURE: HTMLInputElement.size
+MISSING-FEATURE: HTMLInputElement.src
+MISSING-FEATURE: HTMLInputElement.step
+MISSING-FEATURE: HTMLInputElement.type
+MISSING-FEATURE: HTMLInputElement.defaultValue
+MISSING-FEATURE: HTMLInputElement.value
+MISSING-FEATURE: HTMLInputElement.valueAsDate
+MISSING-FEATURE: HTMLInputElement.valueAsNumber
+MISSING-FEATURE: HTMLInputElement.width
+MISSING-FEATURE: HTMLInputElement.select
+MISSING-FEATURE: HTMLInputElement.selectionStart
+MISSING-FEATURE: HTMLInputElement.selectionEnd
+MISSING-FEATURE: HTMLInputElement.setRangeText
+MISSING-FEATURE: HTMLInputElement.align
+MISSING-FEATURE: HTMLInputElement.useMap
+MISMATCH: api.DataTransferItem.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.DataTransferItem.webkitGetAsEntry.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemEntry.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemEntry.isFile.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemEntry.isDirectory.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemEntry.name.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemEntry.fullPath.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemEntry.filesystem.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemEntry.getParent.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemDirectoryEntry.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemDirectoryEntry.createReader.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemDirectoryEntry.getFile.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemDirectoryEntry.getDirectory.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemDirectoryReader.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemDirectoryReader.readEntries.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemFileEntry.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystemFileEntry.file.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystem.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystem.name.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.FileSystem.root.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-INTERFACE: PerformanceEventTiming
+MISSING-INTERFACE: EventCounts
+MISSING-FEATURE: Performance.eventCounts
+MISSING-FEATURE: Performance.profile
+MISSING-INTERFACE: FeaturePolicyViolationReportBody
+MISMATCH: api.Headers.has.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Headers.set.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Request.method.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Request.headers.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Request.referrer.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Request.mode.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Request.credentials.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Request.redirect.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Request.integrity.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Request.keepalive.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: Request.isReloadNavigation
+MISSING-FEATURE: Request.isHistoryNavigation
+ADD-DATA: api.Request.signal.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.Request.clone.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: Request.body
+MISSING-FEATURE: Request.bodyUsed
+MISSING-FEATURE: Request.arrayBuffer
+MISSING-FEATURE: Request.blob
+MISSING-FEATURE: Request.formData
+MISSING-FEATURE: Request.json
+MISSING-FEATURE: Request.text
+MISMATCH: api.Response.type.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Response.url.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Response.redirected.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Response.statusText.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Response.headers.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Response.clone.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: Response.body
+MISSING-FEATURE: Response.bodyUsed
+MISSING-FEATURE: Response.arrayBuffer
+MISSING-FEATURE: Response.blob
+MISSING-FEATURE: Response.formData
+MISSING-FEATURE: Response.json
+MISSING-FEATURE: Response.text
+MISMATCH: api.Gamepad.id.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.GamepadButton.touched.__compat.support.safari.version_added (10.1) does not match WPT (false)
+ADD: api.Sensor.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Sensor.activated.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Sensor.hasReading.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Sensor.timestamp.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Sensor.start.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Sensor.stop.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Sensor.onreading.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Sensor.onactivate.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Sensor.onerror.__compat.support.safari.version_added would be set to false
+ADD: api.SensorErrorEvent.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.SensorErrorEvent.error.__compat.support.safari.version_added would be set to false
+MISSING-INTERFACE: GeolocationSensor
+ADD: api.Gyroscope.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Gyroscope.x.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Gyroscope.y.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Gyroscope.z.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: HTMLHtmlElement.version
+MISSING-FEATURE: HTMLMetaElement.name
+MISSING-FEATURE: HTMLMetaElement.httpEquiv
+MISSING-FEATURE: HTMLMetaElement.content
+MISSING-FEATURE: HTMLMetaElement.scheme
+MISSING-FEATURE: HTMLHRElement.align
+MISSING-FEATURE: HTMLHRElement.color
+MISSING-FEATURE: HTMLHRElement.noShade
+MISSING-FEATURE: HTMLHRElement.size
+MISSING-FEATURE: HTMLHRElement.width
+MISSING-FEATURE: HTMLLIElement.value
+MISSING-FEATURE: HTMLLIElement.type
+MISSING-FEATURE: HTMLAnchorElement.ping
+MISMATCH: api.HTMLAnchorElement.referrerPolicy.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISSING-FEATURE: HTMLAnchorElement.href
+MISSING-FEATURE: HTMLAnchorElement.origin
+MISSING-FEATURE: HTMLAnchorElement.protocol
+MISSING-FEATURE: HTMLAnchorElement.username
+MISSING-FEATURE: HTMLAnchorElement.password
+MISSING-FEATURE: HTMLAnchorElement.host
+MISSING-FEATURE: HTMLAnchorElement.hostname
+MISSING-FEATURE: HTMLAnchorElement.port
+MISSING-FEATURE: HTMLAnchorElement.pathname
+MISSING-FEATURE: HTMLAnchorElement.search
+MISSING-FEATURE: HTMLAnchorElement.hash
+MISMATCH: api.HTMLDataElement.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.HTMLDataElement.value.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: HTMLEmbedElement.src
+MISSING-FEATURE: HTMLEmbedElement.type
+MISSING-FEATURE: HTMLEmbedElement.width
+MISSING-FEATURE: HTMLEmbedElement.height
+MISSING-FEATURE: HTMLEmbedElement.getSVGDocument
+MISSING-FEATURE: HTMLEmbedElement.align
+MISSING-FEATURE: HTMLEmbedElement.name
+MISMATCH: api.HTMLObjectElement.contentWindow.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: HTMLVideoElement.playsInline
+MISMATCH: api.HTMLVideoElement.getVideoPlaybackQuality.__compat.support.safari.version_added (8) does not match WPT (false)
+MISSING-FEATURE: HTMLVideoElement.requestPictureInPicture
+MISSING-FEATURE: HTMLVideoElement.onenterpictureinpicture
+MISSING-FEATURE: HTMLVideoElement.onleavepictureinpicture
+MISSING-FEATURE: HTMLVideoElement.autoPictureInPicture
+MISSING-FEATURE: HTMLVideoElement.disablePictureInPicture
+MISSING-FEATURE: HTMLVideoElement.requestVideoFrameCallback
+MISSING-FEATURE: HTMLVideoElement.cancelVideoFrameCallback
+MISSING-FEATURE: HTMLAreaElement.ping
+MISMATCH: api.HTMLAreaElement.referrerPolicy.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISSING-FEATURE: HTMLAreaElement.href
+MISSING-FEATURE: HTMLAreaElement.origin
+MISSING-FEATURE: HTMLAreaElement.protocol
+MISSING-FEATURE: HTMLAreaElement.username
+MISSING-FEATURE: HTMLAreaElement.password
+MISSING-FEATURE: HTMLAreaElement.host
+MISSING-FEATURE: HTMLAreaElement.hostname
+MISSING-FEATURE: HTMLAreaElement.port
+MISSING-FEATURE: HTMLAreaElement.pathname
+MISSING-FEATURE: HTMLAreaElement.search
+MISSING-FEATURE: HTMLAreaElement.hash
+MISSING-FEATURE: HTMLFormElement.rel
+MISSING-FEATURE: HTMLFormElement.relList
+MISSING-FEATURE: HTMLButtonElement.checkValidity
+MISSING-FEATURE: HTMLButtonElement.setCustomValidity
+MISMATCH: api.HTMLDataListElement.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.HTMLDataListElement.options.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: HTMLTextAreaElement.cols
+MISSING-FEATURE: HTMLTextAreaElement.dirName
+MISSING-FEATURE: HTMLTextAreaElement.disabled
+MISSING-FEATURE: HTMLTextAreaElement.form
+MISSING-FEATURE: HTMLTextAreaElement.maxLength
+MISSING-FEATURE: HTMLTextAreaElement.minLength
+MISSING-FEATURE: HTMLTextAreaElement.name
+MISSING-FEATURE: HTMLTextAreaElement.placeholder
+MISSING-FEATURE: HTMLTextAreaElement.readOnly
+MISSING-FEATURE: HTMLTextAreaElement.required
+MISSING-FEATURE: HTMLTextAreaElement.rows
+MISSING-FEATURE: HTMLTextAreaElement.wrap
+MISSING-FEATURE: HTMLTextAreaElement.type
+MISSING-FEATURE: HTMLTextAreaElement.defaultValue
+MISSING-FEATURE: HTMLTextAreaElement.value
+MISSING-FEATURE: HTMLTextAreaElement.willValidate
+MISSING-FEATURE: HTMLTextAreaElement.validity
+MISSING-FEATURE: HTMLTextAreaElement.validationMessage
+MISSING-FEATURE: HTMLTextAreaElement.checkValidity
+MISSING-FEATURE: HTMLTextAreaElement.setCustomValidity
+MISSING-FEATURE: HTMLTextAreaElement.select
+MISSING-FEATURE: HTMLTextAreaElement.selectionStart
+MISSING-FEATURE: HTMLTextAreaElement.selectionEnd
+MISSING-FEATURE: HTMLTextAreaElement.selectionDirection
+MISSING-FEATURE: HTMLTextAreaElement.setRangeText
+MISSING-FEATURE: HTMLTextAreaElement.setSelectionRange
+MISSING-FEATURE: HTMLFieldSetElement.checkValidity
+MISSING-FEATURE: HTMLFieldSetElement.setCustomValidity
+MISSING-FEATURE: HTMLLegendElement.form
+MISSING-FEATURE: HTMLLegendElement.align
+MISMATCH: api.HTMLScriptElement.noModule.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: HTMLScriptElement.integrity
+MISSING-FEATURE: HTMLMarqueeElement.bgColor
+MISSING-FEATURE: HTMLMarqueeElement.scrollAmount
+MISSING-FEATURE: HTMLMarqueeElement.scrollDelay
+MISSING-FEATURE: HTMLMarqueeElement.trueSpeed
+MISSING-FEATURE: HTMLMarqueeElement.onbounce
+MISSING-FEATURE: HTMLMarqueeElement.onfinish
+MISSING-FEATURE: HTMLMarqueeElement.onstart
+MISSING-FEATURE: HTMLMarqueeElement.start
+MISSING-FEATURE: HTMLMarqueeElement.stop
+MISSING-FEATURE: HTMLFrameSetElement.onafterprint
+MISSING-FEATURE: HTMLFrameSetElement.onbeforeprint
+MISSING-FEATURE: HTMLFrameSetElement.onbeforeunload
+MISSING-FEATURE: HTMLFrameSetElement.onhashchange
+MISSING-FEATURE: HTMLFrameSetElement.onlanguagechange
+MISSING-FEATURE: HTMLFrameSetElement.onmessage
+MISSING-FEATURE: HTMLFrameSetElement.onmessageerror
+MISSING-FEATURE: HTMLFrameSetElement.onoffline
+MISSING-FEATURE: HTMLFrameSetElement.ononline
+MISSING-FEATURE: HTMLFrameSetElement.onpagehide
+MISSING-FEATURE: HTMLFrameSetElement.onpageshow
+MISSING-FEATURE: HTMLFrameSetElement.onpopstate
+MISSING-FEATURE: HTMLFrameSetElement.onrejectionhandled
+MISSING-FEATURE: HTMLFrameSetElement.onunhandledrejection
+MISSING-FEATURE: HTMLFrameSetElement.onunload
+MISSING-INTERFACE: HTMLDirectoryElement
+MISMATCH: api.DOMStringList.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.DOMStringList.length.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.DOMStringList.item.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.DOMStringList.contains.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-INTERFACE: TextTrackCueList
+ADD: api.TextTrackCue.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.TrackEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.SubmitEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.FormDataEvent.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.TextMetrics.__compat.support.safari.version_added (3.1) does not match WPT (false)
+MISMATCH: api.TextMetrics.width.__compat.support.safari.version_added (3.1) does not match WPT (false)
+MISMATCH: api.TextMetrics.actualBoundingBoxLeft.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.actualBoundingBoxRight.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.fontBoundingBoxAscent.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.fontBoundingBoxDescent.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.actualBoundingBoxAscent.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.actualBoundingBoxDescent.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.emHeightAscent.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.emHeightDescent.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.hangingBaseline.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.alphabeticBaseline.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.ideographicBaseline.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-FEATURE: ImageBitmapRenderingContext.canvas
+MISSING-INTERFACE: ElementInternals
+MISSING-INTERFACE: BarProp
+MISSING-INTERFACE: ApplicationCache
+MISSING-FEATURE: CloseEvent.wasClean
+MISSING-FEATURE: CloseEvent.code
+MISSING-FEATURE: CloseEvent.reason
+ADD-DATA: api.MessagePort.onmessageerror.__compat.support.safari.version_added would be set to false
+MISMATCH: api.DedicatedWorkerGlobalScope.name.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD-DATA: api.DedicatedWorkerGlobalScope.close.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.DedicatedWorkerGlobalScope.onmessageerror.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: DedicatedWorkerGlobalScope.requestAnimationFrame
+MISSING-FEATURE: DedicatedWorkerGlobalScope.cancelAnimationFrame
+MISMATCH: api.Worker.__compat.support.safari.version_added (4) does not match WPT (false)
+MISMATCH: api.Worker.terminate.__compat.support.safari.version_added (4) does not match WPT (false)
+MISMATCH: api.Worker.postMessage.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.Worker.onmessage.__compat.support.safari.version_added (4) does not match WPT (false)
+ADD-DATA: api.Worker.onmessageerror.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: Worker.onerror
+MISMATCH: api.SharedWorker.__compat.support.safari.version_added (5) does not match WPT (false)
+MISMATCH: api.SharedWorker.port.__compat.support.safari.version_added (5) does not match WPT (false)
+MISSING-FEATURE: SharedWorker.onerror
+ADD: api.WorkerLocation.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: WorkerLocation.href
+MISSING-FEATURE: WorkerLocation.origin
+MISSING-FEATURE: WorkerLocation.protocol
+MISSING-FEATURE: WorkerLocation.host
+MISSING-FEATURE: WorkerLocation.hostname
+MISSING-FEATURE: WorkerLocation.port
+MISSING-FEATURE: WorkerLocation.pathname
+MISSING-FEATURE: WorkerLocation.search
+MISSING-FEATURE: WorkerLocation.hash
+MISMATCH: api.StorageEvent.initStorageEvent.__compat.support.safari.version_added (true) does not match WPT (false)
+ADD: api.External.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.UIEvent.sourceCapabilities.__compat.support.safari.version_added would be set to false
+ADD: api.InputDeviceCapabilities.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.InputDeviceCapabilities.firesTouchEvents.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: InputDeviceCapabilities.pointerMovementScrolls
+MISMATCH: api.InputEvent.dataTransfer.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.InputEvent.data.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD-DATA: api.IntersectionObserver.disconnect.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.IntersectionObserver.takeRecords.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.IntersectionObserverEntry.time.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.IntersectionObserverEntry.rootBounds.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.IntersectionObserverEntry.boundingClientRect.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.IntersectionObserverEntry.intersectionRect.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.IntersectionObserverEntry.intersectionRatio.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.IntersectionObserverEntry.target.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-INTERFACE: Profiler
+MISSING-INTERFACE: LargestContentfulPaint
+MISSING-INTERFACE: LayoutShift
+ADD: api.PerformanceLongTaskTiming.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PerformanceLongTaskTiming.attribution.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: PerformanceLongTaskTiming.toJSON
+ADD: api.TaskAttributionTiming.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.TaskAttributionTiming.containerType.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.TaskAttributionTiming.containerSrc.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.TaskAttributionTiming.containerId.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.TaskAttributionTiming.containerName.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: TaskAttributionTiming.toJSON
+ADD: api.Magnetometer.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Magnetometer.x.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Magnetometer.y.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Magnetometer.z.__compat.support.safari.version_added would be set to false
+MISSING-INTERFACE: UncalibratedMagnetometer
+ADD: api.MediaCapabilities.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaCapabilities.decodingInfo.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaCapabilities.encodingInfo.__compat.support.safari.version_added would be set to false
+MISMATCH: api.VideoPlaybackQuality.__compat.support.safari.version_added (8) does not match WPT (false)
+MISMATCH: api.VideoPlaybackQuality.creationTime.__compat.support.safari.version_added (8) does not match WPT (false)
+MISMATCH: api.VideoPlaybackQuality.droppedVideoFrames.__compat.support.safari.version_added (8) does not match WPT (false)
+MISMATCH: api.VideoPlaybackQuality.totalVideoFrames.__compat.support.safari.version_added (8) does not match WPT (false)
+MISMATCH: api.VideoPlaybackQuality.corruptedVideoFrames.__compat.support.safari.version_added (8) does not match WPT (false)
+MISMATCH: api.MediaSource.setLiveSeekableRange.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.MediaSource.clearLiveSeekableRange.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.CanvasCaptureMediaStreamTrack.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.CanvasCaptureMediaStreamTrack.canvas.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.CanvasCaptureMediaStreamTrack.requestFrame.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.ImageCapture.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.ImageCapture.takePhoto.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.ImageCapture.getPhotoCapabilities.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.ImageCapture.getPhotoSettings.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.ImageCapture.grabFrame.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.ImageCapture.track.__compat.support.safari.version_added would be set to false
+ADD: api.PhotoCapabilities.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PhotoCapabilities.redEyeReduction.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PhotoCapabilities.imageHeight.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PhotoCapabilities.imageWidth.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PhotoCapabilities.fillLightMode.__compat.support.safari.version_added would be set to false
+ADD: api.MediaSettingsRange.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaSettingsRange.max.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaSettingsRange.min.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaSettingsRange.step.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: MediaRecorder.audioBitrateMode
+ADD-DATA: api.MediaStreamTrack.contentHint.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MediaStreamTrack.isolated.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaStreamTrack.onisolationchange.__compat.support.safari.version_added would be set to false
+MISMATCH: api.MediaDevices.ondevicechange.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.MediaDeviceInfo.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.MediaDeviceInfo.deviceId.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.MediaDeviceInfo.kind.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.MediaDeviceInfo.label.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.MediaDeviceInfo.groupId.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.MediaDeviceInfo.toJSON.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.InputDeviceInfo.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.InputDeviceInfo.getCapabilities.__compat.support.safari.version_added would be set to false
+ADD: api.MediaSession.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaSession.metadata.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaSession.playbackState.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaSession.setActionHandler.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaSession.setPositionState.__compat.support.safari.version_added would be set to false
+ADD: api.MediaMetadata.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaMetadata.title.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaMetadata.artist.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaMetadata.album.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MediaMetadata.artwork.__compat.support.safari.version_added would be set to false
+MISSING-INTERFACE: FileSystemHandle
+MISSING-INTERFACE: FileSystemFileHandle
+MISSING-INTERFACE: FileSystemDirectoryHandle
+MISSING-INTERFACE: FileSystemWriter
+MISMATCH: api.PerformanceNavigation.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.PerformanceNavigation.type.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.PerformanceNavigation.redirectCount.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD-DATA: api.Notification.maxActions.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Notification.image.__compat.support.safari.version_added would be set to false
+MISMATCH: api.Notification.icon.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD-DATA: api.Notification.badge.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Notification.vibrate.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Notification.timestamp.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Notification.requireInteraction.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Notification.data.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Notification.actions.__compat.support.safari.version_added would be set to false
+ADD: api.NotificationEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.NotificationEvent.notification.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.NotificationEvent.action.__compat.support.safari.version_added would be set to false
+MISMATCH: api.DeviceOrientationEvent.__compat.support.safari.version_added (5) does not match WPT (false)
+ADD-DATA: api.DeviceOrientationEvent.alpha.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceOrientationEvent.beta.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceOrientationEvent.gamma.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceOrientationEvent.absolute.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: DeviceOrientationEvent.requestPermission
+ADD: api.DeviceMotionEventAcceleration.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventAcceleration.x.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventAcceleration.y.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventAcceleration.z.__compat.support.safari.version_added would be set to false
+ADD: api.DeviceMotionEventRotationRate.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventRotationRate.alpha.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventRotationRate.beta.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceMotionEventRotationRate.gamma.__compat.support.safari.version_added would be set to false
+MISMATCH: api.DeviceMotionEvent.__compat.support.safari.version_added (5) does not match WPT (false)
+ADD-DATA: api.DeviceMotionEvent.acceleration.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceMotionEvent.accelerationIncludingGravity.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceMotionEvent.rotationRate.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.DeviceMotionEvent.interval.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: DeviceMotionEvent.requestPermission
+ADD: api.OrientationSensor.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.OrientationSensor.quaternion.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.OrientationSensor.populateMatrix.__compat.support.safari.version_added would be set to false
+ADD: api.AbsoluteOrientationSensor.__compat.support.safari.version_added would be set to false
+ADD: api.RelativeOrientationSensor.__compat.support.safari.version_added would be set to false
+MISMATCH: api.Client.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Client.url.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Client.frameType.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Client.id.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Client.type.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Client.postMessage.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.PaymentManager.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentManager.instruments.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentManager.userHint.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: PaymentManager.enableDelegations
+ADD: api.PaymentInstruments.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentInstruments.delete.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentInstruments.get.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentInstruments.keys.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentInstruments.has.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentInstruments.set.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentInstruments.clear.__compat.support.safari.version_added would be set to false
+ADD: api.CanMakePaymentEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.CanMakePaymentEvent.topOrigin.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.CanMakePaymentEvent.paymentRequestOrigin.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.CanMakePaymentEvent.methodData.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.CanMakePaymentEvent.respondWith.__compat.support.safari.version_added would be set to false
+ADD: api.PaymentRequestEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.PaymentRequestEvent.topOrigin.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentRequestEvent.paymentRequestOrigin.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentRequestEvent.paymentRequestId.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentRequestEvent.methodData.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentRequestEvent.total.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentRequestEvent.modifiers.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PaymentRequestEvent.instrumentKey.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: PaymentRequestEvent.requestBillingAddress
+MISSING-FEATURE: PaymentRequestEvent.paymentOptions
+MISSING-FEATURE: PaymentRequestEvent.shippingOptions
+ADD-DATA: api.PaymentRequestEvent.openWindow.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: PaymentRequestEvent.changePaymentMethod
+MISSING-FEATURE: PaymentRequestEvent.changeShippingAddress
+MISSING-FEATURE: PaymentRequestEvent.changeShippingOption
+ADD-DATA: api.PaymentRequestEvent.respondWith.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: PaymentRequest.hasEnrolledInstrument
+MISSING-FEATURE: PaymentRequest.shippingAddress
+ADD-DATA: api.PaymentRequest.onmerchantvalidation.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.PaymentRequest.onpaymentmethodchange.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.PaymentResponse.retry.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.PaymentResponse.onpayerdetailchange.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.MerchantValidationEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MerchantValidationEvent.methodName.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.MerchantValidationEvent.validationURL.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.MerchantValidationEvent.complete.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.PaymentMethodChangeEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.PaymentMethodChangeEvent.methodName.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.PaymentMethodChangeEvent.methodDetails.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.PerformanceObserver.observe.__compat.support.safari.version_added (11) does not match WPT (false)
+MISMATCH: api.PerformanceObserverEntryList.getEntries.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.PerformanceObserverEntryList.getEntriesByType.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.PerformanceObserverEntryList.getEntriesByName.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-INTERFACE: PictureInPictureWindow
+MISSING-INTERFACE: EnterPictureInPictureEvent
+MISSING-FEATURE: PointerEvent.altitudeAngle
+MISSING-FEATURE: PointerEvent.azimuthAngle
+MISSING-FEATURE: PointerEvent.getPredictedEvents
+ADD: api.Presentation.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Presentation.defaultRequest.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Presentation.receiver.__compat.support.safari.version_added would be set to false
+ADD: api.PresentationRequest.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationRequest.start.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationRequest.reconnect.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationRequest.getAvailability.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationRequest.onconnectionavailable.__compat.support.safari.version_added would be set to false
+ADD: api.PresentationAvailability.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationAvailability.value.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationAvailability.onchange.__compat.support.safari.version_added would be set to false
+ADD: api.PresentationConnectionAvailableEvent.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnectionAvailableEvent.connection.__compat.support.safari.version_added would be set to false
+ADD: api.PresentationConnection.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.id.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.url.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.state.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.close.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.terminate.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.onconnect.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.onclose.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.onterminate.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.binaryType.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.onmessage.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnection.send.__compat.support.safari.version_added would be set to false
+ADD: api.PresentationConnectionCloseEvent.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnectionCloseEvent.reason.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PresentationConnectionCloseEvent.message.__compat.support.safari.version_added would be set to false
+MISSING-INTERFACE: ProximitySensor
+ADD: api.PushSubscriptionOptions.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PushSubscriptionOptions.userVisibleOnly.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PushSubscriptionOptions.applicationServerKey.__compat.support.safari.version_added would be set to false
+MISMATCH: api.PushMessageData.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.PushEvent.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.PushSubscriptionChangeEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.PushSubscriptionChangeEvent.newSubscription.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.PushSubscriptionChangeEvent.oldSubscription.__compat.support.safari.version_added would be set to false
+MISSING-INTERFACE: RemotePlayback
+MISSING-INTERFACE: ReportBody
+MISSING-INTERFACE: Report
+MISSING-INTERFACE: ReportingObserver
+MISMATCH: api.ResizeObserverEntry.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.ResizeObserverEntry.target.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.ResizeObserverEntry.contentRect.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: ResizeObserverEntry.devicePixelContentBoxSize
+MISSING-INTERFACE: ResizeObserverSize
+MISSING-INTERFACE: ResizeObservation
+MISMATCH: api.PerformanceResourceTiming.nextHopProtocol.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-INTERFACE: WakeLock
+MISSING-INTERFACE: WakeLockSentinel
+MISSING-INTERFACE: ScrollTimeline
+MISSING-FEATURE: ServiceWorker.postMessage
+ADD: api.NavigationPreloadManager.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.NavigationPreloadManager.enable.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.NavigationPreloadManager.disable.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.NavigationPreloadManager.setHeaderValue.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.NavigationPreloadManager.getState.__compat.support.safari.version_added would be set to false
+MISMATCH: api.WindowClient.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.WindowClient.visibilityState.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.WindowClient.focused.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.WindowClient.focus.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.WindowClient.navigate.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Clients.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Clients.get.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Clients.matchAll.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Clients.openWindow.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.Clients.claim.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-INTERFACE: FaceDetector
+MISSING-INTERFACE: BarcodeDetector
+MISSING-INTERFACE: TextDetector
+ADD: api.StorageManager.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.StorageManager.persisted.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.StorageManager.persist.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.StorageManager.estimate.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: SVGGraphicsElement.requiredExtensions
+MISSING-FEATURE: SVGGraphicsElement.systemLanguage
+MISSING-FEATURE: SVGNumber.value
+MISSING-FEATURE: SVGLength.unitType
+MISSING-FEATURE: SVGLength.value
+MISSING-FEATURE: SVGLength.valueInSpecifiedUnits
+MISSING-FEATURE: SVGLength.valueAsString
+MISSING-FEATURE: SVGLength.newValueSpecifiedUnits
+MISSING-FEATURE: SVGLength.convertToSpecifiedUnits
+MISSING-FEATURE: SVGAngle.unitType
+MISSING-FEATURE: SVGAngle.value
+MISSING-FEATURE: SVGAngle.valueInSpecifiedUnits
+MISSING-FEATURE: SVGAngle.valueAsString
+MISSING-FEATURE: SVGAngle.newValueSpecifiedUnits
+MISSING-FEATURE: SVGAngle.convertToSpecifiedUnits
+MISSING-FEATURE: SVGNumberList.length
+MISSING-FEATURE: SVGNumberList.numberOfItems
+MISSING-FEATURE: SVGNumberList.clear
+MISSING-FEATURE: SVGNumberList.initialize
+MISSING-FEATURE: SVGNumberList.getItem
+MISSING-FEATURE: SVGNumberList.insertItemBefore
+MISSING-FEATURE: SVGNumberList.replaceItem
+MISSING-FEATURE: SVGNumberList.removeItem
+MISSING-FEATURE: SVGNumberList.appendItem
+MISSING-FEATURE: SVGLengthList.length
+MISSING-FEATURE: SVGLengthList.numberOfItems
+MISSING-FEATURE: SVGLengthList.clear
+MISSING-FEATURE: SVGLengthList.initialize
+MISSING-FEATURE: SVGLengthList.getItem
+MISSING-FEATURE: SVGLengthList.insertItemBefore
+MISSING-FEATURE: SVGLengthList.replaceItem
+MISSING-FEATURE: SVGLengthList.removeItem
+MISSING-FEATURE: SVGLengthList.appendItem
+ADD-DATA: api.SVGStringList.length.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: SVGStringList.numberOfItems
+MISSING-FEATURE: SVGStringList.clear
+MISSING-FEATURE: SVGStringList.initialize
+MISSING-FEATURE: SVGStringList.getItem
+MISSING-FEATURE: SVGStringList.insertItemBefore
+MISSING-FEATURE: SVGStringList.replaceItem
+MISSING-FEATURE: SVGStringList.removeItem
+MISSING-FEATURE: SVGStringList.appendItem
+MISSING-FEATURE: SVGAnimatedAngle.baseVal
+MISSING-FEATURE: SVGAnimatedAngle.animVal
+MISSING-FEATURE: SVGAnimatedRect.baseVal
+MISSING-FEATURE: SVGAnimatedRect.animVal
+MISSING-FEATURE: SVGAnimatedLengthList.baseVal
+MISSING-FEATURE: SVGAnimatedLengthList.animVal
+MISMATCH: api.SVGSVGElement.suspendRedraw.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.SVGSVGElement.unsuspendRedraw.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGSVGElement.viewBox
+MISSING-FEATURE: SVGSVGElement.preserveAspectRatio
+MISSING-FEATURE: SVGSymbolElement.viewBox
+MISSING-FEATURE: SVGSymbolElement.preserveAspectRatio
+ADD-DATA: api.SVGUseElement.instanceRoot.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.SVGUseElement.animatedInstanceRoot.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: SVGUseElement.href
+MISSING-INTERFACE: SVGUseElementShadowRoot
+MISSING-INTERFACE: ShadowAnimation
+MISSING-FEATURE: SVGTransform.type
+MISSING-FEATURE: SVGTransform.matrix
+MISSING-FEATURE: SVGTransform.angle
+MISSING-FEATURE: SVGTransform.setMatrix
+MISSING-FEATURE: SVGTransform.setTranslate
+MISSING-FEATURE: SVGTransform.setScale
+MISSING-FEATURE: SVGTransform.setRotate
+MISSING-FEATURE: SVGTransform.setSkewX
+MISSING-FEATURE: SVGTransform.setSkewY
+ADD-DATA: api.SVGTransformList.length.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: SVGTransformList.numberOfItems
+MISSING-FEATURE: SVGTransformList.clear
+MISSING-FEATURE: SVGTransformList.initialize
+MISSING-FEATURE: SVGTransformList.getItem
+MISSING-FEATURE: SVGTransformList.insertItemBefore
+MISSING-FEATURE: SVGTransformList.replaceItem
+MISSING-FEATURE: SVGTransformList.removeItem
+MISSING-FEATURE: SVGTransformList.appendItem
+MISSING-FEATURE: SVGTransformList.createSVGTransformFromMatrix
+MISSING-FEATURE: SVGTransformList.consolidate
+MISSING-FEATURE: SVGAnimatedTransformList.baseVal
+MISSING-FEATURE: SVGAnimatedTransformList.animVal
+MISSING-FEATURE: SVGPreserveAspectRatio.align
+MISSING-FEATURE: SVGPreserveAspectRatio.meetOrSlice
+MISSING-INTERFACE: SVGPointList
+MISSING-FEATURE: SVGPolylineElement.points
+MISSING-FEATURE: SVGPolylineElement.animatedPoints
+MISSING-FEATURE: SVGPolygonElement.points
+MISSING-FEATURE: SVGPolygonElement.animatedPoints
+MISMATCH: api.SVGTextContentElement.getSubStringLength.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.SVGTextContentElement.getStartPositionOfChar.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.SVGTextContentElement.getEndPositionOfChar.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.SVGTextContentElement.getExtentOfChar.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.SVGTextContentElement.getRotationOfChar.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.SVGTextContentElement.getCharNumAtPosition.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.SVGTextContentElement.selectSubString.__compat.support.safari.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGTextPathElement.href
+ADD-DATA: api.SVGImageElement.crossOrigin.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: SVGForeignObjectElement.x
+MISSING-FEATURE: SVGForeignObjectElement.y
+MISSING-FEATURE: SVGForeignObjectElement.width
+MISSING-FEATURE: SVGForeignObjectElement.height
+MISSING-INTERFACE: SVGMarkerElement
+MISSING-FEATURE: SVGGradientElement.gradientUnits
+MISSING-FEATURE: SVGGradientElement.gradientTransform
+MISSING-FEATURE: SVGGradientElement.spreadMethod
+MISSING-FEATURE: SVGGradientElement.href
+MISSING-FEATURE: SVGRadialGradientElement.cx
+MISSING-FEATURE: SVGRadialGradientElement.cy
+MISSING-FEATURE: SVGRadialGradientElement.r
+MISSING-FEATURE: SVGRadialGradientElement.fx
+MISSING-FEATURE: SVGRadialGradientElement.fy
+MISSING-FEATURE: SVGRadialGradientElement.fr
+MISSING-FEATURE: SVGStopElement.offset
+MISSING-FEATURE: SVGPatternElement.viewBox
+MISSING-FEATURE: SVGPatternElement.preserveAspectRatio
+MISSING-FEATURE: SVGPatternElement.href
+MISSING-FEATURE: SVGScriptElement.type
+MISSING-FEATURE: SVGScriptElement.crossOrigin
+MISSING-FEATURE: SVGScriptElement.href
+ADD-DATA: api.SVGAElement.download.__compat.support.safari.version_added would be set to false
+MISMATCH: api.SVGAElement.referrerPolicy.__compat.support.safari.version_added (11.1) does not match WPT (false)
+MISSING-FEATURE: SVGAElement.href
+MISSING-FEATURE: SVGViewElement.viewBox
+MISSING-FEATURE: SVGViewElement.preserveAspectRatio
+MISSING-FEATURE: Touch.altitudeAngle
+MISSING-FEATURE: Touch.azimuthAngle
+MISSING-FEATURE: Touch.touchType
+MISSING-INTERFACE: TrustedHTML
+MISSING-INTERFACE: TrustedScript
+MISSING-INTERFACE: TrustedScriptURL
+MISSING-INTERFACE: TrustedTypePolicyFactory
+MISSING-INTERFACE: TrustedTypePolicy
+MISSING-FEATURE: PerformanceMark.detail
+MISSING-FEATURE: PerformanceMeasure.detail
+MISSING-INTERFACE: Module
+MISSING-INTERFACE: Instance
+MISSING-INTERFACE: Memory
+MISSING-INTERFACE: Table
+MISSING-INTERFACE: Global
+MISMATCH: api.AnimationTimeline.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AnimationTimeline.currentTime.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.DocumentTimeline.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.AnimationEffect.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.AnimationEffect.getTiming.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.AnimationEffect.getComputedTiming.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.AnimationEffect.updateTiming.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.KeyframeEffect.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.KeyframeEffect.target.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.KeyframeEffect.getKeyframes.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.KeyframeEffect.setKeyframes.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AnimationPlaybackEvent.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AnimationPlaybackEvent.currentTime.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AnimationPlaybackEvent.timelineTime.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.LockManager.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.LockManager.request.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.LockManager.query.__compat.support.safari.version_added would be set to false
+ADD: api.Lock.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Lock.name.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.Lock.mode.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: NDEFReader.onreading
+MISMATCH: api.BaseAudioContext.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.destination.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.sampleRate.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.currentTime.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.listener.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.state.__compat.support.safari.version_added (9) does not match WPT (false)
+ADD-DATA: api.BaseAudioContext.audioWorklet.__compat.support.safari.version_added would be set to false
+MISMATCH: api.BaseAudioContext.onstatechange.__compat.support.safari.version_added (9) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createAnalyser.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createBiquadFilter.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createBuffer.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createBufferSource.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createChannelMerger.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createChannelSplitter.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createConstantSource.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createConvolver.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createDelay.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createDynamicsCompressor.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createGain.__compat.support.safari.version_added (6) does not match WPT (false)
+ADD-DATA: api.BaseAudioContext.createIIRFilter.__compat.support.safari.version_added would be set to false
+MISMATCH: api.BaseAudioContext.createOscillator.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createPanner.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createPeriodicWave.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createScriptProcessor.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.createWaveShaper.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.BaseAudioContext.decodeAudioData.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.AudioContext.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.AudioContext.resume.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.AudioContext.suspend.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.AudioContext.close.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.AudioContext.createMediaElementSource.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.AudioContext.createMediaStreamSource.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.AudioContext.createMediaStreamDestination.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.OfflineAudioContext.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.OfflineAudioContext.startRendering.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.OfflineAudioContext.oncomplete.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.AudioBuffer.copyFromChannel.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.AudioBuffer.copyToChannel.__compat.support.safari.version_added (6) does not match WPT (false)
+ADD-DATA: api.AudioParam.automationRate.__compat.support.safari.version_added would be set to false
+ADD: api.AudioScheduledSourceNode.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.AudioScheduledSourceNode.onended.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.AudioScheduledSourceNode.start.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.AudioScheduledSourceNode.stop.__compat.support.safari.version_added would be set to false
+MISMATCH: api.AudioBufferSourceNode.__compat.support.safari.version_added (6) does not match WPT (false)
+ADD: api.IIRFilterNode.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.IIRFilterNode.getFrequencyResponse.__compat.support.safari.version_added would be set to false
+MISMATCH: api.OscillatorNode.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.panningModel.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.distanceModel.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.refDistance.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.maxDistance.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.rolloffFactor.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.coneInnerAngle.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.coneOuterAngle.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.coneOuterGain.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.setPosition.__compat.support.safari.version_added (6) does not match WPT (false)
+MISMATCH: api.PannerNode.setOrientation.__compat.support.safari.version_added (6) does not match WPT (false)
+ADD: api.AudioWorklet.__compat.support.safari.version_added would be set to false
+ADD: api.AudioWorkletGlobalScope.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.AudioParamMap.__compat.support.safari.version_added would be set to false
+ADD: api.AudioWorkletNode.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.AudioWorkletNode.parameters.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.AudioWorkletNode.port.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.AudioWorkletNode.onprocessorerror.__compat.support.safari.version_added would be set to false
+ADD: api.AudioWorkletProcessor.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.AuthenticatorResponse.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AuthenticatorResponse.clientDataJSON.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AuthenticatorAttestationResponse.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AuthenticatorAttestationResponse.attestationObject.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AuthenticatorAssertionResponse.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AuthenticatorAssertionResponse.authenticatorData.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AuthenticatorAssertionResponse.signature.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.AuthenticatorAssertionResponse.userHandle.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.WebGLObject.__compat.support.safari.version_added would be set to false
+MISMATCH: api.WebGLBuffer.__compat.support.safari.version_added (5.1) does not match WPT (false)
+MISMATCH: api.WebGLFramebuffer.__compat.support.safari.version_added (5.1) does not match WPT (false)
+MISMATCH: api.WebGLProgram.__compat.support.safari.version_added (5.1) does not match WPT (false)
+MISMATCH: api.WebGLRenderbuffer.__compat.support.safari.version_added (5.1) does not match WPT (false)
+MISMATCH: api.WebGLShader.__compat.support.safari.version_added (5.1) does not match WPT (false)
+MISMATCH: api.WebGLTexture.__compat.support.safari.version_added (5.1) does not match WPT (false)
+ADD: api.MIDIInputMap.__compat.support.safari.version_added would be set to false
+ADD: api.MIDIOutputMap.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: MIDIAccess.onstatechange
+ADD: api.MIDIPort.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIPort.id.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIPort.manufacturer.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIPort.name.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIPort.type.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIPort.version.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIPort.state.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIPort.connection.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: MIDIPort.onstatechange
+ADD-DATA: api.MIDIPort.open.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIPort.close.__compat.support.safari.version_added would be set to false
+ADD: api.MIDIInput.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: MIDIInput.onmidimessage
+ADD: api.MIDIOutput.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIOutput.send.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: MIDIOutput.clear
+ADD: api.MIDIMessageEvent.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIMessageEvent.data.__compat.support.safari.version_added would be set to false
+ADD: api.MIDIConnectionEvent.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.MIDIConnectionEvent.port.__compat.support.safari.version_added would be set to false
+ADD: api.RTCIdentityProviderGlobalScope.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.RTCIdentityProviderRegistrar.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.RTCIdentityAssertion.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIdentityAssertion.idp.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIdentityAssertion.name.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCPeerConnection.setIdentityProvider.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCPeerConnection.getIdentityAssertion.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCPeerConnection.peerIdentity.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: RTCPeerConnection.idpLoginUrl
+MISSING-FEATURE: RTCPeerConnection.idpErrorInfo
+MISMATCH: api.RTCPeerConnection.setLocalDescription.__compat.support.safari.version_added (11) does not match WPT (false)
+MISMATCH: api.RTCPeerConnection.setRemoteDescription.__compat.support.safari.version_added (11) does not match WPT (false)
+MISMATCH: api.RTCPeerConnection.addIceCandidate.__compat.support.safari.version_added (11) does not match WPT (false)
+ADD-DATA: api.RTCPeerConnection.canTrickleIceCandidates.__compat.support.safari.version_added would be set to false
+MISMATCH: api.RTCPeerConnection.setConfiguration.__compat.support.safari.version_added (11) does not match WPT (false)
+ADD-DATA: api.RTCPeerConnection.onicecandidateerror.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCPeerConnection.generateCertificate.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: RTCPeerConnection.getTransceivers
+MISSING-INTERFACE: RTCError
+ADD-DATA: api.RTCIceCandidate.foundation.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIceCandidate.component.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIceCandidate.priority.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIceCandidate.address.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIceCandidate.protocol.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIceCandidate.port.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIceCandidate.type.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIceCandidate.tcpType.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIceCandidate.relatedAddress.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIceCandidate.relatedPort.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCIceCandidate.usernameFragment.__compat.support.safari.version_added would be set to false
+ADD: api.RTCPeerConnectionIceErrorEvent.__compat.support.safari.version_added would be set to false
+MISSING-FEATURE: RTCPeerConnectionIceErrorEvent.address
+MISSING-FEATURE: RTCPeerConnectionIceErrorEvent.port
+ADD-DATA: api.RTCPeerConnectionIceErrorEvent.url.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCPeerConnectionIceErrorEvent.errorCode.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCPeerConnectionIceErrorEvent.errorText.__compat.support.safari.version_added would be set to false
+ADD: api.RTCCertificate.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCCertificate.expires.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCCertificate.getFingerprints.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCRtpSender.transport.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCRtpSender.getCapabilities.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCRtpSender.setParameters.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISSING-FEATURE: RTCRtpSender.setStreams
+ADD-DATA: api.RTCRtpSender.getStats.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCRtpSender.dtmf.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCRtpReceiver.transport.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCRtpReceiver.getCapabilities.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCRtpReceiver.getContributingSources.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCRtpReceiver.getSynchronizationSources.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCRtpReceiver.getStats.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCRtpTransceiver.currentDirection.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCRtpTransceiver.setCodecPreferences.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.RTCIceTransport.__compat.support.safari.version_added (11) does not match WPT (false)
+MISMATCH: api.RTCDataChannel.label.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.ordered.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.maxPacketLifeTime.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.maxRetransmits.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.protocol.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.negotiated.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.id.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.readyState.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.onopen.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.onerror.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.onclose.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.close.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.onmessage.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.RTCDataChannel.send.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.RTCDTMFSender.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCDTMFSender.insertDTMF.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCDTMFSender.ontonechange.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCDTMFSender.canInsertDTMF.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCDTMFSender.toneBuffer.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD: api.RTCDTMFToneChangeEvent.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+ADD-DATA: api.RTCDTMFToneChangeEvent.tone.__compat.support.safari.version_added would be set to 13.1 (14609.1.20.111.8)
+MISMATCH: api.RTCStatsReport.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+ADD: api.RTCErrorEvent.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.RTCErrorEvent.error.__compat.support.safari.version_added would be set to false
+ADD: api.VRDisplayCapabilities.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.VRDisplayCapabilities.hasPosition.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.VRDisplayCapabilities.hasExternalDisplay.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.VRDisplayCapabilities.canPresent.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.VRDisplayCapabilities.maxLayers.__compat.support.safari.version_added would be set to false
+MISMATCH: api.VRPose.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.VRPose.position.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.VRPose.linearVelocity.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.VRPose.linearAcceleration.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.VRPose.orientation.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.VRPose.angularVelocity.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISMATCH: api.VRPose.angularAcceleration.__compat.support.safari.version_added (false) does not match WPT (13.1 (14609.1.20.111.8))
+MISSING-FEATURE: VRStageParameters.sizeZ
+ADD-DATA: api.VTTCue.region.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.VTTCue.lineAlign.__compat.support.safari.version_added would be set to false
+ADD-DATA: api.VTTCue.positionAlign.__compat.support.safari.version_added would be set to false
+MISSING-INTERFACE: VTTRegion
+MISSING-FEATURE: XRSession.interactionMode
+MISSING-FEATURE: XRSession.requestHitTestSource
+MISSING-FEATURE: XRSession.requestHitTestSourceForTransientInput
+MISSING-FEATURE: XRSession.onsqueeze
+MISSING-FEATURE: XRSession.onsqueezestart
+MISSING-FEATURE: XRSession.onsqueezeend
+MISSING-INTERFACE: XRHitTestSource
+MISSING-INTERFACE: XRTransientInputHitTestSource
+MISSING-INTERFACE: XRHitTestResult
+MISSING-INTERFACE: XRTransientInputHitTestResult
+MISSING-INTERFACE: XRRay
+MISSING-FEATURE: XRFrame.getHitTestResults
+MISSING-FEATURE: XRFrame.getHitTestResultsForTransientInput
+MISSING-INTERFACE: XRRenderState
+MISSING-INTERFACE: XRLayer
+MISMATCH: api.XSLTProcessor.importStylesheet.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.XSLTProcessor.transformToFragment.__compat.support.safari.version_added (true) does not match WPT (false)
+MISMATCH: api.XSLTProcessor.transformToDocument.__compat.support.safari.version_added (true) does not match WPT (false)

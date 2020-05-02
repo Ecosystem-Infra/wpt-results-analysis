@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "flags": "0.1.3",
+    "mdn-browser-compat-data": "^1.0.19",
     "moment": "^2.24.0",
     "node-fetch": "2.6.0",
     "nodegit": "0.26.3"

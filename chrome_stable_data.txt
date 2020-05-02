@@ -1,0 +1,1914 @@
+Comparing WPT and BCD data for chrome, version: 81.0.4044.129 (experimental flags ? false)
+
+Checking WPT results data.
+----------------------
+
+WorkletAnimation: inconsistent support information.
+CookieChangeEvent: inconsistent support information.
+ExtendableCookieChangeEvent: inconsistent support information.
+AbstractRange: inconsistent support information.
+StaticRange: inconsistent support information.
+Range: inconsistent support information.
+EventCounts: inconsistent support information.
+EventCounts: inconsistent support information.
+EventCounts: inconsistent support information.
+AudioTrackList: inconsistent support information.
+AudioTrack: inconsistent support information.
+VideoTrackList: inconsistent support information.
+VideoTrack: inconsistent support information.
+SharedWorker: inconsistent support information.
+SharedWorker.port: inconsistent support information.
+SharedWorker.onerror: inconsistent support information.
+PaymentManager: inconsistent support information.
+PaymentManager.instruments: inconsistent support information.
+PaymentManager.userHint: inconsistent support information.
+PaymentManager.enableDelegations: inconsistent support information.
+PaymentManager: inconsistent support information.
+PaymentManager.instruments: inconsistent support information.
+PaymentManager.userHint: inconsistent support information.
+PaymentManager.enableDelegations: inconsistent support information.
+PaymentManager: inconsistent support information.
+PaymentManager.instruments: inconsistent support information.
+PaymentManager.userHint: inconsistent support information.
+PaymentManager.enableDelegations: inconsistent support information.
+PushSubscriptionChangeEvent: inconsistent support information.
+ReportingObserver: inconsistent support information.
+ReportingObserver.observe: inconsistent support information.
+ReportingObserver.disconnect: inconsistent support information.
+ReportingObserver.takeRecords: inconsistent support information.
+WebGLContextEvent: inconsistent support information.
+WebGLContextEvent.statusMessage: inconsistent support information.
+
+
+Cross-comparing WPT to BCD.
+----------------------
+
+MISSING-FEATURE: ServiceWorkerRegistration.cookies
+MISSING-FEATURE: ServiceWorkerGlobalScope.cookieStore
+MISSING-FEATURE: ServiceWorkerGlobalScope.oncookiechange
+MISMATCH: api.ServiceWorkerGlobalScope.onpushsubscriptionchange.__compat.support.chrome.version_added (40) does not match WPT (false)
+MISSING-FEATURE: ServiceWorkerGlobalScope.serviceWorker
+ADD-DATA: api.ServiceWorkerGlobalScope.onmessageerror.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: WorkerGlobalScope.indexedDB
+MISSING-FEATURE: WorkerGlobalScope.crypto
+MISSING-FEATURE: WorkerGlobalScope.fetch
+MISSING-FEATURE: WorkerGlobalScope.addressSpace
+MISMATCH: api.WorkerGlobalScope.onoffline.__compat.support.chrome.version_added (4) does not match WPT (false)
+MISMATCH: api.WorkerGlobalScope.ononline.__compat.support.chrome.version_added (4) does not match WPT (false)
+MISSING-FEATURE: WorkerGlobalScope.onrejectionhandled
+MISSING-FEATURE: WorkerGlobalScope.onunhandledrejection
+MISSING-FEATURE: WorkerGlobalScope.origin
+MISSING-FEATURE: WorkerGlobalScope.btoa
+MISSING-FEATURE: WorkerGlobalScope.atob
+MISSING-FEATURE: WorkerGlobalScope.setTimeout
+MISSING-FEATURE: WorkerGlobalScope.clearTimeout
+MISSING-FEATURE: WorkerGlobalScope.setInterval
+MISSING-FEATURE: WorkerGlobalScope.clearInterval
+MISSING-FEATURE: WorkerGlobalScope.queueMicrotask
+MISSING-FEATURE: WorkerGlobalScope.createImageBitmap
+MISSING-FEATURE: WorkerGlobalScope.originPolicyIds
+MISSING-FEATURE: WorkerGlobalScope.isSecureContext
+ADD-DATA: api.Blob.slice.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: FileReader.onloadstart
+ADD: api.URL.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBRequest.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBRequest.result.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBRequest.error.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBRequest.source.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBRequest.transaction.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBRequest.readyState.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBRequest.onsuccess.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBRequest.onerror.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBOpenDBRequest.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBOpenDBRequest.onblocked.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBOpenDBRequest.onupgradeneeded.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBVersionChangeEvent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBVersionChangeEvent.oldVersion.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBVersionChangeEvent.newVersion.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBFactory.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBFactory.open.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBFactory.deleteDatabase.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBFactory.cmp.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBDatabase.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBDatabase.name.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBDatabase.version.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBDatabase.objectStoreNames.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBDatabase.transaction.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBDatabase.close.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBDatabase.createObjectStore.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBDatabase.deleteObjectStore.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBDatabase.onabort.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBDatabase.onerror.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBDatabase.onversionchange.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBObjectStore.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.name.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.keyPath.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.indexNames.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.transaction.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.autoIncrement.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.put.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.add.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.delete.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.clear.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.get.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.count.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.openCursor.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.openKeyCursor.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.index.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.createIndex.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBObjectStore.deleteIndex.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBIndex.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBIndex.name.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBIndex.objectStore.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBIndex.keyPath.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBIndex.multiEntry.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBIndex.unique.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBIndex.get.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBIndex.getKey.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBIndex.count.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBIndex.openCursor.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBIndex.openKeyCursor.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBKeyRange.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBKeyRange.lower.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBKeyRange.upper.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBKeyRange.lowerOpen.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBKeyRange.upperOpen.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBKeyRange.only.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBKeyRange.lowerBound.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBKeyRange.upperBound.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBKeyRange.bound.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBCursor.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBCursor.source.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBCursor.direction.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBCursor.key.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBCursor.primaryKey.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBCursor.advance.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBCursor.continue.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBCursor.update.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBCursor.delete.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBCursorWithValue.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBCursorWithValue.value.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.IDBTransaction.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBTransaction.mode.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: IDBTransaction.durability
+ADD-DATA: api.IDBTransaction.db.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBTransaction.error.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBTransaction.objectStore.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBTransaction.abort.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBTransaction.onabort.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBTransaction.oncomplete.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.IDBTransaction.onerror.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Window.indexedDB
+MISSING-FEATURE: Window.onorientationchange
+MISSING-FEATURE: Window.cookieStore
+MISSING-FEATURE: Window.onanimationstart
+MISSING-FEATURE: Window.onanimationiteration
+MISSING-FEATURE: Window.onanimationend
+MISSING-FEATURE: Window.onanimationcancel
+MISSING-FEATURE: Window.ontransitionrun
+MISSING-FEATURE: Window.ontransitionstart
+MISSING-FEATURE: Window.ontransitionend
+MISSING-FEATURE: Window.ontransitioncancel
+ADD-DATA: api.Window.scrollX.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Window.scrollY.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.Window.event.__compat.support.chrome.version_added (1) does not match WPT (false)
+MISSING-FEATURE: Window.fetch
+MISMATCH: api.Window.self.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISSING-FEATURE: Window.closed
+MISMATCH: api.Window.frames.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.Window.length.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.Window.opener.__compat.support.chrome.version_added (1) does not match WPT (false)
+MISMATCH: api.Window.parent.__compat.support.chrome.version_added (1) does not match WPT (false)
+MISSING-FEATURE: Window.applicationCache
+MISSING-FEATURE: Window.captureEvents
+MISSING-FEATURE: Window.onabort
+MISSING-FEATURE: Window.onauxclick
+MISSING-FEATURE: Window.onblur
+MISSING-FEATURE: Window.oncancel
+MISSING-FEATURE: Window.oncanplay
+MISSING-FEATURE: Window.oncanplaythrough
+MISSING-FEATURE: Window.onchange
+MISSING-FEATURE: Window.onclick
+MISSING-FEATURE: Window.onclose
+MISSING-FEATURE: Window.oncontextmenu
+MISSING-FEATURE: Window.oncuechange
+MISSING-FEATURE: Window.ondblclick
+MISSING-FEATURE: Window.ondrag
+MISSING-FEATURE: Window.ondragend
+MISSING-FEATURE: Window.ondragenter
+MISSING-FEATURE: Window.ondragexit
+MISSING-FEATURE: Window.ondragleave
+MISSING-FEATURE: Window.ondragover
+MISSING-FEATURE: Window.ondragstart
+MISSING-FEATURE: Window.ondrop
+MISSING-FEATURE: Window.ondurationchange
+MISSING-FEATURE: Window.onemptied
+MISSING-FEATURE: Window.onended
+MISSING-FEATURE: Window.onerror
+MISSING-FEATURE: Window.onfocus
+MISSING-FEATURE: Window.onformdata
+MISSING-FEATURE: Window.oninput
+MISSING-FEATURE: Window.oninvalid
+MISSING-FEATURE: Window.onkeydown
+MISSING-FEATURE: Window.onkeypress
+MISSING-FEATURE: Window.onkeyup
+MISSING-FEATURE: Window.onload
+MISSING-FEATURE: Window.onloadeddata
+MISSING-FEATURE: Window.onloadedmetadata
+MISSING-FEATURE: Window.onloadstart
+MISSING-FEATURE: Window.onmousedown
+MISSING-FEATURE: Window.onmouseenter
+MISSING-FEATURE: Window.onmouseleave
+MISSING-FEATURE: Window.onmousemove
+MISSING-FEATURE: Window.onmouseout
+MISSING-FEATURE: Window.onmouseover
+MISSING-FEATURE: Window.onmouseup
+MISSING-FEATURE: Window.onpause
+MISSING-FEATURE: Window.onplay
+MISSING-FEATURE: Window.onplaying
+MISSING-FEATURE: Window.onprogress
+MISSING-FEATURE: Window.onratechange
+MISSING-FEATURE: Window.onreset
+MISSING-FEATURE: Window.onresize
+MISSING-FEATURE: Window.onscroll
+MISSING-FEATURE: Window.onsecuritypolicyviolation
+MISSING-FEATURE: Window.onseeked
+MISSING-FEATURE: Window.onseeking
+MISSING-FEATURE: Window.onselect
+MISSING-FEATURE: Window.onslotchange
+MISSING-FEATURE: Window.onstalled
+MISSING-FEATURE: Window.onsubmit
+MISSING-FEATURE: Window.onsuspend
+MISSING-FEATURE: Window.ontimeupdate
+MISSING-FEATURE: Window.ontoggle
+MISSING-FEATURE: Window.onvolumechange
+MISSING-FEATURE: Window.onwaiting
+MISSING-FEATURE: Window.onwebkitanimationend
+MISSING-FEATURE: Window.onwebkitanimationiteration
+MISSING-FEATURE: Window.onwebkitanimationstart
+MISSING-FEATURE: Window.onwebkittransitionend
+MISSING-FEATURE: Window.onwheel
+MISSING-FEATURE: Window.onafterprint
+MISSING-FEATURE: Window.onbeforeprint
+MISSING-FEATURE: Window.onbeforeunload
+MISSING-FEATURE: Window.onhashchange
+MISSING-FEATURE: Window.onlanguagechange
+MISSING-FEATURE: Window.onmessage
+MISSING-FEATURE: Window.onmessageerror
+MISSING-FEATURE: Window.onoffline
+MISSING-FEATURE: Window.ononline
+MISSING-FEATURE: Window.onpagehide
+MISSING-FEATURE: Window.onpageshow
+MISSING-FEATURE: Window.onpopstate
+MISSING-FEATURE: Window.onrejectionhandled
+MISSING-FEATURE: Window.onstorage
+MISSING-FEATURE: Window.onunhandledrejection
+MISSING-FEATURE: Window.onunload
+MISSING-FEATURE: Window.origin
+MISSING-FEATURE: Window.btoa
+MISSING-FEATURE: Window.atob
+MISSING-FEATURE: Window.setTimeout
+MISSING-FEATURE: Window.clearTimeout
+MISSING-FEATURE: Window.setInterval
+MISSING-FEATURE: Window.clearInterval
+MISSING-FEATURE: Window.queueMicrotask
+MISSING-FEATURE: Window.createImageBitmap
+ADD-DATA: api.Window.requestAnimationFrame.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Window.chooseFileSystemEntries
+MISSING-FEATURE: Window.oncompassneedscalibration
+MISSING-FEATURE: Window.originPolicyIds
+MISSING-FEATURE: Window.ongotpointercapture
+MISSING-FEATURE: Window.onlostpointercapture
+MISSING-FEATURE: Window.onpointerdown
+MISSING-FEATURE: Window.onpointermove
+MISSING-FEATURE: Window.onpointerrawupdate
+MISSING-FEATURE: Window.onpointerup
+MISSING-FEATURE: Window.onpointercancel
+MISSING-FEATURE: Window.onpointerover
+MISSING-FEATURE: Window.onpointerout
+MISSING-FEATURE: Window.onpointerenter
+MISSING-FEATURE: Window.onpointerleave
+MISSING-FEATURE: Window.onselectstart
+MISSING-FEATURE: Window.onselectionchange
+MISSING-FEATURE: Window.ontouchstart
+MISSING-FEATURE: Window.ontouchend
+MISSING-FEATURE: Window.ontouchmove
+MISSING-FEATURE: Window.ontouchcancel
+MISMATCH: api.Window.onvrdisplaypresentchange.__compat.support.chrome.version_added (65) does not match WPT (false)
+MISSING-INTERFACE: GravitySensor
+ADD: api.AmbientLightSensor.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.AmbientLightSensor.illuminance.__compat.support.chrome.version_added would be set to false
+MISSING-INTERFACE: AnimationWorkletGlobalScope
+MISSING-INTERFACE: WorkletAnimationEffect
+MISSING-INTERFACE: WorkletAnimation
+MISSING-INTERFACE: WorkletGroupEffect
+MISSING-INTERFACE: WorkletGlobalScope
+ADD: api.Animation.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.Animation.effect.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-FEATURE: Animation.replaceState
+MISMATCH: api.Animation.pending.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-FEATURE: Animation.onremove
+MISMATCH: api.Animation.updatePlaybackRate.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-FEATURE: Animation.persist
+MISSING-FEATURE: Animation.commitStyles
+MISSING-FEATURE: HTMLMediaElement.getStartDate
+ADD-DATA: api.HTMLMediaElement.addTextTrack.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: HTMLMediaElement.remote
+MISSING-FEATURE: Navigator.setClientBadge
+MISSING-FEATURE: Navigator.clearClientBadge
+MISSING-FEATURE: Navigator.setAppBadge
+MISSING-FEATURE: Navigator.clearAppBadge
+MISSING-FEATURE: Navigator.bluetooth
+ADD-DATA: api.Navigator.getGamepads.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Navigator.appCodeName
+MISSING-FEATURE: Navigator.appName
+MISSING-FEATURE: Navigator.appVersion
+MISSING-FEATURE: Navigator.platform
+MISSING-FEATURE: Navigator.product
+MISSING-FEATURE: Navigator.userAgent
+MISSING-FEATURE: Navigator.taintEnabled
+MISSING-FEATURE: Navigator.language
+MISSING-FEATURE: Navigator.languages
+MISSING-FEATURE: Navigator.onLine
+MISMATCH: api.Navigator.registerProtocolHandler.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISSING-FEATURE: Navigator.unregisterProtocolHandler
+MISSING-FEATURE: Navigator.plugins
+MISSING-FEATURE: Navigator.mimeTypes
+MISSING-FEATURE: Navigator.javaEnabled
+MISSING-FEATURE: Navigator.hardwareConcurrency
+MISSING-FEATURE: Navigator.getInstalledRelatedApps
+ADD-DATA: api.Navigator.getUserMedia.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.Navigator.mediaSession.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-FEATURE: Navigator.storage
+MISSING-FEATURE: Navigator.requestMIDIAccess
+MISSING-FEATURE: Navigator.usb
+MISSING-FEATURE: Navigator.vrEnabled
+MISSING-FEATURE: WorkerNavigator.setAppBadge
+MISSING-FEATURE: WorkerNavigator.clearAppBadge
+MISSING-FEATURE: WorkerNavigator.appCodeName
+MISSING-FEATURE: WorkerNavigator.appName
+MISSING-FEATURE: WorkerNavigator.appVersion
+MISSING-FEATURE: WorkerNavigator.platform
+MISSING-FEATURE: WorkerNavigator.product
+MISSING-FEATURE: WorkerNavigator.userAgent
+MISSING-FEATURE: WorkerNavigator.language
+MISSING-FEATURE: WorkerNavigator.languages
+MISSING-FEATURE: WorkerNavigator.onLine
+MISSING-FEATURE: WorkerNavigator.hardwareConcurrency
+MISSING-FEATURE: WorkerNavigator.mediaCapabilities
+MISSING-FEATURE: WorkerNavigator.storage
+MISSING-FEATURE: WorkerNavigator.locks
+MISSING-FEATURE: WorkerNavigator.usb
+ADD: api.Bluetooth.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.Bluetooth.getAvailability.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.Bluetooth.onavailabilitychanged.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.Bluetooth.referringDevice.__compat.support.chrome.version_added would be set to false
+MISSING-FEATURE: Bluetooth.getDevices
+ADD-DATA: api.Bluetooth.requestDevice.__compat.support.chrome.version_added would be set to false
+MISSING-FEATURE: Bluetooth.onadvertisementreceived
+MISSING-FEATURE: Bluetooth.ongattserverdisconnected
+MISSING-FEATURE: Bluetooth.oncharacteristicvaluechanged
+MISSING-FEATURE: Bluetooth.onserviceadded
+MISSING-FEATURE: Bluetooth.onservicechanged
+MISSING-FEATURE: Bluetooth.onserviceremoved
+MISSING-INTERFACE: BluetoothPermissionResult
+MISSING-INTERFACE: ValueEvent
+MISMATCH: api.BluetoothDevice.__compat.support.chrome.version_added (74) does not match WPT (false)
+MISMATCH: api.BluetoothDevice.id.__compat.support.chrome.version_added (74) does not match WPT (false)
+MISMATCH: api.BluetoothDevice.name.__compat.support.chrome.version_added (74) does not match WPT (false)
+MISMATCH: api.BluetoothDevice.gatt.__compat.support.chrome.version_added (74) does not match WPT (false)
+MISSING-FEATURE: BluetoothDevice.onadvertisementreceived
+MISSING-FEATURE: BluetoothDevice.ongattserverdisconnected
+MISSING-FEATURE: BluetoothDevice.oncharacteristicvaluechanged
+MISSING-FEATURE: BluetoothDevice.onserviceadded
+MISSING-FEATURE: BluetoothDevice.onservicechanged
+MISSING-FEATURE: BluetoothDevice.onserviceremoved
+MISSING-INTERFACE: BluetoothManufacturerDataMap
+MISSING-INTERFACE: BluetoothServiceDataMap
+MISSING-INTERFACE: BluetoothAdvertisingEvent
+ADD: api.BluetoothRemoteGATTServer.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTServer.device.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTServer.connected.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTServer.connect.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTServer.disconnect.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTServer.getPrimaryService.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTServer.getPrimaryServices.__compat.support.chrome.version_added would be set to false
+ADD: api.BluetoothRemoteGATTService.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTService.uuid.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTService.getCharacteristic.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTService.getIncludedServices.__compat.support.chrome.version_added would be set to false
+MISSING-FEATURE: BluetoothRemoteGATTService.oncharacteristicvaluechanged
+MISSING-FEATURE: BluetoothRemoteGATTService.onserviceadded
+MISSING-FEATURE: BluetoothRemoteGATTService.onservicechanged
+MISSING-FEATURE: BluetoothRemoteGATTService.onserviceremoved
+ADD: api.BluetoothRemoteGATTCharacteristic.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTCharacteristic.service.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTCharacteristic.uuid.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTCharacteristic.properties.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTCharacteristic.value.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTCharacteristic.getDescriptor.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTCharacteristic.getDescriptors.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTCharacteristic.readValue.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTCharacteristic.writeValue.__compat.support.chrome.version_added would be set to false
+MISSING-FEATURE: BluetoothRemoteGATTCharacteristic.writeValueWithResponse
+MISSING-FEATURE: BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse
+ADD-DATA: api.BluetoothRemoteGATTCharacteristic.startNotifications.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTCharacteristic.stopNotifications.__compat.support.chrome.version_added would be set to false
+MISSING-FEATURE: BluetoothRemoteGATTCharacteristic.oncharacteristicvaluechanged
+ADD: api.BluetoothCharacteristicProperties.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothCharacteristicProperties.broadcast.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothCharacteristicProperties.read.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothCharacteristicProperties.writeWithoutResponse.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothCharacteristicProperties.write.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothCharacteristicProperties.notify.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothCharacteristicProperties.indicate.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothCharacteristicProperties.authenticatedSignedWrites.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothCharacteristicProperties.reliableWrite.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothCharacteristicProperties.writableAuxiliaries.__compat.support.chrome.version_added would be set to false
+ADD: api.BluetoothRemoteGATTDescriptor.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTDescriptor.characteristic.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTDescriptor.uuid.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTDescriptor.value.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTDescriptor.readValue.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.BluetoothRemoteGATTDescriptor.writeValue.__compat.support.chrome.version_added would be set to false
+MISSING-INTERFACE: BluetoothUUID
+MISSING-FEATURE: HTMLBodyElement.onorientationchange
+MISSING-FEATURE: HTMLBodyElement.onafterprint
+MISSING-FEATURE: HTMLBodyElement.onbeforeprint
+MISSING-FEATURE: HTMLBodyElement.onbeforeunload
+MISSING-FEATURE: HTMLBodyElement.onhashchange
+MISSING-FEATURE: HTMLBodyElement.onlanguagechange
+MISSING-FEATURE: HTMLBodyElement.onmessage
+MISSING-FEATURE: HTMLBodyElement.onmessageerror
+MISSING-FEATURE: HTMLBodyElement.onoffline
+MISSING-FEATURE: HTMLBodyElement.ononline
+MISSING-FEATURE: HTMLBodyElement.onpagehide
+MISSING-FEATURE: HTMLBodyElement.onpageshow
+MISSING-FEATURE: HTMLBodyElement.onpopstate
+MISSING-FEATURE: HTMLBodyElement.onrejectionhandled
+MISSING-FEATURE: HTMLBodyElement.onstorage
+MISSING-FEATURE: HTMLBodyElement.onunhandledrejection
+MISSING-FEATURE: HTMLBodyElement.onunload
+ADD-DATA: api.HTMLIFrameElement.featurePolicy.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: HTMLIFrameElement.allowFullscreen
+MISSING-FEATURE: HTMLIFrameElement.getSVGDocument
+MISSING-INTERFACE: CSPViolationReportBody
+MISSING-FEATURE: SecurityPolicyViolationEvent.documentURL
+MISSING-FEATURE: SecurityPolicyViolationEvent.blockedURL
+MISSING-FEATURE: SecurityPolicyViolationEvent.lineno
+MISSING-FEATURE: SecurityPolicyViolationEvent.colno
+MISSING-INTERFACE: CookieStore
+MISSING-INTERFACE: CookieStoreManager
+MISSING-INTERFACE: CookieChangeEvent
+MISSING-INTERFACE: ExtendableCookieChangeEvent
+ADD-DATA: api.CredentialsContainer.preventSilentAccess.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: FederatedCredential.name
+MISSING-FEATURE: FederatedCredential.iconURL
+MISMATCH: api.CSSStyleSheet.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISSING-FEATURE: CSSStyleSheet.replace
+MISSING-FEATURE: CSSStyleSheet.replaceSync
+MISSING-FEATURE: Document.adoptedStyleSheets
+MISSING-FEATURE: Document.onanimationstart
+MISSING-FEATURE: Document.onanimationiteration
+MISSING-FEATURE: Document.onanimationend
+MISSING-FEATURE: Document.onanimationcancel
+MISSING-FEATURE: Document.ontransitionrun
+MISSING-FEATURE: Document.ontransitionstart
+MISSING-FEATURE: Document.ontransitionend
+MISSING-FEATURE: Document.ontransitioncancel
+MISSING-FEATURE: Document.elementFromPoint
+MISSING-FEATURE: Document.elementsFromPoint
+MISSING-FEATURE: Document.caretPositionFromPoint
+MISSING-FEATURE: Document.getBoxQuads
+MISSING-FEATURE: Document.convertQuadFromNode
+MISSING-FEATURE: Document.convertRectFromNode
+MISSING-FEATURE: Document.convertPointFromNode
+MISSING-FEATURE: Document.styleSheets
+ADD-DATA: api.Document.characterSet.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Document.charset
+MISSING-FEATURE: Document.inputEncoding
+MISSING-FEATURE: Document.children
+MISSING-FEATURE: Document.firstElementChild
+MISSING-FEATURE: Document.lastElementChild
+MISSING-FEATURE: Document.childElementCount
+MISSING-FEATURE: Document.prepend
+MISSING-FEATURE: Document.append
+MISSING-FEATURE: Document.replaceChildren
+ADD-DATA: api.Document.featurePolicy.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Document.addressSpace
+ADD-DATA: api.Document.fullscreenEnabled.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Document.fullscreen.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Document.exitFullscreen.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Document.fullscreenElement
+MISSING-FEATURE: Document.onabort
+MISSING-FEATURE: Document.onauxclick
+MISSING-FEATURE: Document.onblur
+MISSING-FEATURE: Document.oncancel
+MISSING-FEATURE: Document.oncanplay
+MISSING-FEATURE: Document.oncanplaythrough
+MISSING-FEATURE: Document.onchange
+MISSING-FEATURE: Document.onclick
+MISSING-FEATURE: Document.onclose
+MISSING-FEATURE: Document.oncontextmenu
+MISSING-FEATURE: Document.oncuechange
+MISSING-FEATURE: Document.ondblclick
+MISSING-FEATURE: Document.ondrag
+MISSING-FEATURE: Document.ondragend
+MISSING-FEATURE: Document.ondragenter
+MISSING-FEATURE: Document.ondragexit
+MISSING-FEATURE: Document.ondragleave
+MISSING-FEATURE: Document.ondragover
+MISSING-FEATURE: Document.ondragstart
+MISSING-FEATURE: Document.ondrop
+MISSING-FEATURE: Document.ondurationchange
+MISSING-FEATURE: Document.onemptied
+MISSING-FEATURE: Document.onended
+MISSING-FEATURE: Document.onerror
+MISSING-FEATURE: Document.onfocus
+MISSING-FEATURE: Document.onformdata
+MISSING-FEATURE: Document.oninput
+MISSING-FEATURE: Document.oninvalid
+MISSING-FEATURE: Document.onkeydown
+MISSING-FEATURE: Document.onkeypress
+MISSING-FEATURE: Document.onkeyup
+MISSING-FEATURE: Document.onload
+MISSING-FEATURE: Document.onloadeddata
+MISSING-FEATURE: Document.onloadedmetadata
+MISSING-FEATURE: Document.onloadstart
+MISSING-FEATURE: Document.onmousedown
+MISSING-FEATURE: Document.onmouseenter
+MISSING-FEATURE: Document.onmouseleave
+MISSING-FEATURE: Document.onmousemove
+MISSING-FEATURE: Document.onmouseout
+MISSING-FEATURE: Document.onmouseover
+MISSING-FEATURE: Document.onmouseup
+MISSING-FEATURE: Document.onpause
+MISSING-FEATURE: Document.onplay
+MISSING-FEATURE: Document.onplaying
+MISSING-FEATURE: Document.onprogress
+MISSING-FEATURE: Document.onratechange
+MISSING-FEATURE: Document.onreset
+MISSING-FEATURE: Document.onresize
+MISSING-FEATURE: Document.onscroll
+MISSING-FEATURE: Document.onsecuritypolicyviolation
+MISSING-FEATURE: Document.onseeked
+MISSING-FEATURE: Document.onseeking
+MISSING-FEATURE: Document.onselect
+MISSING-FEATURE: Document.onslotchange
+MISSING-FEATURE: Document.onstalled
+MISSING-FEATURE: Document.onsubmit
+MISSING-FEATURE: Document.onsuspend
+MISSING-FEATURE: Document.ontimeupdate
+MISSING-FEATURE: Document.ontoggle
+MISSING-FEATURE: Document.onvolumechange
+MISSING-FEATURE: Document.onwaiting
+MISSING-FEATURE: Document.onwebkitanimationend
+MISSING-FEATURE: Document.onwebkitanimationiteration
+MISSING-FEATURE: Document.onwebkitanimationstart
+MISSING-FEATURE: Document.onwebkittransitionend
+MISSING-FEATURE: Document.onwheel
+MISSING-FEATURE: Document.activeElement
+ADD-DATA: api.Document.hidden.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Document.visibilityState.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Document.onvisibilitychange.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Document.pictureInPictureEnabled
+MISSING-FEATURE: Document.exitPictureInPicture
+MISSING-FEATURE: Document.pictureInPictureElement
+MISSING-FEATURE: Document.ongotpointercapture
+MISSING-FEATURE: Document.onlostpointercapture
+MISSING-FEATURE: Document.onpointerdown
+MISSING-FEATURE: Document.onpointermove
+MISSING-FEATURE: Document.onpointerrawupdate
+MISSING-FEATURE: Document.onpointerup
+MISSING-FEATURE: Document.onpointercancel
+MISSING-FEATURE: Document.onpointerover
+MISSING-FEATURE: Document.onpointerout
+MISSING-FEATURE: Document.onpointerenter
+MISSING-FEATURE: Document.onpointerleave
+ADD-DATA: api.Document.exitPointerLock.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Document.pointerLockElement
+MISSING-FEATURE: Document.getSelection
+MISSING-FEATURE: Document.onselectstart
+MISSING-FEATURE: Document.onselectionchange
+MISSING-FEATURE: Document.rootElement
+MISSING-FEATURE: Document.ontouchstart
+MISSING-FEATURE: Document.ontouchend
+MISSING-FEATURE: Document.ontouchmove
+MISSING-FEATURE: Document.ontouchcancel
+MISSING-FEATURE: ShadowRoot.adoptedStyleSheets
+MISSING-FEATURE: ShadowRoot.styleSheets
+MISSING-FEATURE: ShadowRoot.onslotchange
+MISSING-FEATURE: ShadowRoot.fullscreenElement
+MISSING-FEATURE: ShadowRoot.activeElement
+MISSING-FEATURE: ShadowRoot.pictureInPictureElement
+MISSING-FEATURE: ShadowRoot.pointerLockElement
+MISSING-FEATURE: ShadowRoot.getAnimations
+ADD: api.AnimationEvent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.CSSKeyframesRule.appendRule.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: HTMLElement.onanimationstart
+MISSING-FEATURE: HTMLElement.onanimationiteration
+MISSING-FEATURE: HTMLElement.onanimationend
+MISSING-FEATURE: HTMLElement.onanimationcancel
+MISSING-FEATURE: HTMLElement.ontransitionrun
+MISSING-FEATURE: HTMLElement.ontransitionstart
+MISSING-FEATURE: HTMLElement.ontransitionend
+MISSING-FEATURE: HTMLElement.ontransitioncancel
+MISSING-FEATURE: HTMLElement.attributeStyleMap
+MISSING-FEATURE: HTMLElement.autocapitalize
+MISSING-FEATURE: HTMLElement.attachInternals
+MISSING-FEATURE: HTMLElement.onabort
+MISSING-FEATURE: HTMLElement.onauxclick
+MISSING-FEATURE: HTMLElement.onblur
+MISSING-FEATURE: HTMLElement.oncancel
+MISSING-FEATURE: HTMLElement.oncanplay
+MISSING-FEATURE: HTMLElement.oncanplaythrough
+MISSING-FEATURE: HTMLElement.onchange
+MISSING-FEATURE: HTMLElement.onclick
+MISSING-FEATURE: HTMLElement.onclose
+MISSING-FEATURE: HTMLElement.oncontextmenu
+MISSING-FEATURE: HTMLElement.oncuechange
+MISSING-FEATURE: HTMLElement.ondblclick
+MISSING-FEATURE: HTMLElement.ondrag
+MISSING-FEATURE: HTMLElement.ondragend
+MISSING-FEATURE: HTMLElement.ondragenter
+MISSING-FEATURE: HTMLElement.ondragexit
+MISSING-FEATURE: HTMLElement.ondragleave
+MISSING-FEATURE: HTMLElement.ondragover
+MISSING-FEATURE: HTMLElement.ondragstart
+MISSING-FEATURE: HTMLElement.ondrop
+MISSING-FEATURE: HTMLElement.ondurationchange
+MISSING-FEATURE: HTMLElement.onemptied
+MISSING-FEATURE: HTMLElement.onended
+MISSING-FEATURE: HTMLElement.onerror
+MISSING-FEATURE: HTMLElement.onfocus
+MISSING-FEATURE: HTMLElement.onformdata
+MISSING-FEATURE: HTMLElement.oninput
+MISSING-FEATURE: HTMLElement.oninvalid
+MISSING-FEATURE: HTMLElement.onkeydown
+MISSING-FEATURE: HTMLElement.onkeypress
+MISSING-FEATURE: HTMLElement.onkeyup
+MISSING-FEATURE: HTMLElement.onload
+MISSING-FEATURE: HTMLElement.onloadeddata
+MISSING-FEATURE: HTMLElement.onloadedmetadata
+MISSING-FEATURE: HTMLElement.onloadstart
+MISSING-FEATURE: HTMLElement.onmousedown
+MISSING-FEATURE: HTMLElement.onmouseenter
+MISSING-FEATURE: HTMLElement.onmouseleave
+MISSING-FEATURE: HTMLElement.onmousemove
+MISSING-FEATURE: HTMLElement.onmouseout
+MISSING-FEATURE: HTMLElement.onmouseover
+MISSING-FEATURE: HTMLElement.onmouseup
+MISSING-FEATURE: HTMLElement.onpause
+MISSING-FEATURE: HTMLElement.onplay
+MISSING-FEATURE: HTMLElement.onplaying
+MISSING-FEATURE: HTMLElement.onprogress
+MISSING-FEATURE: HTMLElement.onratechange
+MISSING-FEATURE: HTMLElement.onreset
+MISSING-FEATURE: HTMLElement.onresize
+MISSING-FEATURE: HTMLElement.onscroll
+MISSING-FEATURE: HTMLElement.onsecuritypolicyviolation
+MISSING-FEATURE: HTMLElement.onseeked
+MISSING-FEATURE: HTMLElement.onseeking
+MISSING-FEATURE: HTMLElement.onselect
+MISSING-FEATURE: HTMLElement.onslotchange
+MISSING-FEATURE: HTMLElement.onstalled
+MISSING-FEATURE: HTMLElement.onsubmit
+MISSING-FEATURE: HTMLElement.onsuspend
+MISSING-FEATURE: HTMLElement.ontimeupdate
+MISSING-FEATURE: HTMLElement.ontoggle
+MISSING-FEATURE: HTMLElement.onvolumechange
+MISSING-FEATURE: HTMLElement.onwaiting
+MISSING-FEATURE: HTMLElement.onwebkitanimationend
+MISSING-FEATURE: HTMLElement.onwebkitanimationiteration
+MISSING-FEATURE: HTMLElement.onwebkitanimationstart
+MISSING-FEATURE: HTMLElement.onwebkittransitionend
+MISSING-FEATURE: HTMLElement.onwheel
+MISSING-FEATURE: HTMLElement.enterKeyHint
+MISSING-FEATURE: HTMLElement.autofocus
+MISSING-FEATURE: HTMLElement.ongotpointercapture
+MISSING-FEATURE: HTMLElement.onlostpointercapture
+MISSING-FEATURE: HTMLElement.onpointerdown
+MISSING-FEATURE: HTMLElement.onpointermove
+MISSING-FEATURE: HTMLElement.onpointerrawupdate
+MISSING-FEATURE: HTMLElement.onpointerup
+MISSING-FEATURE: HTMLElement.onpointercancel
+MISSING-FEATURE: HTMLElement.onpointerover
+MISSING-FEATURE: HTMLElement.onpointerout
+MISSING-FEATURE: HTMLElement.onpointerenter
+MISSING-FEATURE: HTMLElement.onpointerleave
+MISSING-FEATURE: HTMLElement.onselectstart
+MISSING-FEATURE: HTMLElement.onselectionchange
+MISSING-FEATURE: HTMLElement.ontouchstart
+MISSING-FEATURE: HTMLElement.ontouchend
+MISSING-FEATURE: HTMLElement.ontouchmove
+MISSING-FEATURE: HTMLElement.ontouchcancel
+MISSING-FEATURE: CSSConditionRule.conditionText
+MISMATCH: api.CSSSupportsRule.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-FEATURE: CSSCounterStyleRule.name
+MISSING-FEATURE: CSSCounterStyleRule.system
+MISSING-FEATURE: CSSCounterStyleRule.symbols
+MISSING-FEATURE: CSSCounterStyleRule.additiveSymbols
+MISSING-FEATURE: CSSCounterStyleRule.negative
+MISSING-FEATURE: CSSCounterStyleRule.prefix
+MISSING-FEATURE: CSSCounterStyleRule.suffix
+MISSING-FEATURE: CSSCounterStyleRule.range
+MISSING-FEATURE: CSSCounterStyleRule.pad
+MISSING-FEATURE: CSSCounterStyleRule.speakAs
+MISSING-FEATURE: CSSCounterStyleRule.fallback
+MISSING-FEATURE: FontFace.variationSettings
+ADD-DATA: api.FontFace.load.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.FontFace.loaded.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.FontFaceSet.__compat.support.chrome.version_added (35) does not match WPT (false)
+MISMATCH: api.FontFaceSet.add.__compat.support.chrome.version_added (48) does not match WPT (false)
+MISMATCH: api.FontFaceSet.delete.__compat.support.chrome.version_added (48) does not match WPT (false)
+MISMATCH: api.FontFaceSet.clear.__compat.support.chrome.version_added (48) does not match WPT (false)
+MISMATCH: api.FontFaceSet.onloading.__compat.support.chrome.version_added (48) does not match WPT (false)
+MISMATCH: api.FontFaceSet.onloadingdone.__compat.support.chrome.version_added (48) does not match WPT (false)
+MISMATCH: api.FontFaceSet.onloadingerror.__compat.support.chrome.version_added (48) does not match WPT (false)
+MISMATCH: api.FontFaceSet.load.__compat.support.chrome.version_added (35) does not match WPT (false)
+MISMATCH: api.FontFaceSet.check.__compat.support.chrome.version_added (35) does not match WPT (false)
+MISMATCH: api.FontFaceSet.ready.__compat.support.chrome.version_added (35) does not match WPT (false)
+MISMATCH: api.FontFaceSet.status.__compat.support.chrome.version_added (48) does not match WPT (false)
+MISSING-INTERFACE: CSSFontFaceRule
+MISSING-INTERFACE: CSSFontFeatureValuesRule
+MISSING-INTERFACE: CSSFontFeatureValuesMap
+MISSING-INTERFACE: CSSFontPaletteValuesRule
+MISMATCH: api.SVGClipPathElement.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGClipPathElement.transform
+MISSING-INTERFACE: CSSParserRule
+MISSING-INTERFACE: CSSParserAtRule
+MISSING-INTERFACE: CSSParserQualifiedRule
+MISSING-INTERFACE: CSSParserDeclaration
+MISSING-INTERFACE: CSSParserValue
+MISSING-INTERFACE: CSSParserBlock
+MISSING-INTERFACE: CSSParserFunction
+MISSING-INTERFACE: CSSPropertyRule
+MISSING-FEATURE: CSSPseudoElement.getBoxQuads
+MISSING-FEATURE: CSSPseudoElement.convertQuadFromNode
+MISSING-FEATURE: CSSPseudoElement.convertRectFromNode
+MISSING-FEATURE: CSSPseudoElement.convertPointFromNode
+MISSING-FEATURE: Element.pseudo
+MISSING-FEATURE: Element.getBoxQuads
+MISSING-FEATURE: Element.convertQuadFromNode
+MISSING-FEATURE: Element.convertRectFromNode
+MISSING-FEATURE: Element.convertPointFromNode
+ADD-DATA: api.Element.matches.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Element.webkitMatchesSelector
+MISSING-FEATURE: Element.children
+MISSING-FEATURE: Element.firstElementChild
+MISSING-FEATURE: Element.lastElementChild
+MISSING-FEATURE: Element.childElementCount
+MISSING-FEATURE: Element.prepend
+MISSING-FEATURE: Element.append
+MISSING-FEATURE: Element.replaceChildren
+MISSING-FEATURE: Element.previousElementSibling
+MISSING-FEATURE: Element.nextElementSibling
+MISSING-FEATURE: Element.before
+MISSING-FEATURE: Element.after
+MISSING-FEATURE: Element.replaceWith
+MISSING-FEATURE: Element.remove
+MISSING-FEATURE: Element.assignedSlot
+MISSING-FEATURE: Element.elementTiming
+ADD-DATA: api.Element.requestFullscreen.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Element.requestPointerLock.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Element.role
+MISSING-FEATURE: Element.ariaActiveDescendantElement
+MISSING-FEATURE: Element.ariaAtomic
+MISSING-FEATURE: Element.ariaAutoComplete
+MISSING-FEATURE: Element.ariaBusy
+MISSING-FEATURE: Element.ariaChecked
+MISSING-FEATURE: Element.ariaColCount
+MISSING-FEATURE: Element.ariaColIndex
+MISSING-FEATURE: Element.ariaColIndexText
+MISSING-FEATURE: Element.ariaColSpan
+MISSING-FEATURE: Element.ariaControlsElements
+MISSING-FEATURE: Element.ariaCurrent
+MISSING-FEATURE: Element.ariaDescribedByElements
+MISSING-FEATURE: Element.ariaDescription
+MISSING-FEATURE: Element.ariaDetailsElements
+MISSING-FEATURE: Element.ariaDisabled
+MISSING-FEATURE: Element.ariaErrorMessageElement
+MISSING-FEATURE: Element.ariaExpanded
+MISSING-FEATURE: Element.ariaFlowToElements
+MISSING-FEATURE: Element.ariaHasPopup
+MISSING-FEATURE: Element.ariaHidden
+MISSING-FEATURE: Element.ariaInvalid
+MISSING-FEATURE: Element.ariaKeyShortcuts
+MISSING-FEATURE: Element.ariaLabel
+MISSING-FEATURE: Element.ariaLabelledByElements
+MISSING-FEATURE: Element.ariaLevel
+MISSING-FEATURE: Element.ariaLive
+MISSING-FEATURE: Element.ariaModal
+MISSING-FEATURE: Element.ariaMultiLine
+MISSING-FEATURE: Element.ariaMultiSelectable
+MISSING-FEATURE: Element.ariaOrientation
+MISSING-FEATURE: Element.ariaOwnsElements
+MISSING-FEATURE: Element.ariaPlaceholder
+MISSING-FEATURE: Element.ariaPosInSet
+MISSING-FEATURE: Element.ariaPressed
+MISSING-FEATURE: Element.ariaReadOnly
+MISSING-FEATURE: Element.ariaRelevant
+MISSING-FEATURE: Element.ariaRequired
+MISSING-FEATURE: Element.ariaRoleDescription
+MISSING-FEATURE: Element.ariaRowCount
+MISSING-FEATURE: Element.ariaRowIndex
+MISSING-FEATURE: Element.ariaRowIndexText
+MISSING-FEATURE: Element.ariaRowSpan
+MISSING-FEATURE: Element.ariaSelected
+MISSING-FEATURE: Element.ariaSetSize
+MISSING-FEATURE: Element.ariaSort
+MISSING-FEATURE: Element.ariaValueMax
+MISSING-FEATURE: Element.ariaValueMin
+MISSING-FEATURE: Element.ariaValueNow
+MISSING-FEATURE: Element.ariaValueText
+ADD-DATA: api.Element.getAnimations.__compat.support.chrome.version_added would be set to false
+ADD: api.TransitionEvent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: CSSMathNegate.value
+MISSING-INTERFACE: CSSMathClamp
+MISSING-FEATURE: SVGElement.attributeStyleMap
+MISSING-FEATURE: SVGElement.style
+MISSING-FEATURE: SVGElement.onabort
+MISSING-FEATURE: SVGElement.onauxclick
+MISSING-FEATURE: SVGElement.onblur
+MISSING-FEATURE: SVGElement.oncancel
+MISSING-FEATURE: SVGElement.oncanplay
+MISSING-FEATURE: SVGElement.oncanplaythrough
+MISSING-FEATURE: SVGElement.onchange
+MISSING-FEATURE: SVGElement.onclick
+MISSING-FEATURE: SVGElement.onclose
+MISSING-FEATURE: SVGElement.oncontextmenu
+MISSING-FEATURE: SVGElement.oncuechange
+MISSING-FEATURE: SVGElement.ondblclick
+MISSING-FEATURE: SVGElement.ondrag
+MISSING-FEATURE: SVGElement.ondragend
+MISSING-FEATURE: SVGElement.ondragenter
+MISSING-FEATURE: SVGElement.ondragexit
+MISSING-FEATURE: SVGElement.ondragleave
+MISSING-FEATURE: SVGElement.ondragover
+MISSING-FEATURE: SVGElement.ondragstart
+MISSING-FEATURE: SVGElement.ondrop
+MISSING-FEATURE: SVGElement.ondurationchange
+MISSING-FEATURE: SVGElement.onemptied
+MISSING-FEATURE: SVGElement.onended
+MISSING-FEATURE: SVGElement.onerror
+MISSING-FEATURE: SVGElement.onfocus
+MISSING-FEATURE: SVGElement.onformdata
+MISSING-FEATURE: SVGElement.oninput
+MISSING-FEATURE: SVGElement.oninvalid
+MISSING-FEATURE: SVGElement.onkeydown
+MISSING-FEATURE: SVGElement.onkeypress
+MISSING-FEATURE: SVGElement.onkeyup
+MISSING-FEATURE: SVGElement.onload
+MISSING-FEATURE: SVGElement.onloadeddata
+MISSING-FEATURE: SVGElement.onloadedmetadata
+MISSING-FEATURE: SVGElement.onloadstart
+MISSING-FEATURE: SVGElement.onmousedown
+MISSING-FEATURE: SVGElement.onmouseenter
+MISSING-FEATURE: SVGElement.onmouseleave
+MISSING-FEATURE: SVGElement.onmousemove
+MISSING-FEATURE: SVGElement.onmouseout
+MISSING-FEATURE: SVGElement.onmouseover
+MISSING-FEATURE: SVGElement.onmouseup
+MISSING-FEATURE: SVGElement.onpause
+MISSING-FEATURE: SVGElement.onplay
+MISSING-FEATURE: SVGElement.onplaying
+MISSING-FEATURE: SVGElement.onprogress
+MISSING-FEATURE: SVGElement.onratechange
+MISSING-FEATURE: SVGElement.onreset
+MISSING-FEATURE: SVGElement.onresize
+MISSING-FEATURE: SVGElement.onscroll
+MISSING-FEATURE: SVGElement.onsecuritypolicyviolation
+MISSING-FEATURE: SVGElement.onseeked
+MISSING-FEATURE: SVGElement.onseeking
+MISSING-FEATURE: SVGElement.onselect
+MISSING-FEATURE: SVGElement.onslotchange
+MISSING-FEATURE: SVGElement.onstalled
+MISSING-FEATURE: SVGElement.onsubmit
+MISSING-FEATURE: SVGElement.onsuspend
+MISSING-FEATURE: SVGElement.ontimeupdate
+MISSING-FEATURE: SVGElement.ontoggle
+MISSING-FEATURE: SVGElement.onvolumechange
+MISSING-FEATURE: SVGElement.onwaiting
+MISSING-FEATURE: SVGElement.onwebkitanimationend
+MISSING-FEATURE: SVGElement.onwebkitanimationiteration
+MISSING-FEATURE: SVGElement.onwebkitanimationstart
+MISSING-FEATURE: SVGElement.onwebkittransitionend
+MISSING-FEATURE: SVGElement.onwheel
+MISSING-FEATURE: SVGElement.oncopy
+MISSING-FEATURE: SVGElement.oncut
+MISSING-FEATURE: SVGElement.onpaste
+MISSING-FEATURE: SVGElement.nonce
+MISSING-FEATURE: SVGElement.autofocus
+MISSING-FEATURE: SVGElement.tabIndex
+MISSING-FEATURE: SVGElement.blur
+MISSING-FEATURE: SVGElement.className
+MISSING-FEATURE: SVGElement.ownerSVGElement
+MISSING-FEATURE: SVGElement.viewportElement
+MISSING-FEATURE: SVGElement.correspondingElement
+MISSING-FEATURE: SVGElement.correspondingUseElement
+MISSING-FEATURE: CaretPosition.offsetNode
+MISSING-FEATURE: CaretPosition.offset
+MISSING-FEATURE: CaretPosition.getClientRect
+ADD-DATA: api.MouseEvent.movementX.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.MouseEvent.movementY.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: HTMLImageElement.loading
+MISSING-FEATURE: HTMLImageElement.lowsrc
+MISSING-FEATURE: Text.getBoxQuads
+MISSING-FEATURE: Text.convertQuadFromNode
+MISSING-FEATURE: Text.convertRectFromNode
+MISSING-FEATURE: Text.convertPointFromNode
+MISSING-INTERFACE: CSSImportRule
+MISSING-FEATURE: CSSGroupingRule.cssRules
+MISSING-FEATURE: CSSGroupingRule.insertRule
+MISSING-FEATURE: CSSGroupingRule.deleteRule
+MISMATCH: api.CSSPageRule.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISSING-INTERFACE: CSSMarginRule
+MISSING-FEATURE: SVGStyleElement.sheet
+MISSING-FEATURE: SVGStyleElement.type
+MISSING-FEATURE: SVGStyleElement.media
+MISSING-FEATURE: SVGStyleElement.title
+MISSING-FEATURE: HTMLLinkElement.sheet
+MISSING-FEATURE: HTMLLinkElement.href
+MISSING-FEATURE: HTMLLinkElement.media
+MISSING-FEATURE: HTMLLinkElement.integrity
+MISSING-FEATURE: HTMLLinkElement.hreflang
+MISSING-FEATURE: HTMLLinkElement.type
+MISSING-FEATURE: HTMLLinkElement.imageSrcset
+MISSING-FEATURE: HTMLLinkElement.imageSizes
+MISSING-FEATURE: HTMLLinkElement.charset
+MISSING-FEATURE: HTMLLinkElement.rev
+MISSING-FEATURE: HTMLLinkElement.target
+MISSING-FEATURE: ProcessingInstruction.sheet
+MISSING-FEATURE: SVGFilterElement.filterUnits
+MISSING-FEATURE: SVGFilterElement.primitiveUnits
+MISSING-FEATURE: SVGFilterElement.x
+MISSING-FEATURE: SVGFilterElement.y
+MISSING-FEATURE: SVGFilterElement.width
+MISSING-FEATURE: SVGFilterElement.height
+MISSING-FEATURE: SVGFEBlendElement.mode
+MISSING-FEATURE: SVGFEBlendElement.x
+MISSING-FEATURE: SVGFEBlendElement.y
+MISSING-FEATURE: SVGFEBlendElement.width
+MISSING-FEATURE: SVGFEBlendElement.height
+MISSING-FEATURE: SVGFEBlendElement.result
+MISSING-FEATURE: SVGFEColorMatrixElement.x
+MISSING-FEATURE: SVGFEColorMatrixElement.y
+MISSING-FEATURE: SVGFEColorMatrixElement.width
+MISSING-FEATURE: SVGFEColorMatrixElement.height
+MISSING-FEATURE: SVGFEColorMatrixElement.result
+MISSING-FEATURE: SVGFEComponentTransferElement.x
+MISSING-FEATURE: SVGFEComponentTransferElement.y
+MISSING-FEATURE: SVGFEComponentTransferElement.width
+MISSING-FEATURE: SVGFEComponentTransferElement.height
+MISSING-FEATURE: SVGFEComponentTransferElement.result
+MISSING-FEATURE: SVGComponentTransferFunctionElement.type
+MISSING-FEATURE: SVGComponentTransferFunctionElement.tableValues
+MISSING-FEATURE: SVGComponentTransferFunctionElement.slope
+MISSING-FEATURE: SVGComponentTransferFunctionElement.intercept
+MISSING-FEATURE: SVGComponentTransferFunctionElement.amplitude
+MISSING-FEATURE: SVGComponentTransferFunctionElement.exponent
+MISSING-FEATURE: SVGComponentTransferFunctionElement.offset
+MISSING-FEATURE: SVGFECompositeElement.operator
+MISSING-FEATURE: SVGFECompositeElement.x
+MISSING-FEATURE: SVGFECompositeElement.y
+MISSING-FEATURE: SVGFECompositeElement.width
+MISSING-FEATURE: SVGFECompositeElement.height
+MISSING-FEATURE: SVGFECompositeElement.result
+MISSING-FEATURE: SVGFEConvolveMatrixElement.orderX
+MISSING-FEATURE: SVGFEConvolveMatrixElement.orderY
+MISSING-FEATURE: SVGFEConvolveMatrixElement.kernelMatrix
+MISSING-FEATURE: SVGFEConvolveMatrixElement.divisor
+MISSING-FEATURE: SVGFEConvolveMatrixElement.bias
+MISSING-FEATURE: SVGFEConvolveMatrixElement.targetX
+MISSING-FEATURE: SVGFEConvolveMatrixElement.targetY
+MISSING-FEATURE: SVGFEConvolveMatrixElement.edgeMode
+MISSING-FEATURE: SVGFEConvolveMatrixElement.kernelUnitLengthX
+MISSING-FEATURE: SVGFEConvolveMatrixElement.kernelUnitLengthY
+MISSING-FEATURE: SVGFEConvolveMatrixElement.preserveAlpha
+MISSING-FEATURE: SVGFEConvolveMatrixElement.x
+MISSING-FEATURE: SVGFEConvolveMatrixElement.y
+MISSING-FEATURE: SVGFEConvolveMatrixElement.width
+MISSING-FEATURE: SVGFEConvolveMatrixElement.height
+MISSING-FEATURE: SVGFEConvolveMatrixElement.result
+MISSING-FEATURE: SVGFEDiffuseLightingElement.surfaceScale
+MISSING-FEATURE: SVGFEDiffuseLightingElement.diffuseConstant
+MISSING-FEATURE: SVGFEDiffuseLightingElement.kernelUnitLengthX
+MISSING-FEATURE: SVGFEDiffuseLightingElement.kernelUnitLengthY
+MISSING-FEATURE: SVGFEDiffuseLightingElement.x
+MISSING-FEATURE: SVGFEDiffuseLightingElement.y
+MISSING-FEATURE: SVGFEDiffuseLightingElement.width
+MISSING-FEATURE: SVGFEDiffuseLightingElement.height
+MISSING-FEATURE: SVGFEDiffuseLightingElement.result
+MISSING-FEATURE: SVGFEDistantLightElement.azimuth
+MISSING-FEATURE: SVGFEDistantLightElement.elevation
+MISSING-FEATURE: SVGFEPointLightElement.x
+MISSING-FEATURE: SVGFEPointLightElement.y
+MISSING-FEATURE: SVGFEPointLightElement.z
+MISSING-FEATURE: SVGFESpotLightElement.x
+MISSING-FEATURE: SVGFESpotLightElement.y
+MISSING-FEATURE: SVGFESpotLightElement.z
+MISSING-FEATURE: SVGFESpotLightElement.pointsAtX
+MISSING-FEATURE: SVGFESpotLightElement.pointsAtY
+MISSING-FEATURE: SVGFESpotLightElement.pointsAtZ
+MISSING-FEATURE: SVGFESpotLightElement.specularExponent
+MISSING-FEATURE: SVGFESpotLightElement.limitingConeAngle
+MISSING-FEATURE: SVGFEDisplacementMapElement.scale
+MISSING-FEATURE: SVGFEDisplacementMapElement.xChannelSelector
+MISSING-FEATURE: SVGFEDisplacementMapElement.yChannelSelector
+MISSING-FEATURE: SVGFEDisplacementMapElement.x
+MISSING-FEATURE: SVGFEDisplacementMapElement.y
+MISSING-FEATURE: SVGFEDisplacementMapElement.width
+MISSING-FEATURE: SVGFEDisplacementMapElement.height
+MISSING-FEATURE: SVGFEDisplacementMapElement.result
+MISSING-FEATURE: SVGFEDropShadowElement.dx
+MISSING-FEATURE: SVGFEDropShadowElement.dy
+MISSING-FEATURE: SVGFEDropShadowElement.stdDeviationX
+MISSING-FEATURE: SVGFEDropShadowElement.stdDeviationY
+MISSING-FEATURE: SVGFEDropShadowElement.setStdDeviation
+MISSING-FEATURE: SVGFEDropShadowElement.x
+MISSING-FEATURE: SVGFEDropShadowElement.y
+MISSING-FEATURE: SVGFEDropShadowElement.width
+MISSING-FEATURE: SVGFEDropShadowElement.height
+MISSING-FEATURE: SVGFEDropShadowElement.result
+MISSING-FEATURE: SVGFEFloodElement.x
+MISSING-FEATURE: SVGFEFloodElement.y
+MISSING-FEATURE: SVGFEFloodElement.width
+MISSING-FEATURE: SVGFEFloodElement.height
+MISSING-FEATURE: SVGFEFloodElement.result
+MISSING-FEATURE: SVGFEGaussianBlurElement.stdDeviationX
+MISSING-FEATURE: SVGFEGaussianBlurElement.stdDeviationY
+MISSING-FEATURE: SVGFEGaussianBlurElement.edgeMode
+MISSING-FEATURE: SVGFEGaussianBlurElement.setStdDeviation
+MISSING-FEATURE: SVGFEGaussianBlurElement.x
+MISSING-FEATURE: SVGFEGaussianBlurElement.y
+MISSING-FEATURE: SVGFEGaussianBlurElement.width
+MISSING-FEATURE: SVGFEGaussianBlurElement.height
+MISSING-FEATURE: SVGFEGaussianBlurElement.result
+MISSING-FEATURE: SVGFEImageElement.preserveAspectRatio
+MISSING-FEATURE: SVGFEImageElement.crossOrigin
+MISSING-FEATURE: SVGFEImageElement.x
+MISSING-FEATURE: SVGFEImageElement.y
+MISSING-FEATURE: SVGFEImageElement.width
+MISSING-FEATURE: SVGFEImageElement.height
+MISSING-FEATURE: SVGFEImageElement.result
+MISSING-FEATURE: SVGFEMergeElement.x
+MISSING-FEATURE: SVGFEMergeElement.y
+MISSING-FEATURE: SVGFEMergeElement.width
+MISSING-FEATURE: SVGFEMergeElement.height
+MISSING-FEATURE: SVGFEMergeElement.result
+MISSING-FEATURE: SVGFEMorphologyElement.operator
+MISSING-FEATURE: SVGFEMorphologyElement.radiusX
+MISSING-FEATURE: SVGFEMorphologyElement.radiusY
+MISSING-FEATURE: SVGFEMorphologyElement.x
+MISSING-FEATURE: SVGFEMorphologyElement.y
+MISSING-FEATURE: SVGFEMorphologyElement.width
+MISSING-FEATURE: SVGFEMorphologyElement.height
+MISSING-FEATURE: SVGFEMorphologyElement.result
+MISSING-FEATURE: SVGFEOffsetElement.dx
+MISSING-FEATURE: SVGFEOffsetElement.dy
+MISSING-FEATURE: SVGFEOffsetElement.x
+MISSING-FEATURE: SVGFEOffsetElement.y
+MISSING-FEATURE: SVGFEOffsetElement.width
+MISSING-FEATURE: SVGFEOffsetElement.height
+MISSING-FEATURE: SVGFEOffsetElement.result
+MISSING-FEATURE: SVGFESpecularLightingElement.surfaceScale
+MISSING-FEATURE: SVGFESpecularLightingElement.specularConstant
+MISSING-FEATURE: SVGFESpecularLightingElement.specularExponent
+MISSING-FEATURE: SVGFESpecularLightingElement.kernelUnitLengthX
+MISSING-FEATURE: SVGFESpecularLightingElement.kernelUnitLengthY
+MISSING-FEATURE: SVGFESpecularLightingElement.x
+MISSING-FEATURE: SVGFESpecularLightingElement.y
+MISSING-FEATURE: SVGFESpecularLightingElement.width
+MISSING-FEATURE: SVGFESpecularLightingElement.height
+MISSING-FEATURE: SVGFESpecularLightingElement.result
+MISSING-FEATURE: SVGFETileElement.x
+MISSING-FEATURE: SVGFETileElement.y
+MISSING-FEATURE: SVGFETileElement.width
+MISSING-FEATURE: SVGFETileElement.height
+MISSING-FEATURE: SVGFETileElement.result
+MISSING-FEATURE: SVGFETurbulenceElement.baseFrequencyX
+MISSING-FEATURE: SVGFETurbulenceElement.baseFrequencyY
+MISSING-FEATURE: SVGFETurbulenceElement.numOctaves
+MISSING-FEATURE: SVGFETurbulenceElement.seed
+MISSING-FEATURE: SVGFETurbulenceElement.stitchTiles
+MISSING-FEATURE: SVGFETurbulenceElement.type
+MISSING-FEATURE: SVGFETurbulenceElement.x
+MISSING-FEATURE: SVGFETurbulenceElement.y
+MISSING-FEATURE: SVGFETurbulenceElement.width
+MISSING-FEATURE: SVGFETurbulenceElement.height
+MISSING-FEATURE: SVGFETurbulenceElement.result
+MISSING-FEATURE: SVGAnimatedBoolean.baseVal
+MISSING-FEATURE: SVGAnimatedBoolean.animVal
+MISSING-FEATURE: SVGAnimatedEnumeration.baseVal
+MISSING-FEATURE: SVGAnimatedEnumeration.animVal
+MISSING-FEATURE: SVGAnimatedInteger.baseVal
+MISSING-FEATURE: SVGAnimatedInteger.animVal
+MISSING-FEATURE: SVGAnimatedNumber.baseVal
+MISSING-FEATURE: SVGAnimatedNumber.animVal
+MISSING-FEATURE: SVGAnimatedLength.baseVal
+MISSING-FEATURE: SVGAnimatedLength.animVal
+MISSING-FEATURE: SVGAnimatedNumberList.baseVal
+MISSING-FEATURE: SVGAnimatedNumberList.animVal
+MISSING-FEATURE: SVGAnimatedPreserveAspectRatio.baseVal
+MISSING-FEATURE: SVGAnimatedPreserveAspectRatio.animVal
+MISSING-FEATURE: DOMPoint.fromPoint
+MISSING-FEATURE: DOMPoint.x
+MISSING-FEATURE: DOMPoint.y
+MISSING-FEATURE: DOMPoint.z
+MISSING-FEATURE: DOMPoint.w
+MISSING-FEATURE: DOMRectReadOnly.toJSON
+MISSING-FEATURE: DOMRect.fromRect
+MISSING-FEATURE: DOMRect.x
+MISSING-FEATURE: DOMRect.y
+MISSING-FEATURE: DOMRect.width
+MISSING-FEATURE: DOMRect.height
+MISSING-INTERFACE: DOMRectList
+ADD: api.DOMMatrixReadOnly.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.DOMMatrix.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: DOMMatrix.fromMatrix
+MISSING-FEATURE: DOMMatrix.a
+MISSING-FEATURE: DOMMatrix.b
+MISSING-FEATURE: DOMMatrix.c
+MISSING-FEATURE: DOMMatrix.d
+MISSING-FEATURE: DOMMatrix.e
+MISSING-FEATURE: DOMMatrix.f
+MISSING-FEATURE: DOMMatrix.multiplySelf
+MISSING-FEATURE: DOMMatrix.preMultiplySelf
+MISSING-FEATURE: DOMMatrix.translateSelf
+MISSING-FEATURE: DOMMatrix.rotateSelf
+MISSING-FEATURE: DOMMatrix.rotateFromVectorSelf
+MISSING-FEATURE: DOMMatrix.rotateAxisAngleSelf
+MISSING-FEATURE: DOMMatrix.skewXSelf
+MISSING-FEATURE: DOMMatrix.skewYSelf
+MISSING-FEATURE: DOMMatrix.invertSelf
+MISSING-FEATURE: DOMMatrix.setMatrixValue
+ADD-DATA: api.Event.composedPath.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.CustomEvent.initCustomEvent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.MutationObserver.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: DocumentType.before
+MISSING-FEATURE: DocumentType.after
+MISSING-FEATURE: DocumentType.replaceWith
+MISSING-FEATURE: DocumentType.remove
+MISSING-FEATURE: DocumentFragment.getElementById
+MISSING-FEATURE: DocumentFragment.children
+MISSING-FEATURE: DocumentFragment.firstElementChild
+MISSING-FEATURE: DocumentFragment.lastElementChild
+MISSING-FEATURE: DocumentFragment.childElementCount
+MISSING-FEATURE: DocumentFragment.prepend
+MISSING-FEATURE: DocumentFragment.append
+MISSING-FEATURE: DocumentFragment.replaceChildren
+MISSING-FEATURE: Attr.name
+MISSING-FEATURE: Attr.value
+MISSING-FEATURE: Attr.ownerElement
+MISSING-FEATURE: Attr.specified
+MISSING-FEATURE: CharacterData.previousElementSibling
+MISSING-FEATURE: CharacterData.nextElementSibling
+MISSING-FEATURE: CharacterData.before
+MISSING-FEATURE: CharacterData.after
+MISSING-FEATURE: CharacterData.replaceWith
+MISSING-FEATURE: CharacterData.remove
+MISMATCH: api.AbstractRange.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-FEATURE: XPathResult.numberValue
+MISSING-FEATURE: XPathResult.stringValue
+MISSING-FEATURE: XPathResult.booleanValue
+MISSING-FEATURE: XPathResult.singleNodeValue
+MISSING-FEATURE: XPathResult.snapshotLength
+MISSING-INTERFACE: XPathNSResolver
+MISSING-INTERFACE: XPathEvaluator
+MISSING-FEATURE: XMLSerializer.serializeToString
+MISSING-INTERFACE: PerformanceElementTiming
+MISSING-FEATURE: HTMLInputElement.capture
+MISSING-FEATURE: HTMLInputElement.accept
+MISSING-FEATURE: HTMLInputElement.alt
+MISSING-FEATURE: HTMLInputElement.defaultChecked
+MISSING-FEATURE: HTMLInputElement.checked
+MISSING-FEATURE: HTMLInputElement.dirName
+MISSING-FEATURE: HTMLInputElement.disabled
+MISSING-FEATURE: HTMLInputElement.form
+MISSING-FEATURE: HTMLInputElement.formEnctype
+MISSING-FEATURE: HTMLInputElement.max
+MISSING-FEATURE: HTMLInputElement.maxLength
+MISSING-FEATURE: HTMLInputElement.min
+MISSING-FEATURE: HTMLInputElement.minLength
+MISSING-FEATURE: HTMLInputElement.name
+MISSING-FEATURE: HTMLInputElement.readOnly
+MISSING-FEATURE: HTMLInputElement.size
+MISSING-FEATURE: HTMLInputElement.src
+MISSING-FEATURE: HTMLInputElement.step
+MISSING-FEATURE: HTMLInputElement.type
+MISSING-FEATURE: HTMLInputElement.defaultValue
+MISSING-FEATURE: HTMLInputElement.value
+MISSING-FEATURE: HTMLInputElement.valueAsDate
+MISSING-FEATURE: HTMLInputElement.valueAsNumber
+MISSING-FEATURE: HTMLInputElement.width
+MISSING-FEATURE: HTMLInputElement.select
+MISSING-FEATURE: HTMLInputElement.selectionStart
+MISSING-FEATURE: HTMLInputElement.selectionEnd
+MISSING-FEATURE: HTMLInputElement.setRangeText
+MISSING-FEATURE: HTMLInputElement.align
+MISSING-FEATURE: HTMLInputElement.useMap
+MISMATCH: api.FileSystemEntry.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemEntry.isFile.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemEntry.isDirectory.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemEntry.name.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemEntry.fullPath.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemEntry.filesystem.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemEntry.getParent.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemDirectoryEntry.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemDirectoryEntry.createReader.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemDirectoryEntry.getFile.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemDirectoryEntry.getDirectory.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemDirectoryReader.__compat.support.chrome.version_added (13) does not match WPT (false)
+ADD-DATA: api.FileSystemDirectoryReader.readEntries.__compat.support.chrome.version_added would be set to false
+MISMATCH: api.FileSystemFileEntry.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystemFileEntry.file.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystem.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystem.name.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISMATCH: api.FileSystem.root.__compat.support.chrome.version_added (13) does not match WPT (false)
+MISSING-INTERFACE: PerformanceEventTiming
+MISSING-INTERFACE: EventCounts
+MISSING-FEATURE: Performance.eventCounts
+ADD-DATA: api.Performance.now.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Performance.profile
+ADD-DATA: api.Performance.getEntries.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Performance.getEntriesByType.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Performance.getEntriesByName.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Performance.clearResourceTimings.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Performance.setResourceTimingBufferSize.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Performance.onresourcetimingbufferfull.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Performance.mark.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Performance.clearMarks.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Performance.measure.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Performance.clearMeasures.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.FeaturePolicy.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.FeaturePolicy.allowsFeature.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.FeaturePolicy.allowedFeatures.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.FeaturePolicy.getAllowlistForFeature.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-INTERFACE: FeaturePolicyViolationReportBody
+ADD: api.Headers.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Headers.append.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Headers.delete.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Headers.get.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Headers.has.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Headers.set.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.Request.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Request.method.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Request.headers.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Request.referrer.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Request.credentials.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Request.isReloadNavigation
+MISSING-FEATURE: Request.isHistoryNavigation
+ADD-DATA: api.Request.clone.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Request.body
+MISSING-FEATURE: Request.bodyUsed
+MISSING-FEATURE: Request.arrayBuffer
+MISSING-FEATURE: Request.blob
+MISSING-FEATURE: Request.formData
+MISSING-FEATURE: Request.json
+MISSING-FEATURE: Request.text
+ADD: api.Response.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Response.type.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Response.url.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Response.status.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Response.ok.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Response.statusText.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Response.headers.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Response.clone.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: Response.body
+MISSING-FEATURE: Response.bodyUsed
+MISSING-FEATURE: Response.arrayBuffer
+MISSING-FEATURE: Response.blob
+MISSING-FEATURE: Response.formData
+MISSING-FEATURE: Response.json
+MISSING-FEATURE: Response.text
+ADD: api.Gamepad.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Gamepad.id.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Gamepad.index.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Gamepad.connected.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Gamepad.timestamp.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Gamepad.mapping.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Gamepad.axes.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Gamepad.buttons.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.Gamepad.displayId.__compat.support.chrome.version_added (true) does not match WPT (false)
+ADD: api.GamepadButton.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.GamepadButton.pressed.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.GamepadButton.value.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.GamepadEvent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.GamepadEvent.gamepad.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.GeolocationPosition.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.GeolocationCoordinates.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.GeolocationPositionError.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-INTERFACE: GeolocationSensor
+MISMATCH: api.AudioTrackList.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.AudioTrackList.length.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.AudioTrackList.getTrackById.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.AudioTrackList.onchange.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.AudioTrackList.onaddtrack.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.AudioTrackList.onremovetrack.__compat.support.chrome.version_added (45) does not match WPT (false)
+ADD: api.AudioTrack.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.AudioTrack.id.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.AudioTrack.kind.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.AudioTrack.label.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.AudioTrack.language.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.AudioTrack.enabled.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.AudioTrack.sourceBuffer.__compat.support.chrome.version_added would be set to false
+MISMATCH: api.VideoTrackList.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.VideoTrackList.length.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.VideoTrackList.getTrackById.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.VideoTrackList.selectedIndex.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.VideoTrackList.onchange.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.VideoTrackList.onaddtrack.__compat.support.chrome.version_added (45) does not match WPT (false)
+MISMATCH: api.VideoTrackList.onremovetrack.__compat.support.chrome.version_added (45) does not match WPT (false)
+ADD: api.VideoTrack.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.VideoTrack.id.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.VideoTrack.kind.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.VideoTrack.label.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.VideoTrack.language.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.VideoTrack.selected.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.VideoTrack.sourceBuffer.__compat.support.chrome.version_added would be set to false
+MISSING-FEATURE: TextTrackList.onchange
+MISSING-FEATURE: TextTrackList.onaddtrack
+MISSING-FEATURE: TextTrackList.onremovetrack
+MISMATCH: api.TextTrack.inBandMetadataTrackDispatchType.__compat.support.chrome.version_added (18) does not match WPT (false)
+MISSING-INTERFACE: TextTrackCueList
+MISSING-FEATURE: TextTrackCue.onenter
+MISSING-FEATURE: TextTrackCue.onexit
+MISSING-FEATURE: ValidityState.valueMissing
+MISSING-FEATURE: ValidityState.typeMismatch
+MISSING-FEATURE: ValidityState.patternMismatch
+MISSING-FEATURE: ValidityState.rangeUnderflow
+MISSING-FEATURE: ValidityState.rangeOverflow
+MISSING-FEATURE: ValidityState.stepMismatch
+MISSING-FEATURE: ValidityState.customError
+MISSING-FEATURE: ValidityState.valid
+ADD-DATA: api.TextMetrics.actualBoundingBoxLeft.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.TextMetrics.actualBoundingBoxRight.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.TextMetrics.fontBoundingBoxAscent.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.fontBoundingBoxDescent.__compat.support.chrome.version_added (true) does not match WPT (false)
+ADD-DATA: api.TextMetrics.actualBoundingBoxAscent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.TextMetrics.actualBoundingBoxDescent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.TextMetrics.emHeightAscent.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.emHeightDescent.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.hangingBaseline.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.alphabeticBaseline.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.TextMetrics.ideographicBaseline.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISSING-FEATURE: ImageBitmapRenderingContext.canvas
+ADD-DATA: api.CustomElementRegistry.define.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.CustomElementRegistry.get.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.CustomElementRegistry.whenDefined.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-INTERFACE: ElementInternals
+MISMATCH: api.DataTransferItemList.add.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-INTERFACE: BarProp
+MISSING-FEATURE: BeforeUnloadEvent.returnValue
+MISSING-INTERFACE: ApplicationCache
+MISSING-FEATURE: Plugin.length
+MISSING-FEATURE: CloseEvent.wasClean
+MISSING-FEATURE: CloseEvent.code
+MISSING-FEATURE: CloseEvent.reason
+MISSING-FEATURE: DedicatedWorkerGlobalScope.requestAnimationFrame
+MISSING-FEATURE: DedicatedWorkerGlobalScope.cancelAnimationFrame
+MISMATCH: api.Worker.onmessageerror.__compat.support.chrome.version_added (60) does not match WPT (false)
+MISSING-FEATURE: Worker.onerror
+MISSING-FEATURE: SharedWorker.onerror
+MISSING-FEATURE: WorkerLocation.href
+MISSING-FEATURE: WorkerLocation.origin
+MISSING-FEATURE: WorkerLocation.protocol
+MISSING-FEATURE: WorkerLocation.host
+MISSING-FEATURE: WorkerLocation.hostname
+MISSING-FEATURE: WorkerLocation.port
+MISSING-FEATURE: WorkerLocation.pathname
+MISSING-FEATURE: WorkerLocation.search
+MISSING-FEATURE: WorkerLocation.hash
+MISSING-FEATURE: SVGSVGElement.onafterprint
+MISSING-FEATURE: SVGSVGElement.onbeforeprint
+MISSING-FEATURE: SVGSVGElement.onbeforeunload
+MISSING-FEATURE: SVGSVGElement.onhashchange
+MISSING-FEATURE: SVGSVGElement.onlanguagechange
+MISSING-FEATURE: SVGSVGElement.onmessage
+MISSING-FEATURE: SVGSVGElement.onmessageerror
+MISSING-FEATURE: SVGSVGElement.onoffline
+MISSING-FEATURE: SVGSVGElement.ononline
+MISSING-FEATURE: SVGSVGElement.onpagehide
+MISSING-FEATURE: SVGSVGElement.onpageshow
+MISSING-FEATURE: SVGSVGElement.onpopstate
+MISSING-FEATURE: SVGSVGElement.onrejectionhandled
+MISSING-FEATURE: SVGSVGElement.onstorage
+MISSING-FEATURE: SVGSVGElement.onunhandledrejection
+MISSING-FEATURE: SVGSVGElement.onunload
+MISMATCH: api.SVGSVGElement.createSVGTransformFromMatrix.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGSVGElement.viewBox
+MISSING-FEATURE: SVGSVGElement.preserveAspectRatio
+MISSING-FEATURE: HTMLHtmlElement.version
+MISSING-FEATURE: HTMLMetaElement.name
+MISSING-FEATURE: HTMLMetaElement.httpEquiv
+MISSING-FEATURE: HTMLMetaElement.content
+MISSING-FEATURE: HTMLMetaElement.scheme
+MISSING-FEATURE: HTMLHRElement.align
+MISSING-FEATURE: HTMLHRElement.color
+MISSING-FEATURE: HTMLHRElement.noShade
+MISSING-FEATURE: HTMLHRElement.size
+MISSING-FEATURE: HTMLHRElement.width
+MISSING-FEATURE: HTMLLIElement.value
+MISSING-FEATURE: HTMLLIElement.type
+MISSING-FEATURE: HTMLAnchorElement.ping
+MISSING-FEATURE: HTMLAnchorElement.href
+MISSING-FEATURE: HTMLAnchorElement.origin
+MISSING-FEATURE: HTMLAnchorElement.protocol
+MISSING-FEATURE: HTMLAnchorElement.username
+MISSING-FEATURE: HTMLAnchorElement.password
+MISSING-FEATURE: HTMLAnchorElement.host
+MISSING-FEATURE: HTMLAnchorElement.hostname
+MISSING-FEATURE: HTMLAnchorElement.port
+MISSING-FEATURE: HTMLAnchorElement.pathname
+MISSING-FEATURE: HTMLAnchorElement.search
+MISSING-FEATURE: HTMLAnchorElement.hash
+MISSING-FEATURE: HTMLEmbedElement.src
+MISSING-FEATURE: HTMLEmbedElement.type
+MISSING-FEATURE: HTMLEmbedElement.width
+MISSING-FEATURE: HTMLEmbedElement.height
+MISSING-FEATURE: HTMLEmbedElement.getSVGDocument
+MISSING-FEATURE: HTMLEmbedElement.align
+MISSING-FEATURE: HTMLEmbedElement.name
+MISSING-FEATURE: HTMLVideoElement.playsInline
+MISSING-FEATURE: HTMLVideoElement.requestPictureInPicture
+MISSING-FEATURE: HTMLVideoElement.onenterpictureinpicture
+MISSING-FEATURE: HTMLVideoElement.onleavepictureinpicture
+MISSING-FEATURE: HTMLVideoElement.autoPictureInPicture
+MISSING-FEATURE: HTMLVideoElement.disablePictureInPicture
+MISSING-FEATURE: HTMLVideoElement.requestVideoFrameCallback
+MISSING-FEATURE: HTMLVideoElement.cancelVideoFrameCallback
+MISSING-FEATURE: HTMLAreaElement.ping
+MISSING-FEATURE: HTMLAreaElement.href
+MISSING-FEATURE: HTMLAreaElement.origin
+MISSING-FEATURE: HTMLAreaElement.protocol
+MISSING-FEATURE: HTMLAreaElement.username
+MISSING-FEATURE: HTMLAreaElement.password
+MISSING-FEATURE: HTMLAreaElement.host
+MISSING-FEATURE: HTMLAreaElement.hostname
+MISSING-FEATURE: HTMLAreaElement.port
+MISSING-FEATURE: HTMLAreaElement.pathname
+MISSING-FEATURE: HTMLAreaElement.search
+MISSING-FEATURE: HTMLAreaElement.hash
+MISSING-FEATURE: HTMLFormElement.rel
+MISSING-FEATURE: HTMLFormElement.relList
+MISSING-FEATURE: HTMLButtonElement.checkValidity
+MISSING-FEATURE: HTMLButtonElement.setCustomValidity
+MISSING-FEATURE: HTMLTextAreaElement.cols
+MISSING-FEATURE: HTMLTextAreaElement.dirName
+MISSING-FEATURE: HTMLTextAreaElement.disabled
+MISSING-FEATURE: HTMLTextAreaElement.form
+MISSING-FEATURE: HTMLTextAreaElement.maxLength
+MISSING-FEATURE: HTMLTextAreaElement.minLength
+MISSING-FEATURE: HTMLTextAreaElement.name
+MISSING-FEATURE: HTMLTextAreaElement.placeholder
+MISSING-FEATURE: HTMLTextAreaElement.readOnly
+MISSING-FEATURE: HTMLTextAreaElement.required
+MISSING-FEATURE: HTMLTextAreaElement.rows
+MISSING-FEATURE: HTMLTextAreaElement.wrap
+MISSING-FEATURE: HTMLTextAreaElement.type
+MISSING-FEATURE: HTMLTextAreaElement.defaultValue
+MISSING-FEATURE: HTMLTextAreaElement.value
+MISSING-FEATURE: HTMLTextAreaElement.willValidate
+MISSING-FEATURE: HTMLTextAreaElement.validity
+MISSING-FEATURE: HTMLTextAreaElement.validationMessage
+MISSING-FEATURE: HTMLTextAreaElement.checkValidity
+MISSING-FEATURE: HTMLTextAreaElement.setCustomValidity
+MISSING-FEATURE: HTMLTextAreaElement.select
+MISSING-FEATURE: HTMLTextAreaElement.selectionStart
+MISSING-FEATURE: HTMLTextAreaElement.selectionEnd
+MISSING-FEATURE: HTMLTextAreaElement.selectionDirection
+MISSING-FEATURE: HTMLTextAreaElement.setRangeText
+MISSING-FEATURE: HTMLTextAreaElement.setSelectionRange
+MISSING-FEATURE: HTMLFieldSetElement.checkValidity
+MISSING-FEATURE: HTMLFieldSetElement.setCustomValidity
+MISSING-FEATURE: HTMLLegendElement.form
+MISSING-FEATURE: HTMLLegendElement.align
+MISSING-FEATURE: HTMLScriptElement.integrity
+MISSING-FEATURE: HTMLMarqueeElement.bgColor
+MISSING-FEATURE: HTMLMarqueeElement.scrollAmount
+MISSING-FEATURE: HTMLMarqueeElement.scrollDelay
+MISSING-FEATURE: HTMLMarqueeElement.trueSpeed
+MISSING-FEATURE: HTMLMarqueeElement.onbounce
+MISSING-FEATURE: HTMLMarqueeElement.onfinish
+MISSING-FEATURE: HTMLMarqueeElement.onstart
+MISSING-FEATURE: HTMLMarqueeElement.start
+MISSING-FEATURE: HTMLMarqueeElement.stop
+MISSING-FEATURE: HTMLFrameSetElement.onafterprint
+MISSING-FEATURE: HTMLFrameSetElement.onbeforeprint
+MISSING-FEATURE: HTMLFrameSetElement.onbeforeunload
+MISSING-FEATURE: HTMLFrameSetElement.onhashchange
+MISSING-FEATURE: HTMLFrameSetElement.onlanguagechange
+MISSING-FEATURE: HTMLFrameSetElement.onmessage
+MISSING-FEATURE: HTMLFrameSetElement.onmessageerror
+MISSING-FEATURE: HTMLFrameSetElement.onoffline
+MISSING-FEATURE: HTMLFrameSetElement.ononline
+MISSING-FEATURE: HTMLFrameSetElement.onpagehide
+MISSING-FEATURE: HTMLFrameSetElement.onpageshow
+MISSING-FEATURE: HTMLFrameSetElement.onpopstate
+MISSING-FEATURE: HTMLFrameSetElement.onrejectionhandled
+MISSING-FEATURE: HTMLFrameSetElement.onunhandledrejection
+MISSING-FEATURE: HTMLFrameSetElement.onunload
+MISSING-INTERFACE: HTMLDirectoryElement
+MISSING-FEATURE: InputDeviceCapabilities.pointerMovementScrolls
+MISSING-INTERFACE: Profiler
+MISSING-INTERFACE: LargestContentfulPaint
+MISSING-INTERFACE: LayoutShift
+MISSING-FEATURE: PerformanceLongTaskTiming.toJSON
+MISSING-FEATURE: TaskAttributionTiming.toJSON
+MISMATCH: api.Magnetometer.__compat.support.chrome.version_added (69) does not match WPT (false)
+MISMATCH: api.Magnetometer.x.__compat.support.chrome.version_added (69) does not match WPT (false)
+MISMATCH: api.Magnetometer.y.__compat.support.chrome.version_added (69) does not match WPT (false)
+MISMATCH: api.Magnetometer.z.__compat.support.chrome.version_added (69) does not match WPT (false)
+MISSING-INTERFACE: UncalibratedMagnetometer
+MISMATCH: api.MediaCapabilities.encodingInfo.__compat.support.chrome.version_added (67) does not match WPT (false)
+ADD: api.MediaSource.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.SourceBuffer.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.SourceBuffer.audioTracks.__compat.support.chrome.version_added (23) does not match WPT (false)
+MISMATCH: api.SourceBuffer.videoTracks.__compat.support.chrome.version_added (23) does not match WPT (false)
+ADD: api.SourceBufferList.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.CanvasCaptureMediaStreamTrack.canvas.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+ADD-DATA: api.ImageCapture.takePhoto.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.MediaRecorder.stream.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.MediaRecorder.mimeType.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.MediaRecorder.state.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: MediaRecorder.audioBitrateMode
+ADD: api.MediaStream.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.MediaStreamTrack.isolated.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.MediaStreamTrack.onisolationchange.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.MediaDevices.getUserMedia.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.MediaDevices.getDisplayMedia.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.MediaSession.setPositionState.__compat.support.chrome.version_added (73) does not match WPT (false)
+MISMATCH: api.MediaMetadata.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.MediaMetadata.title.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.MediaMetadata.artist.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.MediaMetadata.album.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.MediaMetadata.artwork.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-INTERFACE: FileSystemHandle
+MISSING-INTERFACE: FileSystemFileHandle
+MISSING-INTERFACE: FileSystemDirectoryHandle
+MISSING-INTERFACE: FileSystemWriter
+MISMATCH: api.NetworkInformation.type.__compat.support.chrome.version_added (61) does not match WPT (false)
+MISMATCH: api.NetworkInformation.downlinkMax.__compat.support.chrome.version_added (61) does not match WPT (false)
+ADD: api.Notification.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.Notification.icon.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.Notification.vibrate.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-FEATURE: DeviceOrientationEvent.requestPermission
+MISMATCH: api.DeviceMotionEventAcceleration.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.DeviceMotionEventAcceleration.x.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.DeviceMotionEventAcceleration.y.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.DeviceMotionEventAcceleration.z.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.DeviceMotionEventRotationRate.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.DeviceMotionEventRotationRate.alpha.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.DeviceMotionEventRotationRate.beta.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.DeviceMotionEventRotationRate.gamma.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-FEATURE: DeviceMotionEvent.requestPermission
+MISSING-FEATURE: PaymentManager.enableDelegations
+ADD-DATA: api.CanMakePaymentEvent.topOrigin.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.PaymentRequestEvent.topOrigin.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: PaymentRequestEvent.requestBillingAddress
+MISSING-FEATURE: PaymentRequestEvent.paymentOptions
+MISSING-FEATURE: PaymentRequestEvent.shippingOptions
+MISSING-FEATURE: PaymentRequestEvent.changePaymentMethod
+MISSING-FEATURE: PaymentRequestEvent.changeShippingAddress
+MISSING-FEATURE: PaymentRequestEvent.changeShippingOption
+MISSING-FEATURE: PaymentRequest.hasEnrolledInstrument
+MISSING-FEATURE: PaymentRequest.shippingAddress
+ADD-DATA: api.PaymentRequest.onmerchantvalidation.__compat.support.chrome.version_added would be set to false
+MISMATCH: api.PaymentRequest.onpaymentmethodchange.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.PaymentResponse.onpayerdetailchange.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.PaymentMethodChangeEvent.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.PaymentMethodChangeEvent.methodName.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.PaymentMethodChangeEvent.methodDetails.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+ADD: api.PerformanceEntry.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.Permissions.request.__compat.support.chrome.version_added (46) does not match WPT (false)
+MISMATCH: api.Permissions.revoke.__compat.support.chrome.version_added (46) does not match WPT (false)
+ADD-DATA: api.PermissionStatus.state.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-INTERFACE: PictureInPictureWindow
+MISSING-INTERFACE: EnterPictureInPictureEvent
+MISSING-FEATURE: PointerEvent.altitudeAngle
+MISSING-FEATURE: PointerEvent.azimuthAngle
+MISSING-FEATURE: PointerEvent.getPredictedEvents
+MISSING-INTERFACE: ProximitySensor
+ADD: api.PushSubscriptionChangeEvent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.PushSubscriptionChangeEvent.newSubscription.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.PushSubscriptionChangeEvent.oldSubscription.__compat.support.chrome.version_added would be set to false
+MISSING-INTERFACE: RemotePlayback
+MISSING-INTERFACE: ReportBody
+MISSING-INTERFACE: Report
+MISSING-INTERFACE: ReportingObserver
+MISSING-FEATURE: ResizeObserverEntry.devicePixelContentBoxSize
+MISSING-INTERFACE: ResizeObserverSize
+MISSING-INTERFACE: ResizeObservation
+MISSING-INTERFACE: ScrollTimeline
+MISSING-FEATURE: ServiceWorker.postMessage
+ADD-DATA: api.WindowClient.ancestorOrigins.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.Clients.openWindow.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.CacheStorage.match.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-INTERFACE: FaceDetector
+MISSING-INTERFACE: BarcodeDetector
+MISSING-INTERFACE: TextDetector
+MISMATCH: api.SpeechRecognition.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.grammars.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.lang.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.continuous.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.interimResults.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.maxAlternatives.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.start.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.stop.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.abort.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onaudiostart.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onsoundstart.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onspeechstart.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onspeechend.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onsoundend.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onaudioend.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onresult.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onnomatch.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onerror.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onstart.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognition.onend.__compat.support.chrome.version_added (33) does not match WPT (false)
+ADD: api.SpeechRecognitionErrorEvent.__compat.support.chrome.version_added would be set to false
+MISMATCH: api.SpeechRecognitionErrorEvent.error.__compat.support.chrome.version_added (77) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionErrorEvent.message.__compat.support.chrome.version_added (77) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionAlternative.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionAlternative.transcript.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionAlternative.confidence.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionResult.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionResult.length.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionResult.item.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionResult.isFinal.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionResultList.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionResultList.length.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionResultList.item.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionEvent.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionEvent.resultIndex.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechRecognitionEvent.results.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechGrammar.__compat.support.chrome.version_added (25) does not match WPT (false)
+MISMATCH: api.SpeechGrammar.src.__compat.support.chrome.version_added (25) does not match WPT (false)
+MISMATCH: api.SpeechGrammar.weight.__compat.support.chrome.version_added (25) does not match WPT (false)
+MISMATCH: api.SpeechGrammarList.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechGrammarList.length.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechGrammarList.item.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechGrammarList.addFromURI.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechGrammarList.addFromString.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesis.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesis.pending.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesis.speaking.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesis.paused.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesis.onvoiceschanged.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesis.speak.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesis.cancel.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesis.pause.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesis.resume.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesis.getVoices.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISSING-FEATURE: SpeechSynthesisEvent.charLength
+MISMATCH: api.SpeechSynthesisVoice.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesisVoice.voiceURI.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesisVoice.name.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesisVoice.lang.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesisVoice.localService.__compat.support.chrome.version_added (33) does not match WPT (false)
+MISMATCH: api.SpeechSynthesisVoice.default.__compat.support.chrome.version_added (33) does not match WPT (false)
+ADD-DATA: api.StorageManager.persisted.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.StorageManager.persist.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: SVGGraphicsElement.requiredExtensions
+MISSING-FEATURE: SVGGraphicsElement.systemLanguage
+MISMATCH: api.SVGGeometryElement.isPointInFill.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.SVGGeometryElement.isPointInStroke.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGNumber.value
+MISSING-FEATURE: SVGLength.unitType
+MISSING-FEATURE: SVGLength.value
+MISSING-FEATURE: SVGLength.valueInSpecifiedUnits
+MISSING-FEATURE: SVGLength.valueAsString
+MISSING-FEATURE: SVGLength.newValueSpecifiedUnits
+MISSING-FEATURE: SVGLength.convertToSpecifiedUnits
+MISSING-FEATURE: SVGAngle.unitType
+MISSING-FEATURE: SVGAngle.value
+MISSING-FEATURE: SVGAngle.valueInSpecifiedUnits
+MISSING-FEATURE: SVGAngle.valueAsString
+MISSING-FEATURE: SVGAngle.newValueSpecifiedUnits
+MISSING-FEATURE: SVGAngle.convertToSpecifiedUnits
+MISSING-FEATURE: SVGNumberList.length
+MISSING-FEATURE: SVGNumberList.numberOfItems
+MISSING-FEATURE: SVGNumberList.clear
+MISSING-FEATURE: SVGNumberList.initialize
+MISSING-FEATURE: SVGNumberList.getItem
+MISSING-FEATURE: SVGNumberList.insertItemBefore
+MISSING-FEATURE: SVGNumberList.replaceItem
+MISSING-FEATURE: SVGNumberList.removeItem
+MISSING-FEATURE: SVGNumberList.appendItem
+MISSING-FEATURE: SVGLengthList.length
+MISSING-FEATURE: SVGLengthList.numberOfItems
+MISSING-FEATURE: SVGLengthList.clear
+MISSING-FEATURE: SVGLengthList.initialize
+MISSING-FEATURE: SVGLengthList.getItem
+MISSING-FEATURE: SVGLengthList.insertItemBefore
+MISSING-FEATURE: SVGLengthList.replaceItem
+MISSING-FEATURE: SVGLengthList.removeItem
+MISSING-FEATURE: SVGLengthList.appendItem
+MISSING-FEATURE: SVGStringList.numberOfItems
+MISSING-FEATURE: SVGStringList.clear
+MISSING-FEATURE: SVGStringList.initialize
+MISSING-FEATURE: SVGStringList.getItem
+MISSING-FEATURE: SVGStringList.insertItemBefore
+MISSING-FEATURE: SVGStringList.replaceItem
+MISSING-FEATURE: SVGStringList.removeItem
+MISSING-FEATURE: SVGStringList.appendItem
+MISSING-FEATURE: SVGAnimatedAngle.baseVal
+MISSING-FEATURE: SVGAnimatedAngle.animVal
+MISSING-FEATURE: SVGAnimatedRect.baseVal
+MISSING-FEATURE: SVGAnimatedRect.animVal
+MISSING-FEATURE: SVGAnimatedLengthList.baseVal
+MISSING-FEATURE: SVGAnimatedLengthList.animVal
+MISMATCH: api.SVGSymbolElement.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGSymbolElement.viewBox
+MISSING-FEATURE: SVGSymbolElement.preserveAspectRatio
+MISSING-FEATURE: SVGUseElement.href
+MISSING-INTERFACE: SVGUseElementShadowRoot
+MISSING-INTERFACE: ShadowAnimation
+MISSING-FEATURE: SVGTransform.type
+MISSING-FEATURE: SVGTransform.matrix
+MISSING-FEATURE: SVGTransform.angle
+MISSING-FEATURE: SVGTransform.setMatrix
+MISSING-FEATURE: SVGTransform.setTranslate
+MISSING-FEATURE: SVGTransform.setScale
+MISSING-FEATURE: SVGTransform.setRotate
+MISSING-FEATURE: SVGTransform.setSkewX
+MISSING-FEATURE: SVGTransform.setSkewY
+MISSING-FEATURE: SVGTransformList.numberOfItems
+MISSING-FEATURE: SVGTransformList.clear
+MISSING-FEATURE: SVGTransformList.initialize
+MISSING-FEATURE: SVGTransformList.getItem
+MISSING-FEATURE: SVGTransformList.insertItemBefore
+MISSING-FEATURE: SVGTransformList.replaceItem
+MISSING-FEATURE: SVGTransformList.removeItem
+MISSING-FEATURE: SVGTransformList.appendItem
+MISSING-FEATURE: SVGTransformList.createSVGTransformFromMatrix
+MISSING-FEATURE: SVGTransformList.consolidate
+MISSING-FEATURE: SVGAnimatedTransformList.baseVal
+MISSING-FEATURE: SVGAnimatedTransformList.animVal
+MISSING-FEATURE: SVGPreserveAspectRatio.align
+MISSING-FEATURE: SVGPreserveAspectRatio.meetOrSlice
+MISSING-INTERFACE: SVGPointList
+MISSING-FEATURE: SVGPolylineElement.points
+MISSING-FEATURE: SVGPolylineElement.animatedPoints
+MISSING-FEATURE: SVGPolygonElement.points
+MISSING-FEATURE: SVGPolygonElement.animatedPoints
+MISMATCH: api.SVGTextContentElement.getCharNumAtPosition.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISSING-FEATURE: SVGTextPathElement.href
+MISSING-FEATURE: SVGForeignObjectElement.x
+MISSING-FEATURE: SVGForeignObjectElement.y
+MISSING-FEATURE: SVGForeignObjectElement.width
+MISSING-FEATURE: SVGForeignObjectElement.height
+MISSING-INTERFACE: SVGMarkerElement
+MISSING-FEATURE: SVGGradientElement.gradientUnits
+MISSING-FEATURE: SVGGradientElement.gradientTransform
+MISSING-FEATURE: SVGGradientElement.spreadMethod
+MISSING-FEATURE: SVGGradientElement.href
+MISSING-FEATURE: SVGRadialGradientElement.cx
+MISSING-FEATURE: SVGRadialGradientElement.cy
+MISSING-FEATURE: SVGRadialGradientElement.r
+MISSING-FEATURE: SVGRadialGradientElement.fx
+MISSING-FEATURE: SVGRadialGradientElement.fy
+MISSING-FEATURE: SVGRadialGradientElement.fr
+MISSING-FEATURE: SVGStopElement.offset
+MISSING-FEATURE: SVGPatternElement.viewBox
+MISSING-FEATURE: SVGPatternElement.preserveAspectRatio
+MISSING-FEATURE: SVGPatternElement.href
+MISSING-FEATURE: SVGScriptElement.type
+MISSING-FEATURE: SVGScriptElement.crossOrigin
+MISSING-FEATURE: SVGScriptElement.href
+MISMATCH: api.SVGAElement.referrerPolicy.__compat.support.chrome.version_added (51) does not match WPT (false)
+MISSING-FEATURE: SVGAElement.href
+MISSING-FEATURE: SVGViewElement.viewBox
+MISSING-FEATURE: SVGViewElement.preserveAspectRatio
+MISSING-FEATURE: Touch.altitudeAngle
+MISSING-FEATURE: Touch.azimuthAngle
+MISSING-FEATURE: Touch.touchType
+MISSING-INTERFACE: TrustedHTML
+MISSING-INTERFACE: TrustedScript
+MISSING-INTERFACE: TrustedScriptURL
+MISSING-INTERFACE: TrustedTypePolicyFactory
+MISSING-INTERFACE: TrustedTypePolicy
+MISSING-FEATURE: PerformanceMark.detail
+MISSING-FEATURE: PerformanceMeasure.detail
+ADD-DATA: api.VisualViewport.onresize.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.VisualViewport.onscroll.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-INTERFACE: Module
+MISSING-INTERFACE: Instance
+MISSING-INTERFACE: Memory
+MISSING-INTERFACE: Table
+MISSING-INTERFACE: Global
+MISMATCH: api.AnimationTimeline.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.AnimationTimeline.currentTime.__compat.support.chrome.version_added (39) does not match WPT (false)
+MISMATCH: api.DocumentTimeline.__compat.support.chrome.version_added (54) does not match WPT (false)
+ADD: api.AnimationEffect.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.AnimationEffect.getTiming.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.AnimationEffect.getComputedTiming.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.AnimationEffect.updateTiming.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.KeyframeEffect.target.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.KeyframeEffect.pseudoElement.__compat.support.chrome.version_added (81) does not match WPT (false)
+ADD-DATA: api.KeyframeEffect.composite.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.KeyframeEffect.getKeyframes.__compat.support.chrome.version_added would be set to false
+MISMATCH: api.AnimationPlaybackEvent.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.AnimationPlaybackEvent.currentTime.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.AnimationPlaybackEvent.timelineTime.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISSING-FEATURE: NDEFReader.onreading
+ADD-DATA: api.BaseAudioContext.createPeriodicWave.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.AudioContext.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.AudioParam.cancelAndHoldAtTime.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.AudioScheduledSourceNode.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.PublicKeyCredential.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.PublicKeyCredential.rawId.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.PublicKeyCredential.response.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.PublicKeyCredential.getClientExtensionResults.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.AuthenticatorResponse.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.AuthenticatorResponse.clientDataJSON.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.AuthenticatorAttestationResponse.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.AuthenticatorAttestationResponse.attestationObject.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.AuthenticatorAttestationResponse.getTransports.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+ADD: api.AuthenticatorAssertionResponse.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.AuthenticatorAssertionResponse.authenticatorData.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.AuthenticatorAssertionResponse.signature.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.AuthenticatorAssertionResponse.userHandle.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.WebGLObject.__compat.support.chrome.version_added would be set to false
+MISMATCH: api.WebGLBuffer.__compat.support.chrome.version_added (9) does not match WPT (false)
+MISMATCH: api.WebGLFramebuffer.__compat.support.chrome.version_added (9) does not match WPT (false)
+MISMATCH: api.WebGLProgram.__compat.support.chrome.version_added (9) does not match WPT (false)
+MISMATCH: api.WebGLRenderbuffer.__compat.support.chrome.version_added (9) does not match WPT (false)
+MISMATCH: api.WebGLShader.__compat.support.chrome.version_added (9) does not match WPT (false)
+MISMATCH: api.WebGLTexture.__compat.support.chrome.version_added (9) does not match WPT (false)
+MISMATCH: api.WebGLQuery.__compat.support.chrome.version_added (56) does not match WPT (false)
+MISMATCH: api.WebGLSampler.__compat.support.chrome.version_added (56) does not match WPT (false)
+MISMATCH: api.WebGLSync.__compat.support.chrome.version_added (56) does not match WPT (false)
+MISMATCH: api.WebGLTransformFeedback.__compat.support.chrome.version_added (56) does not match WPT (false)
+MISMATCH: api.WebGLVertexArrayObject.__compat.support.chrome.version_added (56) does not match WPT (false)
+MISSING-FEATURE: MIDIAccess.onstatechange
+MISSING-FEATURE: MIDIPort.onstatechange
+MISSING-FEATURE: MIDIInput.onmidimessage
+MISSING-FEATURE: MIDIOutput.clear
+ADD: api.RTCIdentityProviderGlobalScope.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.RTCIdentityProviderRegistrar.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: RTCPeerConnection.idpLoginUrl
+MISSING-FEATURE: RTCPeerConnection.idpErrorInfo
+ADD-DATA: api.RTCPeerConnection.createOffer.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.RTCPeerConnection.createAnswer.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.RTCPeerConnection.setLocalDescription.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.RTCPeerConnection.setRemoteDescription.__compat.support.chrome.version_added would be set to false
+ADD-DATA: api.RTCPeerConnection.addIceCandidate.__compat.support.chrome.version_added would be set to false
+MISMATCH: api.RTCPeerConnection.setConfiguration.__compat.support.chrome.version_added (48) does not match WPT (false)
+MISMATCH: api.RTCPeerConnection.onicecandidateerror.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISSING-FEATURE: RTCPeerConnection.getTransceivers
+ADD-DATA: api.RTCPeerConnection.getStats.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-INTERFACE: RTCError
+MISMATCH: api.RTCSessionDescription.type.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISMATCH: api.RTCSessionDescription.sdp.__compat.support.chrome.version_added (true) does not match WPT (false)
+ADD: api.RTCPeerConnectionIceEvent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD: api.RTCPeerConnectionIceErrorEvent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISSING-FEATURE: RTCPeerConnectionIceErrorEvent.address
+MISSING-FEATURE: RTCPeerConnectionIceErrorEvent.port
+ADD-DATA: api.RTCPeerConnectionIceErrorEvent.url.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.RTCPeerConnectionIceErrorEvent.errorCode.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.RTCPeerConnectionIceErrorEvent.errorText.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.RTCRtpSender.transport.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCRtpSender.setParameters.__compat.support.chrome.version_added (true) does not match WPT (false)
+MISSING-FEATURE: RTCRtpSender.setStreams
+MISMATCH: api.RTCRtpTransceiver.setCodecPreferences.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.role.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.state.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.gatheringState.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.getLocalCandidates.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.getRemoteCandidates.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.getSelectedCandidatePair.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.getLocalParameters.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.getRemoteParameters.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.onstatechange.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.ongatheringstatechange.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCIceTransport.onselectedcandidatepairchange.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+MISMATCH: api.RTCStatsReport.__compat.support.chrome.version_added (false) does not match WPT (81.0.4044.129)
+ADD: api.RTCErrorEvent.__compat.support.chrome.version_added would be set to 81.0.4044.129
+ADD-DATA: api.RTCErrorEvent.error.__compat.support.chrome.version_added would be set to 81.0.4044.129
+MISMATCH: api.USBPermissionResult.__compat.support.chrome.version_added (61) does not match WPT (false)
+MISMATCH: api.USBPermissionResult.devices.__compat.support.chrome.version_added (61) does not match WPT (false)
+MISSING-FEATURE: VRStageParameters.sizeZ
+MISSING-INTERFACE: VTTRegion
+MISSING-FEATURE: XRSession.interactionMode
+MISSING-FEATURE: XRSession.requestHitTestSource
+MISSING-FEATURE: XRSession.requestHitTestSourceForTransientInput
+MISSING-FEATURE: XRSession.onsqueeze
+MISSING-FEATURE: XRSession.onsqueezestart
+MISSING-FEATURE: XRSession.onsqueezeend
+MISSING-INTERFACE: XRHitTestSource
+MISSING-INTERFACE: XRTransientInputHitTestSource
+MISSING-INTERFACE: XRHitTestResult
+MISSING-INTERFACE: XRTransientInputHitTestResult
+MISSING-INTERFACE: XRRay
+MISSING-FEATURE: XRFrame.getHitTestResults
+MISSING-FEATURE: XRFrame.getHitTestResultsForTransientInput
+MISMATCH: api.XRSystem.__compat.support.chrome.version_added (79) does not match WPT (false)
+MISMATCH: api.XRSystem.isSessionSupported.__compat.support.chrome.version_added (79) does not match WPT (false)
+MISMATCH: api.XRSystem.requestSession.__compat.support.chrome.version_added (79) does not match WPT (false)
+MISMATCH: api.XRSystem.ondevicechange.__compat.support.chrome.version_added (79) does not match WPT (false)
+MISSING-INTERFACE: XRRenderState
+MISSING-INTERFACE: XRLayer
+MISMATCH: api.XRWebGLLayer.__compat.support.chrome.version_added (79) does not match WPT (false)
