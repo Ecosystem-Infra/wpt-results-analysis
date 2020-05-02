@@ -23,6 +23,9 @@ const lib = require('./lib');
 //     and provide that as optional extra logging.
 //       - the idea here is to answer the question of 'WPT and BCD disagree,
 //         what test should I be looking at?'
+//   - add flag to override MISSING-INTERFACE and report on what data we would
+//     fill in if the interface had existed.
+//   - do the reverse search, which is all APIs in BCD that aren't in WPT
 
 flags.defineString('browser', 'chrome',
     'Browser to lookup. Must match the products used on wpt.fyi');
