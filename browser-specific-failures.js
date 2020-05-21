@@ -220,13 +220,19 @@ async function main() {
   console.log('Calculating browser-specific failures for the runs');
   before = Date.now();
   const dateToScores = new Map();
+  const dateToPerDirScores = new Map();
+  const knownDirs = new Set();
   for (const [date, runs] of alignedRuns.entries()) {
     // The SHA should be the same for all runs, so just grab the first.
     const sha = runs[0].full_revision_hash;
     try {
-      const scores = lib.browserSpecific.scoreBrowserSpecificFailures(
+      const [scores, perDirScores] = lib.browserSpecific.scoreBrowserSpecificFailures(
           runs, new Set(products), options);
       dateToScores.set(date, {sha, scores});
+      dateToPerDirScores.set(date, {sha, perDirScores, version: runs[2].browser_version});
+      for (const dir of perDirScores.keys()) {
+        knownDirs.add(dir);
+      }
     } catch (e) {
       e.message += `\n\tRuns: ${runs.map(r => r.id)}`;
       throw e;
@@ -234,6 +240,32 @@ async function main() {
   }
   after = Date.now();
   console.log(`Done scoring (took ${after - before} ms)`);
+
+  // One-off hack.
+  const dirs = [...knownDirs].sort();
+  let contents = `version,date,${dirs.join(',')}\n`;
+  let previousVersion = '';
+  for (const [date, shaAndDirScores] of dateToPerDirScores) {
+    const sha = shaAndDirScores.sha;
+    const perDirScores = shaAndDirScores.perDirScores;
+    const version = shaAndDirScores.version;
+    if (version == previousVersion) {
+      continue;
+    }
+    previousVersion = version;
+
+    let csvRecord = [version, date.substr(0, 10)];
+    for (const dir of dirs) {
+      if (perDirScores.has(dir)) {
+        // Only care about Safari.
+        csvRecord.push(perDirScores.get(dir)[2]);
+      } else {
+        csvRecord.push(0);
+      }
+    }
+    contents += csvRecord.join(',') + '\n';
+  }
+  await fs.promises.writeFile('safari-per-dir.csv', contents, 'utf-8');
 
   // Finally, time to dump stuff.
   let outputFilename = flags.get('output');
@@ -264,6 +296,7 @@ async function main() {
     data += csvRecord.join(',') + '\n';
   }
   await fs.promises.writeFile(outputFilename, data, 'utf-8');
+
 }
 
 main().catch(reason => {
