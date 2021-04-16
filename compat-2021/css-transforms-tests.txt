@@ -339,11 +339,13 @@
 /css/css-transforms/skewX/svg-skewx-016.html
 /css/css-transforms/skewX/svg-skewx-021.html
 /css/css-transforms/skewX/svg-skewxy-001.html
+/css/css-transforms/skewX/svg-skewx-with-units.html
 /css/css-transforms/skewY/svg-skewy-001.html
 /css/css-transforms/skewY/svg-skewy-006.html
 /css/css-transforms/skewY/svg-skewy-011.html
 /css/css-transforms/skewY/svg-skewy-016.html
 /css/css-transforms/skewY/svg-skewy-021.html
+/css/css-transforms/skewY/svg-skewy-with-units.html
 /css/css-transforms/subpixel-perspective-backface-hidden.html
 /css/css-transforms/subpixel-perspective-translate-z-0.html
 /css/css-transforms/subpixel-transform-changes-001.html
