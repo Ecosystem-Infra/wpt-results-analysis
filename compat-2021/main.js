@@ -210,7 +210,7 @@ function scoreRuns(runs, allTestsSet) {
         passingTests += subtestPasses / subtestTotal;
 
         // TODO: I suspect this doesn't handle missing test results properly,
-        // as we assume every run has everytest so that the testResults arrays
+        // as we assume every run has every test so that the testResults arrays
         // align with |runs|?
         testResults.get(testname).push([subtestPasses, subtestTotal]);
       });
