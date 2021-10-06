@@ -83,12 +83,12 @@ async function fetchAlignedRunsFromServer(products, from, to, experimental) {
   let params = `&label=master&label=${label}`;
   for (const product of products) {
     params += `&product=${product}`;
-  } 
+  }
   const runsUri = `${RUNS_URI}${params}`;
 
   console.log(`Fetching aligned runs from ${from.format('YYYY-MM-DD')} ` +
       `to ${to.format('YYYY-MM-DD')}`);
-    
+
   let cachedCount = 0;
   const before = moment();
   const alignedRuns = new Map();
@@ -96,11 +96,11 @@ async function fetchAlignedRunsFromServer(products, from, to, experimental) {
     const formattedFrom = from.format('YYYY-MM-DD');
     from.add(1, 'days');
     const formattedTo = from.format('YYYY-MM-DD');
-      
+
     // We advance the date (if necessary) before doing anything more, so that
     // code later in the loop body can just 'continue' without checking.
     from = advanceDateToSkipBadDataIfNecessary(from, experimental);
-    
+
     // Attempt to read the runs from the cache.
     // TODO: Consider https://github.com/tidoust/fetch-filecache-for-crawling
     let runs;
@@ -113,7 +113,7 @@ async function fetchAlignedRunsFromServer(products, from, to, experimental) {
       }
     } catch (e) {
       // No cache hit; load from the server instead.
-      const url = `${runsUri}&from=${formattedFrom}&to=${formattedTo}`;
+      const url = `${runsUri}&from=${formattedFrom}T00:00:00Z&to=${formattedTo}T23:59:59Z`;
       const response = await fetch(url);
       // Many days do not have an aligned set of runs, but we always write to
       // the cache to speed up future executions of this code.
@@ -327,7 +327,7 @@ async function scoreCategory(category, experimental, products, alignedRuns) {
 }
 
 async function main() {
-  const products = ['chrome', 'firefox', 'safari'];
+  const products = ['chrome', 'firefox', 'safari', 'webkitgtk'];
   const repo = await Git.Repository.open(
       path.join(ROOT_DIR, 'wpt-results.git'));
 
