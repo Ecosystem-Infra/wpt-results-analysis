@@ -69,7 +69,7 @@ function advanceDateToSkipBadDataIfNecessary(date, experimental) {
   return date;
 }
 
-const RUNS_URI = 'https://wpt.fyi/api/runs?aligned=true&max-count=1';
+const RUNS_URI = 'https://wpt.fyi/api/runs?aligned=true&max-count=100';
 
 // Fetches aligned runs from the wpt.fyi server, between the |from| and |to|
 // dates. If |experimental| is true fetch experimental runs, else stable runs.
@@ -79,11 +79,36 @@ const RUNS_URI = 'https://wpt.fyi/api/runs?aligned=true&max-count=1';
 // we ran both Safari 11.1 and 12.1, and the results are massively different.
 // We should fetch multiple runs for each browser and have upgrade logic.
 async function fetchAlignedRunsFromServer(products, from, to, experimental) {
+
+  // New logic:
+  //
+  // create a map, alignedRuns = {SHA -> [runs]}
+  // create a set, seenShas = set()
+  // for each day between from/to:
+  //   - create a map, runs_on_day {SHA -> [runs]}
+  //   - for each product in products:
+  //     - fetch runs for product in the range from@00:00:00 - to@23:59:59
+  //     - (TODO play with range to see what works)
+  //     - add each run to runs_on_day, unless SHA already in seen_shas
+  //     - (TODO is filtering for seen_shas necessary?)
+  //   - add each sha in runs_on_day to seen_shas
+  //   - choose the SHA with the most runs to add to alignedRuns
+  // return alignedRuns
+  //
+  // So this then returns a map which has SHA -> [runs], but [runs] may be
+  // missing entries.
+  //
+  // I think the main thing that has to change then is scoreRuns, which has to
+  // be smarter about knowing the products. (Can look up run.browser_name, match
+  // against product hopefully!)
+
+
   const label = experimental ? 'experimental' : 'stable';
   let params = `&label=master&label=${label}`;
-  for (const product of products) {
-    params += `&product=${product}`;
-  }
+
+  //for (const product of products) {
+  //  params += `&product=${product}`;
+  //}
   const runsUri = `${RUNS_URI}${params}`;
 
   console.log(`Fetching aligned runs from ${from.format('YYYY-MM-DD')} ` +
@@ -92,6 +117,7 @@ async function fetchAlignedRunsFromServer(products, from, to, experimental) {
   let cachedCount = 0;
   const before = moment();
   const alignedRuns = new Map();
+  const seenShas = new Set();
   while (from < to) {
     const formattedFrom = from.format('YYYY-MM-DD');
     from.add(1, 'days');
@@ -101,41 +127,116 @@ async function fetchAlignedRunsFromServer(products, from, to, experimental) {
     // code later in the loop body can just 'continue' without checking.
     from = advanceDateToSkipBadDataIfNecessary(from, experimental);
 
-    // Attempt to read the runs from the cache.
-    // TODO: Consider https://github.com/tidoust/fetch-filecache-for-crawling
-    let runs;
-    const cacheFile = path.join(ROOT_DIR,
-        `cache/${label}-${products.join('-')}-runs-${formattedFrom}.json`);
-    try {
-      runs = JSON.parse(await fs.promises.readFile(cacheFile));
-      if (runs.length) {
-        cachedCount++;
+    const runsOnDay = new Map();
+
+    for (const product of products) {
+      // Attempt to read the runs from the cache.
+      // TODO: Consider https://github.com/tidoust/fetch-filecache-for-crawling
+      let runs;
+      const cacheFile = path.join(ROOT_DIR,
+          `cache/${label}-${product}-runs-${formattedFrom}.json`);
+      try {
+        runs = JSON.parse(await fs.promises.readFile(cacheFile));
+        if (runs.length) {
+          cachedCount++;
+        }
+      } catch (e) {
+        // No cache hit; load from the server instead.
+        const url = `${runsUri}&product=${product}&from=${formattedFrom}T00:00:00Z&to=${formattedTo}T23:59:59Z`;
+        console.log(`Fetching ${url}`);
+        const response = await fetch(url);
+        // Many days do not have an aligned set of runs, but we always write to
+        // the cache to speed up future executions of this code.
+        runs = await response.json();
+        await fs.promises.writeFile(cacheFile, JSON.stringify(runs));
       }
-    } catch (e) {
-      // No cache hit; load from the server instead.
-      const url = `${runsUri}&from=${formattedFrom}T00:00:00Z&to=${formattedTo}T23:59:59Z`;
-      const response = await fetch(url);
-      // Many days do not have an aligned set of runs, but we always write to
-      // the cache to speed up future executions of this code.
-      runs = await response.json();
-      await fs.promises.writeFile(cacheFile, JSON.stringify(runs));
+
+      console.log(`Got ${runs.length} runs for ${product}`);
+      for (const run of runs) {
+        const sha = run.full_revision_hash;
+        if (seenShas.has(sha)) {
+          // We saw this SHA already on a previous day; avoid double-inclusion.
+          // TODO: This could maybe be fixed by tighter to/from bounds, but
+          // those need to be quite wide to pick up WebKitGTK.
+          console.log(`Already seen ${sha}, skipping`);
+          continue;
+        }
+
+        console.log(`Adding ${sha} to possible choices`);
+        if (!runsOnDay.has(sha)) {
+          runsOnDay.set(sha, []);
+        }
+        runsOnDay.get(sha).push(run);
+      }
     }
 
-    if (!runs.length) {
+    if (runsOnDay.size === 0) {
+      // No data at all for this day.
+      console.log(`No data for ${formattedFrom}`);
       continue;
     }
 
-    if (runs.length !== products.length) {
-      throw new Error(
-          `Fetched ${runs.length} runs, expected ${products.length}`);
+    // So I suspect the problem is that:
+    //
+    //   1. On day 1, we pick up [a, b, c, d] as possible SHAs, and (say) we pick 'c'.
+    //   2. We then mark [a, b, c, d] as all seen.
+    //   3. On day 2, we pick up [b, c, d] as possible SHAs, which have all been seen.
+    //
+    // One option would be to only mark 'c' as seen, BUT then we could get out
+    // of order SHAs (maybe we pick 'b' for day 2).
+    //
+    // So how do we get absolute ordering between SHAs? What does 'from' and
+    // 'to' constrain on?
+    //
+    // None of created_at, time_start, or time_end are cross-product, they are
+    // only absolute orderings within their respective product. (Well, actually,
+    // only created_at is absolute for us, but whatever).
+    //
+    // Looking at from=2021-10-10T00:00:00Z&to=2021-10-11T23:59:59Z (exp):
+    //
+    //   1. Chrome has 44642faf7d, 6f0e022ae8, 8430b93260, 023d5aa5d3, f9e848720b, 9b22c8924a
+    //   2. Safari has 8430b93260, 023d5aa5d3, 9b22c8924a
+    //   3. WebKitGTK has b1147c3f00
+    //
+    // So where is b1147c3f00 for Chrome and Safari? Back on **2021-10-09**!
+    //
+    //   1. Chrome has created_at of    2021-10-09T11:14:48.473922Z
+    //   2. Safari has created_at of    2021-10-09T15:08:55.057906Z
+    //   3. WebKitGTK has created_at of 2021-10-10T04:52:15.734898Z
+    //
+    // That's a solid 17-18 **HOURS** delay before WebKitGTK even starts...
+    //
+    // I guess this is because WebKitGTK is on the daily epoch (I think?), and
+    // Safari is on the 3 or 6 hourly epoch, and Chrome/Firefox are on push. So
+    // Safari lags Chrome by up to 3 or 6 hours, but WebKitGTK can lag by up to 24
+    // hours.
+    //
+    // So what's the logic?
+    //
+    // For a given 'day' (time range), D1, choose the SHA with the most runs.
+    // Then, for the next day D2, choose the SHA with:
+    //   - the most runs AND
+    //   - which has, for each browser that is in both D1 and D2 runs, a
+    //     created_at that is later than the matching run from D1
+    //
+    // TODO: Can we be lazy and just take the earliest created_at for each run?
+    //       What's the impact there, if certain browsers are then missing?
+
+    for (const sha of runsOnDay.keys()) {
+      console.log(`Marking ${sha} as seen`);
+      seenShas.add(sha);
     }
 
-    alignedRuns.set(formattedFrom, runs);
+    const tmp = [...runsOnDay.values()];
+    console.log(tmp);
+    tmp.sort((a, b) => b.length - a.length);
+
+    alignedRuns.set(formattedFrom, tmp[0]);
   }
   const after = moment();
   console.log(`Fetched ${alignedRuns.size} sets of runs in ` +
       `${after - before} ms (${cachedCount} cached)`);
-  
+
   return alignedRuns;
 }
 
@@ -338,6 +439,9 @@ async function main() {
   const experimental = flags.get('experimental');
   const alignedRuns = await fetchAlignedRunsFromServer(
       products, from, to, experimental);
+
+  console.log(alignedRuns);
+  return;
 
   // Verify that we have data for the fetched runs in the wpt-results repo.
   console.log('Getting local set of run ids from repo');
