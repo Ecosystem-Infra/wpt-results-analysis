@@ -29,7 +29,10 @@ cd wpt-results.git/
 git fetch --all --tags
 cd ../
 
-TO_DATE=$(date -d "yesterday 13:00" '+%Y-%m-%d')
+# The end date is exclusive, so use tomorrow so that the most recent runs are
+# included. Aligned runs are used in both scripts so the situation where only
+# some browsers have results is handled.
+TO_DATE=$(date -d "tomorrow 13:00" '+%Y-%m-%d')
 
 update_bsf_csv() {
   local FROM_DATE="2018-06-01"
