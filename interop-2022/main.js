@@ -36,7 +36,7 @@ const CATEGORIES = [
   'interop-2022-scrolling',
   'interop-2022-subgrid',
   'interop-2022-text',
-  // 'interop-2022-viewport',
+  'interop-2022-viewport',
   'interop-2022-webcompat',
 ];
 
@@ -278,7 +278,6 @@ async function scoreCategory(category, experimental, products, alignedRuns,
   //
   // ES6 maps iterate in insertion order, and we initially inserted in date
   // order, so we can just iterate |dateToScores|.
-  let latestTestResults;
   for (const [date, shaAndScores] of dateToScores) {
     const sha = shaAndScores.sha;
     const scores = shaAndScores.scores;
@@ -298,9 +297,6 @@ async function scoreCategory(category, experimental, products, alignedRuns,
       csvRecord.push(score);
     }
     data += csvRecord.join(',') + '\n';
-
-    // We need just the latest test results for writing out the full results.
-    latestTestResults = shaAndScores.testResults;
   }
 
   const csvFilename = experimental ?
@@ -308,29 +304,6 @@ async function scoreCategory(category, experimental, products, alignedRuns,
       `${category}-stable.csv`;
   await fs.promises.writeFile(csvFilename, data, 'utf-8');
   console.log(`Wrote results to ${csvFilename}`);
-
-  // Next, write out the full results for the latest run. This is what is
-  // displayed in the table at the bottom of
-  // https://ecosystem-infra.github.io/wpt-results-analysis/compat
-  data = 'testname';
-  for (const product of products) {
-    data += `,${product}`;
-  }
-  data += '\n';
-
-  for (const [testname, results] of latestTestResults) {
-    const csvRecord = [testname];
-    for (const result of results) {
-      csvRecord.push(result.join('/'));
-    }
-    data += csvRecord.join(',') + '\n';
-  }
-
-  const resultsCsvFilename = experimental ?
-      `${category}-experimental-full-results.csv` :
-      `${category}-stable-full-results.csv`;
-  await fs.promises.writeFile(resultsCsvFilename, data, 'utf-8');
-  console.log(`Wrote latest run results to ${resultsCsvFilename}`);
 
   // Return dateToScores, so that our caller can calculate the summary across
   // multiple categories.
