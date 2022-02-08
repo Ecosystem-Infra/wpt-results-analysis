@@ -364,7 +364,6 @@ async function main() {
   console.log(`Loading ${alignedRuns.size} sets of runs took ` +
       `${after - before} ms`);
 
-  let summaryCsv = `feature,${products.join()}\n`;
   const dateToScoresMaps = new Map();
 
   // Map from labels to tests (includes)
@@ -392,19 +391,9 @@ async function main() {
     const dateToScores = await scoreCategory(category, experimental, products,
         alignedRuns, testsSet);
 
-    // Grab the latest dateToScores to produce the summary of recent results.
-    const latestEntry = Array.from(dateToScores.values()).pop();
-    // TODO: push integer math all the way down
-    const scores = latestEntry.scores.map(s => Math.floor(1000 * s));
-    summaryCsv += `${category},${scores.join()}\n`;
-
     // Store the entire dateToScores for producing the unified CSV later.
     dateToScoresMaps.set(category, dateToScores);
   }
-  const summaryCsvFilename = experimental ?
-      `summary-experimental.csv` : `summary-stable.csv`;
-  await fs.promises.writeFile(summaryCsvFilename, summaryCsv, 'utf-8');
-  console.log(`Wrote latest summary to ${summaryCsvFilename}`);
 
   // TODO(smcgruer): Once the other score CSVs are no longer used, we can push
   // some of this logic into scoreCategory and simplify things.
