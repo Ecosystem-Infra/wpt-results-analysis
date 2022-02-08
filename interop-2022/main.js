@@ -13,7 +13,7 @@ const path = require('path');
 
 flags.defineStringList('products', ['chrome', 'firefox', 'safari'],
     'Products to include (comma-separated)');
-flags.defineString('from', '2018-07-01', 'Starting date (inclusive)');
+flags.defineString('from', '2022-01-01', 'Starting date (inclusive)');
 flags.defineString('to', moment().format('YYYY-MM-DD'),
     'Ending date (exclusive)');
 flags.defineBoolean('experimental', false,
