@@ -44,6 +44,47 @@ const CATEGORIES = [
 
 const RUNS_URI = 'https://wpt.fyi/api/runs?aligned=true&max-count=1';
 
+// All non-OK harness statuses. Any non-OK harness status should be investigated
+// before being added to this list, so that we don't score tests in the wrong
+// way because of a test or infrastructure issue.
+const KNOWN_TEST_STATUSES = new Set([
+  // TIMEOUT in Safari due to https://webkit.org/b/212201
+  '/css/css-grid/grid-definition/grid-limits-001.html',
+  // TIMEOUT in Firefox and Safari, all subtests present
+  '/css/css-scroll-snap/input/keyboard.html',
+  // ERROR in Firefox, TIMEOUT in Safari, all subtests failing in Chrome
+  '/css/css-scroll-snap/input/snap-area-overflow-boundary.html',
+  // TIMEOUT in Chrome with TIMEOUT subtests
+  '/dom/events/Event-dispatch-click.html',
+  // ERROR in Safari but linked bug is fixed
+  '/html/browsers/browsing-the-web/navigating-across-documents/replace-before-load/form-requestsubmit-during-load.html',
+  '/html/browsers/browsing-the-web/navigating-across-documents/replace-before-load/form-requestsubmit-during-pageshow.html',
+  // TIMEOUT in Safari, but just a single subtest
+  '/html/semantics/forms/form-submission-0/form-double-submit-multiple-targets.html',
+  // TIMEOUT in Firefox and Safari, but just a single subtest
+  '/html/semantics/forms/form-submission-0/form-double-submit-to-different-origin-frame.html',
+  // TIMEOUT in Safari but all passing subtests due to https://bugs.webkit.org/show_bug.cgi?id=235407
+  '/html/semantics/forms/form-submission-target/rel-base-target.html',
+  '/html/semantics/forms/form-submission-target/rel-button-target.html',
+  '/html/semantics/forms/form-submission-target/rel-form-target.html',
+  '/html/semantics/forms/form-submission-target/rel-input-target.html',
+  // ERROR in Firefox 95 and Safari 15.2, since fixed
+  '/html/semantics/interactive-elements/the-dialog-element/dialog-showModal.html',
+  // ERROR in Chrome 96, since fixed
+  '/html/semantics/interactive-elements/the-dialog-element/modal-dialog-ancestor-is-inert.html',
+  // TIMEOUT in Safari, but all subtests present
+  '/html/semantics/forms/textfieldselection/select-event.html',
+  '/html/semantics/forms/textfieldselection/selection-start-end.html',
+  '/html/semantics/forms/textfieldselection/textfieldselection-setRangeText.html',
+  '/html/semantics/forms/textfieldselection/textfieldselection-setSelectionRange.html',
+  // TIMEOUT in Firefox 98, since fixed
+  '/html/semantics/forms/the-input-element/image-click-form-data.html',
+  // TIMEOUT in Safari, but all subtests present
+  '/html/semantics/forms/the-input-element/range-restore-oninput-onchange-event.html',
+  // TIMEOUT in STP 137, since fixed
+  '/html/semantics/interactive-elements/the-dialog-element/backdrop-receives-element-events.html',
+]);
+
 // Fetches aligned runs from the wpt.fyi server, between the |from| and |to|
 // dates. If |experimental| is true fetch experimental runs, else stable runs.
 // Returns a map of date to list of runs for that date (one per product)
@@ -165,6 +206,9 @@ function scoreRuns(runs, allTestsSet) {
         let subtestPasses = 0;
         let subtestTotal = 1;
         if ('subtests' in results) {
+          if (results['status'] != 'OK' && !KNOWN_TEST_STATUSES.has(testname)) {
+            throw new Error(`Unexpected non-OK status for test: ${testname}`);
+          }
           subtestTotal = results['subtests'].length;
           for (const subtest of results['subtests']) {
             if (subtest['status'] == 'PASS') {
