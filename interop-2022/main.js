@@ -273,43 +273,6 @@ async function scoreCategory(category, experimental, products, alignedRuns,
   const after = Date.now();
   console.log(`Done scoring (took ${after - before} ms)`);
 
-  let data = 'sha,date';
-  for (const product of products) {
-    data += `,${product}-version,${product}`;
-  }
-  data += '\n';
-
-  // First write out the summary results.
-  //
-  // ES6 maps iterate in insertion order, and we initially inserted in date
-  // order, so we can just iterate |dateToScores|.
-  for (const [date, shaAndScores] of dateToScores) {
-    const sha = shaAndScores.sha;
-    const scores = shaAndScores.scores;
-    const versions = shaAndScores.versions;
-    if (!scores) {
-      console.log(`ERROR: ${date} had no scores`);
-      continue;
-    }
-    const csvRecord = [
-      sha,
-      date.substr(0, 10),
-    ];
-    for (let i = 0; i < products.length; i++) {
-      csvRecord.push(versions[i]);
-      // TODO: push integer math all the way down
-      const score = Math.floor(1000 * scores[i]);
-      csvRecord.push(score);
-    }
-    data += csvRecord.join(',') + '\n';
-  }
-
-  const csvFilename = experimental ?
-      `${category}-experimental.csv` :
-      `${category}-stable.csv`;
-  await fs.promises.writeFile(csvFilename, data, 'utf-8');
-  console.log(`Wrote results to ${csvFilename}`);
-
   // Return dateToScores, so that our caller can calculate the summary across
   // multiple categories.
   return dateToScores;
@@ -432,10 +395,10 @@ async function main() {
     unifiedCsv += `${csvLine.join()}\n`;
   }
 
-  const unifiedCsvFilename = experimental ?
-      `unified-scores-experimental.csv` : `unified-scores-stable.csv`;
-  await fs.promises.writeFile(unifiedCsvFilename, unifiedCsv, 'utf-8');
-  console.log(`Wrote unified scores to ${unifiedCsvFilename}`);
+  const csvFilename = experimental ?
+      `interop-2022-experimental.csv` : `interop-2022-stable.csv`;
+  await fs.promises.writeFile(csvFilename, unifiedCsv, 'utf-8');
+  console.log(`Wrote scores to ${csvFilename}`);
 }
 
 main().catch(reason => {
