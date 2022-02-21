@@ -363,7 +363,7 @@ async function main() {
     dateToScoresMaps.set(category, dateToScores);
   }
 
-  // TODO(smcgruer): Once the other score CSVs are no longer used, we can push
+  // TODO: Once the other score CSVs are no longer used, we can push
   // some of this logic into scoreCategory and simplify things.
   let unifiedCsv = 'date';
   for (const product of products) {
