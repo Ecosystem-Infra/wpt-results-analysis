@@ -92,10 +92,6 @@ const KNOWN_TEST_STATUSES = new Set([
 // Fetches aligned runs from the wpt.fyi server, between the |from| and |to|
 // dates. If |experimental| is true fetch experimental runs, else stable runs.
 // Returns a map of date to list of runs for that date (one per product)
-//
-// TODO: Known problem: there are periods of time, mostly mid-late 2018, where
-// we ran both Safari 11.1 and 12.1, and the results are massively different.
-// We should fetch multiple runs for each browser and have upgrade logic.
 async function fetchAlignedRunsFromServer(products, from, to, experimental) {
   const label = experimental ? 'experimental' : 'stable';
   let params = `&label=master&label=${label}`;
