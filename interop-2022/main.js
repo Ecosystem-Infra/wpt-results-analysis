@@ -1,7 +1,11 @@
 'use strict';
 
-// TODO: There's a lot of reused code from browser-specific-failures.js here,
-// that could be put into lib/
+/**
+ * Implements test results scoring for Interop 2022 as described in the RFC:
+ * https://github.com/web-platform-tests/rfcs/blob/master/rfcs/interop_2022.md#metrics
+ *
+ * Note that the scaling to 90% happens in the https://wpt.fyi/interop-2022 frontend.
+ */
 
 const fetch = require('node-fetch');
 const flags = require('flags');
